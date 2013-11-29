@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+<title>Home</title>
+</head>
+<body data-lift-content-id="main">
+	<div id="main" ng-app="foboDemoApp" data-lift="surround?with=default;at=content">
+	
+      <div class="row" >
+        <div class="col-sm-12" >
+		  <h2>Welcome to your project!</h2>
+		  <p>
+			<span data-lift="helloWorld.howdy"> Welcome to your Lift
+				Angular/Bootstrap v3 app at <span id="time">Time goes here</span>
+			</span>
+	 	  </p>
+	    </div>
+	  </div>	
+
+      <div class="row" >
+        <div class="col-sm-12" >	  
+	      <p> The following sections will show some Lift / Angular integration examples. </p>	
+	    </div>
+	  </div>
+	  <hr>	
+	    
+      <div class="row" >
+        <div class="col-sm-12" >
+          <h3>Example 1:</h3>
+		  <form class="form-horizontal" role="form">
+            <div class="form-group">
+			  <label for="name" class="col-sm-2 control-label">Name:</label> 
+			  <div class="col-sm-10">
+			    <input id="name" class="form-control" type="text" ng-model="yourName" placeholder="Enter a name here">
+			  </div>
+			</div>
+	      </form>
+		</div>  
+      </div>
+		
+      <div class="row" >
+        <div class="col-sm-10 col-sm-offset-2" >		
+		  <h4>Hello {{yourName}}!</h4>
+	    </div>
+	  </div>
+	  <hr>	
+			
+      <div class="row" >
+        <div class="col-sm-12 " >		
+		  <h3>Example 2:</h3>
+	    </div>
+	  </div>			
+      <div class="row" >
+        <div class="col-sm-10 col-sm-offset-2" >			
+		  <div ng-controller="SimpleRTCtrl">
+		    <pre>{{lrtResModel}}</pre>
+            <button type="button" class="btn btn-primary" ng-click="doSimpleLiftRT()">Simple RT</button>
+            <button type="button" class="btn btn-primary" ng-click="doResetRT()">Reset</button> 
+	      </div>
+	    </div>
+	  </div>		
+	  <hr>
+		
+      <div class="row" >
+        <div class="col-sm-12 " >		
+		  <h3>Example 3:</h3>
+	    </div>
+	  </div>			
+      <div class="row" >
+        <div class="col-sm-10 col-sm-offset-2" >			
+	      <div ng-controller="GridCtrl">
+		    <div class="gridStyle" ng-grid="gridOptions"></div>
+		  </div>
+		</div>
+	  </div>			
+	  <hr>
+		
+	  <span data-lift="SimpleRT"> This snippet injects the roundtrip script</span>
+    </div>		
+</body>
+</html>
+
