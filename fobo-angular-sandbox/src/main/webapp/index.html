@@ -9,10 +9,10 @@
 	
       <div class="row" >
         <div class="col-sm-12" >
-		  <h2>Welcome to your project!</h2>
+		  <h2>Lift - FoBo / Angular / Bootstrap / Slick - Demo</h2>
 		  <p>
 			<span data-lift="helloWorld.howdy"> Welcome to your Lift
-				Angular/Bootstrap v3 app at <span id="time">Time goes here</span>
+				Angular/Bootstrap/Slick app at <span id="time">Time goes here</span>
 			</span>
 	 	  </p>
 	    </div>
@@ -20,14 +20,46 @@
 
       <div class="row" >
         <div class="col-sm-12" >	  
-	      <p> The following sections will show some Lift / Angular integration examples. </p>	
+	      <p> Although this pages uses the <a href="http://www.media4u101.se/lift-advanced-bs3/">lift-advanced-bs3 Template Application</a> 
+	      with FoBo's Bootstrap v3.x setting as it's base the following sections is mostly about Angular JS and  
+	      <a href="http://blog.goodstuff.im/roundtrip_promises">Lift 3's Round Trip</a> concept.
+	      To make the examples a bit more realistic we are also using Slick to handle the back end storage. 
+	      The examples is increasingly complex in what they accomplish but considering 
+	      the "normal complexity" involved in coding the same thing using other techniques 
+	      the code needed using Lift and Angular is very elegant and simple to comprehend.</p>
+	      
+	      <p>I have tried to keep the amount of code used as simple as possible to make the 
+	      examples clear, for that reason the Slick integration is close to the bare minimum
+	      (using a in memory db) and dose, for that reason, not reflect what you would expect 
+	      in a production ready project. </p>
+	      <h4>This demo application uses the following components:</h4>
+	      <dl class="dl-horizontal">
+          <dt><a href="http://liftweb.net/">Lift</a></dt>
+          <dd>Lift is the most powerful, most secure web framework available today.</dd>
+
+          <dt><a href="http://slick.typesafe.com/">Slick</a></dt>
+          <dd>The Scala Language-Integrated Connection Kit. Seamless data access.</dd>
+          <dt><a href="http://www.media4u101.se/fobo-lift-template-demo/">FoBo</a></dt>
+          <dd>A Generic Front-End Toolkit Module for Lift. For developing mobile scalable responsive web applications. </dd>
+          <dt><a href="http://angularjs.org/">Angular JS</a></dt>
+          <dd>Including the <a href="http://angular-ui.github.io/">Angular UI</a> modules <a href="http://angular-ui.github.io/ng-grid/">NG Grid</a> and <a href="http://angular-ui.github.io/bootstrap/">UI Bootstrap</a>. This component is provided via the <a href="http://www.media4u101.se/fobo-lift-template-demo/">FoBo</a> module.</dd>
+          <dt><a href="http://getbootstrap.com/">Bootstrap v3.x</a></dt>
+          <dd>Sleek, intuitive, and powerful mobile first front-end framework. This component is provided via the <a href="http://www.media4u101.se/fobo-lift-template-demo/">FoBo</a> module.</dd>
+          <dt><a href="http://fontawesome.io/">Font Awesome</a></dt>
+          <dd>The iconic font designed for Bootstrap. This component is provided via the <a href="http://www.media4u101.se/fobo-lift-template-demo/">FoBo</a> module.</dd>
+          <dt><a href="http://code.google.com/p/google-code-prettify/">google-code-prettify</a></dt>
+          <dd> Syntax highlighting of code snippets in a web page. This component is provided via the <a href="http://www.media4u101.se/fobo-lift-template-demo/">FoBo</a> module.</dd>
+        </dl>	
+        <p>You can read more about Angular JS, Lift 3 and Streaming Promises in <a href="http://blog.goodstuff.im/roundtrip_promises">DPP's Blog</a></p>
+        
 	    </div>
 	  </div>
 	  <hr>	
 	    
       <div class="row" >
         <div class="col-sm-12" >
-          <h3>Example 1:</h3>
+          <h3>Example 1:</h3> 
+          <p>This is a very simple angular only example (no server interaction) doing a ajax updates of the angular expression yourName.</p>
 		  <form class="form-horizontal" role="form">
             <div class="form-group">
 			  <label for="name" class="col-sm-2 control-label">Name:</label> 
@@ -44,19 +76,21 @@
 		  <h4>Hello {{yourName}}!</h4>
 	    </div>
 	  </div>
+	  
 	  <hr>	
-			
+	 		
       <div class="row" >
         <div class="col-sm-12 " >		
 		  <h3>Example 2:</h3>
+		  <p>This example is doing a roundtrip to the server to fetch and display a Json string when clicking the "Simple RT" button.</p>
 	    </div>
 	  </div>			
       <div class="row" >
         <div class="col-sm-10 col-sm-offset-2" >			
 		  <div ng-controller="SimpleRTCtrl">
 		    <pre>{{lrtResModel}}</pre>
-            <button type="button" class="btn btn-primary" ng-click="doSimpleLiftRT()">Simple RT</button>
-            <button type="button" class="btn btn-primary" ng-click="doResetRT()">Reset</button> 
+            <button type="button" class="btn btn-default" ng-click="doSimpleLiftRT()">Simple RT</button>
+            <button type="button" class="btn btn-default" ng-click="doResetRT()">Reset</button> 
 	      </div>
 	    </div>
 	  </div>		
@@ -65,18 +99,32 @@
       <div class="row" >
         <div class="col-sm-12 " >		
 		  <h3>Example 3:</h3>
+		  <p>This example is doing a roundtrip to the server to fetch and display the grid data from the backend store handled by slick. </p>	  
 	    </div>
 	  </div>			
       <div class="row" >
         <div class="col-sm-10 col-sm-offset-2" >			
 	      <div ng-controller="GridCtrl">
 		    <div class="gridStyle" ng-grid="gridOptions"></div>
+  		    <div class="form-inline" role="form">
+              <div class="form-group">
+                <input type="hidden" id="pid" ng-model="person.id">
+                <label class="sr-only" for="pname">Name</label>
+                <input type="text" class="form-control" id="pname" placeholder="Enter name" ng-model="person.name">
+              </div>
+              <div class="form-group">
+                <label class="sr-only" for="page">Age</label>
+                <input type="number" class="form-control" id="page" placeholder="Enter age" ng-model="person.age">
+              </div>
+              <button class="btn btn-default" ng-click='doAdd()'>Add</button>
+            </div>
 		  </div>
 		</div>
 	  </div>			
 	  <hr>
 		
 	  <span data-lift="SimpleRT"> This snippet injects the roundtrip script</span>
+	  
     </div>		
 </body>
 </html>

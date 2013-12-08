@@ -1,6 +1,10 @@
 package code.lib
 
 /**
+ * The following classes in this file was originally uses by M. Lucchetta in his Lift GoogleMaps 
+ * Integration https://github.com/antidata/GoogleMaps but has for it's general usefulness been copied 
+ * and used here.
+ *   
  * This file is part of Lift GoogleMaps Integration. Lift GoogleMaps Integration is free software: you can
  * redistribute it and/or modify it under the terms of the GNU General Public
  * License as published by the Free Software Foundation, version 2.

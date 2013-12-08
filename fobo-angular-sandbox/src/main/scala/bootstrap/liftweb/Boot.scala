@@ -33,6 +33,10 @@ class Boot {
       DB.defineConnectionManager(DefaultConnectionIdentifier, vendor)
     }
 
+    //Init slick tables 
+    SlickHelper.initSchema 
+    //MySlickHelper.demoRun
+    
     // Use Lift's Mapper ORM to populate the database
     // you don't need to use Mapper to use Lift... use
     // any ORM you want

@@ -28,7 +28,7 @@ app.controller('SimpleRTCtrl',['$scope', function($scope){
 app.controller('GridCtrl',['$scope',function($scope) {
     
 	$scope.myData = function() {
-	  var promise = myRTFunctions.getNameAgeGridDataFromRT();
+	  var promise = myRTFunctions.getPersonGridData();
 	    return promise.then(function(data) {
 		      $scope.$apply(function() {
 		        $scope.myData = data;
@@ -37,14 +37,39 @@ app.controller('GridCtrl',['$scope',function($scope) {
 		    });	  
 	};
 	$scope.myData();
+	
     $scope.gridOptions = { 
         data: 'myData',
         enableCellSelection: true,
         enableRowSelection: false,
         enableCellEdit: true,
-        columnDefs: [{field: 'name', displayName: 'Name', enableCellEdit: true}, 
+        columnDefs: [{field: 'id', visible: false},
+                     {field: 'name', displayName: 'Name', enableCellEdit: true}, 
                      {field:'age', displayName:'Age', enableCellEdit: true}]
     };
+    
+    //The age is declared as a input type="number" but here we 
+    //set person with empty values to enable the placeholder text
+    var resetPersonFields = function() {
+    $scope.person = {
+            id: 0,
+            name: "",
+            age: "" 
+        };        
+    }
+    resetPersonFields();  
+    $scope.doAdd = function() {
+    	var json = angular.toJson($scope.person);
+    	var promise = myRTFunctions.addPersonGridData(json);
+    	resetPersonFields();
+	    return promise.then(function(data) {
+		      $scope.$apply(function() {
+		        $scope.myData = data;
+		      })
+		      return data;
+		    });	      	
+    };  
+    
 }]);
 
 
