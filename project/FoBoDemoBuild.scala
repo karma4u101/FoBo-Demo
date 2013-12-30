@@ -13,10 +13,13 @@ object FoBoDemoBuild extends Build {
   
 
   lazy val root = Project(id   = "FoBo-Demo", 
-                  base = file(".")) aggregate(Bs3StarterTemplates,FoBoAngularSandbox)
-                             
-                           
-lazy val FoBoAngularSandbox = Project(id = "FoBo-Angular-Sandbox",
+                  base = file(".")) aggregate(FoBoLiftTemplateDemo,Bs3StarterTemplates,FoBoAngularSandbox)
+  
+  lazy val FoBoLiftTemplateDemo = Project(id = "FoBo-Lift-Template-Demo",
+                             base = file("fobo-lift-template-demo"))                 
+   
+    
+  lazy val FoBoAngularSandbox = Project(id = "FoBo-Angular-Sandbox",
                              base = file("fobo-angular-sandbox")) 
                              
   lazy val FoBoBS3Sandbox = Project(id = "FoBo-Bootstrap3-Sandbox",

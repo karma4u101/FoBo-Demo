@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+
+<title>Embeded Topbar template</title>
+</head>
+
+<!-- This is a embedable piece of html -->
+<body class="lift:content_id=fobo-navbar">
+
+	<!--  search google "google h1 tag span inside" its okey google will not search discriminate this h1 tag -->
+
+    <!--Note: Fore historical reasons this page navbar is not implemented using the Fobo navbar snippet even though 
+    it could be, if you are looking for FoBo navbar snippet code check out the libo/_navbar.html file used on the 
+    Bootstrap dedicated demo page. -->
+	<div class="navbar navbar-inverse navbar-fixed-top" id="fobo-navbar">
+		<div class="navbar-inner">
+			<div style="width: auto;" class="container-fluid">
+				<a data-target=".nav-collapse" data-toggle="collapse"
+					class="btn btn-navbar"> <span class="icon-bar"></span> <span
+					class="icon-bar"></span> <span class="icon-bar"></span>
+				</a> <a href="#" class="brand">FoBo</a>
+				<div class="nav-collapse">
+
+					<!-- create the 'main' menu items -->
+					<ul class="nav">
+
+						<li><a href="#spyhome"> <i class="icon-home icon-white"></i>
+								<span data-lift="Loc.i">Home</span>
+						</a></li>
+
+						<li>
+						   <a href="#spyabout"> <i
+								class="icon-question-sign icon-white"></i> <span
+								data-lift="Loc?locid=about.link.text">About</span>
+						   </a>
+						</li>
+
+						<li>
+						  <a href="#spysetup"> 
+						    <i class="icon-asterisk icon-white"></i> <span data-lift="Loc?locid=setup.link.text">Setup</span>
+						  </a>
+						</li>
+
+						<li>
+						  <a href="#spyfooter"> <i 
+								class="icon-info-sign icon-white"></i> <span
+								data-lift="Loc?locid=ref.link.text">References</span>
+						  </a>
+						</li>
+
+                      </ul>
+                   
+                      <ul class="nav">
+                      
+						<li class="dropdown">
+						  <a id="content-dropdown"
+							data-toggle="dropdown" class="dropdown-toggle" href="#"> <span
+								data-lift="Loc?locid=content.dropdown.text">Content</span> <b
+								class="caret"></b>
+						  </a>
+
+							<ul class="dropdown-menu">
+								<li><span
+									data-lift="Menu.item?name=Home;?linkToSelf=true;">
+										<i class="icon-home"></i> <span data-lift="Loc.i">Home</span>
+								</span></li>
+								
+								<li><a href="#spyabout"> <i class="icon-question-sign"></i>
+										<span data-lift="Loc?locid=about.link.text">About</span>
+								</a></li>
+
+								<li><a href="#spysetup"> <i class="icon-asterisk "></i>
+										<span data-lift="Loc?locid=setup.link.text">Setup</span>
+								</a></li>
+
+								<li><a href="#spyfooter"> <i class="icon-info-sign"></i>
+										<span data-lift="Loc?locid=ref.link.text">References</span>
+								</a></li>
+								<li class="divider"></li>
+								<li><span data-lift="Menu.item?name=LiBo;"> <span data-lift="Loc.i">LiBo</span>
+								</span></li>
+								<li><span data-lift="Menu.item?name=Bootstrap-2.2.2;">
+										<i class="icon-book"></i> <span data-lift="Loc.i">Bootstrap-2.2.2</span>
+								</span></li>
+
+								<li><span data-lift="Menu.item?name=Bootstrap-3.0.1;">
+										<i class="icon-book"></i> <span data-lift="Loc.i">Bootstrap-3.0.1</span>
+								</span></li>								
+								<li class="divider"></li>
+
+								<li><span data-lift="Menu.item?name=fobo-angular-sandbox;"> <i
+										class="icon-book"></i> <span data-lift="Loc.i">fobo-angular-sandbox</span>
+								</span></li>
+
+								<li><span
+									data-lift="Menu.item?name=Foundation;a:class=addclassshowofdummy;">
+										<i class="icon-book"></i> <span data-lift="Loc.i">Foundation</span>
+								</span></li>
+
+								<li><span data-lift="Menu.item?name=JQuery-mobile;">
+										<i class="icon-book"></i> <span data-lift="Loc.i">JQuery-mobile</span>
+								</span></li>
+
+								<li><span data-lift="Menu.item?name=DataTables;"> <i
+										class="icon-book"></i> <span data-lift="Loc.i">DataTables</span>
+								</span></li>
+
+								<li class="divider"></li>
+
+								<li><span data-lift="Menu.item?name=FoBoAPI;"> <i
+										class="icon-book"></i> <span
+										data-lift="Loc?locid=api.link.text">FoBo API</span>
+								</span></li>
+
+							</ul></li>
+					</ul>
+
+					<ul class="nav pull-right">
+						<li><span data-lift="Menu.item?name=FoBoAPI;"> <i
+								class="icon-book icon-white"></i> <span
+								data-lift="Loc?locid=api.link.text">FoBo API</span>
+						</span></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</body>
