@@ -4,21 +4,7 @@ version := "0.0.1-SNAPSHOT"
 
 organization := "net.liftweb"
 
-//version in ThisBuild := "1.1-SNAPSHOT"
-
-//liftVersion in ThisBuild <<= liftVersion ?? "2.6-SNAPSHOT"
-
-//liftEdition in ThisBuild <<= liftVersion apply { _.substring(0,3) }
-
-//name <<= (name, liftEdition) { (n, e) =>  n + "_" + e }
-
 crossScalaVersions := Seq("2.10.0", "2.9.3", "2.9.2", "2.9.1-1", "2.9.1")
-
-//scalaVersion in ThisBuild := "2.10.0"
-
-//EclipseKeys.withSource := true
-
-//EclipseKeys.skipParents in ThisBuild := false
 
 resolvers ++= Seq("snapshots"     at "http://oss.sonatype.org/content/repositories/snapshots",
                   "staging"       at "http://oss.sonatype.org/content/repositories/staging",

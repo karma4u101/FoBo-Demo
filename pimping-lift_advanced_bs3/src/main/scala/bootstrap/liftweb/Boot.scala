@@ -87,17 +87,28 @@ class Boot {
     import scala.xml._
     val divider1   = Menu("divider1") / "divider1"
     val ddLabel1   = Menu.i("UserDDLabel") / "ddlabel1"
+    
     val home       = Menu.i("Home") / "index" 
+    
     val userMenu   = User.AddUserMenusHere
-    val static     = Menu(Loc("Static", Link(List("static"), true, "/static/index"), S.loc("StaticContent" , scala.xml.Text("Static Content")),LocGroup("lg2","topRight")))
-    val twbs       = Menu(Loc("Bootstrap3", Link(List("bootstrap301"), true, "/bootstrap301/index"), S.loc("Bootstrap3" , scala.xml.Text("Bootstrap3")),LocGroup("lg2")))
+    
+    val static     = Menu(Loc("Static", 
+        Link(List("static"), true, "/static/index"), 
+        S.loc("StaticContent" , scala.xml.Text("Static Content")),
+        LocGroup("lg2","topRight") ))
+        
+    val twbs       = Menu(Loc("Bootstrap3", 
+        Link(List("bootstrap301"), true, "/bootstrap301/index"),
+        S.loc("Bootstrap3" , scala.xml.Text("Bootstrap3")),
+        LocGroup("lg2"),
+        FoBo.TBLocInfo.LinkTargetBlank ))
      
     def sitemap = SiteMap(
         home          >> LocGroup("lg1"),
         static,
         twbs,
         ddLabel1      >> LocGroup("topRight") >> PlaceHolder submenus (
-            divider1  >> FoBo.TBLocInfo.Divider >> userMenu
+            divider1  /*>> FoBo.TBLocInfo.Divider*/ >> userMenu
             )
          )
   }
