@@ -19,6 +19,8 @@ app.controller('SimpleRTCtrl',['$scope', function($scope){
 	};
 }]);
 
+//http://stackoverflow.com/questions/15647981/angularjs-and-ng-grid-auto-save-data-to-the-server-after-a-cell-was-changed/15832417#15832417
+//ng-change=\"updateEntity(row.entity)\"
 /* 
  * ngGrid example
  * Fetches a JArray [{name: "Moroni", age: 50},{name: "Tiancum", age: 43}, ....] from the server

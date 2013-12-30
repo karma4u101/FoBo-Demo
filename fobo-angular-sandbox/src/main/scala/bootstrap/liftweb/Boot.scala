@@ -11,6 +11,7 @@ import sitemap._
 import Loc._
 import mapper._
 
+
 import code.model._
 import net.liftmodules.{FoBo}
 
@@ -92,6 +93,7 @@ class Boot {
   
   object Site {
     import scala.xml._
+    
     val divider1   = Menu("divider1") / "divider1"
     val ddLabel1   = Menu.i("UserDDLabel") / "ddlabel1"
     val home       = Menu.i("Home") / "index" 

@@ -19,11 +19,17 @@
 	  </div>	
 
       <div class="row" >
-        <div class="col-sm-12" >	  
-	      <p> Although this pages uses the <a href="http://www.media4u101.se/lift-advanced-bs3/">lift-advanced-bs3 Template Application</a> 
+        <div class="col-sm-12" >
+        
+        <div class="bs-callout bs-callout-info">
+          <h4><i class="fa fa-exclamation-triangle"></i> Work In Progress!</h4>
+          <p>This is work in progress, please check back later for a more complete tutorial/demo.</p>
+        </div>        
+        	  
+	      <p> Although this demo uses the <a href="http://www.media4u101.se/lift-advanced-bs3/">lift-advanced-bs3 Template Application</a> 
 	      with FoBo's Bootstrap v3.x setting as it's base the following sections is mostly about Angular JS and  
 	      <a href="http://blog.goodstuff.im/roundtrip_promises">Lift 3's Round Trip</a> concept.
-	      To make the examples a bit more realistic we are also using Slick to handle the back end storage. 
+	      To make the examples a bit more realistic/exciting we are also using Slick to handle the back end storage. 
 	      The examples is increasingly complex in what they accomplish but considering 
 	      the "normal complexity" involved in coding the same thing using other techniques 
 	      the code needed using Lift and Angular is very elegant and simple to comprehend.</p>
@@ -60,14 +66,14 @@
         <div class="col-sm-12" >
           <h3>Example 1:</h3> 
           <p>This is a very simple angular only example (no server interaction) doing a ajax updates of the angular expression yourName.</p>
-		  <form class="form-horizontal" role="form">
+		  <div class="form-horizontal" role="form">
             <div class="form-group">
 			  <label for="name" class="col-sm-2 control-label">Name:</label> 
 			  <div class="col-sm-10">
 			    <input id="name" class="form-control" type="text" ng-model="yourName" placeholder="Enter a name here">
 			  </div>
 			</div>
-	      </form>
+	      </div>
 		</div>  
       </div>
 		
@@ -76,7 +82,12 @@
 		  <h4>Hello {{yourName}}!</h4>
 	    </div>
 	  </div>
-	  
+      <div class="row" >
+        <div class="col-sm-12 " >		
+		  <p>To prepare you for the coming examples and get you started with Angular JS in Lift we are 
+		  opening this up with a very simple example.</p>
+	    </div>
+	  </div>	  
 	  <hr>	
 	 		
       <div class="row" >
@@ -92,14 +103,38 @@
             <button type="button" class="btn btn-default" ng-click="doSimpleLiftRT()">Simple RT</button>
             <button type="button" class="btn btn-default" ng-click="doResetRT()">Reset</button> 
 	      </div>
+	      
 	    </div>
-	  </div>		
+	  </div>
+      <div class="row" >
+        <div class="col-sm-12 " >		
+		  <p>Next in Example 3 we are going to use the same design pattern but this time we are going to 
+	      fetch a array of data and display it using the Angular NG-Grid UI module.</p>
+	    </div>
+	  </div>	  		
 	  <hr>
 		
       <div class="row" >
         <div class="col-sm-12 " >		
-		  <h3>Example 3:</h3>
-		  <p>This example is doing a roundtrip to the server to fetch and display the grid data from the backend store handled by slick. </p>	  
+ 		  <h3>Example 3:</h3>
+		  <p>This example is doing a roundtrip to the server to fetch and display the grid data from the 
+		  back-end store handled by slick. We are going to build on this example in the following examples 
+		  to extend its functionality but we start with the simplest task of just fetching the data. </p>
+	    </div>
+	  </div>			
+      <div class="row" >
+        <div class="col-sm-10 col-sm-offset-2" >			
+	      <div ng-controller="GridCtrl">
+		    <div class="gridStyle" ng-grid="gridOptions"></div>
+		  </div>
+		</div>
+	  </div>			
+	  <hr>
+	  
+      <div class="row" >
+        <div class="col-sm-12 " >		
+		  <h3>Example 4:</h3>
+		  <p>This example is doing a roundtrip to the server to fetch and display the grid data from the back-end store handled by slick. </p>	  
 	    </div>
 	  </div>			
       <div class="row" >
@@ -121,8 +156,25 @@
 		  </div>
 		</div>
 	  </div>			
-	  <hr>
+	  <hr>	  
 		
+      <div class="row" >
+        <div class="col-sm-12" >
+          <h3>Example X:</h3> 
+          <p>This is a very simple angular only example (no server interaction) doing a ajax updates of the angular expression yourName.</p>
+<!--           <ul> -->
+<!--             <li data-jssource="* *+ #> ['One',2,'tree',4]; ">Wombat: </li> -->
+<!--           </ul> -->
+<!-- 		  <ul> -->
+<!-- 		    <li data-jssource=" [{'name':'Peter','age':49},{'name': 'Wombat'},{'name':'Ulla', 'age':39 }]; "> -->
+<!-- 		      <span data-jssource="* *+ #> it.name">Name: </span> -->
+<!-- 		      <span data-jssource="* *+ #> it.age">Age: </span> -->
+<!-- 		    </li> -->
+<!-- 		  </ul> -->
+<!-- 	  <script data-lift-server='true'>my server side JS</script>			   -->
+		</div>  
+      </div>		
+
 	  <span data-lift="SimpleRT"> This snippet injects the roundtrip script</span>
 	  
     </div>		
