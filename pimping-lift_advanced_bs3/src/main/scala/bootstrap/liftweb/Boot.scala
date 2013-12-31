@@ -103,10 +103,17 @@ class Boot {
         LocGroup("lg2"),
         FoBo.TBLocInfo.LinkTargetBlank ))
      
+    val FLTDemo       = Menu(Loc("FLTDemo", 
+        ExtLink("http://www.media4u101.se/fobo-lift-template-demo/"), 
+        S.loc("FLTDemo" , scala.xml.Text("FoBo Lift Template Demo")),
+        LocGroup("lg2")/*,
+        FoBo.TBLocInfo.LinkTargetBlank */ ))               
+        
     def sitemap = SiteMap(
         home          >> LocGroup("lg1"),
         static,
         twbs,
+        FLTDemo,
         ddLabel1      >> LocGroup("topRight") >> PlaceHolder submenus (
             divider1  /*>> FoBo.TBLocInfo.Divider*/ >> userMenu
             )

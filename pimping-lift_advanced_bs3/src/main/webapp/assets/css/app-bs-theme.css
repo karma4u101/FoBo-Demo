@@ -174,7 +174,23 @@ a.list-group-item:hover, a.list-group-item:focus {
 
 }
 
+.bs-callout-info {
+    background-color: #F4F8FA;
+    border-color: #BCE8F1;
+}
+.bs-callout-info h4 {
+    color: #34789A;
+}
 
+.bs-callout {
+    border-left: 3px solid #EEEEEE;
+    margin: 20px 0;
+    padding: 20px;
+}
+.bs-callout h4 {
+    margin-bottom: 5px;
+    margin-top: 0;
+}
 /*end bootstrap theme*/
 
 /*Lift stuff*/
