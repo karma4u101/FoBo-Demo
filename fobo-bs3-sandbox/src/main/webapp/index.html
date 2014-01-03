@@ -1,20 +1,80 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
-    <title>Home</title>
-  </head>
-  <body data-lift-content-id="main">
-    <div id="main" data-lift="surround?with=default;at=content">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+<title>Home</title>
+</head>
+<body data-lift-content-id="main">
+	<div id="main" data-lift="surround?with=default;at=content">
 
-      <h2>Welcome to your project!</h2>
-      <p>
-	<span data-lift="helloWorld.howdy">
-	  Welcome to your Lift app at <span id="time">Time goes here</span>
-	</span>
-      </p>
-      
-    </div>
-  </body>
+		<h2>Welcome to your project!</h2>
+		<p>
+			<span data-lift="helloWorld.howdy"> Welcome to your Lift app
+				at <span id="time">Time goes here</span>
+			</span>
+		</p>
+
+		<div class="row">
+			<div class="col-sm-12">
+			
+               <!-- Lift menu loc controlled alternative to Fiddle http://jsfiddle.net/JpJqD/84/ -->
+				<div id="sidebar" class="list-group" style="max-width:300px;">
+					<a data-lift="Menu.item?name=sbL1Dashbord;a:class=list-group-item active"> <span data-lift="Loc.i">sbL1Dashbord</span></a>				
+					<a data-lift="Menu.item?name=sbL1Users;a:class=list-group-item"> <span data-lift="Loc.i">sbL1Users</span> <span class="badge">0</span></a>
+					<div id="users" class="list-group subitem collapse">
+					    <a data-lift="Menu.item?name=sbL2Users;a:class=list-group-item"> <span data-lift="Loc.i">sbL2Users</span> <span class="badge">0</span></a>
+					    <a data-lift="Menu.item?name=sbL2CreateUsr;a:class=list-group-item"> <span data-lift="Loc.i">sbL2CreateUsr</span> </a>
+					    <a data-lift="Menu.item?name=sbL2CreateGrp;a:class=list-group-item"> <span data-lift="Loc.i">sbL2CreateGrp</span> </a>
+					</div>
+					<a data-lift="Menu.item?name=sbL1Articles;a:class=list-group-item"> <span data-lift="Loc.i">sbL1Articles</span> <span class="badge">0</span></a>			
+					<div id="articles" class="list-group subitem collapse">
+					    <a data-lift="Menu.item?name=sbL2Articles;a:class=list-group-item"> <span data-lift="Loc.i">sbL2Articles</span> <span class="badge">0</span></a>
+					    <a data-lift="Menu.item?name=sbL2CreateArticle;a:class=list-group-item"> <span data-lift="Loc.i">sbL2CreateArticle</span> </a>					
+					</div>
+				</div>
+
+			</div>			
+		</div>
+		
+		<div class="row">
+			<div class="col-sm-12">
+
+                <!-- Fiddle http://jsfiddle.net/JpJqD/84/ -->
+				<div id="sidebar" class="list-group" style="max-width:300px;">
+					<a href="#" class="list-group-item active"> <i
+						class="icon-dashboard"></i> Dashboard
+					</a> <a href="#users" class="list-group-item" data-parent="#sidebar">
+						<i class="icon-group"></i> Users <span class="badge bg_danger">0</span>
+					</a>
+					<div id="users" class="list-group subitem collapse">
+						<a href="#" class="list-group-item"> <i
+							class="icon-caret-right"></i> Users <span class="badge bg_danger">0</span>
+						</a> <a href="#" class="list-group-item"> <i
+							class="icon-caret-right"></i> Create User
+						</a> <a href="#" class="list-group-item"> <i
+							class="icon-caret-right"></i> Create Group
+						</a>
+					</div>
+					<a href="#articles" class="list-group-item" data-parent="#sidebar">
+						<i class="icon-file-text"></i> Articles <span
+						class="badge bg_danger">0</span>
+					</a>
+					<div id="articles" class="list-group subitem collapse">
+						<a href="#" class="list-group-item bg_warning"> <i
+							class="icon-caret-right"></i> Articles <span
+							class="badge bg_danger">0</span>
+						</a> <a href="#" class="list-group-item"> <i
+							class="icon-caret-right"></i> Create Article
+						</a>
+					</div>
+				</div>
+				
+				
+			</div>
+        </div>
+
+
+
+		</div></body>
 </html>
 
