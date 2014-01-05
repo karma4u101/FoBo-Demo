@@ -4,6 +4,11 @@ body {
     font-family: "Helvetica Neue","HelveticaNeue",Helvetica,Arial,"Lucida Grande",sans-serif;
 }
 
+/*Navbar android dropdown fix see http://stackoverflow.com/questions/13902734/bootstrap-cant-click-dropdown-child-menu-items-on-mobile-and-first-click-not */
+.dropdown-backdrop {
+  position: static;
+}
+
 /*bootstrap overrides*/
 .container-fluid {
     padding-left: 0px;
