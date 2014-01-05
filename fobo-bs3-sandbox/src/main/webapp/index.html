@@ -58,10 +58,20 @@
 
 		<div class="row">
 			<div class="col-sm-12">
+			
+			<h2>Working with Lift API functions</h2>
+			<p>Before we jump in to use FoBo's built in API function's we are going to demonstrate some ways to work with 
+			FoBo's Bootstrap support and Lift to do some more or less common tasks involving Lift API function. 
+			If you are familiar with Lift and have basic knowledge of Bootstrap you will be good with just a quick skim 
+			of this section.</p>
+			
                 <h3>Example 1: Collapsible menu</h3> 
-                <p>Lets take this plane collapsible menu and turn it's links into something controlled by Lifts SiteMap.</p>
-                <p>Klick on the Users and/or Articles top level menu items to see the menu expand to show it's sub menu items.</p>
+                <p>Lets take the collapsible menu to the right/second-below and turn it's links into something controlled by Lifts SiteMap 
+                seen in the collapsible menu to the left/first-below.</p>
+                <p>Click on the Users and/or Articles top level menu items to see the menu expand to show it's sub menu items.</p>
 
+		<div class="row">
+			<div class="col-sm-6">
                <!-- Lift menu loc controlled alternative to Fiddle http://jsfiddle.net/JpJqD/84/ -->
                <span class="label label-default">Collapsible Example - With Lift menu item links</span>
 				<div id="sidebarLD" class="list-group" style="max-width:300px;">
@@ -78,16 +88,10 @@
 					    <a data-lift="Menu.item?name=sbL2CreateArticle;a:class=list-group-item"> <span data-lift="Loc.i">sbL2CreateArticle</span> </a>					
 					</div>
 				</div>
-
-			</div>			
-		</div>
-				
-				
-
-
-		<div class="row">
-			<div class="col-sm-12">
-
+ 
+               </div>
+               <div class="col-sm-6">
+ 
                 <!-- Fiddle http://jsfiddle.net/JpJqD/84/ -->
                 <span class="label label-default">Collapsible Example - No lift controlled links</span>
 				<div id="sidebarFid" class="list-group" style="max-width:300px;">
@@ -118,6 +122,20 @@
 						</a>
 					</div>
 				</div>
+ 
+               </div>
+             </div>
+
+			</div>			
+		</div>
+				
+				
+
+
+		<div class="row">
+			<div class="col-sm-12">
+
+ 
 
 							
 			</div>
