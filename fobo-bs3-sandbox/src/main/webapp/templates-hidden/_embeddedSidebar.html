@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+
+<title>Embedded Sidebars template</title>
+</head>
+
+<!-- This is an embedded piece of html -->
+<body class="lift:content_id=sidebars">
+
+<section id="sidebars">
+				<div class="list-group hidden-xs" id="lmenu">
+					<span data-lift="FoBo.Bs3LinkedListGroup.builder?group=lg1"></span>
+					<span data-lift="FoBo.Bs3LinkedListGroup.builder?group=user"></span>
+					<span data-lift="FoBo.Bs3LinkedListGroup.builder?group=lg2"></span>
+				</div>
+
+        <div class="row hidden-xs hidden-sm">
+          <div class="col-sm-12" >
+            <a href="https://github.com/karma4u101/FoBo-Demo" role="button" class="btn btn-default btn-lg"><i class="fa fa-github-square fa-2x"></i> <b>Github Home</b></a>
+          </div>
+        </div>
+        
+				<div class="lift:Msgs?showAll=true"></div>
+
+				<div class="bs-sidebar hidden-print" role="complementary">
+					<ul class="nav bs-sidenav">
+					   <li style="border-bottom:1px inset #ccc;">
+					   <span data-lift="Menu.item?name=dtop;"><span
+								data-lift="Loc.i">Top</span></span></li>
+								
+						<li><span data-lift="Menu.item?name=sbg1;"><span
+								data-lift="Loc.i">Section 1</span></span>
+							<ul class="nav">
+								<span data-lift="FoBo.Bs3NavLiList.builder?group=sbg1"></span>
+							</ul></li>
+						<li><span data-lift="Menu.item?name=sbg2;"><span
+								data-lift="Loc.i">Section 2</span></span>
+<!-- 						<a href="#section-2">Section 2</a> -->
+							<ul class="nav">
+								<span data-lift="FoBo.Bs3NavLiList.builder?group=sbg2"></span>
+							</ul></li>
+						<li><span data-lift="Menu.item?name=sbg3;"><span
+								data-lift="Loc.i">Section 3</span></span>
+<!-- 						<a href="#section-3">Section 3</a> -->
+							<ul class="nav">
+								<span data-lift="FoBo.Bs3NavLiList.builder?group=sbg3"></span>
+							</ul></li>
+						<li><span data-lift="Menu.item?name=sbg4;"><span
+								data-lift="Loc.i">Section 4</span></span>
+<!-- 						<a href="#section-4">Section 4</a> -->
+							<ul class="nav">
+								<span data-lift="FoBo.Bs3NavLiList.builder?group=sbg4"></span>
+							</ul></li>
+					</ul>
+				</div>
+   </section>
+</body>

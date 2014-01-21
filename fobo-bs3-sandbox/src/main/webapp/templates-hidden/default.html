@@ -1,85 +1,99 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:lift="http://liftweb.net/">
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title class="lift:Menu.title">Lift - FoBo / Bootstrap v3 - Demo: </title>
-   
-    <link href="/classpath/fobo/bootstrap.css" rel="stylesheet" type="text/css" />
-    <link href="/classpath/fobo/bootstrap-theme.css" rel="stylesheet" type="text/css" />
-    <link href="/classpath/fobo/font-awesome.css" rel="stylesheet" type="text/css"/>
-    <link href="/assets/css/app-bs-theme.css" rel="stylesheet" type="text/css" />
-    
-    <script id="jquery" src="/classpath/fobo/jquery.js" type="text/javascript"></script>
-    <script id="json" src="/classpath/json.js" type="text/javascript"></script>  
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:lift="http://liftweb.net/">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title class="lift:Menu.title">Lift - FoBo / Bootstrap v3 -
+	Demo:</title>
 
-    <script type="text/javascript">
-    $(window).load(function(){
-    	$('#sidebarLD > a').on('click', function (e) {
-	    	e.preventDefault();
-	    	if(!$(this).hasClass("active")){
-	    		var lastActive = $(this).closest("#sidebarLD").children(".active");
-	    		lastActive.removeClass("active");
-	    		lastActive.next('div').collapse('hide');
-    			$(this).addClass("active");
-    			$(this).next('div').collapse('show');
-	    	}
-	    });
-    });
-    </script>
-    <script type="text/javascript">
-    $(window).load(function(){
-    	$('#sidebarFid > a').on('click', function (e) {
-	    	e.preventDefault();
-	    	if(!$(this).hasClass("active")){
-	    		var lastActive = $(this).closest("#sidebarFid").children(".active");
-	    		lastActive.removeClass("active");
-	    		lastActive.next('div').collapse('hide');
-    			$(this).addClass("active");
-    			$(this).next('div').collapse('show');
-	    	}
-	    });
-    });
-    </script>    
+<link href="/classpath/fobo/bootstrap.css" rel="stylesheet"
+	type="text/css" />
+<link href="/classpath/fobo/bootstrap-theme.css" rel="stylesheet"
+	type="text/css" />
+<link href="/classpath/fobo/font-awesome.css" rel="stylesheet"
+	type="text/css" />
+<link href="/assets/css/app-bs-theme.css" rel="stylesheet"
+	type="text/css" />
 
-  </head>
-  <body>
-  
-  <span data-lift='embed?what=_embededTopNavbar'> Embedding the TopNavbar here</span>
+<script id="jquery" src="/classpath/fobo/jquery.js"
+	type="text/javascript"></script>
+<script id="json" src="/classpath/json.js" type="text/javascript"></script>
+<script src="/assets/js/app.js" type="text/javascript"></script>
 
-    <div class="container">
+<script type="text/javascript">
+	$(window).load(
+			function() {
+				$('#sidebarLD > a').on(
+						'click',
+						function(e) {
+							e.preventDefault();
+							if (!$(this).hasClass("active")) {
+								var lastActive = $(this).closest("#sidebarLD")
+										.children(".active");
+								lastActive.removeClass("active");
+								lastActive.next('div').collapse('hide');
+								$(this).addClass("active");
+								$(this).next('div').collapse('show');
+							}
+						});
+			});
+</script>
+<script type="text/javascript">
+	$(window).load(
+			function() {
+				$('#sidebarFid > a').on(
+						'click',
+						function(e) {
+							e.preventDefault();
+							if (!$(this).hasClass("active")) {
+								var lastActive = $(this).closest("#sidebarFid")
+										.children(".active");
+								lastActive.removeClass("active");
+								lastActive.next('div').collapse('hide');
+								$(this).addClass("active");
+								$(this).next('div').collapse('show');
+							}
+						});
+			});
+</script>
 
-      <div class="row" style="min-height:1200px;">
-        <div class="col-sm-3" style="border-right: 1px solid #eee; hight:100%;">
+</head>
+<body>
 
-        <div class="list-group hidden-xs" id="lmenu">
-          <span data-lift="FoBo.Bs3LinkedListGroup.builder?group=lg1"></span>
-          <span data-lift="FoBo.Bs3LinkedListGroup.builder?group=user"></span>
-          <span data-lift="FoBo.Bs3LinkedListGroup.builder?group=lg2"></span>
-        </div>
-        
-        <div class="lift:Msgs?showAll=true"></div>
-   
-      </div> 
-      <div class="col-sm-9">
-        <div id="content">The main content will get bound here</div>
-      </div>
+	<span data-lift='embed?what=_embededTopNavbar'> Embedding the
+		TopNavbar here</span>
 
-    </div><!-- container -->
-      
-      <div class="row">
-      <div class="col-sm-12" style="text-align: center">
-        <h4 class="alt">
-          <a href="http://www.liftweb.net"><i>Lift</i></a> 
-	  is Copyright 2007-2013 WorldWide Conferencing, LLC.
-	  Distributed under an Apache 2.0 License.</h4>
-      </div>
-      </div>
-  
-    <script src="/classpath/fobo/bootstrap.js" type="text/javascript"></script>
-      
-   </div>   
-  </body>
+	<div class="container">
+
+		<div class="row" style="min-height: 5200px;">
+			<div class="col-sm-3"
+				style="border-right: 1px solid #eee; hight: 100%;">
+
+              <span data-lift='embed?what=_embeddedSidebar'> Embedding the sidebar here</span>
+
+			</div>
+			<div class="col-sm-9">
+				<div id="content">The main content will get bound here</div>
+			</div>
+
+		</div>
+
+		<!-- container end -->
+		<br />
+		<hr />
+		<!-- fotter -->
+		<div class="row">
+			<div class="col-sm-12" style="text-align: center">
+				<span data-lift='embed?what=_embeddedFotter'> Embedding the
+					fotter here</span>
+			</div>
+		</div>
+
+		<script src="/classpath/fobo/bootstrap.js" type="text/javascript"></script>
+
+	</div>
+</body>
 </html>

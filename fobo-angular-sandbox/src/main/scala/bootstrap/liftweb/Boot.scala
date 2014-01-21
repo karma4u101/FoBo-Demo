@@ -140,7 +140,7 @@ class Boot {
         home          >> LocGroup("lg1"),
       /*  static, */
        
-        FLTDemo ,
+        FLTDemo,
         Slick,
         AngularJS,
         twbs, 
