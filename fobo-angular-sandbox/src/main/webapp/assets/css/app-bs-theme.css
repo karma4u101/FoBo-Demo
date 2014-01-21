@@ -194,6 +194,11 @@ a.list-group-item:hover, a.list-group-item:focus {
 
 /*end bootstrap theme*/
 
+/**/
+.github-btn {
+  	margin-top:15px;
+  	margin-bottom:0px;
+}
 /*Lift stuff*/
 
 #lift__noticesContainer___notice ul, 

@@ -95,7 +95,7 @@ class Boot {
     val FLTDemo       = Menu(Loc("FLTDemo", 
         ExtLink("http://www.media4u101.se/fobo-lift-template-demo/"), 
         S.loc("FLTDemo" , scala.xml.Text("FoBo Lift Template Demo")),
-        LocGroup("lg1","topRight")/*,
+        LocGroup("lg2","topRight")/*,
         FoBo.TBLocInfo.LinkTargetBlank */ ))      
     
     //list-group menu example with collapsible sub menus

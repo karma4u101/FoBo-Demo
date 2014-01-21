@@ -188,8 +188,8 @@ a.list-group-item:hover, a.list-group-item:focus {
 
 /* First level of nav */
 .bs-sidenav {
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 15px;
+  margin-bottom: 15px;
   padding-top:    10px;
   padding-bottom: 10px;
   text-shadow: 0 1px 0 #fff;
@@ -272,6 +272,11 @@ a.list-group-item:hover, a.list-group-item:focus {
 
 /*end bootstrap theme*/
 
+/**/
+.github-btn {
+  	margin-top:15px;
+  	margin-bottom:0px;
+}
 /*Lift stuff*/
 
 #lift__noticesContainer___notice ul, 
