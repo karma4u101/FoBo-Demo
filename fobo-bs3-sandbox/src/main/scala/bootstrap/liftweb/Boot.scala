@@ -109,7 +109,6 @@ class Boot {
     val sbL2CreateArticle = Menu(Loc("sbL2CreateArticle",Link(List("sbL2CreateArticle"),true, "#sbL2CreateArticle"), S.loc("sbL2CreateArticle", Text("Create Article"))  ))
    
     //index affix sidbar links
-    //val sbg1  = Menu(Loc("sbg1"      ,Link(List("sbg1")      ,true, "#section-1")       , S.loc("sbg1"      , Text("Working with Lift API functions"))   ))
     val dtop  = Menu(Loc("dtop"      ,Link(List("dtop")      ,true, "#dtop")         , null   ))
     val sbg1  = Menu(Loc("sbg1"      ,Link(List("sbg1")      ,true, "#section-1")         , null   ))
 

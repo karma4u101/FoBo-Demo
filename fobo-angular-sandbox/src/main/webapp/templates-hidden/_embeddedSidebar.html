@@ -23,24 +23,30 @@
           </div>
         </div>
         
-        
 		<iframe
 			class="github-btn" src="http://ghbtns.com/github-btn.html?user=karma4u101&repo=fobo&type=watch&count=true&size=large"
 			allowtransparency="true" frameborder="0" scrolling="0"
 			width="180px" height="30px">
 		</iframe>
-			        
-        
-<!--         <div class="row">    -->
-<!--           <div class="col-sm-12"> -->
-<!--             <a href="http://www.media4u101.se/fobo-lift-template-demo/" role="button" class="btn btn-default btn-lg"><i class="fa fa-external-link-square fa-2x"></i> <b>FoBo Demo Home</b></a>        -->
-<!--           </div>           -->
-<!--         </div> -->
-        
         
         <div class="lift:Msgs?showAll=true"></div>
    
-   <!-- test section -->     
-   <!-- end test section -->
+ 		<div class="bs-sidebar hidden-print" role="complementary">
+			<ul class="nav bs-sidenav">
+				<li style="border-bottom: 1px inset #ccc;"><span
+					data-lift="Menu.item?name=dtop;"><span data-lift="Loc.i">Top</span></span></li>
+				<li><span data-lift="Menu.item?name=sbg1;"> <i class="fa fa-caret-right"></i> <span
+						data-lift="Loc.i">Section 1</span></span>
+					<ul class="nav">
+						<span data-lift="FoBo.Bs3NavLiList.builder?group=sbg1"></span>
+					</ul></li>
+				<li><span data-lift="Menu.item?name=sbg2;"> <i class="fa fa-caret-right"></i> <span
+						data-lift="Loc.i">Section 2</span></span> 
+					<ul class="nav">
+						<span data-lift="FoBo.Bs3NavLiList.builder?group=sbg2"></span>
+					</ul></li>
+			</ul>
+		</div>  
+ 
    </section>
 </body>

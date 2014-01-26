@@ -13,7 +13,7 @@ import mapper._
 
 
 import code.model._
-import net.liftmodules.{FoBo}
+import net.liftmodules.FoBo
 
 
 /**
@@ -59,6 +59,7 @@ class Boot {
     FoBo.InitParam.ToolKit=FoBo.AngularJS122
     FoBo.InitParam.ToolKit=FoBo.AJSNGGrid207
     FoBo.InitParam.ToolKit=FoBo.AJSUIBootstrap070
+    FoBo.InitParam.ToolKit=FoBo.PrettifyJun2011
     FoBo.init() 
     
     //Show the spinny image when an Ajax call starts
@@ -134,7 +135,22 @@ class Boot {
         LocGroup("lg2")/*,
         FoBo.TBLocInfo.LinkTargetBlank */ ))        
      
-        //
+    //index affix sidbar links
+    val dtop  = Menu(Loc("dtop"      ,Link(List("dtop")      ,true, "#dtop")         , null   ))
+    val sbg1  = Menu(Loc("sbg1"      ,Link(List("sbg1")      ,true, "#section-1")         , S.loc("section-1"     , Text("FoBo Lift/Angular setup"))   ))
+
+    val g1ex1 = Menu(Loc("g1ex1"     ,Link(List("g1ex1")     ,true, "#section-1-1")     , S.loc("g1ex1"     , Text("Dependency settings")),LocGroup("sbg1")       ))
+    val g1ex2 = Menu(Loc("g1ex2"     ,Link(List("g1ex2")     ,true, "#section-1-2")     , S.loc("g1ex2"     , Text("Lift Boot")),LocGroup("sbg1")       ))
+    val g1ex3 = Menu(Loc("g1ex3"     ,Link(List("g1ex3")     ,true, "#section-1-3")     , S.loc("g1ex3"     , Text("Lift default template")),LocGroup("sbg1")       ))
+//    val g1ex4 = Menu(Loc("g1ex4"     ,Link(List("g1ex4")     ,true, "#section-1-4")     , S.loc("g1ex4"     , Text("Example 1.4:")),LocGroup("sbg1")       ))
+
+    val sbg2  = Menu(Loc("sbg2"      ,Link(List("sbg2")      ,true, "#section-2")       , S.loc("sbg2"      , Text("Section 2"))   ))
+    val g2ex1 = Menu(Loc("g2ex1"     ,Link(List("g2ex1")     ,true, "#section-2-1")     , S.loc("g2ex1"     , Text("Example 2.1:")),LocGroup("sbg2")       ))
+    val g2ex2 = Menu(Loc("g2ex2"     ,Link(List("g2ex2")     ,true, "#section-2-2")     , S.loc("g2ex2"     , Text("Example 2.2:")),LocGroup("sbg2")       ))
+    val g2ex3 = Menu(Loc("g2ex3"     ,Link(List("g2ex3")     ,true, "#section-2-3")     , S.loc("g2ex3"     , Text("Example 2.3:")),LocGroup("sbg2")       ))
+    val g2ex4 = Menu(Loc("g2ex4"     ,Link(List("g2ex4")     ,true, "#section-2-4")     , S.loc("g2ex4"     , Text("Example 2.4:")),LocGroup("sbg2")       ))
+    val g2ex5 = Menu(Loc("g2ex5"     ,Link(List("g2ex5")     ,true, "#section-2-5")     , S.loc("g2ex5"     , Text("Example 2.5:")),LocGroup("sbg2")       ))
+    
         
     def sitemap = SiteMap(
         home          >> LocGroup("lg1"),
@@ -144,11 +160,23 @@ class Boot {
         Slick,
         AngularJS,
         twbs, 
-        FontAwesome
+        FontAwesome,
+        dtop,    
+        sbg1,
+        g1ex1,
+        g1ex2,
+        g1ex3,
+        sbg2,
+        g2ex1,
+        g2ex2,
+        g2ex3,
+        g2ex4,        
+        g2ex5        
         /*,
         ddLabel1      >> LocGroup("topRight") >> PlaceHolder submenus (
             divider1  >> FoBo.TBLocInfo.Divider >> userMenu
             ) */
+        
          ) 
   }
   
