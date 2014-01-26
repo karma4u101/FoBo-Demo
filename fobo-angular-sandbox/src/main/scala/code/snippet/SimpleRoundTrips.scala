@@ -10,7 +10,6 @@ import common._
 trait SimpleRoundTrips extends EmptyRoundTrip with PersonComponent with Loggable {
   
   protected def doSimpleRT(value : JValue, func : RoundTripHandlerFunc) : Unit = {
-    //import net.liftweb.json.JsonAST.{JString, JArray, JValue}
     //send the json data to the client as a JString using the RoundTripHandlerFunc
     func.send(JString("There and back again!"))
   }

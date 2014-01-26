@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+
+<title>Embedded pretty template</title>
+</head>
+
+<!-- This is an embedded piece of html -->
+<body class="lift:content_id=pretty">
+<section id="pretty">
+<span class="label label-default">assets/js/controllers/simpleRTCtrl.js</span>
+<pre class="prettyprint linenums js">
+app.controller('SimpleRTCtrl',['$scope', function($scope){	
+	$scope.lrtResModel="Click and I will do a server roundtrip";
+	
+	$scope.doSimpleLiftRT = function() {
+	    var promise = myRTFunctions.doSimpleRT(); // call to lift function
+	    return promise.then(function(data) {
+	      $scope.$apply(function() {
+	        $scope.lrtResModel = data;
+	      })
+	      return data;
+	    });			
+	};
+	$scope.doResetRT = function() {
+		return $scope.lrtResModel="Click again and I will do another roundtrip";
+	};
+}]);
+</pre>
+</section>
+</body>

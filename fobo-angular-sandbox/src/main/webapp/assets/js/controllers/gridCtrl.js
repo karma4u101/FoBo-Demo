@@ -1,24 +1,3 @@
-
-var app = angular.module('foboDemoApp',['ngGrid','ui.bootstrap']);
-
-/*Fetches a JString from the server*/
-app.controller('SimpleRTCtrl',['$scope', function($scope){	
-	$scope.lrtResModel="Click and I will do a server roundtrip";
-	
-	$scope.doSimpleLiftRT = function() {
-	    var promise = myRTFunctions.doSimpleRT(); // call to lift function
-	    return promise.then(function(data) {
-	      $scope.$apply(function() {
-	        $scope.lrtResModel = data;
-	      })
-	      return data;
-	    });			
-	};
-	$scope.doResetRT = function() {
-		return $scope.lrtResModel="Click again and I will do another roundtrip";
-	};
-}]);
-
 //http://stackoverflow.com/questions/15647981/angularjs-and-ng-grid-auto-save-data-to-the-server-after-a-cell-was-changed/15832417#15832417
 //ng-change=\"updateEntity(row.entity)\"
 /* 
@@ -73,5 +52,3 @@ app.controller('GridCtrl',['$scope',function($scope) {
     };  
     
 }]);
-
-

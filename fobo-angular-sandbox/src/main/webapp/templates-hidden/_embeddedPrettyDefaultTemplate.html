@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+
+<title>Embedded pretty template</title>
+</head>
+
+<!-- This is an embedded piece of html -->
+<body class="lift:content_id=pretty">
+
+<section id="pretty">
+<span class="label label-default">default.html</span>
+<pre class="prettyprint linenums lang-html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+⋮
+  &lt;link href='/classpath/fobo/ng-grid.css' rel="stylesheet" type='text/css' /&gt;
+
+  &lt;script src="/classpath/fobo/jquery.js" id="jquery" type="text/javascript"&gt;&lt;/script&gt;
+  &lt;script src="/classpath/fobo/angular.js" type="text/javascript"&gt;&lt;/script&gt;
+  &lt;script src="/classpath/fobo/ui-bootstrap-tpls.js" type="text/javascript"&gt;&lt;/script&gt;
+  &lt;script src="/classpath/fobo/ng-grid.js" type="text/javascript"&gt;&lt;/script&gt; 
+  &lt;!-- Your application specific angularJS (controller and services) files --&gt;
+  &lt;script src="/assets/js/simpleRTCtrl.js" type="text/javascript"&gt;&lt;/script&gt; 
+⋮
+&lt;/head&gt;		  
+&lt;body data-lift-content-id="main"&gt;
+  &lt;div id="main" ng-app="foboDemoApp" data-lift="surround?with=default;at=content"&gt;
+    ⋮	  
+    ⋮
+  &lt;/div&gt;
+&lt;/body&gt;
+</pre>
+</section>
+</body>

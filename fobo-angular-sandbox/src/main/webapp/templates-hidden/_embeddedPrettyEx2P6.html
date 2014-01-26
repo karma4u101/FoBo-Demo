@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+
+<title>Embedded pretty template</title>
+</head>
+
+<!-- This is an embedded piece of html -->
+<body class="lift:content_id=pretty">
+<section id="pretty">
+<span class="label label-default">code.lib.PageRoundTrips.scala</span>
+<pre class="prettyprint linenums scala">
+import net.liftweb.http.RoundTripInfo
+
+abstract class PageRoundTrips {
+  protected def getRoundTrips : List[RoundTripInfo]
+}
+
+class EmptyRoundTrip extends PageRoundTrips {
+  protected def getRoundTrips : List[RoundTripInfo] = Nil
+}
+</pre>
+</section>
+</body>
