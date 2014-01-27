@@ -148,10 +148,10 @@
 						<p>
 						 Make sure to check for the latest version in the <a href="https://github.com/karma4u101/FoBo#fobo---a-generic-front-end-toolkit-module-for-lift-">FoBo Github readme.</a> 
 						</p> 
-						<span data-lift='embed?what=_embeddedPrettyDepSettingSBT'>
+						<span data-lift='embed?what=embeddedPretty/depSettingSBT'>
 							Embedding the prettyprint dependency settings code here</span>
 							
-						<span data-lift='embed?what=_embeddedPrettyDepSettingMaven'>
+						<span data-lift='embed?what=embeddedPretty/depSettingMaven'>
 							Embedding the prettyprint dependency settings code here</span>
 								
 						<p>For more information about dependency settings see the <a href="https://github.com/karma4u101/FoBo#dependency-settings">Dependency Settings</a> 
@@ -162,7 +162,7 @@
 					<div class="col-sm-12">
 						<a id="section-1-2"></a>
 						<h3><span data-lift="Loc.i">Section 1-2</span></h3>
-						One of the benefit you get from using FoBo module is that you have
+						One of the benefit you get from using the FoBo module is that you have
 						a easy up/down-grade cycle with a "single point of change", the
 						FoBo init parameter in Lift Boot. There are two functions provided
 						by FoBo that makes this "single point of change" fit for use.
@@ -180,19 +180,19 @@
 						</dl>
 
 						<p>
-							FoBo even takes care of and provides minified resources in
+							FoBo takes care of and provides minified resources in
 							production and more easily debugable code in development, this is
-							done without any need for code changes, at the same time you do
-							not clutter your applications assets space with tookit library
-							code that any way should not be directly manipulated. By changing
-							a available <a target="_blank"
+							done without any need for code changes and at the same time, by 
+							using Fobo, you do not clutter your applications assets space with 
+							tookit library code that should not be directly manipulated any way. 
+							By changing a available <a target="_blank"
 								href="http://www.media4u101.se/fobo-lift-template-demo/foboapi/index.html#net.liftmodules.FoBo.package">FoBo
 								toolkit init parameters</a> you can quickly change the version of
 							the front end toolkit's you are using or add another FoBo
 							supported one.
 						</p>
 
-						<span data-lift='embed?what=_embeddedPrettyBoot'> Embedding
+						<span data-lift='embed?what=embeddedPretty/boot'> Embedding
 							the prettyprint Boot.scala code here</span> <a id="section-1-2"></a> <a
 							id="section-1-3"></a>
 						<h3><span data-lift="Loc.i">Section 1-3</span></h3>
@@ -203,7 +203,7 @@
 						in the page body and add the <code>data-lift="head"</code> attribute to it, then when lift 
 						processes the page it will be moved into the heade, this could be useful if you have page 
 						specific resource needs.   
-						<span data-lift='embed?what=_embeddedPrettyDefaultTemplate'>
+						<span data-lift='embed?what=embeddedPretty/defaultTemplate'>
 							Embedding the prettyprint default.html code here</span>
 							
 						<p>Specific to this demo we are setting the <code>ng-app="foboDemoApp"</code> (Angular bootstrap directive) in 
@@ -276,14 +276,16 @@
 
 						<p>Now that we have all the initiation parts in place lets
 							warm up with this simple example.</p>
-						<span data-lift='embed?what=_embeddedPrettyEx1Form'>
+						<span data-lift='embed?what=embeddedPretty/ex1Form'>
 							Embedding the prettyprint ex1 form code here</span> 
 						
-						<p>This example we are crating a (angular) model with the value <code>yourName</code> and bind that to the heading.</p>
+						<p>This example we are crating a (angular) model (<code>ng-model="yourName"</code>) 
+						with the value <code>"yourName"</code> and bind that to the heading.</p>
 							
 						<span
-							data-lift='embed?what=_embeddedPrettyEx1Res'> Embedding
+							data-lift='embed?what=embeddedPretty/ex1Res'> Embedding
 							the prettyprint ex1 form code here</span>
+						<p>As you type in a name the <code>{ { yourName } }</code> value will get updated.</p> 	
 
 					</div>
 				</div>
@@ -312,30 +314,40 @@
 				<div class="row">
 					<div class="col-sm-12 ">
 					    <br/>
-					    <p>TODO Add explanation to the code and glue information to explain how basic lift round trip works .... </p>
-					    
+					    <p>In this example I will line out whats involved in a Lift roundtrip's we start with a quote from David Pollak.</p>
+					    <blockquote class="pull-right">
+					    <p>With Lift 3, we introduce the idea of Round Trips: a client-side request 
+					    that's sent to the server where the client receives a Streaming Promise, 
+					    the server performs its computations and when the results are ready, they 
+					    get pushed to the client… and if there are multiple results, the multiple 
+					    results are pushed to the client as the results become available.</p>
+					    <small>David Pollak @dpp in <cite title="Source Title"><a href="http://blog.goodstuff.im/roundtrip_promises">Angular JS, Lift 3, and Streaming Promises</a></cite></small>
+					    </blockquote>
+					    <p>If you have not read David's <a href="http://blog.goodstuff.im/roundtrip_promises">blog post</a> already now is the time to do it.</p>
 					    <span
-							data-lift='embed?what=_embeddedPrettyEx2P1'> Embedding
+							data-lift='embed?what=embeddedPretty/ex2P1'> Embedding
 							the prettyprint ex2 code here</span>
 							
 					    <span
-							data-lift='embed?what=_embeddedPrettyEx2P2'> Embedding
+							data-lift='embed?what=embeddedPretty/ex2P2'> Embedding
 							the prettyprint ex2 code here</span>							
 					    
 					    <span
-							data-lift='embed?what=_embeddedPrettyEx2P3'> Embedding
+							data-lift='embed?what=embeddedPretty/ex2P3'> Embedding
 							the prettyprint ex2 code here</span>	
 							
 					    <span
-							data-lift='embed?what=_embeddedPrettyEx2P4'> Embedding
+							data-lift='embed?what=embeddedPretty/ex2P4'> Embedding
 							the prettyprint ex2 code here</span>							
 					    
 					    <span
-							data-lift='embed?what=_embeddedPrettyEx2P5'> Embedding
+							data-lift='embed?what=embeddedPretty/ex2P5'> Embedding
 							the prettyprint ex2 code here</span>
-							
+						<p>As this is a very simple example we are only using the <code>func.send(/*some data*/)</code> 
+						function. In addition we have <code>func.done()</code> and <code>func.failure(/*Some failure message*/)</code>
+						that gives us explicit control over sending data, done, and failure.</p>	
 					    <span
-							data-lift='embed?what=_embeddedPrettyEx2P6'> Embedding
+							data-lift='embed?what=embeddedPretty/ex2P6'> Embedding
 							the prettyprint ex2 code here</span>																			    
 					    
 					    <br/>
