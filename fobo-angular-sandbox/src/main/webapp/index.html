@@ -119,6 +119,21 @@
 						Blog</a>
 				</p>
 
+				<div class="bs-callout bs-callout-info">
+				<h4><i class="fa fa-exclamation-triangle fa-2x"></i> Lift and ORM's</h4>
+				<p>Lift comes with two (optional) ORM persistence layer modules  
+				<a href="https://www.assembla.com/wiki/show/liftweb/Mapper">Mapper</a> and
+				<a href="https://www.assembla.com/wiki/show/liftweb/Record">Record</a> 
+				where, notably, the later includes specific support for 
+				<a href="https://www.assembla.com/wiki/show/liftweb/MongoDB">MongoDB</a> 
+				and <a href="http://squeryl.org/">Squeryl</a>.</p>
+				<p>Although Lift has those excellent ORM modules <strong>Lift's WebKit is agnostic 
+				as to the use of ORM frameworks</strong> or database query and access library 
+				as can be seen in this tutorial/demo where I am using the Slick 2.0 
+				Functional Relational Mapping framework.</p>
+                </div>
+
+
 			</div>
 		</div>
 		<hr>
@@ -155,8 +170,12 @@
 						<span data-lift='embed?what=embeddedPretty/depSettingMaven'>
 							Embedding the prettyprint dependency settings code here</span>
 								
-						<p>For more information about dependency settings see the <a href="https://github.com/karma4u101/FoBo#dependency-settings">Dependency Settings</a> 
-						section in FoBo readme on Github.</p>
+						<div class="bs-callout bs-callout-info">
+						  <h4><i class="fa fa-exclamation-triangle"></i> FoBo and Lift versions</h4>
+						  <p>FoBo currently have artifacts for Lift 2.5, 2.6 and 3.0. For more information 
+						  about dependency settings supported toolkits and more, 
+						  see the <a href="https://github.com/karma4u101/FoBo">FoBo readme on Github</a>.</p>
+						</div>							
 													
 					</div>
 					<div class="col-sm-12">
@@ -206,6 +225,9 @@
 						<span data-lift='embed?what=embeddedPretty/defaultTemplate'>
 							Embedding the prettyprint default.html code here</span>
 							
+						<span data-lift='embed?what=embeddedPretty/pageTemplate'>
+							Embedding the prettyprint index.html code here</span>
+														
 						<p>Specific to this demo we are setting the <code>ng-app="foboDemoApp"</code> (Angular bootstrap directive) in 
 						the same tag as the lift surround tag this means that we have set the root element of the angular application 
 						so that it will surround/include most of the code and it will be available on all demo pages. </p>
