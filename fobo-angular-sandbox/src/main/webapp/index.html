@@ -40,7 +40,9 @@
 						href="http://blog.goodstuff.im/roundtrip_promises">Lift 3's
 						Round Trip</a> concept. To make the examples a bit more
 					realistic/exciting we are also using Slick to handle the back end
-					storage and dispatch for some REST. 
+					storage. <!-- and dispatch for some REST. -->
+				</p>
+				<p>	
 					The examples is increasingly complex in what they accomplish but 
 					considering the "normal complexity" involved in coding the same thing 
 					using other techniques the code needed using Lift and Angular is very 
@@ -129,7 +131,7 @@
 				and <a href="http://squeryl.org/">Squeryl</a>.</p>
 				<p>Although Lift has those excellent ORM modules <strong>Lift's WebKit is agnostic 
 				as to the use of ORM frameworks</strong> or database query and access library 
-				as can be seen in this tutorial/demo where I am using the Slick 2.0 
+				as can be seen in this tutorial/demo where we are using the Slick 2.0 
 				Functional Relational Mapping framework.</p>
                 </div>
 
@@ -182,9 +184,8 @@
 						<a id="section-1-2"></a>
 						<h3><span data-lift="Loc.i">Section 1-2</span></h3>
 						One of the benefit you get from using the FoBo module is that you have
-						a easy up/down-grade cycle with a "single point of change", the
-						FoBo init parameter in Lift Boot. There are two functions provided
-						by FoBo that makes this "single point of change" fit for use.
+						a easy up/down-grade cycle with a "single point of change", i.e the
+						FoBo init parameter in Lift Boot. 
 						<dl>
 							<dt>Quick and easy up/down -grade of toolkit resources is
 								provided by FoBo via a "single point of change" as:</dt>
@@ -194,6 +195,9 @@
 										included toolkits.</li>
 									<li>FoBo automatically serves minified toolkit resources
 										in production and more easily debuggable resources otherwise.</li>
+									<li>FoBo uses uniform settings to resources in html templates, no 
+									need for changes when doing a up-grade/down-grade or running in a dev/test
+									environment vs deploying to a production environment.</li>	
 								</ul>
 							</dd>
 						</dl>
@@ -214,6 +218,8 @@
 						<span data-lift='embed?what=embeddedPretty/boot'> Embedding
 							the prettyprint Boot.scala code here</span> <a id="section-1-2"></a> <a
 							id="section-1-3"></a>
+							
+							
 						<h3><span data-lift="Loc.i">Section 1-3</span></h3>
 						The most common place to put global references to css and javascript resources in a 
 						Lift application is in the default.html template, this project and the example below 
