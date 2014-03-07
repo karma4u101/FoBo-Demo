@@ -105,11 +105,6 @@ class Boot {
 //        S.loc("StaticContent" , scala.xml.Text("Static Content")),
 //        LocGroup("lg2","topRight") ))
 //
-    val twbs       = Menu(Loc("Bootstrap3", 
-        Link(List("bootstrap301"), true, "/bootstrap301/index"), 
-        S.loc("Bootstrap3" , scala.xml.Text("Bootstrap3")),
-        LocGroup("lg2"),
-        FoBo.TBLocInfo.LinkTargetBlank ))
         
     val AngularJS       = Menu(Loc("AngularJS", 
         ExtLink("http://angularjs.org/"), 
@@ -159,7 +154,7 @@ class Boot {
         FLTDemo,
         Slick,
         AngularJS,
-        twbs, 
+
         FontAwesome,
         dtop,    
         sbg1,

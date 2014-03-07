@@ -13,12 +13,12 @@
 <pre class="prettyprint linenums scala">
 trait SimpleRoundTrips extends EmptyRoundTrip with PersonComponent with Loggable {
   
-  protected def doSimpleRT(value : JValue, func : RoundTripHandlerFunc) : Unit = {
-    //send the json data to the client as a JString using the RoundTripHandlerFunc
+  protected def doSimpleRT(value :JValue, func :RoundTripHandlerFunc) :Unit = {
+    //send json data to the client as a JString using the RoundTripHandlerFunc
     func.send(JString("There and back again!"))
   }
   ⋮
-  private val roundtrips : List[RoundTripInfo] = List("doSimpleRT" -> doSimpleRT _)
+  private val roundtrips:List[RoundTripInfo] = List("doSimpleRT" -> doSimpleRT _)
   abstract override def getRoundTrips = super.getRoundTrips ++ roundtrips  
 }   
 </pre>
