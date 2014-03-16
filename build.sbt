@@ -4,7 +4,7 @@ name := "FoBo-Demo"
 
 organization := "net.liftweb"
 
-version in ThisBuild := "1.2-SNAPSHOT"
+version in ThisBuild := "1.2"
 
 liftVersion in ThisBuild <<= liftVersion ?? "3.0-SNAPSHOT"
 

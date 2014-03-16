@@ -22,7 +22,7 @@ scalacOptions ++= Seq("-deprecation", "-unchecked")
 libraryDependencies <++= (liftLatestVersion,liftLatestEdition,version) { (v,e,mv) =>
     "net.liftweb"     %% "lift-webkit"            % v    % "compile" ::
     "net.liftweb"     %% "lift-mapper"            % v    % "compile" ::
-    "net.liftmodules" %% ("fobo"+"_"+e)          % "1.2-SNAPSHOT" % "compile" ::
+    "net.liftmodules" %% ("fobo"+"_"+e)          % "1.2" % "compile" ::
     Nil
 }
 

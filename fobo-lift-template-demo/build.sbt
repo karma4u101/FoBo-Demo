@@ -2,7 +2,7 @@ organization := "se.media4u101"
 
 name := "FoBo-Lift-Template-Demo"
 
-version := "2.6.6-SNAPSHOT"
+version := "2.6.7-SNAPSHOT"
 
 crossScalaVersions := Seq("2.10.0", "2.9.2", "2.9.1-1", "2.9.1")
 
@@ -31,7 +31,7 @@ libraryDependencies <++= (liftVersion,liftEdition,version) { (v,e,mv) =>
     "net.liftweb"     %% "lift-mapper"            % v    % "compile" ::
     "net.liftweb"     %% "lift-squeryl-record"    % v    % "compile" ::
     "net.liftweb"     %% "lift-testkit"           % v    % "compile" ::
-    "net.liftmodules" %% ("fobo"+"_"+e)           % "1.2-SNAPSHOT" % "compile" ::
+    "net.liftmodules" %% ("fobo"+"_"+e)           % "1.2" % "compile" ::
     Nil
 }
 
