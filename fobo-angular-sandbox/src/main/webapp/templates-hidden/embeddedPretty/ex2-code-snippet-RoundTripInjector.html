@@ -9,10 +9,10 @@
 <!-- This is an embedded piece of html -->
 <body class="lift:content_id=pretty">
 <section id="pretty">
-<span class="label label-default">code.snippet.SimpleRT.scala</span>
+<span class="label label-default">code.snippet.RoundTripInjector.scala</span>
 <pre class="prettyprint linenums scala">
 /*This snippet is injecting the roundtrip scripts into the tail of the html page body.*/
-class SimpleRT extends SimpleRoundTrips {
+class RoundTripBindingInjector extends MyAngularJSDemoRoundTrips {
   def render() : NodeSeq = {
     val functions = ((for {
       session &lt;- S.session

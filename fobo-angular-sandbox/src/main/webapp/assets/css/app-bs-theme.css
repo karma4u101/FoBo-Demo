@@ -337,6 +337,6 @@ a.list-group-item:hover, a.list-group-item:focus {
 
 .gridStyle {
     border: 1px solid rgb(212,212,212);
-    width: 500px; 
-    height: 300px;
+    max-width: 500px; 
+    min-height: 300px;
 }

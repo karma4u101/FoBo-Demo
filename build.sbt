@@ -29,14 +29,14 @@ resolvers ++= Seq("snapshots"     at "http://oss.sonatype.org/content/repositori
                   "releases"      at "http://oss.sonatype.org/content/repositories/releases"
                  )
 
-seq(com.github.siasia.WebPlugin.webSettings :_*)
+seq(webSettings :_*)
 
 scalacOptions ++= Seq("-deprecation", "-unchecked")
 
 libraryDependencies <++= (liftVersion,liftEdition,version) { (v,e,mv) =>
     "net.liftweb"     %% "lift-webkit"            % v    % "compile" ::
     "net.liftweb"     %% "lift-mapper"            % v    % "compile" ::
-    "net.liftmodules" %% ("fobo"+"_"+e)          % "1.2-SNAPSHOT" % "compile" ::
+    "net.liftmodules" %% ("fobo"+"_"+e)          % "1.2" % "compile" ::
     Nil
 }
 

@@ -7,10 +7,14 @@ import code.lib.EmptyRoundTrip
 import net.liftweb._
 import common._
 
-trait SimpleRoundTrips extends EmptyRoundTrip with PersonComponent with Loggable {
+// trait SimpleRoundTrips extends EmptyRoundTrip ==>> MyAJSDemoRoundTrips extends EmptyRoundTrip .... extends PageRoundTrips
+trait MyAngularJSDemoRoundTrips extends EmptyRoundTrip with PersonComponent {
+  
+  private val logger = Logger(classOf[MyAngularJSDemoRoundTrips]) 
   
   protected def doSimpleRT(value : JValue, func : RoundTripHandlerFunc) : Unit = {
     //send the json data to the client as a JString using the RoundTripHandlerFunc
+    logger.info("doSimpleRT awsome")  
     func.send(JString("There and back again!"))
   }
   

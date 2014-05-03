@@ -6,6 +6,9 @@ import scala.slick.ast.Util._
 import net.liftweb._
 import common._
 
+//see https://github.com/slick/slick-examples/blob/master/src/main/scala/com/typesafe/slick/examples/lifted/MultiDBCakeExample.scala
+//for how to setup different drivers on for example test and production.
+
 trait SlickComponent {
   val db = Database.forURL("jdbc:h2:mem:test1;DB_CLOSE_DELAY=-1", driver="org.h2.Driver")
 }
@@ -13,7 +16,9 @@ trait SlickComponent {
 //Moved outside of trait to make json serialization simpler
 case class Person(id: Int, name: String, age: Int )
 
-trait PersonComponent extends SlickComponent with Loggable /*Logger*/ {
+trait PersonComponent extends SlickComponent {
+  
+  private val logger = Logger(classOf[PersonComponent])
   
   class Persons(tag: Tag) extends Table[(Int, String, Int )](tag,"PERSONS") {
     def id = column[Int]("PER_ID", O.PrimaryKey, O.AutoInc)

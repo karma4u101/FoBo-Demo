@@ -11,7 +11,7 @@ resolvers ++= Seq("snapshots"     at "http://oss.sonatype.org/content/repositori
                   "releases"      at "http://oss.sonatype.org/content/repositories/releases"
                  )
 
-seq(com.github.siasia.WebPlugin.webSettings :_*)
+seq(webSettings :_*)
 
 unmanagedResourceDirectories in Test <+= (baseDirectory) { _ / "src/main/webapp" }
 

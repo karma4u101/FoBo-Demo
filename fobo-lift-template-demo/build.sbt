@@ -8,7 +8,7 @@ crossScalaVersions := Seq("2.10.0", "2.9.2", "2.9.1-1", "2.9.1")
 
 scalaVersion := "2.10.0"
 
-seq(com.github.siasia.WebPlugin.webSettings :_*)
+seq(webSettings :_*)
 
 scalacOptions ++= Seq("-deprecation", "-unchecked")
 
