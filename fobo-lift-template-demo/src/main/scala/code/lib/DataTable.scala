@@ -185,7 +185,7 @@ package object DataTable {
           ("iTotalDisplayRecords" -> source.totalDisplayRecords) ~
           ("sEcho" -> S.param("sEcho").dmap(0)(_.toInt)) ~
           ("aaData" -> source.jsonData)
-
+        
         JsonResponse(json)
       }
 
