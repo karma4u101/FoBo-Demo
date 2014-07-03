@@ -35,12 +35,12 @@ class Boot extends Loggable {
     FoBo.InitParam.ToolKit=FoBo.PrettifyJun2011
     FoBo.InitParam.ToolKit=FoBo.JQueryMobile110
     FoBo.InitParam.ToolKit=FoBo.DataTables190
-    FoBo.InitParam.ToolKit=FoBo.Knockout210
+    FoBo.InitParam.ToolKit=FoBo.Knockout221
     FoBo.InitParam.ToolKit=FoBo.Bootstrap232
     FoBo.InitParam.ToolKit=FoBo.FontAwesome321
     FoBo.InitParam.ToolKit=FoBo.AngularJS1211      //The core files 
     FoBo.InitParam.ToolKit=FoBo.AJSUIBootstrap020 //Angular UI Bootstrap
-    FoBo.InitParam.ToolKit=FoBo.AJSNGGrid204      //Angular NG-Grid    
+    FoBo.InitParam.ToolKit=FoBo.AJSNGGrid207      //Angular NG-Grid    
     FoBo.InitParam.ToolKit=FoBo.Pace0415
     FoBo.init()  
     

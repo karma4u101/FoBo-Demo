@@ -2,11 +2,11 @@ organization := "se.media4u101"
 
 name := "FoBo-Lift-Template-Demo"
 
-version := "2.6.7-SNAPSHOT"
+version := "2.6.8-SNAPSHOT"
 
 crossScalaVersions := Seq("2.10.0", "2.9.2", "2.9.1-1", "2.9.1")
 
-scalaVersion := "2.10.0"
+scalaVersion := "2.10.4"
 
 seq(webSettings :_*)
 
