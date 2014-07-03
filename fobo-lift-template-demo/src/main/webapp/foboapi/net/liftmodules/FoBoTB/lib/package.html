@@ -1,5 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!DOCTYPE html >
 <html>
         <head>
           <title>lib - net.liftmodules.FoBoTB.lib</title>
@@ -31,7 +30,11 @@
       <div id="definition">
         <img src="../../../../lib/package_big.png" />
         <p id="owner"><a href="../../../package.html" class="extype" name="net">net</a>.<a href="../../package.html" class="extype" name="net.liftmodules">liftmodules</a>.<a href="../package.html" class="extype" name="net.liftmodules.FoBoTB">FoBoTB</a></p>
-        <h1>lib</h1>
+        <h1>lib</h1> <span class="permalink">
+      <a href="../../../../index.html#net.liftmodules.FoBoTB.lib.package" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" />
+      </a>
+    </span>
       </div>
 
       <h4 id="signature" class="signature">
@@ -63,7 +66,7 @@
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="net.liftmodules.FoBoTB.lib.BootstrapSH" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+              <ol><li name="net.liftmodules.FoBoTB.lib.BootstrapSH" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="BootstrapSHextendsScriptHelper"></a>
       <a id="BootstrapSH:BootstrapSH"></a>
       <h4 class="signature">
@@ -74,11 +77,34 @@
       <span class="symbol">
         <a href="BootstrapSH.html"><span class="name">BootstrapSH</span></a><span class="result"> extends <a href="ScriptHelper.html" class="extype" name="net.liftmodules.FoBoTB.lib.ScriptHelper">ScriptHelper</a></span>
       </span>
-      </h4>
-      <p class="comment cmt">Bootstrap script helper is a helper class that implements some commonly
-used bootstrap component init/usage script functions.</p>
-    </li><li name="net.liftmodules.FoBoTB.lib.ScriptHelper" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="ScriptHelperextendsObject"></a>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.liftmodules.FoBoTB.lib.package@BootstrapSHextendsScriptHelper" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Bootstrap script helper is a helper class that implements some commonly
+used bootstrap component init/usage script functions.</p><div class="fullcomment"><div class="comment cmt"><h4>Script Helper Bootstrap v2.x</h4><p>Bootstrap script helper is a helper class that implements some commonly
+used bootstrap component init/usage script functions.
+This convenience script functions is used in the <a href="../snippet/FoBo/Bootstrap.html" class="extype" name="net.liftmodules.FoBoTB.snippet.FoBo.Bootstrap">net.liftmodules.FoBoTB.snippet.FoBo.Bootstrap</a>
+snippet but can also be used as a convenience helper in your own customized snippets.
+</p></div><dl class="attributes block"> <div class="block">Example:
+               <ol><li class="cmt"><p>If you find that the <a href="../snippet/FoBo/Bootstrap.html" class="extype" name="net.liftmodules.FoBoTB.snippet.FoBo.Bootstrap">net.liftmodules.FoBoTB.snippet.FoBo.Bootstrap</a> snippet dose not fit you exact needs
+your can still use the BootstrapSH class to customize your own project snippets.</p><pre><span class="kw">import</span> net.liftmodules.FoBo.lib.{BootstrapSH<span class="kw">=&gt;</span>sch}
+ :
+<span class="kw">class</span> MySnippet {
+
+  <span class="kw">lazy</span> <span class="kw">val</span> sch = <span class="kw">new</span> sch()
+
+  <span class="kw">def</span> someFunc = {
+    :
+    sch.fobohelper(...)
+    :
+  }
+  :
+}</pre></li></ol>
+            </div></dl></div>
+    </li><li name="net.liftmodules.FoBoTB.lib.ScriptHelper" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ScriptHelperextendsAnyRef"></a>
       <a id="ScriptHelper:ScriptHelper"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -88,8 +114,30 @@ used bootstrap component init/usage script functions.</p>
       <span class="symbol">
         <a href="ScriptHelper.html"><span class="name">ScriptHelper</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
-      </h4>
-      <p class="comment cmt">This script helper is a helper class that implements some commonly used script functions.</p>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.liftmodules.FoBoTB.lib.package@ScriptHelperextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">This script helper is a helper class that implements some commonly used script functions.</p><div class="fullcomment"><div class="comment cmt"><h4>Script Helper Bootstrap v2.x</h4><p>This script helper is a helper class that implements some commonly used script functions.
+This convenience script functions is used in the FoBo.ScriptHelper snippet but
+can also be used as a convenience helper in your own customized snippets.
+</p></div><dl class="attributes block"> <div class="block">Example:
+               <ol><li class="cmt"><p>If you find that the net.liftmodules.FoBo.snippet.FoBo.ScriptHelper snippet dose not fit you exact needs
+your can still use the ScriptHelper class to customize your own project snippets.</p><pre><span class="kw">import</span> net.liftmodules.FoBo.lib.{ScriptHelper<span class="kw">=&gt;</span>sch}
+ :
+<span class="kw">class</span> MySnippet {
+
+  <span class="kw">lazy</span> <span class="kw">val</span> sch = <span class="kw">new</span> sch()
+
+  <span class="kw">def</span> someFunc = {
+    :
+    sch.fobohelper(...)
+    :
+  }
+  :
+}</pre></li></ol>
+            </div></dl></div>
     </li></ol>
             </div>
 
