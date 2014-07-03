@@ -9,7 +9,8 @@ import http._
 import js.jquery.JQueryArtifacts
 import sitemap._
 import Loc._
-import mapper._
+//import mapper._
+import mapper.{DB,StandardDBVendor,Schemifier}
 
 import code.model._
 import net.liftmodules.{FoBo}

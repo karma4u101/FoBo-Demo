@@ -9,13 +9,18 @@
     
     <title class="lift:Menu.title">Lift - FoBo / Angular / Bootstrap / Slick - Demo: </title>
    
-    <link href="/classpath/fobo/bootstrap.css" rel="stylesheet" type="text/css" />
-    <link href="/classpath/fobo/bootstrap-theme.css" rel="stylesheet" type="text/css" />
-    <link href="/classpath/fobo/font-awesome.css" rel="stylesheet" type="text/css"/>
-    <link href='/classpath/fobo/ng-grid.css' rel="stylesheet" type='text/css' />
-    <link href="/classpath/fobo/prettify.css" rel="stylesheet" type="text/css" /> 
+    <!-- instead of manually adding the fobo resources we inject them -->
+    <link data-lift="FoBo.Resources.injectCSS?resources=bootstrap,bootstrap-theme,font-awesome,ng-grid,prettify"></link>
+    <!-- the fobo resources below is injected by the FoBo.Resources.injectCSS snippet above -->
+<!--     <link href="/classpath/fobo/bootstrap.css" rel="stylesheet" type="text/css" /> -->
+<!--     <link href="/classpath/fobo/bootstrap-theme.css" rel="stylesheet" type="text/css" /> -->
+<!--     <link href="/classpath/fobo/font-awesome.css" rel="stylesheet" type="text/css"/> -->
+<!--     <link href='/classpath/fobo/ng-grid.css' rel="stylesheet" type='text/css' /> -->
+<!--     <link href="/classpath/fobo/prettify.css" rel="stylesheet" type="text/css" />  -->
     
     <link href="/assets/css/app-bs-theme.css" rel="stylesheet" type="text/css" />
+    
+   
     
     <script>
       document.write('<base href="' + document.location + '" />');
@@ -41,24 +46,25 @@
 
     </div>   <!-- container end -->
 
-	<script src="/classpath/fobo/prettify.js" type="text/javascript"></script>
-	<script src="/classpath/fobo/lang-scala.js" type="text/javascript"></script>     
-     
-    <script src="/classpath/fobo/jquery.js" id="jquery" type="text/javascript"></script>
-    <script src="/classpath/fobo/angular.js" type="text/javascript"></script>
-    <!-- Add the angular modules you need -->
-    <script src="/classpath/fobo/angular-animate.js" type="text/javascript"></script>
+    <!-- instead of manually adding the fobo resources we inject them -->
+    <script data-lift="FoBo.Resources.injectJS?resources=prettify,lang-scala,jquery,bootstrap,angular,angular-animate,ui-bootstrap-tpls,ng-grid"></script>     
+     <!-- the fobo resources below is injected by the FoBo.Resources.injectJS snippet above -->
+<!-- 	<script src="/classpath/fobo/prettify.js" type="text/javascript"></script> -->
+<!-- 	<script src="/classpath/fobo/lang-scala.js" type="text/javascript"></script>      -->
+<!--    <script src="/classpath/fobo/jquery.js" id="jquery" type="text/javascript"></script> -->
+<!--    <script src="/classpath/fobo/bootstrap.js" type="text/javascript"></script> -->
+<!--    <script src="/classpath/fobo/angular.js" type="text/javascript"></script> -->
+<!--    <script src="/classpath/fobo/angular-animate.js" type="text/javascript"></script> -->
+<!--    <script src="/classpath/fobo/ui-bootstrap-tpls.js" type="text/javascript"></script> -->
+<!--    <script src="/classpath/fobo/ng-grid.js" type="text/javascript"></script> -->
     
-    <script src="/classpath/fobo/ui-bootstrap-tpls.js" type="text/javascript"></script>
-    <script src="/classpath/fobo/ng-grid.js" type="text/javascript"></script>
-   
     <!-- Your application specific angularJS (controller and services) files -->
     <script src="/assets/js/app.js" type="text/javascript"></script>
     <script src="/assets/js/controllers/simpleRTCtrl.js" type="text/javascript"></script>
     <script src="/assets/js/controllers/gridCtrl.js" type="text/javascript"></script>
     <script src="/assets/js/appbsutil.js" type="text/javascript"></script>  
 
-    <script src="/classpath/fobo/bootstrap.js" type="text/javascript"></script>
+    
       
       
 	<span data-lift="RoundTripBindingInjector"> This snippet injects the roundtrip script</span>             

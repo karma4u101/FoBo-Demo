@@ -1,10 +1,10 @@
-name := "FoBo-Demo"
+moduleName := "FoBo-Demo"
 
 //version := "0.0.1-SNAPSHOT"
 
 organization := "net.liftweb"
 
-version in ThisBuild := "1.2"
+version in ThisBuild := "1.3-SNAPSHOT"
 
 liftVersion in ThisBuild <<= liftVersion ?? "3.0-SNAPSHOT"
 
@@ -16,17 +16,17 @@ liftLatestEdition in ThisBuild <<= liftLatestVersion apply { _.substring(0,3) }
 
 //name <<= (name, liftEdition) { (n, e) =>  n + "_" + e }
 
-crossScalaVersions := Seq("2.10.0", "2.9.3", "2.9.2", "2.9.1-1", "2.9.1")
+crossScalaVersions := Seq("2.11.0", "2.10.0", "2.9.3", "2.9.2", "2.9.1-1", "2.9.1")
 
-scalaVersion in ThisBuild := "2.10.3"
+scalaVersion in ThisBuild := "2.10.4"
 
 EclipseKeys.withSource := true
 
 EclipseKeys.skipParents in ThisBuild := false
 
-resolvers ++= Seq("snapshots"     at "http://oss.sonatype.org/content/repositories/snapshots",
-                  "staging"       at "http://oss.sonatype.org/content/repositories/staging",
-                  "releases"      at "http://oss.sonatype.org/content/repositories/releases"
+resolvers ++= Seq("snapshots"     at "https://oss.sonatype.org/content/repositories/snapshots",
+                  "staging"       at "https://oss.sonatype.org/content/repositories/staging",
+                  "releases"      at "https://oss.sonatype.org/content/repositories/releases"
                  )
 
 seq(webSettings :_*)

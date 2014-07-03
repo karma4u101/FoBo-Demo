@@ -16,11 +16,10 @@ scanDirectories in Compile := Nil
 
 logLevel := Level.Info
 
-resolvers ++= Seq(
-  "Sonatype snapshots"             at "http://oss.sonatype.org/content/repositories/snapshots",
-  "Sonatype releases"              at "http://oss.sonatype.org/content/repositories/releases",
-  "Java.net Maven2 Repository"     at "http://download.java.net/maven/2/"
-)
+resolvers ++= Seq("snapshots"     at "https://oss.sonatype.org/content/repositories/snapshots",
+                  "staging"       at "https://oss.sonatype.org/content/repositories/staging",
+                  "releases"      at "https://oss.sonatype.org/content/repositories/releases"
+                 )
 
 EclipseKeys.withSource := true
 

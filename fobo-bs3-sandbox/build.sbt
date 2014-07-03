@@ -6,9 +6,9 @@ organization := "net.liftweb"
 
 crossScalaVersions := Seq("2.10.0", "2.9.3", "2.9.2", "2.9.1-1", "2.9.1")
 
-resolvers ++= Seq("snapshots"     at "http://oss.sonatype.org/content/repositories/snapshots",
-                  "staging"       at "http://oss.sonatype.org/content/repositories/staging",
-                  "releases"      at "http://oss.sonatype.org/content/repositories/releases"
+resolvers ++= Seq("snapshots"     at "https://oss.sonatype.org/content/repositories/snapshots",
+                  "staging"       at "https://oss.sonatype.org/content/repositories/staging",
+                  "releases"      at "https://oss.sonatype.org/content/repositories/releases"
                  )
 
 seq(webSettings :_*)
