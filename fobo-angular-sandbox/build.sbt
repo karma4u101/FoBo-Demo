@@ -1,12 +1,12 @@
 moduleName := "FoBo-Angular-Sandbox"
 
-version := "0.0.1-SNAPSHOT"
+version := "0.2.0-SNAPSHOT"
 
 organization := "net.liftweb"
 
-crossScalaVersions := Seq("2.10.3")
+crossScalaVersions := Seq("2.10.4")
 
-scalaVersion := "2.10.3"
+scalaVersion := "2.10.4"
 
 resolvers ++= Seq("snapshots"     at "https://oss.sonatype.org/content/repositories/snapshots",
                   "staging"       at "https://oss.sonatype.org/content/repositories/staging",
