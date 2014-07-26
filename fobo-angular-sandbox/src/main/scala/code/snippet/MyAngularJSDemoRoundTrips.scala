@@ -41,8 +41,25 @@ trait MyAngularJSDemoRoundTrips extends EmptyRoundTrip with PersonComponent {
     getPersonGridData(value, func)
   }
   
+  protected def updatePersonGridData(value : JValue, func : RoundTripHandlerFunc) : Unit = {
+    import net.liftweb.json.JsonParser._
+    import net.liftweb.json.DefaultFormats
+    implicit val formats = DefaultFormats   
+    //we need to extract the value as a sting and parse it to get a 
+    //JValue that will be accepted for maping to Person
+    val pval = parse(value.extract[String])
+    //the Person case class will get the values 
+    val person = pval.extract[Person]
+    //insert it into the persons database table 
+    logger.info("updatePersonGridData person to update is person="+person.toString())  
+    updatePerson(person)
+    //call to update the grid
+    getPersonGridData(value, func)
+  }  
+  
   private val roundtrips : List[RoundTripInfo] = List("doSimpleRT" -> doSimpleRT _, 
                                                       "getPersonGridData" -> getPersonGridData _,
-                                                      "addPersonGridData" -> addPersonGridData _)
+                                                      "addPersonGridData" -> addPersonGridData _,
+                                                      "updatePersonGridData" -> updatePersonGridData _)
   abstract override def getRoundTrips = super.getRoundTrips ++ roundtrips  
 }

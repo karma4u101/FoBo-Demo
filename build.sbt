@@ -1,7 +1,5 @@
 moduleName := "FoBo-Demo"
 
-//version := "0.0.1-SNAPSHOT"
-
 organization := "net.liftweb"
 
 version in ThisBuild := "1.3-SNAPSHOT"
@@ -36,7 +34,7 @@ scalacOptions ++= Seq("-deprecation", "-unchecked")
 libraryDependencies <++= (liftVersion,liftEdition,version) { (v,e,mv) =>
     "net.liftweb"     %% "lift-webkit"            % v    % "compile" ::
     "net.liftweb"     %% "lift-mapper"            % v    % "compile" ::
-    "net.liftmodules" %% ("fobo"+"_"+e)          % "1.2" % "compile" ::
+    "net.liftmodules" %% ("fobo"+"_"+e)          % "1.3" % "compile" ::
     Nil
 }
 

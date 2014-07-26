@@ -15,27 +15,24 @@
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
-⋮
-  &lt;link href='/classpath/fobo/ng-grid.css' rel="stylesheet" type='text/css' /&gt;
-
-⋮
+   ⋮
+  &lt;!-- instead of manually adding the fobo provided css resources we inject them --&gt;
+  &lt;link data-lift="FoBo.Resources.injectCSS?resources=bootstrap,bootstrap-theme,font-awesome,ng-grid,prettify">&lt;/link&gt;
+   ⋮
 &lt;/head&gt;		  
 &lt;body&gt;
     ⋮
   &lt;div id="content"&gt;The main content will get bound here&lt;/div&gt;
     ⋮  
-  &lt;script src="/classpath/fobo/jquery.js" id="jquery" type="text/javascript"&gt;&lt;/script&gt;
-  &lt;!-- The angular core --&gt;
-  &lt;script src="/classpath/fobo/angular.js" type="text/javascript"&gt;&lt;/script&gt;
-  &lt;!-- Add the angular modules you need --&gt;
-  &lt;script src="/classpath/fobo/angular-animate.js" type="text/javascript"&gt; &lt;/script&gt;
-  &lt;script src="/classpath/fobo/ui-bootstrap-tpls.js" type="text/javascript"&gt;&lt;/script&gt;
-  &lt;script src="/classpath/fobo/ng-grid.js" type="text/javascript"&gt;&lt;/script&gt; 
+  &lt;!-- instead of manually adding the fobo provided javascript resources we inject them --&gt;
+  &lt;script data-lift="FoBo.Resources.injectJS?resources=prettify,lang-scala,jquery,bootstrap,angular,angular-animate,ui-bootstrap-tpls,ng-grid">&lt;/script&gt;     
+
   &lt;!-- Your application specific angularJS (controller and services) files --&gt;
   &lt;script src="/assets/js/app.js" type="text/javascript"&gt;&lt;/script&gt; 
   &lt;script src="/assets/js/apputil.js" type="text/javascript"&gt;&lt;/script&gt; 
   &lt;script src="/assets/js/controllers/simpleRTCtrl.js" type="text/javascript"&gt;&lt;/script&gt; 
   &lt;script src="/assets/js/controllers/gridCtrl.js" type="text/javascript"&gt;&lt;/script&gt;   
+  &lt;script src="/assets/js/controllers/grid2Ctrl.js" type="text/javascript"&gt;&lt;/script&gt; 
   ⋮
 &lt;/body&gt;
 &lt;/html&gt;

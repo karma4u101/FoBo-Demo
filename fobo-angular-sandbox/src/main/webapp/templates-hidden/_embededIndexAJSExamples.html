@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+
+<title>Embedded pretty template</title>
+</head>
+
+<!-- This is an embedded piece of html -->
+<body class="lift:content_id=indexAJExamples">
+
+   <section id='indexAJExamples'>
+
+		<div class="row">
+			<div class="col-sm-12">
+				<a id="section-2"></a>
+				<h2><span data-lift="Loc.i">Section 2</span></h2>
+
+                <p>This section describes the functions and code involved in the angular examples. For overall setup and configuration
+                of required resources see the <a href="#section-1" target="_self"><span data-lift="Loc.i">Section 1</span></a> section. 
+                You could also clone this project and inspect all the code. </p>              
+
+				<div class="bs-callout bs-callout-info">
+					<h4>
+						<i class="fa fa-exclamation-triangle fa-2x"></i> New to AngularJS?
+					</h4>
+					<p>
+						If you are new to AngularJS I <strong>strongly</strong> suggest
+						that you, to get started with the basics, visit <a
+							href="http://angularjs.org/">AngularJS</a> excellent home. There
+						are plenty of examples, tutorials and other information that you
+						will find valuable in you exciting endeavors into AngularJS land.
+					</p>
+				</div>
+
+                <div class="col-sm-12"> 
+                  <div class="embed-responsive embed-responsive-4by3">
+                    <iframe class="embed-responsive-item" src="//www.youtube.com/embed/i9MHigUZKEM?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>					
+                  </div>
+                </div>
+                  
+
+				<div class="row">
+					<div class="col-sm-12">
+						<a id="section-2-1"></a>
+						<h3>Example 1:</h3>
+				<p>
+					To prepare you for the coming examples and get you started with
+					Angular JS in Lift we are opening up this section with a very basic
+					example that you already should be familiar with from <a
+						href="http://angularjs.org/">AngularJS home <i class="fa fa-external-link"></i></a>.
+				</p>						
+						<p>This is a very simple angular only example (no server
+							interaction) doing a ajax updates of the angular expression
+							yourName.</p>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-sm-12">
+
+						<div class="panel panel-default" style="padding: 10px;">
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="form-horizontal" role="form">
+										<div class="form-group">
+											<label for="name" class="col-sm-2 control-label">Name:</label>
+											<div class="col-sm-10">
+												<input id="name" class="form-control" type="text"
+													ng-model="yourName" placeholder="Enter a name here">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-10 col-sm-offset-2">
+									<h4>Hello {{yourName}}!</h4>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-sm-12 ">
+
+						<p></p>
+						<span data-lift='embed?what=embeddedPretty/ex1-formWithNgModule'>
+							Embedding the prettyprint ex1 form code here</span> 
+						
+						<p>This example we are creating a angular model 
+						<a href="https://docs.angularjs.org/api/ng/directive/ngModel">ngModel <i class="fa fa-external-link"></i></a> 
+						(<code>ng-model="yourName"</code>) with the assignable <a href="https://docs.angularjs.org/guide/expression">angular expression <i class="fa fa-external-link"></i></a> 
+						<code>"yourName"</code> we are then using this expression in a binding <code><span>{{</span> expression <span>}}</span></code> on the heading as shown below.</p>
+							
+						<span
+							data-lift='embed?what=embeddedPretty/ex1-expressionBindingToHeding'> Embedding
+							the prettyprint ex1 form code here</span>
+						<p>As you type in a name the <code><span>{{</span>yourName<span>}}</span></code> value will get updated.</p> 	
+
+					</div>
+				</div>
+				<hr>
+
+				<div class="row">
+					<div class="col-sm-12 ">
+						<a id="section-2-2"></a>
+						<h3>Example 2:</h3>
+						<p>This example is doing a Lift 3 roundtrip to the server to fetch
+							and display a Json string when clicking the "Simple RT" button.</p>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="panel panel-default" style="padding: 10px;">
+							<div class="row">
+								<div class="col-sm-10 col-sm-offset-2">
+									<div ng-controller="SimpleRTCtrl">
+										<pre>{{lrtResModel}}</pre>
+										<button type="button" class="btn btn-default"
+											ng-click="doSimpleLiftRT()">Simple RT</button>
+										<button type="button" class="btn btn-default"
+											ng-click="doResetRT()">Reset</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-sm-12 ">
+					    <br/>
+					    <p>In this example I will try explain the things involved in hooking up Lift roundtrip's with a angularJS 
+					    <a href="https://docs.angularjs.org/guide/controller">controller <i class="fa fa-external-link"></i></a>, this <strong>"hookup" pattern</strong> is used in most of the following example(s).</p> 
+					    <p>As there are many ways to model the Lift roundtrip functionality you may see other blog post 
+					    doing thing's in a slightly different way, my hope is that you will see the overal "wiring" 
+					    to be able to come up with something that sutes your needs.</p>
+					    <p>Let's start with a quote from David Pollak.</p>
+					    <blockquote class="pull-right">
+					    <p>With Lift 3, we introduce the idea of Round Trips: a client-side request 
+					    that's sent to the server where the client receives a Streaming Promise, 
+					    the server performs its computations and when the results are ready, they 
+					    get pushed to the client… and if there are multiple results, the multiple 
+					    results are pushed to the client as the results become available.</p>
+					    <small>David Pollak @dpp in <cite title="Source Title"><a href="http://blog.goodstuff.im/roundtrip_promises">Angular JS, Lift 3, and Streaming Promises</a></cite></small>
+					    </blockquote>
+					    <p>If you have not read David's <a href="http://blog.goodstuff.im/roundtrip_promises">blog post <i class="fa fa-external-link"></i></a> 
+					    about Lift round trips, now is a good time to do it.</p>
+					    
+				        <div class="bs-callout bs-callout-info">
+					        <h4>
+						        <i class="fa fa-exclamation-triangle fa-2x"></i> Resource setup
+					        </h4>
+					        <p>
+						    To avoid cluttering the examples with to much repeating details the overall 
+						    resource setup has been ommited from the example section.
+						    One way to setup angular resources in Lift is to use the FoBo module, you can 
+						    read all about how to setup the resources using FoBo in the 
+						    <a href="#section-1" target="_self"><span data-lift="Loc.i">Section 1</span></a> section.       
+					        </p>
+				        </div>					    
+					    					    
+					    <p>Now lets look at the code. As this is the first example involving Lift roundtrip's and a bit more angular 
+					    stuff I will show you all the essential parts, we start by look at this from the view (Lift html5 templates) 
+					    focusing on the angular stuff.</p>
+											    
+					    <span
+							data-lift='embed?what=embeddedPretty/ng-app-foboDemoApp'> Embedding
+							the prettyprint ex2 code here</span>
+						
+						<p>The <a href="https://docs.angularjs.org/tutorial/step_00"><code>ng-app</code><i class="fa fa-external-link"></i></a> attribute represents an Angular directive named ngApp. 
+						This directive is used to flag the html element that Angular should consider to be the 
+						root element of the angular application. In our case the root element will be the 
+						<code>div id=main</code> element.</p> 
+						
+					    <span
+							data-lift='embed?what=embeddedPretty/ex2-assets-app'> Embedding
+							the prettyprint ex2 code here</span>	
+							
+						<p>Here we are loading the <code>foboDemoApp</code> <a href="https://docs.angularjs.org/guide/module">module <i class="fa fa-external-link"></i></a> 
+						with it's configuration and run blocks, althogh not nessary in this example we are also loading some module 
+						dependancies <code>['ngGrid','ui.bootstrap']</code>, as the module dependencies is not used in this example 
+					    we could have made it a empty list <code>[]</code>, we are however going to use the 
+						dependancies in late examples.</p> 						
+						
+                        <span
+							data-lift='embed?what=embeddedPretty/ex2-ng-controller-SimpleRTCtrl'> Embedding
+							the prettyprint ex2 code here</span>
+							
+						<p>
+						Above shows the controller declaration in the Lift template and blow is the javascript implementaion of the same Angular  
+						<a href="https://docs.angularjs.org/guide/controller">controller <i class="fa fa-external-link"></i></a>
+						</p>	
+														
+					    <span
+							data-lift='embed?what=embeddedPretty/ex2-assets-controller-SimpleRTCtrl'> Embedding
+							the prettyprint SimpleRTCtrl js code here</span>	
+							
+						<p>Now things are starting to get a bit more interesting, altogh we are keeping things simple, 
+						here we are calling, from the angular javascript controller, the function <code>myRTFunctions.doSimpleRT();</code> 
+						that is, a function that is hocked to native Lift/Scala code on the server. 
+						This function will return a promise containing a json string fetched from the server with the message 
+						<b>"There and back again!"</b></p>
+						<p>I am going to show you the Lift server.side code in a moment but let us first take a look at 
+						the snippet that provides the glue between the server and the client starting with the snippet 
+						declaration in the template.
+						</p>	
+							
+                        <span data-lift='embed?what=embeddedPretty/ex2-data-lift-RoundTripInjector'> Embedding
+							the data-lift Roundtrip injector </span>	
+											    
+					    <p>Above shows the <code>RoundTripBindingInjector</code> snippet that will inject the roundtrip hocks. 
+					     Below is the actual implementation that renders the roundtrip functions as javascript code in 
+					    the html template by calling the <code>getRoundTrips</code> function in the trait <code>MyAngularJSDemoRoundTrips</code>. 
+					    </p>
+					    <span 
+							data-lift='embed?what=embeddedPretty/ex2-code-snippet-RoundTripInjector'> Embedding
+							the prettyprint roundtrip injector snippet code here</span>							
+					    
+					    <p>And below is the relevant code in the <code>MyAngularJSDemoRoundTrips</code> trait showing the mapping between 
+					    the <code>doSimpleRT</code> js function and the Scala function, for simplicity and clearaty we also call that 
+					    function <code>doSimpleRT</code>.
+					     </p>
+					    
+					    <span
+							data-lift='embed?what=embeddedPretty/ex2P5'> Embedding
+							the prettyprint ex2 code here</span>
+						<p>As this is a very simple example we are only using the <code>func.send(/*some data*/)</code> 
+						function. In addition we have <code>func.done()</code> and <code>func.failure(/*Some failure message*/)</code>
+						that gives us explicit control over sending data, done, and failure.</p>	
+						
+						<p>For completnes below is showing how we declare <code>getRoundTrips</code></p>
+					    <span
+							data-lift='embed?what=embeddedPretty/ex2P6'> Embedding
+							the prettyprint ex2 code here</span>																			    
+					    
+				<div class="bs-callout bs-callout-info">
+					<h4>
+						<i class="fa fa-exclamation-triangle fa-2x"></i> Styleguide
+					</h4>
+					<p>
+					This demo group files in a <strong>functionally way</strong> (all templates/views together, all css together, all js together etc...), 
+					this is, today, a common way of structuring web apps. New web technologies is however emerging with 
+					<strong>web components</strong> as one of the most exiting and impacting ones, this will change how we strukture 
+					future web apps and as technolgy merges this will include how we structure AngularJS and Lift web apps too.</p>
+					
+					<p>With this in mind Google has put together some AngularJS style guide documentation, so if you want to get up to date on how 
+					to structure future web apps the <strong>structurally way</strong> you can take a look at this Angular blog post
+					<a href="http://blog.angularjs.org/2014/02/an-angularjs-style-guide-and-best.html">An AngularJS Style Guide and Best Practice for App Structure</a>	
+					it contains references to these documents. 
+					</p>
+					
+
+				</div>					    
+					    
+					    <br/>
+						<p>Next in Example 3 we are going to use the same design pattern as outlined above but this time we 
+						are going to fetch a array of data from the back-end store using slick and display it using the 
+						Angular NG-Grid UI module.</p>
+					</div>
+				</div>
+				<hr>
+
+				<div class="row">
+					<div class="col-sm-12 ">
+						<a id="section-2-3"></a>
+						<h3>Example 3:</h3>
+						<p>This example is doing a roundtrip to the server to fetch
+							and display the grid data from the back-end store handled by
+							slick. We are going to build on this example in the following
+							examples to extend its functionality but we start with the
+							simplest task of just fetching the data.</p>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="panel panel-default" style="padding: 10px;">
+							<div class="row">
+								<div class="col-sm-10 col-sm-offset-2">
+									<div ng-controller="GridCtrl">
+										<div class="gridStyle" ng-grid="gridOptions"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<hr>
+
+				<div class="row">
+					<div class="col-sm-12 ">
+						<a id="section-2-4"></a>
+						<h3>Example 4:</h3>
+						<p>Building on Example 3 we are now adding the abillity to add new Person data to the back-end store and display 
+						it in the grid by doing a roundtrip to the server to add the Person data and then return the new grid data from 
+						the back-end store handled by slick.</p>
+					</div>
+				</div>
+
+
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="panel panel-default" style="padding: 10px;">
+							<div class="row">
+								<div class="col-sm-10 col-sm-offset-2">
+									<div ng-controller="GridCtrl">
+										<div class="gridStyle" ng-grid="gridOptions"></div>
+										<div class="form-inline" role="form">
+											<div class="form-group">
+												<input type="hidden" id="pid" ng-model="person.id">
+												<label class="sr-only" for="pname">Name</label> <input
+													type="text" class="form-control" id="pname"
+													placeholder="Enter name" ng-model="person.name">
+											</div>
+											<div class="form-group">
+												<label class="sr-only" for="page">Age</label> <input
+													type="number" class="form-control" id="page"
+													placeholder="Enter age" ng-model="person.age">
+											</div>
+											<button class="btn btn-default" ng-click='doAdd()'>Add</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<hr>
+
+				<div class="row">
+					<div class="col-sm-12">
+						<a id="section-2-5"></a>
+						<h3>Example 5:</h3>
+						<p>Building on Example 4 we now also add <b>excel like cell edit</b> operations for <b>entity updates</b> and 
+						<b>checkbox selection</b> for <b>entity delete</b> operations. This completes the example serie as We now have 
+						CRUD operations on the ng-grid.</p>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="panel panel-default" style="padding: 10px;">
+							<div class="row">
+								<div class="col-sm-10 col-sm-offset-2">
+									<div ng-controller="Grid2Ctrl">
+										<div class="gridStyle" ng-grid="gridOptions"></div>
+										<div class="form-inline" role="form">
+											<div class="form-group">
+												<input type="hidden" id="pid" ng-model="person.id">
+												<label class="sr-only" for="pname">Name</label> <input
+													type="text" class="form-control" id="pname"
+													placeholder="Enter name" ng-model="person.name">
+											</div>
+											<div class="form-group">
+												<label class="sr-only" for="page">Age</label> <input
+													type="number" class="form-control" id="page"
+													placeholder="Enter age" ng-model="person.age">
+											</div>
+											<button class="btn btn-default" ng-click='doAdd()'>Add</button>
+										</div>
+										<button class="btn btn-default" ng-click='doDeleteSelected()'>Delete selected</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+
+
+			</div>
+		</div>
+ 
+		
+    </section>
+</body>

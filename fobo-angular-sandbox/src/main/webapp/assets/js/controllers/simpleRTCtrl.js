@@ -15,6 +15,7 @@ app.controller('SimpleRTCtrl',['$scope', function($scope){
 	$scope.doResetRT = function() {
 		return $scope.lrtResModel="Click again and I will do another roundtrip";
 	};
+	
 }]);
 
 

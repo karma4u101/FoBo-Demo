@@ -1,10 +1,5 @@
-/* 
- * ngGrid example
- * Fetches a JArray [{name: "Moroni", age: 50},{name: "Tiancum", age: 43}, ....] from the server
- * and sets some grid options.
- * 
-*/
-app.controller('GridCtrl',['$scope',function($scope) {
+
+app.controller('Grid2Ctrl',['$scope',function($scope) {
     
 	$scope.myData = function() {
 	  var promise = myRTFunctions.getPersonGridData();
@@ -19,6 +14,7 @@ app.controller('GridCtrl',['$scope',function($scope) {
 	
     $scope.gridOptions = { 
         data: 'myData',
+        showSelectionCheckbox: true,
         enableCellSelection: true,
         enableRowSelection: false,
         enableCellEdit: true,        
@@ -47,6 +43,22 @@ app.controller('GridCtrl',['$scope',function($scope) {
 		      })
 		      return data;
 		    });	      	
-    };    
+    };  
+    
+    //a ng-grid callback event that can be used to handle cell edit updates
+    $scope.$on('ngGridEventEndCellEdit', function(evt){
+    	console.log("about to update entity=")
+        console.log(evt.targetScope.row.entity);  // the underlying data bound to the row
+        // Detect changes and send entity to server 
+        var json = angular.toJson(evt.targetScope.row.entity);
+    	var promise = myRTFunctions.updatePersonGridData(json);
+    	//resetPersonFields();
+	    return promise.then(function(data) {
+		      $scope.$apply(function() {
+		        $scope.myData = data;
+		      })
+		      return data;
+		    });          
+    });    
     
 }]);

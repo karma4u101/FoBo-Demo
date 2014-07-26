@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+
+<title>Embedded pretty template</title>
+</head>
+
+<!-- This is an embedded piece of html -->
+<body class="lift:content_id=indexFoBoConf">
+
+   <section id='indexFoBoConf'>
+   
+		<div class="row">
+			<div class="col-sm-12">
+				<a id="section-1"></a>
+				<h2><span data-lift="Loc.i">Section 1</span></h2>
+				
+				<p>The following section describes how to set up the Lift Front-End Toolkit module FoBo to 
+				provide AngularJS the way it is set up in this demo.</p>
+				
+				<div class="bs-callout bs-callout-info">
+					<h4>
+						<i class="fa fa-exclamation-triangle fa-2x"></i> Starting a new Lift project using FoBo!
+					</h4>
+					<p>If you plan to use FoBo in a new project I can recommend using the 
+					<a href="http://www.media4u101.se/lift-advanced-bs3/">lift-advanced-bs3 Template Application</a>
+					as a starting point then most of the setup presented in this section will be done for you. 
+					</p>
+				</div>					
+				
+				<div class="row">
+					<div class="col-sm-12">
+						<a id="section-1-1"></a>
+						<h3><span data-lift="Loc.i">Section 1-1</span></h3>
+						
+						<p>
+						 Make sure to check for the latest version in the <a href="https://github.com/karma4u101/FoBo#fobo---a-generic-front-end-toolkit-module-for-lift-">FoBo Github readme.</a> 
+						</p> 
+						<span data-lift='embed?what=embeddedPretty/depSettingSBT'>
+							Embedding the prettyprint dependency settings code here</span>
+							
+						<span data-lift='embed?what=embeddedPretty/depSettingMaven'>
+							Embedding the prettyprint dependency settings code here</span>
+								
+						<div class="bs-callout bs-callout-info">
+						  <h4><i class="fa fa-exclamation-triangle"></i> FoBo and Lift versions</h4>
+						  <p>FoBo currently have artifacts for Lift 2.5, 2.6 and 3.0. For more information 
+						  about dependency settings supported toolkits and more, 
+						  see the <a href="https://github.com/karma4u101/FoBo">FoBo readme on Github</a>.</p>
+						</div>							
+													
+					</div>
+					<div class="col-sm-12">
+						<a id="section-1-2"></a>
+						<h3><span data-lift="Loc.i">Section 1-2</span></h3>
+						One of the benefit you get from using the FoBo module is that you have
+						a easy up/down-grade cycle with a "single point of change", i.e the
+						FoBo init parameter in Lift Boot. 
+						<dl>
+							<dt>Quick and easy up/down -grade of toolkit resources is
+								provided by FoBo via a "single point of change" as:</dt>
+							<dd>
+								<ul>
+									<li>FoBo simultaneously provides several versions of the
+										included toolkits.</li>
+									<li>FoBo automatically serves minified toolkit resources
+										in production and more easily debuggable resources otherwise.</li>
+									<li>FoBo uses uniform settings to resources in html templates, no 
+									need for changes when doing a up-grade/down-grade or running in a dev/test
+									environment vs deploying to a production environment.</li>	
+								</ul>
+							</dd>
+						</dl>
+
+						<p>
+							FoBo takes care of and provides minified resources in
+							production and more easily debugable code in development, this is
+							done without any need for code changes and at the same time, by 
+							using Fobo, you do not clutter your applications assets space with 
+							tookit library code that should not be directly manipulated any way. 
+							By changing a available <a target="_blank"
+								href="http://www.media4u101.se/fobo-lift-template-demo/foboapi/index.html#net.liftmodules.FoBo.package">FoBo
+								toolkit init parameters</a> you can quickly change the version of
+							the front end toolkit's you are using or add another FoBo
+							supported one.
+						</p>
+
+						<span data-lift='embed?what=embeddedPretty/boot'> Embedding
+							the prettyprint Boot.scala code here</span> <a id="section-1-2"></a> <a
+							id="section-1-3"></a>
+							
+							
+						<h3><span data-lift="Loc.i">Section 1-3</span></h3>
+						The most common place to put global references to css and javascript resources in a 
+						Lift application is in the default.html template, this project and the example below 
+						is set up like that. 
+						If you need more flexibility you can put the css/js resource reference 
+						in the page body and add the <code>data-lift="head"</code> attribute to it, then when lift 
+						processes the page it will be moved into the heade, this could be useful if you have page 
+						specific resource needs.   
+						<span data-lift='embed?what=embeddedPretty/defaultTemplate'>
+							Embedding the prettyprint default.html code here</span>
+							
+						<span data-lift='embed?what=embeddedPretty/ng-app-foboDemoApp'>
+							Embedding the prettyprint index.html code here</span>
+														
+						<p>Specific to this demo we are setting the <code>ng-app="foboDemoApp"</code> (Angular bootstrap directive) in 
+						the same tag as the lift surround tag this means that we have set the root element of the angular application 
+						so that it will surround/include most of the code and it will be available on all demo pages. </p>
+						<p>You are, in your application, of course free to set the ng-app name and directive where ever it fits your needs best.</p>     
+
+					</div>
+					<div class="col-sm-12">
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+		
+    </section>
+</body>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+
+<title>Embedded pretty template</title>
+</head>
+
+<!-- This is an embedded piece of html -->
+<body class="lift:content_id=indexIntro">
+
+   <section id='indexIntro'>
+   
+		<div class="row">
+			<div class="col-sm-12">
+				<a id="dtop"></a>
+				<h2>Lift - FoBo / Angular / Bootstrap / Slick - Demo</h2>
+				<p>
+					<span data-lift="helloWorld.howdy"> Welcome to your Lift
+						Angular/Bootstrap/Slick app at <span id="time">Time goes
+							here</span>
+					</span>
+				</p>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-sm-12">
+
+				<div class="bs-callout bs-callout-warning">
+					<h4>
+						<i class="fa fa-exclamation-triangle fa-2x"></i> Work In Progress!
+					</h4>
+					<p>This is work in progress, please check back later for a more
+						complete tutorial/demo.</p>
+				</div>
+
+				<p>
+					Although this demo uses the <a
+						href="http://www.media4u101.se/lift-advanced-bs3/">lift-advanced-bs3
+						Template Application <i class="fa fa-external-link"></i></a> with FoBo's Bootstrap v3.x setting as it's
+					base the following sections is mostly about Angular JS and <a
+						href="http://blog.goodstuff.im/roundtrip_promises">Lift 3's
+						Round Trip <i class="fa fa-external-link"></i></a> concept. To make the examples a bit more
+					realistic/exciting we are also using Slick to handle the back end
+					storage. <!-- and dispatch for some REST. -->
+				</p>
+				<p>	
+					The examples is increasingly complex in what they accomplish but 
+					considering the "normal complexity" involved in coding the same thing 
+					using other techniques the code needed using Lift and Angular is very 
+					elegant and fairly simple to comprehend.
+				</p>
+
+				<p>I have tried to keep the amount of code used as simple as
+					possible to make the examples clear, for that reason the Slick
+					integration is close to the bare minimum (using a in memory db) and
+					dose, for that reason, not reflect what you would expect in a
+					production ready project.</p>
+					
+				<div class="panel panel-default" style="padding-left:10px;padding-right:10px;">	
+				<h4>This demo application uses the following components:</h4>
+				<dl class="dl-horizontal">
+					<dt>
+						<a href="http://liftweb.net/">Lift</a>
+					</dt>
+					<dd>Lift is the most powerful, most secure web framework
+						available today.</dd>
+
+					<dt>
+						<a href="http://slick.typesafe.com/">Slick</a>
+					</dt>
+					<dd>The Scala Language-Integrated Connection Kit giving you seamless
+						data access.</dd>
+					<dt>
+						<a href="http://www.media4u101.se/fobo-lift-template-demo/">FoBo</a>
+					</dt>
+					<dd>A comprehensive Front-End toolkit module for Lift. For
+						developing mobile scalable responsive web applications.</dd>
+					<dt>
+						<a href="http://angularjs.org/">AngularJS</a>
+					</dt>
+					<dd>
+						Including the <a href="http://angular-ui.github.io/">Angular
+							UI</a> modules <a href="http://angular-ui.github.io/ng-grid/">NG
+							Grid</a> and <a href="http://angular-ui.github.io/bootstrap/">UI
+							Bootstrap</a>. This component is provided via the <a
+							href="http://www.media4u101.se/fobo-lift-template-demo/">FoBo</a>
+						module.
+					</dd>
+					<dt>
+						<a href="http://getbootstrap.com/">Bootstrap v3.x</a>
+					</dt>
+					<dd>
+						Sleek, intuitive, and powerful mobile first front-end framework.
+						This component is provided via the <a
+							href="http://www.media4u101.se/fobo-lift-template-demo/">FoBo</a>
+						module.
+					</dd>
+					<dt>
+						<a href="http://fontawesome.io/">Font Awesome</a>
+					</dt>
+					<dd>
+						The iconic font designed for Bootstrap. This component is provided
+						via the <a
+							href="http://www.media4u101.se/fobo-lift-template-demo/">FoBo</a>
+						module.
+					</dd>
+					<dt>
+						<a href="http://code.google.com/p/google-code-prettify/">google-code-prettify</a>
+					</dt>
+					<dd>
+						Syntax highlighting of code snippets in a web page. This component
+						is provided via the <a
+							href="http://www.media4u101.se/fobo-lift-template-demo/">FoBo</a>
+						module.
+					</dd>
+				</dl>
+				</div>
+				
+				<p>
+					You can read more about Angular JS, Lift 3 and Streaming Promises
+					in <a href="http://blog.goodstuff.im/roundtrip_promises">DPP's
+						Blog <i class="fa fa-external-link"></i></a>
+				</p>
+
+				<div class="bs-callout bs-callout-info">
+				<h4><i class="fa fa-exclamation-triangle fa-2x"></i> Lift and ORM's</h4>
+				<p>Lift comes with two (optional) ORM persistence layer modules  
+				<a href="https://www.assembla.com/wiki/show/liftweb/Mapper">Mapper</a> and
+				<a href="https://www.assembla.com/wiki/show/liftweb/Record">Record</a> 
+				where, notably, the later includes specific support for 
+				<a href="https://www.assembla.com/wiki/show/liftweb/MongoDB">MongoDB</a> 
+				and <a href="http://squeryl.org/">Squeryl</a>.</p>
+				<p>Although Lift has those excellent ORM modules <strong>Lift's WebKit is agnostic 
+				as to the use of ORM frameworks</strong> or database query and access library 
+				as can be seen in this tutorial/demo where we are using the Slick 2.0 
+				Functional Relational Mapping framework.</p>
+                </div>
+
+
+			</div>
+		</div>
+		
+    </section>
+</body>

@@ -14,14 +14,14 @@ trait SlickComponent {
 }
 
 //Moved outside of trait to make json serialization simpler
-case class Person(id: Int, name: String, age: Int )
+case class Person(id: Long, name: String, age: Int )
 
 trait PersonComponent extends SlickComponent {
   
   private val logger = Logger(classOf[PersonComponent])
   
-  class Persons(tag: Tag) extends Table[(Int, String, Int )](tag,"PERSONS") {
-    def id = column[Int]("PER_ID", O.PrimaryKey, O.AutoInc)
+  class Persons(tag: Tag) extends Table[(Long, String, Int )](tag,"PERSONS") {
+    def id = column[Long]("PER_ID", O.PrimaryKey, O.AutoInc)
     def name = column[String]("NAME")
     def age = column[Int]("AGE")
   
@@ -32,12 +32,26 @@ trait PersonComponent extends SlickComponent {
   private val personsAutoInc = persons.map(p => (p.name, p.age)) returning persons.map(_.id) into {
     case (_, id) => id
   }  
+  
+  private def findGById(id: Long) = for {
+    p <- persons; if p.id === id
+  } yield p  
+  
+  
   /*
   def insertPerson(person: Person)(implicit session: Session): Person = {
     val id = personsAutoInc.insert(person.name, person.age)
     person.copy(name = person.name, age = person.age)
   } 
   */
+  def updatePerson(person: Person): Person = db.withSession {
+    implicit session =>
+    logger.info("updatePerson person="+person.toString)  
+    val p = findGById(person.id)
+    p.update(person.id,person.name,person.age)
+    person.copy(name = person.name, age = person.age)
+  }   
+    
   def insertPerson(person: Person): Person = db.withSession {
     implicit session =>
     logger.info("insertPerson person="+person.toString)  
