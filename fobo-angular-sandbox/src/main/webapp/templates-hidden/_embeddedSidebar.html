@@ -12,8 +12,6 @@
 <section id="sidebars">
         <div class="list-group hidden-xs" id="lmenu">
           <span data-lift="FoBo.Bs3LinkedListGroup.builder?group=lg1"></span>
-<!--           <span data-lift="FoBo.Bs3LinkedListGroup.builder?group=user"></span> -->
-<!--           <span class="list-group-item mylgheader">Example menu section header</span> -->
           <span data-lift="FoBo.Bs3LinkedListGroup.builder?group=lg2"></span>
         </div>
         
@@ -33,19 +31,21 @@
         
  		<div class="bs-sidebar hidden-print" role="complementary">
 			<ul class="nav bs-sidenav">
-				<li style="border-bottom: 1px inset #ccc;"><span
-					data-lift="Menu.item?name=dtop;"><span data-lift="Loc.i">Top</span></span></li>
-				<li><span data-lift="Menu.item?name=sbg2;"> <i class="fa fa-caret-right"></i> <span
-						data-lift="Loc.i">Section 2</span></span> 
+				<li style="border-bottom: 1px inset #ccc;">
+				  <span data-lift="Menu.item?name=dtop;"><span data-lift="Loc.i">Top</span></span>
+				</li>
+				<li>
+				  <span data-lift="Menu.item?name=sbg2;"> <i class="fa fa-caret-right"></i> <span data-lift="Loc.i">Section 2</span></span> 
 					<ul class="nav">
 						<span data-lift="FoBo.Bs3NavLiList.builder?group=sbg2"></span>
-					</ul></li>
-				<li><span data-lift="Menu.item?name=sbg1;"> <i class="fa fa-caret-right"></i> <span
-						data-lift="Loc.i">Section 1</span></span>
+					</ul>
+				</li>
+				<li>
+				    <span data-lift="Menu.item?name=sbg1;"> <i class="fa fa-caret-right"></i> <span data-lift="Loc.i">Section 1</span></span>
 					<ul class="nav">
 						<span data-lift="FoBo.Bs3NavLiList.builder?group=sbg1"></span>
-					</ul></li>
-
+					</ul>
+				</li>
 			</ul>
 		</div>  
  

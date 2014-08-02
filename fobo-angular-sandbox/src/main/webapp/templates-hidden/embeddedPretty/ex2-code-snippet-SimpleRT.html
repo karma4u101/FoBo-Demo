@@ -9,15 +9,15 @@
 <!-- This is an embedded piece of html -->
 <body class="lift:content_id=pretty">
 <section id="pretty">
-<span class="label label-default">code.snippet.MyAngularJSDemoRoundTrips.scala</span>
+<span class="label label-default">code.snippet.SimpleRT.scala</span>
 <pre class="prettyprint linenums scala">
-trait MyAngularJSDemoRoundTrips extends EmptyRoundTrip with PersonComponent {
+trait SimpleRT extends EmptyRoundTrip {
   
   protected def doSimpleRT(value :JValue, func :RoundTripHandlerFunc) :Unit = {
     //send json data to the client as a JString using the RoundTripHandlerFunc
     func.send(JString("There and back again!"))
   }
-  ⋮
+  
   private val roundtrips:List[RoundTripInfo] = List("doSimpleRT" -> doSimpleRT _)
   abstract override def getRoundTrips = super.getRoundTrips ++ roundtrips  
 }   

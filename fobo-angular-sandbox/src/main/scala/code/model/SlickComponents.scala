@@ -46,17 +46,27 @@ trait PersonComponent extends SlickComponent {
   */
   def updatePerson(person: Person): Person = db.withSession {
     implicit session =>
-    logger.info("updatePerson person="+person.toString)  
+    logger.debug("updatePerson person="+person.toString)  
     val p = findGById(person.id)
     p.update(person.id,person.name,person.age)
     person.copy(name = person.name, age = person.age)
-  }   
+  }
+  
+  def deletePerson(person: Person): Unit = db.withSession {
+    implicit session =>
+    logger.debug("deletePerson person="+person.toString)  
+    val p = findGById(person.id)
+    val affectedRowsCount = p.delete
+    logger.info("deletePerson affectedRowsCount="+affectedRowsCount)
+    val invoker = p.deleteInvoker
+    val statement = p.deleteStatement    
+  }  
     
   def insertPerson(person: Person): Person = db.withSession {
     implicit session =>
-    logger.info("insertPerson person="+person.toString)  
+    logger.debug("insertPerson person="+person.toString)  
     val id = personsAutoInc.insert(person.name, person.age)
-    person.copy(name = person.name, age = person.age)
+    person.copy(id=id,name = person.name, age = person.age)
   }   
   
   private val queryAll = for (p <- persons) yield (p.id,p.name,p.age)
@@ -67,34 +77,6 @@ trait PersonComponent extends SlickComponent {
   
 }
 
-trait CoffeeComponent extends SlickComponent with SupplierComponent {
- // Definition of the COFFEES table
-  class Coffees(tag: Tag) extends Table[(String, Int, Double, Int, Int)](tag, "COFFEES") {
-    def name = column[String]("COF_NAME", O.PrimaryKey)
-    def supID = column[Int]("SUP_ID")
-    def price = column[Double]("PRICE")
-    def sales = column[Int]("SALES")
-    def total = column[Int]("TOTAL")
-    def * = (name, supID, price, sales, total)
-    // A reified foreign key relation that can be navigated to create a join
-    def supplier = foreignKey("SUP_FK", supID, suppliers)(_.id)
-  }
-  val coffees = TableQuery[Coffees]  
-}
 
-trait SupplierComponent extends SlickComponent {
-  // Definition of the SUPPLIERS table
-  class Suppliers(tag: Tag) extends Table[(Int, String, String, String, String, String)](tag, "SUPPLIERS") {
-    def id = column[Int]("SUP_ID", O.PrimaryKey) // This is the primary key column
-    def name = column[String]("SUP_NAME")
-    def street = column[String]("STREET")
-    def city = column[String]("CITY")
-    def state = column[String]("STATE")
-    def zip = column[String]("ZIP")
-    // Every table needs a * projection with the same type as the table's type parameter
-    def * = (id, name, street, city, state, zip)
-  }
-  val suppliers = TableQuery[Suppliers]    
-}
 
 

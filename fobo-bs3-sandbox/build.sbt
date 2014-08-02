@@ -1,10 +1,10 @@
 name := "FoBo-Bootstrap3-Sandbox"
 
-version := "0.0.2-SNAPSHOT"
+version := "0.0.3-SNAPSHOT"
 
 organization := "net.liftweb"
 
-crossScalaVersions := Seq("2.10.0", "2.9.3", "2.9.2", "2.9.1-1", "2.9.1")
+crossScalaVersions := Seq("2.11.1", "2.10.4", "2.9.3", "2.9.2", "2.9.1-1", "2.9.1")
 
 resolvers ++= Seq("snapshots"     at "https://oss.sonatype.org/content/repositories/snapshots",
                   "staging"       at "https://oss.sonatype.org/content/repositories/staging",
@@ -20,7 +20,7 @@ scalacOptions ++= Seq("-deprecation", "-unchecked")
 libraryDependencies <++= (liftVersion,liftEdition,version) { (v,e,mv) =>
     "net.liftweb"     %% "lift-webkit"     % v              % "compile" ::
     "net.liftweb"     %% "lift-mapper"     % v              % "compile" ::
-    "net.liftmodules" %% ("fobo"+"_"+e)    % "1.2" % "compile" ::
+    "net.liftmodules" %% ("fobo"+"_"+e)    % "1.3" % "compile" ::
     Nil
 }
 
@@ -28,6 +28,19 @@ libraryDependencies ++= Seq(
     "org.eclipse.jetty"       % "jetty-webapp"            % "8.1.7.v20120910"     % "container,test",
     "org.eclipse.jetty.orbit" % "javax.servlet"           % "3.0.0.v201112011016" % "container,test" artifacts Artifact("javax.servlet", "jar", "jar"),
     "ch.qos.logback"          % "logback-classic"         % "1.0.6",
-    "org.specs2"              %% "specs2"                 % "1.14"                % "test",
     "com.h2database"          % "h2"                      % "1.3.167"
   )
+
+libraryDependencies <++= scalaVersion { sv =>
+  (sv match {
+      case "2.11.1"  => "org.specs2" %% "specs2" % "2.3.12" % "test"
+      case "2.10.4" | "2.9.2" | "2.9.1" | "2.9.1-1" => "org.specs2" %% "specs2" % "1.12.3" % "test"
+      case _ => "org.specs2" %% "specs2" % "1.12.3" % "test"
+      }) ::
+   (sv match {
+      case "2.11.1"  => "org.scalacheck" %% "scalacheck" % "1.11.4" % "test"
+      case "2.10.4" | "2.9.2" => "org.scalacheck" %% "scalacheck" % "1.10.0" % "test"
+      case _ => "org.scalacheck" %% "scalacheck" % "1.10.0" % "test"
+      }) ::
+  Nil
+}  

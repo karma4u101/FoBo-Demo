@@ -7,7 +7,7 @@ import net.liftweb.http.js.JsCmds._
 import net.liftweb.http.js.JE.JsRaw
 
 /*This snippet is injecting the roundtrip binding scripts into the tail of the html page body.*/
-class RoundTripBindingInjector extends MyAngularJSDemoRoundTrips {
+class RoundTripBindingInjector extends PersonRT with SimpleRT {
   
   def render() : NodeSeq = {
     val functions = ((for {

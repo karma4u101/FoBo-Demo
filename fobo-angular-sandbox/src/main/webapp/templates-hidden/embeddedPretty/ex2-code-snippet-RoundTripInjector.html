@@ -12,7 +12,7 @@
 <span class="label label-default">code.snippet.RoundTripBindingInjector.scala</span>
 <pre class="prettyprint linenums scala">
 /*This snippet is injecting the roundtrip scripts into the tail of the html page body.*/
-class RoundTripBindingInjector extends MyAngularJSDemoRoundTrips {
+class RoundTripBindingInjector extends PersonRT with SimpleRT {
   def render() : NodeSeq = {
     val functions = ((for {
       session &lt;- S.session

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+
+<title>Embedded pretty template</title>
+</head>
+
+<!-- This is an embedded piece of html -->
+<body class="lift:content_id=pretty">
+<section id="pretty">
+<span class="label label-default">assets/js/controllers/personGridCtrl.js - Populate the Person ng-grid</span>
+<pre class="prettyprint linenums js">
+app.controller('PersonGridCtrl',['$scope',function($scope) {
+	
+  $scope.populate = true;
+  $scope.myData = []
+	
+  $scope.doPopulate = function() {
+    var promise = myRTFunctions.personsQuery();  //Round trip call to Lift server function
+    return promise.then(function(data) {
+      $scope.$apply(function() {
+        $scope.myData = data; 
+      })
+      return data;
+    });	 
+  };
+	
+  if($scope.populate){
+    $scope.doPopulate();
+    $scope.populate = false;
+  }   	
+    
+  $scope.simpleGridOptions = { 
+    data: 'myData',
+    enableRowSelection: false,       
+    columnDefs: [{field: 'id', visible: false},
+                 {field: 'name', displayName: 'Name'}, 
+                 {field:'age', displayName:'Age'}]
+  };
+    
+}]);
+
+</pre>
+</section>
+</body>

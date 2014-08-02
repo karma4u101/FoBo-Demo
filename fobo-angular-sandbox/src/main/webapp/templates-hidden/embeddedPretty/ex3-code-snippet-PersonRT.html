@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+
+<title>Embedded pretty template</title>
+</head>
+
+<!-- This is an embedded piece of html -->
+<body class="lift:content_id=pretty">
+<section id="pretty">
+<span class="label label-default">code.snippet.SimpleRT.scala</span>
+<pre class="prettyprint linenums scala">
+package code.snippet
+
+import net.liftweb.json.JsonAST.{JString, JArray, JValue}
+import net.liftweb.http.{RoundTripInfo, RoundTripHandlerFunc}
+import code.model.{PersonComponent,Person}
+import code.lib.EmptyRoundTrip
+import net.liftweb._
+
+trait PersonRT extends EmptyRoundTrip with PersonComponent {
+  
+  protected def personsQuery(value : JValue, func : RoundTripHandlerFunc) : Unit = {
+     import net.liftweb.json.JsonDSL._
+     //map the query result to a list containing JsonAST.JObject's 
+     val jsondata = selectAllPersons().map { p => ( ("id" -> p.id) ~ ("name" -> p.name) ~ ("age" -> p.age)  ) }
+     //send the json data to the client as a JArray using the RoundTripHandlerFunc 
+     func.send( JArray(jsondata) )
+  }    
+  
+  private val roundtrips : List[RoundTripInfo] = List("personsQuery" -> personsQuery _)
+  abstract override def getRoundTrips = super.getRoundTrips ++ roundtrips  
+}  
+</pre>
+</section>
+</body>
