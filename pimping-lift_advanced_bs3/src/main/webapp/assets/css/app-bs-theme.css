@@ -81,6 +81,15 @@ body { padding-top: 70px; }
     border-top-color: #99CCCC; 
 }
 
+.btn-default .caret {
+    border-bottom-color: #99CCCC; 
+    border-top-color: #99CCCC; 
+}
+.btn-default:hover .caret {
+    border-bottom-color: #fff;
+    border-top-color: #fff;
+}
+
 .dropdown-menu {
     background-color: #006699;
 }
