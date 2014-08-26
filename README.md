@@ -1,16 +1,16 @@
 FoBo-Demo
 =========
 
-Sandbox projects for [FoBo](https://github.com/karma4u101/FoBo) demos 
+Sandbox projects for [FoBo](https://github.com/karma4u101/FoBo) demos/tutorials. 
 
 Quick Start
 -----------
 The only prerequisites for running a FoBo demo example is that you have Git and Java installed and configured on the target computer.
 You don't need to use it but the project also includes Eclipse and IDEA plug-in for browsing and following/working with the code, see the [Scala IDE Support] section bellow.   
  
-1) Clone this project
+1) Clone this project 
 
-	git clone git@github.com:karma4u101/FoBo-Demo
+	git clone https://github.com/karma4u101/FoBo-Demo.git
 	cd FoBo-Demo
 
 2) Start the sbt console
