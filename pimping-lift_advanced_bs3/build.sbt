@@ -8,9 +8,9 @@ liftVersion := "2.6-RC1"
 
 liftEdition <<= liftVersion apply { _.substring(0,3) }
 
-scalaVersion := "2.11.1"
+scalaVersion := "2.11.2"
 
-crossScalaVersions := Seq("2.11.1") 
+crossScalaVersions := Seq("2.11.2") 
 
 resolvers ++= Seq("snapshots"     at "https://oss.sonatype.org/content/repositories/snapshots",
                   "staging"       at "https://oss.sonatype.org/content/repositories/staging",
@@ -37,16 +37,15 @@ libraryDependencies ++= Seq(
     "com.h2database"          % "h2"                      % "1.3.167"
   )
   
-libraryDependencies <++= scalaVersion { sv =>
+libraryDependencies <++= scalaVersion { sv => 
   (sv match {
-      case "2.11.1"  => "org.specs2" %% "specs2" % "2.3.12" % "test"
-      case "2.10.4" | "2.9.2" | "2.9.1" | "2.9.1-1" => "org.specs2" %% "specs2" % "1.12.3" % "test"
-      case _ => "org.specs2" %% "specs2" % "1.12.3" % "test"
-      }) ::
-   (sv match {
-      case "2.11.1"  => "org.scalacheck" %% "scalacheck" % "1.11.4" % "test"
-      case "2.10.4" | "2.9.2" => "org.scalacheck" %% "scalacheck" % "1.10.0" % "test"
-      case _ => "org.scalacheck" %% "scalacheck" % "1.10.0" % "test"
+      case "2.9.2" | "2.9.1" | "2.9.1-1" => "org.specs2" %% "specs2" % "1.12.3" % "test"
+      case "2.10.4" => "org.specs2" %% "specs2" % "1.13" % "test"
+      case _ => "org.specs2" %% "specs2" % "2.3.11" % "test"
+ }) ::
+    (sv match {
+      case "2.10.4" | "2.9.2" | "2.9.1" | "2.9.1-1" => "org.scalacheck" %% "scalacheck" % "1.10.0" % "test"
+      case _ => "org.scalacheck" %% "scalacheck" % "1.11.4" % "test"
       }) ::
   Nil
 }

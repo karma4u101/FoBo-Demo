@@ -4,7 +4,7 @@ name := "FoBo-Lift-Template-Demo"
 
 version := "2.8.0-SNAPSHOT"
 
-crossScalaVersions := Seq("2.10.0", "2.9.2", "2.9.1-1", "2.9.1")
+crossScalaVersions := Seq("2.10.4", "2.9.2", "2.9.1-1", "2.9.1")
 
 scalaVersion := "2.10.4"
 
@@ -35,7 +35,7 @@ libraryDependencies <++= (liftVersion,liftEdition,version) { (v,e,mv) =>
 }
 
 // Customize any further dependencies as desired
-libraryDependencies <++= scalaVersion { sv =>
+libraryDependencies ++= { 
   "ch.qos.logback" % "logback-classic" % "1.0.0" % "provided" ::
   "log4j" % "log4j" % "1.2.16" % "provided" ::
   "org.eclipse.jetty"        % "jetty-webapp"  % "8.0.3.v20111011" % "container" ::
@@ -43,17 +43,20 @@ libraryDependencies <++= scalaVersion { sv =>
   "commons-lang"             % "commons-lang"  % "2.0"             % "compile->default" ::
   "com.jolbox"               % "bonecp"        % "0.7.1.RELEASE"   % "compile->default" ::
   "com.h2database"           % "h2"            % "1.3.167" ::  
-  (sv match {
-      case "2.10.0" | "2.9.2" | "2.9.1" | "2.9.1-1" => "org.specs2" %% "specs2" % "1.12.3" % "test"
-      case _ => "org.specs2" %% "specs2" % "1.12.3" % "test"
-      }) ::
-   (sv match {
-      case "2.10.0" | "2.9.2" => "org.scalacheck" %% "scalacheck" % "1.10.0" % "test"
-      case _ => "org.scalacheck" %% "scalacheck" % "1.10.0" % "test"
-      }) ::
   Nil
 }
 
-
+libraryDependencies <++= scalaVersion { sv => 
+  (sv match {
+      case "2.9.2" | "2.9.1" | "2.9.1-1" => "org.specs2" %% "specs2" % "1.12.3" % "test"
+      case "2.10.4" => "org.specs2" %% "specs2" % "1.13" % "test"
+      case _ => "org.specs2" %% "specs2" % "2.3.11" % "test"
+ }) ::
+    (sv match {
+      case "2.10.4" | "2.9.2" | "2.9.1" | "2.9.1-1" => "org.scalacheck" %% "scalacheck" % "1.10.0" % "test"
+      case _ => "org.scalacheck" %% "scalacheck" % "1.11.4" % "test"
+      }) ::
+  Nil
+}
 
 

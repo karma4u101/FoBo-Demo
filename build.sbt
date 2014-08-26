@@ -4,7 +4,7 @@ organization := "net.liftweb"
 
 version in ThisBuild := "0.5-SNAPSHOT"
 
-liftVersion in ThisBuild <<= liftVersion ?? "3.0-M1" //2.6-RC1
+liftVersion in ThisBuild <<= liftVersion ?? "3.0-SNAPSHOT" //2.6-RC1
 
 liftLatestVersion in ThisBuild <<= liftLatestVersion ?? "3.0-SNAPSHOT"
 
@@ -16,7 +16,7 @@ liftLatestEdition in ThisBuild <<= liftLatestVersion apply { _.substring(0,3) }
 
 crossScalaVersions := Seq("2.11.1", "2.10.4", "2.9.3", "2.9.2", "2.9.1-1", "2.9.1")
 
-scalaVersion in ThisBuild := "2.10.4"
+scalaVersion in ThisBuild := "2.11.1"
 
 EclipseKeys.withSource := true
 
@@ -34,7 +34,7 @@ scalacOptions ++= Seq("-deprecation", "-unchecked")
 libraryDependencies <++= (liftVersion,liftEdition,version) { (v,e,mv) =>
     "net.liftweb"     %% "lift-webkit"            % v    % "compile" ::
     "net.liftweb"     %% "lift-mapper"            % v    % "compile" ::
-    "net.liftmodules" %% ("fobo"+"_"+e)          % "1.3" % "compile" ::
+    "net.liftmodules" %% ("fobo"+"_"+e)          % "1.4-SNAPSHOT" % "compile" ::
     Nil
 }
 
