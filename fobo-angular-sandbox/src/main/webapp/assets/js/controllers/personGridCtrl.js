@@ -1,25 +1,20 @@
 
 app.controller('PersonGridCtrl',['$scope','$log',function($scope,$log) {
 	
-	$scope.populate = true;
 	$scope.myData = []
-	
-	$scope.doPopulate = function() {
-	  $log.debug('PersonGridCtrl:doPopulate: about to call personsQuery');	
-	  var promise = myRTFunctions.personsQuery();  
-	  return promise.then(function(data) {
-		      $scope.$apply(function() {
-		        $scope.myData = data; 
-		        $log.debug('PersonGridCtrl:doPopulate: in apply data set'); 
-		      })
-		      return data;
-		    });	 
-	};
-	
-//	if($scope.populate){
-//	  $scope.doPopulate();
-//	  $scope.populate = false;
-//    }   	
+				
+		$scope.doPopulate = function() {
+			  $log.debug('PersonGridCtrl:doPopulate: about to call personsQuery');	
+			  var promise = myRTFunctions.personsQuery();  
+			  
+			  return promise.then(function(data) {
+				      $scope.$apply(function() {
+				        $scope.myData = data; 
+				        $log.debug('PersonGridCtrl:doPopulate: in apply data set'); 
+				      })
+				      return data;
+				    });	 
+			};	
 	$scope.doPopulate();
 		
 	
@@ -34,7 +29,7 @@ app.controller('PersonGridCtrl',['$scope','$log',function($scope,$log) {
         	var promise = myRTFunctions.deletePersonCmd(json);
     	    return promise.then(function(data) {
     		      $scope.$apply(function() {
-    		    	$log.debug("PersonGridCtrl:remove:deletePersonCmd in $apply data.deleted="+data.deleted);  
+    		    	$log.debug("PersonGridCtrl:remove:deletePersonCmd in apply data.deleted="+data.deleted);  
     		        //$scope.myData = data;
     		    	if(data.deleted){
     		    	  $scope.doPopulate();	
@@ -46,22 +41,25 @@ app.controller('PersonGridCtrl',['$scope','$log',function($scope,$log) {
     	else{
     		$log.debug('Are you sure(?) dialog got answer='+answer+' aborted delete of person: ' + entity.name);
     	}
-        //alert('Are you sure you wish to delete person: ' + entity.name + ' delete ' + remove  );
-    	//console.log('about to delete person: ' + entity.name);
     }    
-        
-    
+
+    //The age is declared as a input type="number" but here we 
+    //set person with empty values to enable the placeholder text
+    $scope.resetPersonFields = function() {
+       $scope.person = { id: 0, name: "", age: "" };        
+    }
+    $scope.resetPersonFields();
     
     $scope.doAdd = function() {
-    	$log.debug('PersonGridCtrl:doAdd: about to add person ' + $scope.person);
     	var json = angular.toJson($scope.person);
+    	$log.debug('PersonGridCtrl:doAdd: person json=' + json);
     	var promise = myRTFunctions.addPersonCmd(json);
     	$scope.resetPersonFields();
 	    return promise.then(function(data) {
 		      $scope.$apply(function() {
-		    	$log.debug("PersonGridCtrl:doAdd in $apply data.inserted="+data.inserted);   
+		    	$log.debug("PersonGridCtrl:doAdd in apply data.inserted="+data.inserted);   
                 if(data.inserted) {
-                	$log.debug("PersonGridCtrl:doAdd in $apply repopulate the list"); 	
+                	$log.debug("PersonGridCtrl:doAdd in apply repopulate the list"); 	
                 	$scope.doPopulate();
                 }
 		      })
@@ -69,16 +67,15 @@ app.controller('PersonGridCtrl',['$scope','$log',function($scope,$log) {
 		    });	
     };  
     
-    
     $scope.updatePerson = function(entity) {
     	$log.debug('PersonGridCtrl:updatePerson: about to update person ' + entity);
         var json = angular.toJson(entity);
     	var promise = myRTFunctions.updatePersonCmd(json);
 	    return promise.then(function(data) {
 		      $scope.$apply(function() {
-		    	$log.debug("PersonGridCtrl:updatePerson in $apply data="+data.updated);  
+		    	$log.debug("PersonGridCtrl:updatePerson in apply data="+data.updated);  
 		        if(data.updated){
-                	$log.debug("PersonGridCtrl:updatePerson in $apply repopulate the list"); 	
+                	$log.debug("PersonGridCtrl:updatePerson in apply repopulate the list"); 	
                 	$scope.doPopulate();		        	
 		        }
 		      })
@@ -89,25 +86,13 @@ app.controller('PersonGridCtrl',['$scope','$log',function($scope,$log) {
     
     //a ng-grid callback event that can be used to handle cell edit updates
     $scope.$on('ngGridEventEndCellEdit', function(evt){
-    	$scope.done = false;
+    	//$scope.done = false;
     	$log.debug("PersonGridCtrl:ngGridEventEndCellEdit: evt - about to update entity=");
         $log.debug(evt.targetScope.row.entity);  // the underlying data bound to the row
         // Detect changes and send entity to server 
 	    $scope.updatePerson(evt.targetScope.row.entity)     
     });    
-    
-
-    //The age is declared as a input type="number" but here we 
-    //set person with empty values to enable the placeholder text
-    $scope.resetPersonFields = function() {
-    $scope.person = {
-            id: 0,
-            name: "",
-            age: ""
-        };        
-    }
-	//$scope.resetPersonFields();
-    
+        
     $scope.simpleGridOptions = { 
             data: 'myData',
             enableRowSelection: false,       

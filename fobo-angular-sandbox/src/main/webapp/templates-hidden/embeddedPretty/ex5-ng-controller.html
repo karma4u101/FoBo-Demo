@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+
+<title>Embedded pretty template</title>
+</head>
+
+<!-- This is an embedded piece of html -->
+<body class="lift:content_id=pretty">
+<section id="pretty">
+<span class="label label-default">assets/js/controllers/personGridCtrl.js - Person grid controller with CRUD functionality</span>
+<pre class="prettyprint linenums js">
+app.controller('PersonGridCtrl',function($scope) {
+	
+  $scope.myData = []
+	
+  $scope.doPopulate = function() {	
+    var promise = myRTFunctions.personsQuery();  //Round trip call to Lift server function
+    return promise.then(function(data) {
+      $scope.$apply(function() {
+        $scope.myData = data; 
+      })
+      return data;
+    });	 
+  };
+  $scope.doPopulate();
+    
+  $scope.doAdd = function() {
+    var json = angular.toJson($scope.person);
+    var promise = myRTFunctions.addPersonCmd(json); //send the data to the server 
+    $scope.resetPersonFields();
+	return promise.then(function(data) {
+	   $scope.$apply(function() { 
+          if(data.inserted) {	
+             $scope.doPopulate();
+          }
+	   })
+	   return data;
+    });	
+  };  
+    
+  $scope.resetPersonFields = function() {
+    $scope.person = {id: 0, name: "", age: ""};        
+  }        
+  $scope.resetPersonFields();
+  
+  $scope.remove = function(entity) {    
+  	  //open a confirm dialog
+      var answer = confirm('GridCtrl:remove: Are you sure you wish to delete person: '+entity.name)
+      if (answer){
+         var json = angular.toJson(entity);
+         var promise = myRTFunctions.deletePersonCmd(json);
+    	 return promise.then(function(data) {
+    		  $scope.$apply(function() {
+    		  if(data.deleted){
+    		     $scope.doPopulate();	
+    		  }
+    		})
+    		return data;
+    	 });     		
+      }
+  }  
+  
+  $scope.updatePerson = function(entity) {
+     var json = angular.toJson(entity);
+     var promise = myRTFunctions.updatePersonCmd(json);
+	 return promise.then(function(data) {
+	   $scope.$apply(function() {
+		   if(data.updated){
+              $scope.doPopulate();		        	
+		   }
+		})
+		return data;
+	 });     	
+  }
+    
+  //a ng-grid callback event that can be used to handle cell edit updates
+  $scope.$on('ngGridEventEndCellEdit', function(evt){
+     //Detect changes and send entity to server 
+     $scope.updatePerson(evt.targetScope.row.entity)     
+  });    
+  
+  
+  $scope.gridOptions = { 
+        data: 'myData',      
+        enableRowSelection: false,
+        multiSelect: false,        
+        enableCellSelection: true,   
+        columnDefs: [{
+            field: 'id', 
+            visible: false
+        },{
+            field: 'name', 
+            displayName: 'Name', 
+            enableCellEdit: true
+        },{
+            field:'age', 
+            displayName:'Age', 
+            enableCellEdit: true
+        },{ 
+            field: 'remove',
+            displayName: 'Delete',
+            cellTemplate: '&lt;button type="button" ng-model="row.entity.remove"  
+                           ng-click="remove(row.entity)" class="close"  
+                           style="float:left;margin-left:5px;color: darkred;opacity: 0.3;"&gt;
+                           &lt;span aria-hidden="true"&gt;&times;&lt;/span&gt;
+                           &lt;span class="sr-only"&gt;Remove&lt;/span&gt;
+                           &lt;/button&gt;',
+            width: '55px'
+        }]
+  };  
+    
+}]);
+
+</pre>
+</section>
+</body>

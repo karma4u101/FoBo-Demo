@@ -9,11 +9,10 @@
 <!-- This is an embedded piece of html -->
 <body class="lift:content_id=pretty">
 <section id="pretty">
-<span class="label label-default">assets/js/controllers/personGridCtrl.js - Populate the Person ng-grid</span>
+<span class="label label-default">assets/js/controllers/personGridCtrl.js - The grid controller with read functionality</span>
 <pre class="prettyprint linenums js">
 app.controller('PersonGridCtrl',['$scope',function($scope) {
 	
-  $scope.populate = true;
   $scope.myData = []
 	
   $scope.doPopulate = function() {
@@ -25,12 +24,8 @@ app.controller('PersonGridCtrl',['$scope',function($scope) {
       return data;
     });	 
   };
-	
-  if($scope.populate){
-    $scope.doPopulate();
-    $scope.populate = false;
-  }   	
-    
+  $scope.doPopulate();
+ 	
   $scope.simpleGridOptions = { 
     data: 'myData',
     enableRowSelection: false,       

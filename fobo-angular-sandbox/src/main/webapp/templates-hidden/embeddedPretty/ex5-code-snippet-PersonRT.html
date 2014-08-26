@@ -9,7 +9,7 @@
 <!-- This is an embedded piece of html -->
 <body class="lift:content_id=pretty">
 <section id="pretty">
-<span class="label label-default">code.snippet.PersonRT.scala - With create and read functionality</span>
+<span class="label label-default">code.snippet.PersonRT.scala - With CRUD functionality</span>
 <pre class="prettyprint linenums scala">
  ⋮
 trait PersonRT extends EmptyRoundTrip with PersonComponent {
@@ -28,8 +28,28 @@ trait PersonRT extends EmptyRoundTrip with PersonComponent {
     func.send(retStaus)
   }
   
+  protected def updatePersonCmd(value : JValue, func : RoundTripHandlerFunc) : Unit = {
+    implicit val formats = DefaultFormats   
+    val pval = parse(value.extract[String])
+    val person = pval.extract[Person]
+    updatePerson(person)
+    val retStaus = ("updated" -> true)
+    func.send(retStaus)    
+  } 
+  
+  protected def deletePersonCmd(value : JValue, func : RoundTripHandlerFunc) : Unit = {
+    implicit val formats = DefaultFormats   
+    val pval = parse(value.extract[String])
+    val person = pval.extract[Person] 
+    deletePerson(person)
+    val retStaus = ("deleted" -> true)
+    func.send(retStaus)    
+  } 
+    
   private val roundtrips : List[RoundTripInfo] = List("personsQuery" -> personsQuery _,                                                
-                                                      "addPersonCmd" -> addPersonCmd _)
+                                                      "addPersonCmd" -> addPersonCmd _,
+                                                      "updatePersonCmd" -> updatePersonCmd _,
+                                                      "deletePersonCmd" -> deletePersonCmd _)
   abstract override def getRoundTrips = super.getRoundTrips ++ roundtrips  
 } 
 </pre>

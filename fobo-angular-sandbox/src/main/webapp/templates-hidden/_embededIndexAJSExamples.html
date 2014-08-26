@@ -18,7 +18,7 @@
 
                 <p>This section contains angular examples alongside with descriptions of the involved functions and code. 
                 We start with a couple of fairly trivial examples that in the end will lead us to a excel like data grid example 
-                with CRUD back-end data functionality that interact with the server using Lift 3.x round trip promises.</p>  
+                with CRUD back-end data functionality that interact with the server using Lift 3.x round trip functions.</p>  
                 <p>For overall setup and configuration of required resources see the <a href="#section-1" target="_self"><span data-lift="Loc.i">Section 1</span></a> 
                 section. </p>              
 
@@ -117,12 +117,13 @@
 						<p>When clicking on the "Simple RT" button the text above the button will be replaced with a text fetched 
 						from the server. So what's happening is that the angular model gets updated via the angular controller 
 						who is invoking a lift round trip function that, as part of its execution, invokes a Scala function on 
-						the server that calculates the value, or assembles the data, to be return to the calling client. 
-						The return value is put into the RoundTripHandlerFunc who is then sending it back from the server 
-						to the client, in this case it will end up as a future in the angular controller whereby the angular 
-						module gets updated and the value displayed above the click button. </p>
-						<p>In our case we are not handling errors but the RoundTripHandlerFunc is not only able to send back data 
-						but also signal end of data or some error condition, you can read more about that in 
+						the server, this function dose the calculations and returns it to the client.</p> 
+						
+						<p>The return value is put into Lift's <code>RoundTripHandlerFunc</code> who is then sending it back 
+						from the server to the client, in this case it will end up as a future in the angular controller whereby 
+						the angular module gets updated and the value will be displayed above the click button. </p>
+						<p>In our case we are not handling errors but Lift's <code>RoundTripHandlerFunc</code> is not only able to send back data 
+						but also signal end of data (for streams) or some error condition, you can read more about that in 
 						<a href="http://blog.goodstuff.im/roundtrip_promises">DPP's Blog <i class="fa fa-external-link"></i></a></p>
 					</div>
 				</div>
@@ -156,7 +157,7 @@
 						<i class="fa fa-exclamation-triangle fa-2x"></i> Modeling Lift Round Trips!
 					</h4>
 					    <p>As there are many ways to model the Lift round trips functionality you may see other blog post 
-					    doing thing's in a slightly different way, my hope is that you will see the overal "wiring" 
+					    or turorilas doing thing's in a slightly different way, my hope is that you will see the overal "wiring" 
 					    to be able to come up with something that sutes your needs.</p>
 				</div>
 				
@@ -182,8 +183,9 @@
 					        <p>
 						    To avoid cluttering the examples with to much repeating details the overall 
 						    resource setup has been ommited from the example section.
-						    One way to setup angular resources in Lift is to use the FoBo module, you can 
-						    read all about how to setup the resources used in this demo using FoBo in the 
+						    One way to setup angular, bootstrap and other front end toolkit resources in 
+						    Lift is to use the FoBo module, you can read all about how to setup the 
+						    resources used in this demo using FoBo in the 
 						    <a href="#section-1" target="_self"><span data-lift="Loc.i">Section 1</span></a> section.       
 					        </p>
 				        </div>					    
@@ -257,9 +259,9 @@
 					    <span
 							data-lift='embed?what=embeddedPretty/ex2-code-snippet-SimpleRT'> Embedding
 							the prettyprint ex2 code here</span>
-						<p>As this is a very simple example we are only using the <code>func.send(/*some data*/)</code> 
-						function. In addition using the RoundTripHandlerFunc we also have <code>func.done()</code> and 
-						<code>func.failure(/*Some failure message*/)</code> that gives us explicit control over 
+						<p>As this is a very simple example we are only using the <code>send(/*some data*/)</code> 
+						function. In addition using the <code>RoundTripHandlerFunc</code> we also have <code>done()</code> and 
+						<code>failure(/*Some failure message*/)</code> that gives us explicit control over 
 						sending data, done, and failure.</p>	
 				
 						<p>For completnes below is showing how we declare <code>getRoundTrips</code></p>
@@ -297,7 +299,7 @@
 					    <br/>
 						<p>Next in Example 3 we are going to use the same design pattern as outlined above but this time we 
 						are going to fetch a array of data from the back-end store using slick and display it using the 
-						Angular NG-Grid UI module.</p>
+						Angular NG-Grid UI module provided by FoBo.</p>
 					</div>
 				</div>
 				<hr>
@@ -426,6 +428,12 @@
 					</div>
 				</div>
 				
+               <span data-lift='embed?what=embeddedPretty/ex5-ng-controller'> Embedding
+							the prettyprint ex3 code here</span>
+														
+                <span data-lift='embed?what=embeddedPretty/ex5-code-snippet-PersonRT'> Embedding
+							the prettyprint ex2 code here</span>
+											
 				<p>This completes the example serie as we now have CRUD operations on the ng-grid.</p>			
 
 			</div>

@@ -9,40 +9,30 @@
 <!-- This is an embedded piece of html -->
 <body class="lift:content_id=pretty">
 <section id="pretty">
-<span class="label label-default">assets/js/controllers/personGridCtrl.js - Person grid controller with add function</span>
+<span class="label label-default">assets/js/controllers/personGridCtrl.js - Person grid controller with create and read functionality</span>
 <pre class="prettyprint linenums js">
-app.controller('PersonGridCtrl','$log',function($scope,$log) {
+app.controller('PersonGridCtrl',function($scope) {
 	
-  $scope.populate = true;
   $scope.myData = []
 	
-  $scope.doPopulate = function() {
-    $log.debug('PersonGridCtrl:doPopulate: about to call personsQuery');	
+  $scope.doPopulate = function() {	
     var promise = myRTFunctions.personsQuery();  //Round trip call to Lift server function
     return promise.then(function(data) {
       $scope.$apply(function() {
         $scope.myData = data; 
-        $log.debug('PersonGridCtrl:doPopulate: in apply data set'); 
       })
       return data;
     });	 
   };
-	
-  if($scope.populate){
-    $scope.doPopulate();
-    $scope.populate = false;
-  }   	
+  $scope.doPopulate();
     
   $scope.doAdd = function() {
-    $log.debug('PersonGridCtrl:doAdd: about to add person ' + $scope.person);
     var json = angular.toJson($scope.person);
-    var promise = myRTFunctions.addPersonCmd(json); //send the add data to the 
+    var promise = myRTFunctions.addPersonCmd(json); //send the data to the server
     $scope.resetPersonFields();
 	return promise.then(function(data) {
-	   $scope.$apply(function() {
-	      $log.debug("PersonGridCtrl:doAdd in $apply data.inserted="+data.inserted);   
-          if(data.inserted) {
-             $log.debug("PersonGridCtrl:doAdd in $apply repopulate the list"); 	
+	   $scope.$apply(function() { 
+          if(data.inserted) {	
              $scope.doPopulate();
           }
 	   })
@@ -50,13 +40,11 @@ app.controller('PersonGridCtrl','$log',function($scope,$log) {
     });	
   };  
     
-    $scope.resetPersonFields = function() {
-    $scope.person = {
-            id: 0,
-            name: "",
-            age: ""
-        };        
-    }        
+  $scope.resetPersonFields = function() {
+    $scope.person = {id: 0, name: "", age: ""};        
+  }
+  $scope.resetPersonFields();        
+  
   $scope.simpleGridOptions = { 
     data: 'myData',
     enableRowSelection: false,       

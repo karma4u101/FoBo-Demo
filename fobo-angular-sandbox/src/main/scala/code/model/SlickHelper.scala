@@ -19,7 +19,7 @@ object SlickHelper extends PersonComponent  {
       (3,"Nephi",29),
       (4,"Enos",34),
       (5,"Peter",46),
-      (6,"UllaBella",42)
+      (6,"Ulla",42)
     )
     
   }
