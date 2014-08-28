@@ -1,5 +1,5 @@
 
-app.controller('PersonGridCtrl',['$scope','$log',function($scope,$log) {
+app.controller('PersonGridCtrl',['$scope','$log','$modal',function($scope,$log,$modal) {
 	
 	$scope.myData = []
 				
@@ -19,30 +19,48 @@ app.controller('PersonGridCtrl',['$scope','$log',function($scope,$log) {
 		
 	
     $scope.remove = function(entity) {    
-    	//$ModalDemoCtrl.open('sm');
     	$log.debug('PersonGridCtrl:remove: about to delete person: ' + entity.name);
-    	//open a confirm dialog
-    	var answer = confirm('GridCtrl:remove: Are you sure you wish to delete person: ' + entity.name )
-    	if (answer){
-    		$log.debug('PersonGridCtrl:remove: Are you sure(?) dialog got answer='+answer+' proceding with deleting person: ' + entity.name);
-            var json = angular.toJson(entity);
-        	var promise = myRTFunctions.deletePersonCmd(json);
-    	    return promise.then(function(data) {
-    		      $scope.$apply(function() {
-    		    	$log.debug("PersonGridCtrl:remove:deletePersonCmd in apply data.deleted="+data.deleted);  
-    		        //$scope.myData = data;
-    		    	if(data.deleted){
-    		    	  $scope.doPopulate();	
-    		    	}
-    		      })
-    		      return data;
-    		    });     		
-    	}
-    	else{
-    		$log.debug('Are you sure(?) dialog got answer='+answer+' aborted delete of person: ' + entity.name);
-    	}
+    	var modalInstance = $scope.openDeletePersonAnswerModal(entity);
+    	//result - a promise that is resolved when a modal is closed and rejected when a modal is dismissed.
+    	//So if the module is closed and not rejected we eventually get a result. 
+    	//In our case the controller is so simple that we do not need to 'check' the result answer
+    	//as it will always be 'ok', but in case the controller will be changed in the future 
+    	//we check that the answer is 'ok' anyway.
+    	modalInstance.result.then(function (answer) {
+        	$log.debug('answer: ' + answer);
+        	if(answer=='ok'){
+        		$log.debug('PersonGridCtrl:remove: Are you sure(?) modal dialog got answer='+answer+' proceding with deleting person: ' + entity.name);
+                var json = angular.toJson(entity);
+            	var promise = myRTFunctions.deletePersonCmd(json);
+        	    return promise.then(function(data) {
+        		      $scope.$apply(function() {
+        		    	$log.debug("PersonGridCtrl:remove:deletePersonCmd in apply data.deleted="+data.deleted);  
+        		        //$scope.myData = data;
+        		    	if(data.deleted){
+        		    	  $scope.doPopulate();	
+        		    	}
+        		      })
+        		      return data;
+        		    });         		
+        	}
+        }, function (reason) {
+        	$log.debug('DeletePersonAnswerModal dismissed at: ' + new Date() + ' reason: '+reason+' so aborting delete of person: '+ entity.name);
+        });
     }    
 
+    $scope.openDeletePersonAnswerModal = function(entity){
+    	return $modal.open({
+    		     templateUrl: 'myModalTemplate.html',
+    	         controller: 'PersonModalInstCtrl',
+    	         size: 'sm',
+    	         resolve: {
+    	    	   entity: function () {
+    	              return entity;
+    	           }
+    	         }    	    
+              });    	
+    }
+    
     //The age is declared as a input type="number" but here we 
     //set person with empty values to enable the placeholder text
     $scope.resetPersonFields = function() {
@@ -126,3 +144,5 @@ app.controller('PersonGridCtrl',['$scope','$log',function($scope,$log) {
     };     
     
 }]);
+
+

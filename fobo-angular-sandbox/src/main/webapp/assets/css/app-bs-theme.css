@@ -138,16 +138,37 @@ a.list-group-item:hover, a.list-group-item:focus {
     color: #fff;
 }
 
-.popover-content {
-    font-size:14px;
-    background-color: #f5f5f5;
-}
+
 .popover-title {
     background-color: #003C6F;
     background-image: linear-gradient(to bottom, #003366 0%, #006699 100%);
     color: #99CCCC;
     font-weight: bold;
 }
+.popover-content {
+    font-size:14px;
+    background-color: #f5f5f5;
+}
+
+
+.modal-header {
+    background-color: #003C6F;
+    background-image: linear-gradient(to bottom, #003366 0%, #006699 100%);
+}
+.modal-body {
+    font-size:14px;
+    background-color: #f5f5f5;
+}
+.modal-footer {
+    font-size:14px;
+    background-color: #f5f5f5;
+}
+.modal-title {
+	font-size:16px;
+    color: #99CCCC;
+    font-weight: bold;	
+}
+
 
 @media (max-width: 767px) {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
@@ -173,12 +194,7 @@ a.list-group-item:hover, a.list-group-item:focus {
   }
 
 }
-/*
-.bs-callout-info {
-    background-color: #F4F8FA;
-    border-color: #BCE8F1;
-}
-*/
+
 .bs-callout {
     border-left: 3px solid #EEEEEE;
     margin: 20px 0;
@@ -190,7 +206,7 @@ a.list-group-item:hover, a.list-group-item:focus {
 }
 .bs-callout-info {
     background-color: #F4F8FA;
-    border-color:  #5BC0DE; /*#34789A;*/
+    border-color:  #5BC0DE; 
 }
 .bs-callout-info h4 {
     color: #34789A;

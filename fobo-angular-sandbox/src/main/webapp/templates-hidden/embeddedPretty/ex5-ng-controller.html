@@ -11,7 +11,7 @@
 <section id="pretty">
 <span class="label label-default">assets/js/controllers/personGridCtrl.js - Person grid controller with CRUD functionality</span>
 <pre class="prettyprint linenums js">
-app.controller('PersonGridCtrl',function($scope) {
+app.controller('PersonGridCtrl',['$scope','$modal',function($scope,$modal) {
 	
   $scope.myData = []
 	
@@ -39,28 +39,44 @@ app.controller('PersonGridCtrl',function($scope) {
 	   return data;
     });	
   };  
+
+  $scope.remove = function(entity) {    
+    var modalInstance = $scope.openDeletePersonAnswerModal(entity);
+    modalInstance.result.then(function (answer) {
+        if(answer=='ok'){
+          var json = angular.toJson(entity);
+          var promise = myRTFunctions.deletePersonCmd(json);
+          return promise.then(function(data) {
+             $scope.$apply(function() {
+        		if(data.deleted){
+        		  $scope.doPopulate();	
+        		}
+        	 })
+             return data;
+          });         		
+        }
+    }, function (reason) {
+      ;//modal dialog dismissed via cancel button, do noting
+    });
+  }    
+
+  $scope.openDeletePersonAnswerModal = function(entity){
+    return $modal.open({
+    	     templateUrl: 'myModalTemplate.html',
+    	     controller: 'PersonModalInstCtrl',
+    	     size: 'sm',
+    	     resolve: {
+    	       entity: function () {
+    	         return entity;
+    	       }
+    	     }    	    
+           });    	
+  }
     
   $scope.resetPersonFields = function() {
     $scope.person = {id: 0, name: "", age: ""};        
   }        
   $scope.resetPersonFields();
-  
-  $scope.remove = function(entity) {    
-  	  //open a confirm dialog
-      var answer = confirm('GridCtrl:remove: Are you sure you wish to delete person: '+entity.name)
-      if (answer){
-         var json = angular.toJson(entity);
-         var promise = myRTFunctions.deletePersonCmd(json);
-    	 return promise.then(function(data) {
-    		  $scope.$apply(function() {
-    		  if(data.deleted){
-    		     $scope.doPopulate();	
-    		  }
-    		})
-    		return data;
-    	 });     		
-      }
-  }  
   
   $scope.updatePerson = function(entity) {
      var json = angular.toJson(entity);

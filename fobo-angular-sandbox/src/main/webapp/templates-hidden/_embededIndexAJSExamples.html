@@ -292,8 +292,6 @@
 					<a href="http://blog.angularjs.org/2014/02/an-angularjs-style-guide-and-best.html">An AngularJS Style Guide and Best Practice for App Structure</a>	
 					it contains references to these documents. 
 					</p>
-					
-
 				</div>					    
 					    
 					    <br/>
@@ -380,6 +378,11 @@
 					</div>
 				</div>
 
+                <p>Below is the html scoped by the person grid controller. It has grown a bit compaired with 
+                example 3 as we now add some, bootstrap styled, input fields and a button to submit the field vaules. 
+                The interesting and new angular stuff, compaired to example 3, is the <code>ng-model</code> and the 
+                <code>ng-click</code> bindings on input and button.</p>
+                
                 <span data-lift='embed?what=embeddedPretty/ex4-template-PersonCtrl'> Embedding
 							the prettyprint ex3 code here</span>
 							
@@ -395,8 +398,7 @@
 					<div class="col-sm-12">
 						<a id="section-2-5"></a>
 						<h3>Example 5:</h3>
-						<p>Building on Example 4 we now also add <b>excel like cell edit</b> operations 
-						(double click on name or age cell to edit), end of edit will trigger a <b>entity updates</b>. 
+						<p>Building on example 4 we now also add <b>excel like cell edit</b> operations. 
 						We also add a discrete <b>delete button</b> column for <b>entity delete</b> operations and
 						as before we have the <b>add</b> function. </p>
 					</div>
@@ -427,9 +429,42 @@
 						</div>
 					</div>
 				</div>
+				<script type="text/ng-template" id="myModalTemplate.html"> 
+                      <div class='modal-header'> 
+                         <h4 class='modal-title'>Delete</h4> 
+                       </div> 
+                      <div class='modal-body'> 
+                        <p><i class="fa fa-exclamation-triangle fa-3x" style="color:#f0ad4e;"></i> Are you sure you wish to delete person: {{ entity.name }} </p> 
+                      </div> 
+                      <div class='modal-footer'> 
+                        <button class='btn btn-danger' ng-click='ok()'>OK</button> 
+                        <button class='btn btn-default' ng-click='cancel()'>Cancel</button> 
+                      </div>
+                </script>
+                
+				<div class="bs-callout bs-callout-info">
+					<h4>
+						<i class="fa fa-exclamation-triangle fa-2x"></i> CRUD operations
+					</h4>
+					<p>
+					To <b>edit</b> grid data, <b>double click</b> on a name or age cell, 
+				    "end of edit" will trigger a <b>entity update</b>. 
+				    <b>Add</b> and <b>delete</b> operations should be self-explaining.</p>
+				</div>	
+				
+				<p>Below is the html for example 5 scoped by the person controller, the only difference from 
+				example 4 is a change in grid options from <code>ng-grid="simpleGridOptions"</code> to 
+				<code>ng-grid="gridOptions"</code></p>	
+							
+                <span data-lift='embed?what=embeddedPretty/ex5-template-PersonCtrl'> Embedding
+							the prettyprint ex3 code here</span>	
+										
+				<p>Below is the final controller handling all CRUD operations on the ng-grid.</p>
 				
                <span data-lift='embed?what=embeddedPretty/ex5-ng-controller'> Embedding
 							the prettyprint ex3 code here</span>
+									
+				<p>Below is the final PersonRT trait handling all CRUD operations.</p>
 														
                 <span data-lift='embed?what=embeddedPretty/ex5-code-snippet-PersonRT'> Embedding
 							the prettyprint ex2 code here</span>
