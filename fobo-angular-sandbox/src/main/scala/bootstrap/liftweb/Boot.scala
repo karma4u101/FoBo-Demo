@@ -97,22 +97,19 @@ class Boot {
   object Site {
     import scala.xml._
     
-//    val divider1   = Menu("divider1") / "divider1"
-//    val ddLabel1   = Menu.i("UserDDLabel") / "ddlabel1"
     val home       = Menu.i("Home") / "index" 
-//    val userMenu   = User.AddUserMenusHere
-    
-//    val static     = Menu(Loc("Static", 
-//        Link(List("static"), true, "/static/index"), 
-//        S.loc("StaticContent" , scala.xml.Text("Static Content")),
-//        LocGroup("lg2","topRight") ))
-//
         
     val AngularJS       = Menu(Loc("AngularJS", 
         ExtLink("http://angularjs.org/"), 
         S.loc("AngularJS" , scala.xml.Text("AngularJS")),
         LocGroup("lg2"),
         FoBo.TBLocInfo.LinkTargetBlank  )) 
+        
+    val Bootstrap       = Menu(Loc("Bootstrap", 
+        ExtLink("http://getbootstrap.com/"), 
+        S.loc("Bootstrap" , scala.xml.Text("Bootstrap")),
+        LocGroup("lg2"),
+        FoBo.TBLocInfo.LinkTargetBlank  ))         
         
    val Slick       = Menu(Loc("Slick", 
         ExtLink("http://slick.typesafe.com/"), 
@@ -156,7 +153,7 @@ class Boot {
         FLTDemo,
         Slick,
         AngularJS,
-
+        Bootstrap,
         FontAwesome,
         dtop,    
         sbg1,

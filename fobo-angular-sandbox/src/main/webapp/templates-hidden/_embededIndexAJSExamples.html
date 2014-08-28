@@ -152,13 +152,13 @@
 					    <p>Below I will try explain the things involved in hooking up Lift roundtrip's with a angularJS 
 					    <a href="https://docs.angularjs.org/guide/controller">controller <i class="fa fa-external-link"></i></a>, this <strong>"hookup" pattern</strong> is used in most of the following example(s).</p> 
 
-				<div class="bs-callout bs-callout-warning">
+				<div class="bs-callout bs-callout-info">
 					<h4>
 						<i class="fa fa-exclamation-triangle fa-2x"></i> Modeling Lift Round Trips!
 					</h4>
 					    <p>As there are many ways to model the Lift round trips functionality you may see other blog post 
-					    or turorilas doing thing's in a slightly different way, my hope is that you will see the overal "wiring" 
-					    to be able to come up with something that sutes your needs.</p>
+					    or turorilas doing thing's in a slightly different way, my hope is that my aproache is simple enoth 
+					    that you will understand and see the overal "wiring" yet flexible entoght for most use cases.</p>
 				</div>
 				
 
@@ -289,7 +289,7 @@
 					<p>With this in mind Google has put together some AngularJS style guide documentation, so if you want to get 
 					up to date on how to structure future web apps the <strong>structurally way</strong> you can take a look at 
 					this Angular blog post 
-					<a href="http://blog.angularjs.org/2014/02/an-angularjs-style-guide-and-best.html">An AngularJS Style Guide and Best Practice for App Structure</a>	
+					<a href="http://blog.angularjs.org/2014/02/an-angularjs-style-guide-and-best.html">An AngularJS Style Guide and Best Practice for App Structure <i class="fa fa-external-link"></i></a>	
 					it contains references to these documents. 
 					</p>
 				</div>					    
@@ -297,7 +297,7 @@
 					    <br/>
 						<p>Next in Example 3 we are going to use the same design pattern as outlined above but this time we 
 						are going to fetch a array of data from the back-end store using slick and display it using the 
-						Angular NG-Grid UI module provided by FoBo.</p>
+						<a href="http://angular-ui.github.io/ng-grid/">Angular NG-Grid UI module <i class="fa fa-external-link"></i></a> provided by FoBo.</p>
 					</div>
 				</div>
 				<hr>
@@ -306,9 +306,12 @@
 					<div class="col-sm-12 ">
 						<a id="section-2-3"></a>
 						<h3>Example 3:</h3>
-						<p>This example is doing a round trip to the server to fetch
-							and display the grid data from the back-end store handled by
-							slick. We are going to build on this example in the following
+						<p>Using the <a href="http://angular-ui.github.io/ng-grid/">Angular NG-Grid UI module <i class="fa fa-external-link"></i></a>, 
+						   provided via the <span data-lift="Menu.item?name=FLTDemo;">FoBo module <i class="fa fa-external-link"></i></span>, 
+						   this example is doing a round trip to the server to fetch
+							and display grid data from the back-end store handled by
+							<a href="http://slick.typesafe.com/">Slick <i class="fa fa-external-link"></i></a>. 
+							We are going to build on this example in the following
 							examples to extend its functionality. Here we start with the
 							simplest task of just fetching and displaying the data.</p>
 					</div>
@@ -398,7 +401,7 @@
 					<div class="col-sm-12">
 						<a id="section-2-5"></a>
 						<h3>Example 5:</h3>
-						<p>Building on example 4 we now also add <b>excel like cell edit</b> operations. 
+						<p>Building on example 3 and 4 we now also add <b>excel like cell edit</b> operations. 
 						We also add a discrete <b>delete button</b> column for <b>entity delete</b> operations and
 						as before we have the <b>add</b> function. </p>
 					</div>
@@ -459,12 +462,12 @@
                 <span data-lift='embed?what=embeddedPretty/ex5-template-PersonCtrl'> Embedding
 							the prettyprint ex3 code here</span>	
 										
-				<p>Below is the final controller handling all CRUD operations on the ng-grid.</p>
+				<p>Below is the final controller handling the CRUD operations on the ng-grid.</p>
 				
                <span data-lift='embed?what=embeddedPretty/ex5-ng-controller'> Embedding
 							the prettyprint ex3 code here</span>
 									
-				<p>Below is the final PersonRT trait handling all CRUD operations.</p>
+				<p>Below is the final PersonRT trait handling the CRUD operations.</p>
 														
                 <span data-lift='embed?what=embeddedPretty/ex5-code-snippet-PersonRT'> Embedding
 							the prettyprint ex2 code here</span>
