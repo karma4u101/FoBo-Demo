@@ -4,9 +4,9 @@ name := "FoBo-Lift-Template-Demo"
 
 version := "2.8.1-SNAPSHOT"
 
-crossScalaVersions := Seq("2.10.4", "2.9.2", "2.9.1-1", "2.9.1")
+crossScalaVersions := Seq("2.11.2", "2.10.4", "2.9.2", "2.9.1-1", "2.9.1")
 
-scalaVersion := "2.10.4"
+scalaVersion := "2.11.2"
 
 seq(webSettings :_*)
 
@@ -30,7 +30,7 @@ libraryDependencies <++= (liftVersion,liftEdition,version) { (v,e,mv) =>
     "net.liftweb"     %% "lift-mapper"            % v    % "compile" ::
     "net.liftweb"     %% "lift-squeryl-record"    % v    % "compile" ::
     "net.liftweb"     %% "lift-testkit"           % v    % "compile" ::
-    "net.liftmodules" %% ("fobo"+"_"+e)           % "1.3" % "compile" ::
+    "net.liftmodules" %% ("fobo"+"_"+e)           % "1.4-SNAPSHOT" % "compile" ::
     Nil
 }
 

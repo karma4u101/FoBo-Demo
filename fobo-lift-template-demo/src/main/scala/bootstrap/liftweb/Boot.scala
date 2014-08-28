@@ -16,7 +16,7 @@ import _root_.net.liftweb.http.provider.HTTPRequest
 import _root_.net.liftweb.http.auth.{ HttpBasicAuthentication, AuthRole, userRoles }
 
 import code.model._
-import code.snippet._
+//import code.snippet._
 
 import net.liftmodules.{FoBo/*,FoBoFA,FoBoTB*/}
 
