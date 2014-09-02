@@ -1,6 +1,6 @@
 moduleName := "FoBo-Angular-Sandbox"
 
-version := "0.5.3-SNAPSHOT"
+version := "0.5.5-SNAPSHOT"
 
 organization := "net.liftweb"
 

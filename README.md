@@ -1,7 +1,11 @@
 FoBo-Demo
 =========
 
-Sandbox projects for [FoBo](https://github.com/karma4u101/FoBo) demos/tutorials. 
+Sandbox projects for [FoBo](https://github.com/karma4u101/FoBo) demos/tutorials.
+- fobo-angular-sandbox -- A Lift 3 round trip tutorial with FoBo, AngularJS and Slick. 
+- fobo-lift-template-demo -- The main introduction to FoBo pages.
+- pimping-lift_advanced_bs3 -- A for demo perpose slightly pimped lift_advanced_bs3 
+- fobo-bs3-sandbox -- A WIP FoBo boostrap 3 demo/tutorial (early alpha fase) 
 
 Quick Start
 -----------
@@ -23,7 +27,7 @@ There is also a sbt.bat for windows users so if you are on a windows machine jus
         > projects  
         > project [sub project name as shown in list from the 'projects' command]
 
-4) Update & Start Jetty  
+4) Update & Start Jetty 
 The following commands will update and fetch the projects dependancys then start the jetty server and load the lift application. 
 
 	> update ~container:start
@@ -46,16 +50,24 @@ Scala IDE Support
 
 Sbteclipse provides SBT command to create Eclipse project files
 
-1) Usage
+1) Usage 
 
+To create a eclipse project containing one of the sbt sub projects: 
+ 
 	project$ ./sbt
+        > project [sub project name as shown in list from the 'projects' command]
+	> eclipse 
+
+or if you wish to create a "one in all" eclispe project:
+
+ 	project$ ./sbt
 	> eclipse 
 
 2) In eclipse do: 
 
 	File ==> Import...
 	Select General ==> Existing Project into Workspace 
-	Use "Brows" to look up the project root ....
+	Use "Browse" to look up the project root ....
 
 ### IDEA
 
@@ -64,6 +76,11 @@ sbt-idea provides a `gen-idea` command to SBT to generate IDEA project files
 1) Usage
 
 	project$ ./sbt
+	> gen-idea no-classifiers
+
+Or creating from a sub project
+	project> ./sbt
+        > project [sub project name as shown in list from the 'projects' command]
 	> gen-idea no-classifiers
 
 2) In Intellij / IDEA do:
