@@ -174,9 +174,9 @@
 						<i class="fa fa-exclamation-triangle fa-2x"></i> Modeling Lift Round Trips!
 					</h4>
 					    <p>As there are many ways to model the Lift round trips functionality you may see other blog post 
-					    or turorilas doing thing's in a slightly different way, my hope is that the pattern used 
-					    in this tutorial is simple enoth that you will understand and see the overal "wiring" yet 
-					    flexible entoght for most use cases.</p>
+					    or tutorials doing thing's in a slightly different way, my hope is that the pattern used 
+					    in this tutorial is simple enough that you will understand and see the overall "wiring" yet 
+					    flexible enough for most use cases.</p>
 				</div>
 				
 
@@ -204,8 +204,8 @@
 						<i class="fa fa-exclamation-triangle fa-2x"></i> Angular application scope
 					</h4>
 					<p>
-						Althoug it is common to have only one <code>ng-app</code> directive in a 
-						application (typical in a <mark>single-page</mark> application) it is posible to 
+						Although it is common to have only one <code>ng-app</code> directive in a 
+						application (typical in a <mark>single-page</mark> application) it is possible to 
 						have more than one <code>ng-app</code> directives in one and the same application 
 						(one per page). 
 					</p>
@@ -216,8 +216,8 @@
 							the prettyprint ex2 code here</span>	
 							
 						<p>Here we are loading the <code>foboDemoApp</code> <a target="_blank" href="https://docs.angularjs.org/guide/module">module <i class="fa fa-external-link"></i></a> 
-						with it's configuration and run blocks. Althogh not nessary in this example we are also loading some module 
-						dependancies <code>['ngGrid','ui.bootstrap']</code>. As the module dependencies is not used in this example 
+						with it's configuration and run blocks. Although not necessary in this example we are also loading some module 
+						dependencies <code>['ngGrid','ui.bootstrap']</code>. As the module dependencies is not used in this example 
 					    we could have made it a empty list <code>[]</code>, we are however going to use the 
 						dependancies in later examples.</p> 						
 						
@@ -227,7 +227,7 @@
 							the prettyprint ex2 code here</span>
 							
 						<p>
-						Above shows the controller declaration in the Lift template. Bellow is the javascript implementaion of the 
+						Above shows the controller declaration in the Lift template. Bellow is the javascript implementation of the 
 						same Angular <a target="_blank" href="https://docs.angularjs.org/guide/controller">controller <i class="fa fa-external-link"></i></a>
 						</p>	
 						<h4>The controller</h4>								
@@ -235,7 +235,7 @@
 							data-lift='embed?what=embeddedPretty/ex2-assets-controller-SimpleRTCtrl'> Embedding
 							the prettyprint SimpleRTCtrl js code here</span>	
 							
-						<p>Now in the Angular controller things are starting to get a bit more interesting, altogh we are keeping things simple. 
+						<p>Now in the Angular controller things are starting to get a bit more interesting, although we are keeping things simple. 
 						Here we are calling, from the Angular javascript controller, the round trip function <code>myRTFunctions.doSimpleRT();</code> 
 						that is, a function that is hooked to native Lift/Scala code on the server. 
 						This function will return a 
@@ -243,8 +243,8 @@
 						and when fulfilled it will contain a 
 						<a target="_blank" href="https://github.com/lift/lift/blob/master/framework/lift-base/lift-json/README.md">lift-json <i class="fa fa-external-link"></i></a> 
 						string originated from the server with the message <b>"There and back again!"</b>.</p>
-						<p>The function that returns the future is a lift round trip call and hense something Angular knows nothing about (it's not handled by Angular) 
-						so when the future is resolved we need to tell Angular that things has happend/changed, in Angular we do that by calling <code>$scope.$apply</code></p>
+						<p>The function that returns the future is a lift round trip call and hence something Angular knows nothing about (it's not handled by Angular) 
+						so when the future is resolved we need to tell Angular that things has happened/changed, in Angular we do that by calling <code>$scope.$apply</code></p>
 
 						<h4>Lift round trip bindings</h4>
 						<p>I am going to show you the Lift server side code in a moment but let us first take a look at 
@@ -263,7 +263,7 @@
 					    
 					    <p>Below is the actual snippet implementation that renders the <i>hook up</i> functions as javascript code 
 					    in the bottom of the html page. Our use case specific <i>hook up</i> functions is added by calling 
-					    our <code>getRoundTrips</code> function. The essensial Lift round trip building magic is condensed into
+					    our <code>getRoundTrips</code> function. The essential Lift round trip building magic is condensed into
 					    the <code>buildRoundtrip</code> <code>toJsCmd</code> transformation. 
 					    In this example our use case specific server side round trip functions is declared in the <code>SimpleRT</code> trait, 
 					    in later examples our use case specific server side round trip functions will be in the <code>PersonRT</code> trait. 
@@ -272,17 +272,18 @@
 							data-lift='embed?what=embeddedPretty/ex2-code-snippet-RoundTripInjector'> Embedding
 							the prettyprint roundtrip injector snippet code here</span>							
 					    
-					    <p>Below is our <code>SimpleRT</code> trait contaning a <code>List</code> with a
+					    <p>Below is our <code>SimpleRT</code> trait containing a <code>List</code> with a
 					    <code>RoundTripInfo</code> object that maps the js function <code>doSimpleRT</code> in the 
 					    Angular controller using it's name (the string value) with our Scala function 
 			            <code>doSimpleRT(value :JValue, func :RoundTripHandlerFunc) :Unit</code>. 
 			            </p>
-					    <p>As you can see we are for clearaty using the same function name <var>doSimpleRT</var> in booth ends.</p>
+					    <p>As you can see we are for clarity using the same function name <var>doSimpleRT</var> in booth ends.</p>
 					  
 					    
 					    <span
 							data-lift='embed?what=embeddedPretty/ex2-code-snippet-SimpleRT'> Embedding
 							the prettyprint ex2 code here</span>
+							
 						<p>The <code>doSimpleRT</code> function has two parameters, namely the input 
 						value named <code>value</code> of type <code>JsonAST.JValue</code> and the return value 
 						named <code>func</code> of type <code>RoundTripHandlerFunc</code>. </p>	
@@ -294,18 +295,18 @@
 						failure message on failure.</p>	
 				
 				        <h4>Decoupling our round trip functions</h4>
-						<p>For completnes, the code below is showing how we declare <code>getRoundTrips</code> so that  
+						<p>For completeness, the code below is showing how we declare <code>getRoundTrips</code> so that  
 						by extending <code>EmptyRoundTrip</code> we have a way of organizing our round trip functions 
-						into separete traits.</p>
+						into separate traits.</p>
 					    <span
 							data-lift='embed?what=embeddedPretty/ex2-code-lib-PageRoundTrips'> Embedding
 							the prettyprint ex2 code here</span>																			    
 					    
 					    <h4>That's it!</h4>
-					    <p>When you get your head around it, it ain't that complicated and as has been said abowe this is one way
-					    of doing it. Compaired with a simpler and more strait forward approach we are using the <code>PageRoundTrips</code> 
+					    <p>When you get your head around it, it ain't that complicated and as has been said above this is one way
+					    of doing it. Compared with a simpler and more strait forward approach we are using the <code>PageRoundTrips</code> 
 					    abstraction (originally <a target="_blank" href="https://github.com/antidata/GoogleMaps">used <i class="fa fa-external-link"></i></a> 
-					    by M. Lucchetta) which gives us some additional flexibilty as it in a decoupled way lets us organize your 
+					    by M. Lucchetta) which gives us some additional flexibility as it in a decoupled way lets us organize your 
 					    round trip functions into multiple snippet traits.</p>
 					    
 				<div class="bs-callout bs-callout-info">
@@ -313,10 +314,10 @@
 						<i class="fa fa-exclamation-triangle fa-2x"></i> Styleguide
 					</h4>
 					<p>
-					This demo group files in a <strong>functionally way</strong> (all templates/views together, all css together, 
+					This application group files in a <strong>functionally way</strong> (all templates/views together, all css together, 
 					all js together etc...), this is, today, a common way of structuring web apps. New web technologies is however 
 					emerging with <strong>web components</strong> as one of the most exiting and impacting ones, this will change 
-					how we strukture future web apps and as technolgy merges this will include how we structure AngularJS and Lift 
+					how we structure future web apps and as technology merges this will include how we structure AngularJS and Lift 
 					web apps too.</p>
 					
 					<p>With this in mind Google has put together some AngularJS style guide documentation, so if you want to get 
@@ -380,7 +381,7 @@
 				<p>In <code>$scope.simpleGridOptions</code> we are binding <code>$scope.myData</code> 
 				to the grid and when the <var>promise</var> returned by Lift's round trip function 
 				<code>personsQuery()</code> called via the <code>$scope.doPopulate</code> function 
-				is fullfilled the grid will get populated with data fetched from the back-end store.</p>		
+				is fulfilled the grid will get populated with data fetched from the back-end store.</p>		
 					
                 <span data-lift='embed?what=embeddedPretty/ex3-ng-controller'> Embedding
 							the prettyprint ex3 code here</span>
@@ -391,17 +392,17 @@
 				function that fetches and maps the back-end person data to a list of <code>JsonAST.JObject's</code>. 
 				</p>				
                 <span data-lift='embed?what=embeddedPretty/ex3-code-snippet-PersonRT'> Embedding
-							the prettyprint ex2 code here</span>
+							the prettyprint ex3 code here</span>
 
                 <p>We will in the following examples add additional round trip functions, for 
-				handling create, update and delete opperations.</p>
+				handling create, update and delete operations.</p>
 				<hr>
 
 				<div class="row">
 					<div class="col-sm-12 ">
 						<a id="section-2-4"></a>
 						<h3>Example 4:</h3>
-						<p>Building on example 3 we are now adding the abillity to create and <b>add new Person</b> data to the back-end store and display 
+						<p>Building on example 3 we are now adding the ability to create and <b>add new Person</b> data to the back-end store and display 
 						it in the grid by doing a roundtrip to the server to add the Person data and then update the grid with the new data.</p>
 					</div>
 				</div>
@@ -436,21 +437,21 @@
                 
                 
                 <h4>The view bindings</h4>
-                <p>Below is the html scoped by the person grid controller. It has grown a bit compaired with 
-                example 3 as we now add some, bootstrap styled, input fields and a button to submit the field vaules. 
-                The interesting and new Angular stuff, compaired to example 3, is the <code>ng-model</code> and the 
+                <p>Below is the html scoped by the person grid controller. It has grown a bit compared with 
+                example 3 as we now add some, bootstrap styled, input fields and a button to submit the field values. 
+                The interesting and new Angular stuff, compared to example 3, is the <code>ng-model</code> and the 
                 <code>ng-click</code> bindings on input and button.</p>
                 
                 <span data-lift='embed?what=embeddedPretty/ex4-template-PersonCtrl'> Embedding
-							the prettyprint ex3 code here</span>
+							the prettyprint ex4 code here</span>
 							
 				<h4>The controller</h4>			
-				<p>Added to the controller compaired to example 2 is the <code>$scope.doAdd</code> function 
+				<p>Added to the controller compared to example 2 is the <code>$scope.doAdd</code> function 
 				where in we now also is sending json data from the client to the server via the round 
 				trip function <code>addPersonCmd</code>. Then when data has been inserted into the back-end 
 				store we also make sure the grid is updated with the newly added data.</p>				
                 <span data-lift='embed?what=embeddedPretty/ex4-ng-controller'> Embedding
-							the prettyprint ex3 code here</span>
+							the prettyprint ex4 code here</span>
 				
 				<h4>Lift round trip bindings</h4>	
 				<p>Here we add the <code>addPersonCmd</code> function to the <code>RoundTripInfo</code> object 
@@ -458,14 +459,14 @@
 				put it into the <code>Person</code> case class and inserts it into the back-end store.</p>
 														
                 <span data-lift='embed?what=embeddedPretty/ex4-code-snippet-PersonRT'> Embedding
-							the prettyprint ex2 code here</span>
+							the prettyprint ex4 code here</span>
 
 				<div class="bs-callout bs-callout-warning">
 					<h4>
 						<i class="fa fa-exclamation-triangle fa-2x"></i> Handling errors
 					</h4>
                     <p>In the example code above we are not handling errors we are simply assuming that  
-					everything is okey and are sending back a property of "inserted" set to true as return status.</p>	
+					everything is okay and are sending back a property of "inserted" set to true as return status.</p>	
 				</div>		
 				
 				<hr>
@@ -505,18 +506,6 @@
 						</div>
 					</div>
 				</div>
-				<script type="text/ng-template" id="myModalTemplate.html"> 
-                      <div class='modal-header'> 
-                         <h4 class='modal-title'>Delete</h4> 
-                       </div> 
-                      <div class='modal-body'> 
-                        <p><i class="fa fa-exclamation-triangle fa-3x" style="color:#f0ad4e;"></i> Are you sure you wish to delete person: {{ entity.name }} </p> 
-                      </div> 
-                      <div class='modal-footer'> 
-                        <button class='btn btn-danger' ng-click='ok()'>OK</button> 
-                        <button class='btn btn-default' ng-click='cancel()'>Cancel</button> 
-                      </div>
-                </script>
                 
 				<div class="bs-callout bs-callout-info">
 					<h4>
@@ -533,31 +522,98 @@
 				example 4 is a change in grid options from <code>ng-grid="simpleGridOptions"</code> to 
 				<code>ng-grid="gridOptions"</code></p>	
                 <span data-lift='embed?what=embeddedPretty/ex5-template-PersonCtrl'> Embedding
-							the prettyprint ex3 code here</span>	
+							the prettyprint ex5 code here</span>	
 							
 			    <h4>The controller</h4>								
-				<p>Below is the final controller handling the CRUD operations on the ng-grid.</p>
+				<p>Below is the controller handling the CRUD operations on the ng-grid.</p>
                 <span data-lift='embed?what=embeddedPretty/ex5-ng-controller'> Embedding
-							the prettyprint ex3 code here</span>
+							the prettyprint ex5 code here</span>
 								
 				<h4>Lift round trip bindings</h4>					
-				<p>Below is the final PersonRT trait handling the CRUD operations.</p>										
+				<p>Below is the PersonRT trait handling the CRUD operations.</p>										
                 <span data-lift='embed?what=embeddedPretty/ex5-code-snippet-PersonRT'> Embedding
-							the prettyprint ex2 code here</span>
+							the prettyprint ex5 code here</span>
 											
-				<p>This completes the Lift round trip example serie as we now have CRUD operations on the ng-grid 
-				Now that you have seen a smal part of how well Angular and Lift fits togheter here is 50 more 
-				Angular examples.</p>			
+<!-- 				<p>This completes the Lift round trip example serie as we now have CRUD operations on the ng-grid  -->
+<!-- 				Now that you have seen a smal part of how well Angular and Lift fits togheter here is 50 more  -->
+<!-- 				Angular examples.</p>			 -->
+				
+				<hr>
+				
+				<div class="row">
+					<div class="col-sm-12">
+						<a id="section-2-6"></a>
+						<h3>Example 6:</h3>
+						<p>Building on example 3 - 5, while the view stays the same as in example 5   
+						we are now doing some refactoring to move out the back-end calls (the round trip calls) 
+						from the <code>PersonGridCtrl</code> into a <code>PersonFactory</code> service. 
+						The <code>PersonFactory</code> is a angular factory service 
+						<a target="_blank" href="http://blog.xebia.com/2013/09/01/differences-between-providers-in-angularjs/">provider <i class="fa fa-external-link"></i></a>.
+						This separation of concerns also makes it easy to add some client side 
+						cashing to avoid unnecessary server calls. 
+						</p>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="panel panel-default" style="padding: 10px;">
+							<div class="row">
+								<div class="col-sm-10 col-sm-offset-2">
+									<div ng-controller="PersonGridCtrl">
+										<div class="gridStyle" ng-grid="gridOptions"></div>
+										<div class="form-inline" role="form">
+											<div class="form-group">
+												<input type="hidden" id="p2id" ng-model="person.id">
+												<label class="sr-only" for="p2name">Name</label> 
+												<input type="text" class="form-control" id="p2name" placeholder="Enter name" ng-model="person.name">
+											</div>
+											<div class="form-group">
+												<label class="sr-only" for="p2age">Age</label> 
+												<input type="number" class="form-control" id="p2age" placeholder="Enter age" ng-model="person.age">
+											</div>
+											<button class="btn btn-default" ng-click='doAdd()'>Add</button>											    
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>	
+							
+			    <h4>The controller</h4>								
+				<p>Here we have <mark>injected</mark> the <code>PersonFactory</code> service and 
+				replaced the round trip calls with calls to the <code>PersonFactory</code> factory service.</p>
+				
+                <span data-lift='embed?what=embeddedPretty/ex6-ng-controller'> Embedding
+							the prettyprint ex6 code here</span>
+								
+				<h4>The factory service</h4>					
+				<p>Below is the <code>PersonFactory</code> factory service that now handles the person 
+				round trip server calls. To avoide some unnecessary server calls we also add cashing 
+				abilities to the service.</p>
+														
+                <span data-lift='embed?what=embeddedPretty/ex6-factory-service'> Embedding
+							the prettyprint ex6 code here</span>
+											
+				<p>This completes the Lift round trip example series as we now have CRUD operations on the ng-grid 
+				and some client side data cashing and a good separation of concerns.
+				Now that you have seen a small part of how well Angular and Lift fits together you may like to 
+				learn more about Angular so here is 50 more Angular examples that start from the basics and beyond.
+				If you are now to Lift visit the <a target="_blank" href="http://liftweb.net/">liftweb.net <i class="fa fa-external-link"></i></a>
+	            and join the <a target="_blank" href="http://liftweb.net/forum">community forum <i class="fa fa-external-link"></i></a>.</p>					
 				
 				<div class="bs-callout bs-callout-info">
 					<h4>
 						<i class="fa fa-exclamation-triangle fa-2x"></i> Improving/extending the examples
 					</h4>                    
-                    <p>From here we could go on and factoring out, for example, <code>doPopulate</code> into a Angular 
-                    <mark>factory service</mark> with data cashing, add Angular <mark>NgRoute</mark> with <mark>route controllers</mark> and 
-                    <mark>templates</mark> and so on but I'm saving that for a rainy day.</p>
-				</div>					
-
+                    <p>From here we could go on and some routing with Angular <mark>NgRoute</mark> using 
+                    <mark>route controllers</mark> and separate things out into <mark>Angular templates</mark> 
+                    and probably much more but I'm saving that for a rainy day.</p>
+				</div>
+									
+                <hr>
+                
                 <br/>
                 <div class="col-sm-12"> 
                   <div class="embed-responsive embed-responsive-4by3">
@@ -566,12 +622,24 @@
                 </div>
                 <br/>
                 
-                <p>You will find code that goes along with this screen cast abowe <a target="_blank" href="https://github.com/curran/screencasts/tree/gh-pages/introToAngular">intro To Angular <i class="fa fa-external-link"></i></a>
+                <p>You will find code that goes along with this screen cast above <a target="_blank" href="https://github.com/curran/screencasts/tree/gh-pages/introToAngular">intro To Angular <i class="fa fa-external-link"></i></a>
                 and you will find part 2 of the screen cast <a target="_blank" href="https://www.youtube.com/watch?v=6J08m1H2BME">here <i class="fa fa-external-link"></i></a></p>
 
 			</div>
 		</div>
- 
+
+				<script type="text/ng-template" id="myModalTemplate.html"> 
+                      <div class='modal-header'> 
+                         <h4 class='modal-title'>Delete</h4> 
+                       </div> 
+                      <div class='modal-body'> 
+                        <p><i class="fa fa-exclamation-triangle fa-3x" style="color:#f0ad4e;"></i> Are you sure you wish to delete person: {{ entity.name }} </p> 
+                      </div> 
+                      <div class='modal-footer'> 
+                        <button class='btn btn-danger' ng-click='ok()'>OK</button> 
+                        <button class='btn btn-default' ng-click='cancel()'>Cancel</button> 
+                      </div>
+                </script> 
 		
     </section>
 </body>

@@ -124,7 +124,9 @@ class Boot {
     val g2ex3 = Menu(Loc("g2ex3"     ,Link(List("g2ex3")     ,true, "#section-2-3")     , S.loc("g2ex3"     , Text("Example 2.3:")),LocGroup("sbg2")       ))
     val g2ex4 = Menu(Loc("g2ex4"     ,Link(List("g2ex4")     ,true, "#section-2-4")     , S.loc("g2ex4"     , Text("Example 2.4:")),LocGroup("sbg2")       ))
     val g2ex5 = Menu(Loc("g2ex5"     ,Link(List("g2ex5")     ,true, "#section-2-5")     , S.loc("g2ex5"     , Text("Example 2.5:")),LocGroup("sbg2")       ))
+    val g2ex6 = Menu(Loc("g2ex6"     ,Link(List("g2ex6")     ,true, "#section-2-6")     , S.loc("g2ex6"     , Text("Example 2.6:")),LocGroup("sbg2")       ))
 
+    
     val sbg3  = Menu(Loc("sbg3"      ,Link(List("sbg3")      ,true, "#section-3")       , S.loc("sbg3"      , Text("Section 3"))   ))
     val g3ex1 = Menu(Loc("g3ex1"     ,Link(List("g3ex1")     ,true, "#section-3-1")     , S.loc("g3ex1"     , Text("Example 3.1:")),LocGroup("sbg3")       ))
     val g3ex2 = Menu(Loc("g3ex2"     ,Link(List("g3ex2")     ,true, "#section-3-2")     , S.loc("g3ex2"     , Text("Example 3.2:")),LocGroup("sbg3")       ))
@@ -167,6 +169,7 @@ class Boot {
         g2ex3,
         g2ex4,        
         g2ex5,
+        g2ex6,
         sbg3,
         g3ex1,
         g3ex2,

@@ -144,6 +144,7 @@ class Boot {
     val g2ex3 = Menu(Loc("g2ex3"     ,Link(List("g2ex3")     ,true, "#section-2-3")     , S.loc("g2ex3"     , Text("Example 2.3:")),LocGroup("sbg2")       ))
     val g2ex4 = Menu(Loc("g2ex4"     ,Link(List("g2ex4")     ,true, "#section-2-4")     , S.loc("g2ex4"     , Text("Example 2.4:")),LocGroup("sbg2")       ))
     val g2ex5 = Menu(Loc("g2ex5"     ,Link(List("g2ex5")     ,true, "#section-2-5")     , S.loc("g2ex5"     , Text("Example 2.5:")),LocGroup("sbg2")       ))
+    val g2ex6 = Menu(Loc("g2ex6"     ,Link(List("g2ex6")     ,true, "#section-2-6")     , S.loc("g2ex6"     , Text("Example 2.6:")),LocGroup("sbg2")       ))
     
         
     def sitemap = SiteMap(
@@ -165,7 +166,8 @@ class Boot {
         g2ex2,
         g2ex3,
         g2ex4,        
-        g2ex5        
+        g2ex5,
+        g2ex6
         /*,
         ddLabel1      >> LocGroup("topRight") >> PlaceHolder submenus (
             divider1  >> FoBo.TBLocInfo.Divider >> userMenu

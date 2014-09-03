@@ -3,17 +3,17 @@ app.controller('PersonGridCtrl',['$scope','$log','$modal','PersonFactory',functi
 	
 	$scope.myData = []
 	
-	$scope.doPopulate = function(invalidateCache) {			
-		var promise = PersonFactory.personsQuery(invalidateCache);
+	$scope.doPopulate = function() {			
+		var promise = PersonFactory.personsQuery();
 		return promise.then(function(data){
 			$scope.$apply(function() {
-		      //$log.debug('PersonGridCtrl:doPopulate: PersonFactory.personsQuery() data='+angular.toJson(data))
+		      $log.debug('PersonGridCtrl:doPopulate: in apply')
 			  $scope.myData = data;
 			})
 		    return data;		    
 		}); 
 	};
-	$scope.doPopulate(false);
+	$scope.doPopulate();
 		
 	
     $scope.remove = function(entity) {    
@@ -29,13 +29,13 @@ app.controller('PersonGridCtrl',['$scope','$log','$modal','PersonFactory',functi
         	if(answer=='ok'){
         		$log.debug('PersonGridCtrl:remove: Are you sure(?) modal dialog got answer='+answer+' proceding with deleting person: ' + entity.name);
                 var json = angular.toJson(entity);
-            	var promise = myRTFunctions.deletePersonCmd(json);
+                var promise = PersonFactory.deletePersonCmd(json);
         	    return promise.then(function(data) {
         		      $scope.$apply(function() {
         		    	$log.debug("PersonGridCtrl:remove:deletePersonCmd in apply data.deleted="+data.deleted);  
         		        //$scope.myData = data;
         		    	if(data.deleted){
-        		    	  $scope.doPopulate(true);	
+        		    	  $scope.doPopulate();	
         		    	}
         		      })
         		      return data;
@@ -69,14 +69,15 @@ app.controller('PersonGridCtrl',['$scope','$log','$modal','PersonFactory',functi
     $scope.doAdd = function() {
     	var json = angular.toJson($scope.person);
     	$log.debug('PersonGridCtrl:doAdd: person json=' + json);
-    	var promise = myRTFunctions.addPersonCmd(json);
+    	//var promise = myRTFunctions.addPersonCmd(json);
+    	var promise = PersonFactory.addPersonCmd(json);
     	$scope.resetPersonFields();
 	    return promise.then(function(data) {
 		      $scope.$apply(function() {
 		    	$log.debug("PersonGridCtrl:doAdd in apply data.inserted="+data.inserted);   
                 if(data.inserted) {
                 	$log.debug("PersonGridCtrl:doAdd in apply repopulate the list"); 	
-                	$scope.doPopulate(true);
+                	$scope.doPopulate();
                 }
 		      })
 		      return data;
@@ -86,13 +87,14 @@ app.controller('PersonGridCtrl',['$scope','$log','$modal','PersonFactory',functi
     $scope.updatePerson = function(entity) {
     	$log.debug('PersonGridCtrl:updatePerson: about to update person ' + entity);
         var json = angular.toJson(entity);
-    	var promise = myRTFunctions.updatePersonCmd(json);
+    	//var promise = myRTFunctions.updatePersonCmd(json);
+    	var promise = PersonFactory.updatePersonCmd(json);
 	    return promise.then(function(data) {
 		      $scope.$apply(function() {
-		    	$log.debug("PersonGridCtrl:updatePerson in apply data="+data.updated);  
+		    	$log.debug("PersonGridCtrl:updatePerson in apply data.updated="+data.updated);  
 		        if(data.updated){
                 	$log.debug("PersonGridCtrl:updatePerson in apply repopulate the list"); 	
-                	$scope.doPopulate(true);		        	
+                	$scope.doPopulate();		        	
 		        }
 		      })
 		      return data;
