@@ -2,7 +2,9 @@ FoBo-Demo
 =========
 
 Sandbox projects for [FoBo](https://github.com/karma4u101/FoBo) demos/tutorials.
-- fobo-angular-sandbox -- A Lift 3 round trip tutorial with FoBo, AngularJS and Slick. 
+
+- fobo-angular-lift-roundtrips -- A Lift 3 round trip tutorial with FoBo, AngularJS and Slick. 
+- fobo-angular-sandbox -- sandbox for FoBo angular stuff
 - fobo-lift-template-demo -- The main introduction to FoBo pages.
 - pimping-lift_advanced_bs3 -- A for demo perpose slightly pimped lift_advanced_bs3 
 - fobo-bs3-sandbox -- A WIP FoBo boostrap 3 demo/tutorial (early alpha fase) 
