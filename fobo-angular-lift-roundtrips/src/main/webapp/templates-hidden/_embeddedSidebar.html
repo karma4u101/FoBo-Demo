@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+
+<title>Embedded Sidebars template</title>
+</head>
+
+<!-- This is an embedded piece of html -->
+<body class="lift:content_id=sidebars">
+
+<section id="sidebars">
+        <div class="list-group hidden-xs" id="lmenu">
+          <span data-lift="FoBo.Bs3LinkedListGroup.builder?group=lg1"></span>
+          <span data-lift="FoBo.Bs3LinkedListGroup.builder?group=lg2"></span>
+        </div>
+        
+        <div class="row hidden-xs hidden-sm">
+          <div class="col-sm-12" >
+            <a href="https://github.com/karma4u101/FoBo-Demo" role="button" class="btn btn-default btn-lg"><i class="fa fa-github-square fa-2x"></i> <b>FoBo Demo</b></a>
+          </div>
+        </div>
+        
+		<iframe
+			class="github-btn hidden-xs hidden-sm" src="http://ghbtns.com/github-btn.html?user=karma4u101&repo=fobo&type=watch&count=true&size=large"
+			allowtransparency="true" frameborder="0" scrolling="0"
+			width="180px" height="30px">
+		</iframe>
+        
+        <div class="lift:Msgs?showAll=true"></div>
+        
+ 		<div class="bs-sidebar hidden-print" role="complementary">
+			<ul class="nav bs-sidenav">
+				<li style="border-bottom: 1px inset #ccc;">
+				  <span data-lift="Menu.item?name=dtop;"><span data-lift="Loc.i">Top</span></span>
+				</li>
+				<li>
+				  <span data-lift="Menu.item?name=sbg2;"> <i class="fa fa-caret-right"></i> <span data-lift="Loc.i">Section 2</span></span> 
+					<ul class="nav">
+						<span data-lift="FoBo.Bs3NavLiList.builder?group=sbg2"></span>
+					</ul>
+				</li>
+				<li>
+				    <span data-lift="Menu.item?name=sbg1;"> <i class="fa fa-caret-right"></i> <span data-lift="Loc.i">Section 1</span></span>
+					<ul class="nav">
+						<span data-lift="FoBo.Bs3NavLiList.builder?group=sbg1"></span>
+					</ul>
+				</li>
+			</ul>
+		</div>  
+ 
+   </section>
+</body>

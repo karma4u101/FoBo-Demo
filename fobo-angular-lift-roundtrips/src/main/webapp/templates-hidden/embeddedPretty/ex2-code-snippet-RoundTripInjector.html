@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+
+<title>Embedded pretty template</title>
+</head>
+
+<!-- This is an embedded piece of html -->
+<body class="lift:content_id=pretty">
+<section id="pretty">
+<span class="label label-default">RoundTripBindingInjector.scala</span>
+<pre class="prettyprint linenums scala">
+/*This snippet is injecting the roundtrip scripts into the tail of the html page body.*/
+class RoundTripBindingInjector extends PersonRT with SimpleRT {
+  def render() : NodeSeq = {
+    val functions = ((for {
+      session &lt;- S.session
+    } yield &lt;lift:tail&gt;{Script(
+        JsRaw(s"var myRTFunctions = ${session.buildRoundtrip(getRoundTrips).toJsCmd}").cmd
+        )}&lt;/lift:tail&gt;) openOr NodeSeq.Empty)
+    functions
+  }  
+}
+</pre>
+</section>
+</body>

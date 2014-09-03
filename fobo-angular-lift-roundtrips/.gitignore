@@ -1,0 +1,7 @@
+/.settings
+/project
+/.classpath
+/.project
+/build.sbt~
+/geronimo-web.xml~
+/lift_proto.db.h2.db

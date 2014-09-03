@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+
+<title>Embedded pretty template</title>
+</head>
+
+<!-- This is an embedded piece of html -->
+<body class="lift:content_id=pretty">
+<section id="pretty">
+<span class="label label-default">PersonRT.scala</span>
+<pre class="prettyprint linenums scala">
+ ⋮
+trait PersonRT extends EmptyRoundTrip with PersonComponent {
+  
+  protected def personsQuery(value : JValue, func : RoundTripHandlerFunc) : Unit = {
+     val jsondata = selectAllPersons().map { p => ( ("id" -> p.id) ~ ("name" -> p.name) ~ ("age" -> p.age)  ) } 
+     func.send( JArray(jsondata) )
+  }    
+  
+  protected def addPersonCmd(value : JValue, func : RoundTripHandlerFunc) : Unit = {
+    implicit val formats = DefaultFormats   
+    val pval = parse(value.extract[String])
+    val person = pval.extract[Person]
+    insertPerson(person)
+    val retStaus = ("inserted" -> true)
+    func.send(retStaus)
+  }
+  
+  protected def updatePersonCmd(value : JValue, func : RoundTripHandlerFunc) : Unit = {
+    implicit val formats = DefaultFormats   
+    val pval = parse(value.extract[String])
+    val person = pval.extract[Person]
+    updatePerson(person)
+    val retStaus = ("updated" -> true)
+    func.send(retStaus)    
+  } 
+  
+  protected def deletePersonCmd(value : JValue, func : RoundTripHandlerFunc) : Unit = {
+    implicit val formats = DefaultFormats   
+    val pval = parse(value.extract[String])
+    val person = pval.extract[Person] 
+    deletePerson(person)
+    val retStaus = ("deleted" -> true)
+    func.send(retStaus)    
+  } 
+    
+  private val roundtrips : List[RoundTripInfo] = List("personsQuery" -> personsQuery _,                                                
+                                                      "addPersonCmd" -> addPersonCmd _,
+                                                      "updatePersonCmd" -> updatePersonCmd _,
+                                                      "deletePersonCmd" -> deletePersonCmd _)
+  abstract override def getRoundTrips = super.getRoundTrips ++ roundtrips  
+} 
+</pre>
+</section>
+</body>

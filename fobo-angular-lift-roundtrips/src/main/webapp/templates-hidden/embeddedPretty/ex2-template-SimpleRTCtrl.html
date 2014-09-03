@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+
+<title>Embedded pretty template</title>
+</head>
+
+<!-- This is an embedded piece of html -->
+<body class="lift:content_id=pretty">
+<section id="pretty">
+<span class="label label-default">index.html</span>
+<pre class="prettyprint linenums lang-html">
+ ⋮
+&lt;div ng-controller="SimpleRTCtrl"&gt;
+  &lt;pre&gt;{ { lrtResModel } }&lt;/pre&gt;
+  &lt;button type="button" class="btn btn-default" ng-click="doSimpleLiftRT()"&gt;Simple RT&lt;/button&gt;
+  &lt;button type="button" class="btn btn-default" ng-click="doResetRT()"&gt;Reset&lt;/button&gt;
+&lt;/div&gt;
+ ⋮
+</pre>
+</section>
+</body>

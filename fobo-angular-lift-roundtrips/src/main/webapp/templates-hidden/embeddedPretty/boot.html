@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+
+<title>Embedded pretty template</title>
+</head>
+
+<!-- This is an embedded piece of html -->
+<body class="lift:content_id=pretty">
+
+<section id="pretty">
+<span class="label label-default">Boot.scala</span>
+<pre class="prettyprint linenums lang-scala">
+package bootstrap.liftweb
+⋮
+import net.liftmodules.FoBo
+⋮		  
+class Boot {
+  def boot {	
+       ⋮  	  
+    //Init the FoBo - Front-End Toolkit module, 
+    //see http://liftweb.net/lift_modules for more info
+    FoBo.InitParam.JQuery=FoBo.JQuery1110  
+    FoBo.InitParam.ToolKit=FoBo.AngularJS1219
+    FoBo.InitParam.ToolKit=FoBo.AJSNGGrid207
+    FoBo.InitParam.ToolKit=FoBo.AJSUIBootstrap070
+    FoBo.init() 
+       ⋮ 
+  } 
+}    		  
+</pre>
+</section>
+</body>
