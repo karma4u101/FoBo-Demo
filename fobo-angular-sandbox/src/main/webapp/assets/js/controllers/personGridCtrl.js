@@ -1,21 +1,19 @@
 
-app.controller('PersonGridCtrl',['$scope','$log','$modal',function($scope,$log,$modal) {
+app.controller('PersonGridCtrl',['$scope','$log','$modal','PersonFactory',function($scope,$log,$modal,PersonFactory) {
 	
 	$scope.myData = []
-				
-		$scope.doPopulate = function() {
-			  $log.debug('PersonGridCtrl:doPopulate: about to call personsQuery');	
-			  var promise = myRTFunctions.personsQuery();  
-			  
-			  return promise.then(function(data) {
-				      $scope.$apply(function() {
-				        $scope.myData = data; 
-				        $log.debug('PersonGridCtrl:doPopulate: in apply data set'); 
-				      })
-				      return data;
-				    });	 
-			};	
-	$scope.doPopulate();
+	
+	$scope.doPopulate = function(invalidateCache) {			
+		var promise = PersonFactory.personsQuery(invalidateCache);
+		return promise.then(function(data){
+			$scope.$apply(function() {
+		      //$log.debug('PersonGridCtrl:doPopulate: PersonFactory.personsQuery() data='+angular.toJson(data))
+			  $scope.myData = data;
+			})
+		    return data;		    
+		}); 
+	};
+	$scope.doPopulate(false);
 		
 	
     $scope.remove = function(entity) {    
@@ -37,7 +35,7 @@ app.controller('PersonGridCtrl',['$scope','$log','$modal',function($scope,$log,$
         		    	$log.debug("PersonGridCtrl:remove:deletePersonCmd in apply data.deleted="+data.deleted);  
         		        //$scope.myData = data;
         		    	if(data.deleted){
-        		    	  $scope.doPopulate();	
+        		    	  $scope.doPopulate(true);	
         		    	}
         		      })
         		      return data;
@@ -78,7 +76,7 @@ app.controller('PersonGridCtrl',['$scope','$log','$modal',function($scope,$log,$
 		    	$log.debug("PersonGridCtrl:doAdd in apply data.inserted="+data.inserted);   
                 if(data.inserted) {
                 	$log.debug("PersonGridCtrl:doAdd in apply repopulate the list"); 	
-                	$scope.doPopulate();
+                	$scope.doPopulate(true);
                 }
 		      })
 		      return data;
@@ -94,7 +92,7 @@ app.controller('PersonGridCtrl',['$scope','$log','$modal',function($scope,$log,$
 		    	$log.debug("PersonGridCtrl:updatePerson in apply data="+data.updated);  
 		        if(data.updated){
                 	$log.debug("PersonGridCtrl:updatePerson in apply repopulate the list"); 	
-                	$scope.doPopulate();		        	
+                	$scope.doPopulate(true);		        	
 		        }
 		      })
 		      return data;
