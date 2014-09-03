@@ -2,7 +2,7 @@ organization := "se.media4u101"
 
 name := "FoBo-Lift-Template-Demo"
 
-version := "2.8.1-SNAPSHOT"
+version := "2.8.2-SNAPSHOT"
 
 crossScalaVersions := Seq("2.11.2", "2.10.4", "2.9.2", "2.9.1-1", "2.9.1")
 

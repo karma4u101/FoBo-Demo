@@ -163,7 +163,10 @@ object Paths {
   //index.html#net.liftmodules.FoBo.package
   val nlHelp           = Menu.i("NLHelp") / "helpindex"
   
-  val angularDemo = Menu(Loc("fobo-angular-sandbox", ExtLink("http://www.media4u101.se/fobo-angular-sandbox/"), S.loc("fobo-angular-sandbox", Text("AngularJS demo")) ,FoBo.TBLocInfo.LinkTargetBlank  ) )
+  //val angularDemo = Menu(Loc("fobo-angular-sandbox", ExtLink("http://www.media4u101.se/fobo-angular-sandbox/"), S.loc("fobo-angular-sandbox", Text("AngularJS demo")) ,FoBo.TBLocInfo.LinkTargetBlank  ) )
+  
+  val roundTripDemo = Menu(Loc("fobo-angular-lift-roundtrips", ExtLink("http://www.media4u101.se/fobo-angular-lift-roundtrips/"), S.loc("fobo-angular-lift-roundtrips", Text("Lift round trip tutorial")) ,FoBo.TBLocInfo.LinkTargetBlank  ) )
+  
   
   val starterTemplateDemo = Menu(Loc("lift_advanced_bs3", ExtLink("http://www.media4u101.se/lift-advanced-bs3/"), S.loc("lift_advanced_bs3", Text("Lift TB3 templates")) ,FoBo.TBLocInfo.LinkTargetBlank  ) )
   //https://github.com/lift/lift_26_sbt/
@@ -190,7 +193,7 @@ object Paths {
       ),
       content2DD >> LocGroup("liboDD2") >> PlaceHolder submenus ( 
               starterTemplateDemo,
-              angularDemo
+              roundTripDemo
       ), 
       foundationDoc,
       jqueryMobileDoc,
