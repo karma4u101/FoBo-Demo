@@ -1,7 +1,7 @@
 FoBo-Demo
 =========
 
-Sandbox projects for [FoBo](https://github.com/karma4u101/FoBo) demos/tutorials.
+Sandbox projects for [FoBo](https://github.com/karma4u101/FoBo) demos/articles/tutorials.
 
 - fobo-angular-lift-roundtrips -- A Lift 3 round trip tutorial with FoBo, AngularJS and Slick. 
 - fobo-angular-sandbox -- sandbox for FoBo angular stuff

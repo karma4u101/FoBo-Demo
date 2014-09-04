@@ -24,10 +24,10 @@
       $sideBar.affix({
         offset: {
           top: function () {
-            var offsetTop      = $sideBar.offset().top
+            var offsetTop      = $sideBar.offset().top ;
             var sideBarMargin  = parseInt($sideBar.children(0).css('margin-top'), 10)
-            var navOuterHeight = $('.rt-nav').height()
-
+            var navOuterHeight = $('.rt-nav').height() 
+            //var sum = offsetTop - navOuterHeight - sideBarMargin;
             return (this.top = offsetTop - navOuterHeight - sideBarMargin)
           }
         , bottom: function () {
@@ -54,6 +54,7 @@
  	       // when done, add hash to url
  	       // (default click behaviour)
  	       window.location.hash = hash;
+ 	    
  	     });
  	});      
     
