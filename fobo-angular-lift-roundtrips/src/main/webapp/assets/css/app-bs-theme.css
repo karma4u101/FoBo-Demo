@@ -11,6 +11,11 @@ body { padding-top: 70px; }
  padding: 8px 15px;
 }
 
+.rt-nav {
+margin-bottom: 0;
+border-bottom: 0;
+}
+
 /* Main navigation */
 .navbar {
     background-image: linear-gradient(to bottom, #003366 0%, #006699 100%);
