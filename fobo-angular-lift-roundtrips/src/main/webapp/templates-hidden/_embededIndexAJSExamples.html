@@ -18,9 +18,11 @@
 				<h2 ><span data-lift="Loc.i">Section 2</span></h2>
 
                 <p>This section contains Angular examples alongside with descriptions of the involved functions and code. 
-                We start with a trivial example, proceed with fairly simple <mark>round trip</mark> example and in the 
-                end we will use <mark>round trip's</mark> to implement a excel like data grid example with CRUD 
-                back-end data functionality that interact with the server using Lift 3's round trip functions.</p>  
+                We start with a trivial example, proceeds with a fairly simple <mark>round trip</mark> example with a
+                thorough explanation of how it utilizes the <mark>round trip</mark> concept. 
+                We then proceed with a serie of example where we add more and more functionality to a data-grid that 
+                in the end implements a "excel like" data-grid with CRUD data functionality that interact with the 
+                server using Lift 3's round trip functions.</p>  
                 <p>For overall setup and configuration of required resources see the <a href="#section-1" target="_self"><span data-lift="Loc.i">Section 1</span></a> 
                 section. </p>              
 
@@ -339,7 +341,7 @@
 						<a target="_blank" href="http://slick.typesafe.com/">Slick <i class="fa fa-external-link"></i></a> 
 						and display it using the 
 						<a target="_blank" href="http://angular-ui.github.io/ng-grid/">Angular NG-Grid UI module <i class="fa fa-external-link"></i></a>.</p> 
-						<p>In example 4 and 5 we will expand up on the functionality in example 3 to in the grid have, not only, read 
+						<p>In example 4 to 6 we will expand up on the functionality in example 3 to in the grid have, not only, read 
 						operations but also create, update and delete operations. 
 						</p>
 					</div>
@@ -451,7 +453,7 @@
 							the prettyprint ex4 code here</span>
 							
 				<h4>The controller</h4>			
-				<p>Added to the controller compared to example 2 is the <code>$scope.doAdd</code> function 
+				<p>Added to the controller compared to example 3 is the <code>$scope.doAdd</code> function 
 				where in we now also is sending json data from the client to the server via the round 
 				trip function <code>addPersonCmd</code>. Then when data has been inserted into the back-end 
 				store we also make sure the grid is updated with the newly added data.</p>				
@@ -552,11 +554,11 @@
 						<div id="/section-2-6"></div>
 						<h3 >Example 6:</h3>
 						<p>Building on example 3 - 5, while the view stays the same as in example 5   
-						we are now doing some refactoring to move out the back-end calls (the round trip calls) 
+						we have now done some refactoring and moved out the back-end calls (the round trip calls) 
 						from the <code>PersonGridCtrl</code> into a <code>PersonFactory</code> service. 
 						The <code>PersonFactory</code> is a angular factory service 
 						<a target="_blank" href="http://blog.xebia.com/2013/09/01/differences-between-providers-in-angularjs/">provider <i class="fa fa-external-link"></i></a>.
-						This separation of concerns also makes it easy to add some client side 
+						This separation of concerns has also made it easy to add some simple client side 
 						cashing to avoid unnecessary server calls. 
 						</p>
 					</div>

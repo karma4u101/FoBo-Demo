@@ -1,6 +1,6 @@
 moduleName := "FoBo-Angular-Lift-RoundTrips"
 
-version := "0.5.9-SNAPSHOT"
+version := "0.6.2-SNAPSHOT"
 
 organization := "net.liftweb"
 

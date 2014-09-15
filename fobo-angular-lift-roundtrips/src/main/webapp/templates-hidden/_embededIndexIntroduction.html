@@ -39,8 +39,8 @@
 <!-- 				</div> -->
 
                 <p>This article is about Lift 3's round trip concept. At the end of this article you will know 
-                how to set up a <a href="#section-2-5" target="_self"><span data-lift="Loc.i">data grid</span></a>  
-                with CRUD operations using Lift 3's round trip concept with AngularJS and Slick.</p>
+                how to set up a <a href="#section-2-6" target="_self"><span data-lift="Loc.i">data grid</span></a>  
+                with CRUD operations using Lift 3's round trip concept with Angular and Slick.</p>
 				
 			    <p>So what do we mean by <mark>Lift 3's round trip concept?</mark> Let's clarify with a quote from  
 			    Lift Founder David Pollak.</p>
@@ -59,10 +59,10 @@
 					href="http://www.media4u101.se/lift-advanced-bs3/">lift-advanced-bs3
 					Template Application <i class="fa fa-external-link"></i></a> with the Lift module 
 					FoBo's Bootstrap v3.x setting as it's base the following sections is mostly 
-					about Angular JS and <a target="_blank" href="http://blog.goodstuff.im/roundtrip_promises">Lift 3's
+					about Angular and <a target="_blank" href="http://blog.goodstuff.im/roundtrip_promises">Lift 3's
 					Round Trip <i class="fa fa-external-link"></i></a> concept. To make the examples a 
-					bit more realistic/exciting we are also using <mark>Slick</mark> to handle the back end
-					storage. The choice of back end storage system has however no impact on the overall 
+					bit more realistic/exciting we are also using <mark>Slick</mark> to handle the back-end
+					storage. The choice of using Slick to handle the back-end storage has however no impact on the overall 
 					concept described in this article/tutorial.  
 				</p>
 
@@ -70,8 +70,10 @@
 					<h4>
 						<i class="fa fa-exclamation-triangle fa-2x"></i> Run this application locally on your computer!
 					</h4>
-					<p>If you wish, you can have this article up and running in less than 5 minutes 
+					<p>If you wish, you can have this article/tutorial up and running in less than 5 minutes, 
 					the only prerequisites is that you have Java and Git installed on the target computer. 
+					One benefits (apart from easy acces to the code) would be that you will not only have 
+					acces to the client side consol logs but also the server side logs.
 					To get started go to <a target="_blank" href="https://github.com/karma4u101/FoBo-Demo">FoBo-Demo <i class="fa fa-external-link"></i></a>
 					and read the README.md.</p>
 				</div>						
@@ -110,7 +112,7 @@
 					</dt>
 					<dd>A comprehensive Front-End toolkit module for Lift. For
 						developing mobile scalable responsive web applications. 
-						All toolkits, bootstrap, Angular, font awesome, google-code-prettify 
+						All toolkits, Bootstrap, AngularJS, Font Awesome, google-code-prettify 
 						used in this article is provided by 
 						<a target="_blank" href="http://www.media4u101.se/fobo-lift-template-demo/">FoBo</a>. 
 						</dd>
@@ -129,7 +131,8 @@
 						<a target="_blank" href="http://getbootstrap.com/">Bootstrap v3.x</a>
 					</dt>
 					<dd>
-						Sleek, intuitive, and powerful mobile first front-end framework.
+						Sleek, intuitive, and powerful mobile first front-end framework that makes doing 
+						the right thing easy.
 						This component is provided via the <a
 							target="_blank" href="http://www.media4u101.se/fobo-lift-template-demo/">FoBo</a>
 						module.
@@ -180,7 +183,7 @@
 						<i class="fa fa-exclamation-triangle fa-2x"></i> The FoBo Lift module
 					</h4>
 					<p>FoBo is all about providing toolkits for responsive design solutions. 
-					In this the Angular toolkit and its modules like 
+					In this the AngularJS toolkit and its modules like 
 					<a target="_blank" href="http://www.ng-newsletter.com/posts/angular-on-mobile.html">NGTouch <i class="fa fa-external-link"></i></a>, 
 					<a target="_blank" href="http://angular-ui.github.io/bootstrap/">UI Bootstrap <i class="fa fa-external-link"></i></a>, 
 					<a target="_blank" href="http://angular-ui.github.io/ng-grid/">NG-Grid <i class="fa fa-external-link"></i></a> 
@@ -194,7 +197,7 @@
 					<h4>
 						<i class="fa fa-exclamation-triangle fa-2x"></i> The lift-ng module
 					</h4>                    
-                    <p>A competent complement to FoBo for working with Angular in Lift is the
+                    <p>A competent complement to the Front-End Toolkit module FoBo for working with Angular in Lift is the
                     <a target="_blank" href="https://github.com/joescii/lift-ng">lift-ng <i class="fa fa-external-link"></i></a> module. 
                     <b>lift-ng</b> is a excellent Angular specific Lift module that lets you utilize 
                     Lift's reactive features such as asynchronous comet updates to the client 
