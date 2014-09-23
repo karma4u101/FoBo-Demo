@@ -13,8 +13,8 @@
     </appender>
 
 
-    <logger name="code.model" level="info" />
-    <logger name="code.snippet" level="info" />
+    <logger name="code.model" level="debug" />
+    <logger name="code.snippet" level="debug" />
     <logger name="net.liftweb" level="warn" />
     <logger name="bootstrap.liftweb" level="info" />
     <root level="warn">

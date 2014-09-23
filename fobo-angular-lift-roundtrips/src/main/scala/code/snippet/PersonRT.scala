@@ -1,6 +1,6 @@
 package code.snippet
 
-import net.liftweb.json.JsonAST.{JString, JArray, JValue}
+import net.liftweb.json.JsonAST.{JString, JArray, JValue, JField, JInt}
 import net.liftweb.json.JsonDSL._
 import net.liftweb.json.JsonParser._
 import net.liftweb.json.DefaultFormats
@@ -18,56 +18,47 @@ trait PersonRT extends EmptyRoundTrip with PersonComponent {
      //map the query result to a list containing JsonAST.JObject's 
      val jsondata = selectAllPersons().map { p => ( ("id" -> p.id) ~ ("name" -> p.name) ~ ("age" -> p.age)  ) }
      //send the json data to the client as a JArray using the RoundTripHandlerFunc 
-     logger.info("personsQuery about to send jsondata.size="+jsondata.size)  
+     logger.debug("personsQuery about to send jsondata.size="+jsondata.size)  
      func.send( JArray(jsondata) )
-//     val errmsg = "Outch someting unexpected happend!"
-//     func.failure(errmsg)
   }    
   
   protected def addPersonCmd(value : JValue, func : RoundTripHandlerFunc) : Unit = {
-    implicit val formats = DefaultFormats   
-    //we need to extract the value as a string and parse it to get a 
-    //JValue that will be accepted for maping to Person
-    val pval = parse(value.extract[String])
-    //the Person case class will get the values 
-    val person = pval.extract[Person]
-    logger.info("addPersonCmd about to add person="+person.toString()) 
+    val vtp = jsonToPerson(value)
+    logger.info("addPersonCmd about to add person="+vtp.toString()) 
     //insert it into the persons database table 
-    insertPerson(person)
+    insertPerson(vtp)
     //send back a status
     val retStaus = ("inserted" -> true)
     func.send(retStaus)
   }
   
   protected def updatePersonCmd(value : JValue, func : RoundTripHandlerFunc) : Unit = {
-    implicit val formats = DefaultFormats   
-    //we need to extract the value as a string and parse it to get a 
-    //JValue that will be accepted for maping to Person
-    val pval = parse(value.extract[String])
-    //the Person case class will get the values 
-    val person = pval.extract[Person]
-    //insert it into the persons database table 
-    logger.info("updatePersonCmd about to update person="+person.toString())  
-    updatePerson(person)
+    val vtp = jsonToPerson(value)
+    logger.debug("updatePersonCmd about to update person="+vtp.toString())  
+    updatePerson(vtp)
     //send back a status
     val retStaus = ("updated" -> true)
     func.send(retStaus)    
   } 
   
   protected def deletePersonCmd(value : JValue, func : RoundTripHandlerFunc) : Unit = {
-    implicit val formats = DefaultFormats   
-    //we need to extract the value as a string and parse it to get a 
-    //JValue that will be accepted for maping to Person
-    val pval = parse(value.extract[String])
-    //the Person case class will get the values 
-    val person = pval.extract[Person]
-    //insert it into the persons database table 
-    logger.info("deletePersonCmd about to delete person="+person.toString())  
-    deletePerson(person)
+    val vtp = jsonToPerson(value)
+    logger.debug("deletePersonCmd about to delete person="+vtp.toString())  
+    deletePerson(vtp)
     //send back a status
     val retStaus = ("deleted" -> true)
     func.send(retStaus)    
   }   
+  
+  private def jsonToPerson(value:JValue) : Person = {
+    implicit val formats = DefaultFormats 
+    val pval = parse(value.extract[String]) transformField {
+      case JField("age", JString(s))  => JField("age", JInt(s.toInt))
+      case JField("id", JString(s))  => JField("id", JInt(s.toInt))
+    }
+    //Return the case class
+    Person((pval \ "id").extract[Int],(pval \ "name").extract[String],(pval \ "age").extract[Int])
+  }    
   
   private val roundtrips : List[RoundTripInfo] = List("personsQuery" -> personsQuery _,                                                
                                                       "addPersonCmd" -> addPersonCmd _,
