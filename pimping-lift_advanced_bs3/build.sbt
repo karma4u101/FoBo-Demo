@@ -2,9 +2,9 @@ name := "Pimping-Lift-Advanced-Bs3"
 
 organization := "net.liftweb"
 
-version := "0.2.0-SNAPSHOT"
+version := "0.2.1-SNAPSHOT"
 
-liftVersion := "2.6-RC1" 
+liftVersion := "2.6" 
 
 liftEdition <<= liftVersion apply { _.substring(0,3) }
 

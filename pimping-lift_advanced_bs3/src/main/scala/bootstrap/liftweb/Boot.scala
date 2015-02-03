@@ -85,9 +85,13 @@ class Boot {
   
   object Site {
     import scala.xml._
+    //if user is logged in replace menu label "User" with users first name.
+    def getuserDDLabel:String = { 
+      lazy val username = User.currentUser.map(n => n.firstName + " "+ n.lastName)
+      if ( User.loggedIn_? ) username.openOrThrowException("Something wicked happened") else S ? "UserDDLabel"
+    }
+    val ddLabel1   = Menu(getuserDDLabel) / "ddlabel1"
     val divider1   = Menu("divider1") / "divider1"
-    val ddLabel1   = Menu.i("UserDDLabel") / "ddlabel1"
-    
     val home       = Menu.i("Home") / "index" 
     
     val userMenu   = User.AddUserMenusHere
