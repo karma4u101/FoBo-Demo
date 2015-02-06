@@ -40,6 +40,12 @@ body { padding-top: 70px; }
 .navbar-default .navbar-nav > li > a:hover {
   color: #fff;
 }
+
+.navbar-nav > li > a > span > img.gravatar {
+    margin-bottom: -10px;
+    margin-top: -10px;
+}
+
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover {
   background-image: linear-gradient(to bottom, #003C66 0%, #003C61 100%);

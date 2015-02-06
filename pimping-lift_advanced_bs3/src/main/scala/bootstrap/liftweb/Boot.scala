@@ -13,6 +13,7 @@ import mapper.{DB,StandardDBVendor,Schemifier}
 
 import code.model._
 import net.liftmodules.{FoBo}
+import scravatar.{Gravatar,DefaultImage}
 
 
 /**
@@ -85,10 +86,13 @@ class Boot {
   
   object Site {
     import scala.xml._
-    //if user is logged in replace menu label "User" with users first name.
-    def getuserDDLabel:String = { 
-      lazy val username = User.currentUser.map(n => n.firstName + " "+ n.lastName)
-      if ( User.loggedIn_? ) username.openOrThrowException("Something wicked happened") else S ? "UserDDLabel"
+    //if user is logged in replace menu label "User" with users gravatar image and full name.
+    def getuserDDLabel:NodeSeq = { 
+      lazy val username = User.currentUser.map(u => u.firstName + " "+ u.lastName)
+      lazy val useremail= User.currentUser.map(u => u.email.get)
+      lazy val gurl = Gravatar(useremail.openOrThrowException("")).size(36).avatarUrl
+      lazy val gravatar = <img class="responsive-img img-rounded gravatar" src={gurl}/>
+      if ( User.loggedIn_? ) <xml:group>{gravatar}  {username.openOrThrowException("Something wicked happened")}</xml:group> else <xml:group>{S ? "UserDDLabel"}</xml:group>
     }
     val ddLabel1   = Menu(getuserDDLabel) / "ddlabel1"
     val divider1   = Menu("divider1") / "divider1"
