@@ -87,14 +87,19 @@ class Boot {
   object Site {
     import scala.xml._
     //if user is logged in replace menu label "User" with users gravatar image and full name.
-    def getuserDDLabel:NodeSeq = { 
+    def userDDLabel:NodeSeq = { 
+      def gravatar:NodeSeq = {
+        val gurl = Gravatar(User.currentUser.map(u => u.email.get).openOrThrowException("")).size(36).avatarUrl
+        <img class="responsive-img img-rounded gravatar" src={gurl}/> 
+      }      
       lazy val username = User.currentUser.map(u => u.firstName + " "+ u.lastName)
-      lazy val useremail= User.currentUser.map(u => u.email.get)
-      lazy val gurl = Gravatar(useremail.openOrThrowException("")).size(36).avatarUrl
-      lazy val gravatar = <img class="responsive-img img-rounded gravatar" src={gurl}/>
-      if ( User.loggedIn_? ) <xml:group>{gravatar}  {username.openOrThrowException("Something wicked happened")}</xml:group> else <xml:group>{S ? "UserDDLabel"}</xml:group>
+      User.loggedIn_? match {
+        case true =>  <xml:group>{gravatar}  {username.openOrThrowException("Something wicked happened")}</xml:group> 
+        case _ => <xml:group>{S ? "UserDDLabel"}</xml:group>   
+      }
     }
-    val ddLabel1   = Menu(getuserDDLabel) / "ddlabel1"
+
+    val ddLabel1   = Menu(userDDLabel) / "ddlabel1"
     val divider1   = Menu("divider1") / "divider1"
     val home       = Menu.i("Home") / "index" 
     
