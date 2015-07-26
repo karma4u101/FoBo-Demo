@@ -58,7 +58,7 @@ class Boot {
     //FoBo.InitParam.JQuery=FoBo.JQueryMigrate121    
     FoBo.InitParam.ToolKit=FoBo.Bootstrap320
     FoBo.InitParam.ToolKit=FoBo.FontAwesome410
-    FoBo.InitParam.ToolKit=FoBo.AngularJS1219
+    FoBo.InitParam.ToolKit=FoBo.AngularJS141
     FoBo.InitParam.ToolKit=FoBo.AJSNGGrid207
     FoBo.InitParam.ToolKit=FoBo.AJSUIBootstrap0100
     FoBo.InitParam.ToolKit=FoBo.PrettifyJun2011

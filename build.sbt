@@ -14,9 +14,9 @@ liftLatestEdition in ThisBuild <<= liftLatestVersion apply { _.substring(0,3) }
 
 //name <<= (name, liftEdition) { (n, e) =>  n + "_" + e }
 
-crossScalaVersions := Seq("2.11.1", "2.10.4", "2.9.3", "2.9.2", "2.9.1-1", "2.9.1")
+crossScalaVersions := Seq("2.11.4", "2.10.4", "2.9.3", "2.9.2", "2.9.1-1", "2.9.1")
 
-scalaVersion in ThisBuild := "2.11.1"
+scalaVersion in ThisBuild := "2.11.4"
 
 EclipseKeys.withSource := true
 
@@ -51,12 +51,12 @@ libraryDependencies ++= Seq(
   
   libraryDependencies <++= scalaVersion { sv =>
   (sv match {
-      case "2.11.1"  => "org.specs2" %% "specs2" % "2.3.12" % "test"
+      case "2.11.4"  => "org.specs2" %% "specs2" % "2.3.12" % "test"
       case "2.10.4" | "2.9.2" | "2.9.1" | "2.9.1-1" => "org.specs2" %% "specs2" % "1.12.3" % "test"
       case _ => "org.specs2" %% "specs2" % "1.12.3" % "test"
       }) ::
    (sv match {
-      case "2.11.1"  => "org.scalacheck" %% "scalacheck" % "1.11.4" % "test"
+      case "2.11.4"  => "org.scalacheck" %% "scalacheck" % "1.11.4" % "test"
       case "2.10.4" | "2.9.2" => "org.scalacheck" %% "scalacheck" % "1.10.0" % "test"
       case _ => "org.scalacheck" %% "scalacheck" % "1.10.0" % "test"
       }) ::
