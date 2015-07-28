@@ -56,8 +56,8 @@ class Boot {
     //FoBo.InitParam.JQuery=FoBo.JQuery1111 //FoBo.JQuery1102  
     FoBo.InitParam.JQuery=FoBo.JQuery1111 //FoBo.JQuery191  
     //FoBo.InitParam.JQuery=FoBo.JQueryMigrate121    
-    FoBo.InitParam.ToolKit=FoBo.Bootstrap320
-    FoBo.InitParam.ToolKit=FoBo.FontAwesome410
+    FoBo.InitParam.ToolKit=FoBo.Bootstrap335
+    FoBo.InitParam.ToolKit=FoBo.FontAwesome430
     FoBo.InitParam.ToolKit=FoBo.AngularJS141
     FoBo.InitParam.ToolKit=FoBo.AJSNGGrid207
     FoBo.InitParam.ToolKit=FoBo.AJSUIBootstrap0100
