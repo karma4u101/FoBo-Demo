@@ -33,7 +33,7 @@ class Boot {
 
       DB.defineConnectionManager(DefaultConnectionIdentifier, vendor)
     }
-
+ 
     //Init slick tables 
     SlickHelper.initSchema 
     SlickHelper.demoRun
@@ -82,13 +82,30 @@ class Boot {
     LiftRules.htmlProperties.default.set((r: Req) =>
       new Html5Properties(r.userAgent))    
       
-    LiftRules.noticesAutoFadeOut.default.set( (notices: NoticeType.Value) => {
-        notices match {
-          case NoticeType.Notice => Full((8 seconds, 4 seconds))
-          case _ => Empty
-        }
-     }
-    ) 
+      //this is not working as we are no longer allowing (see securityRules below) 
+      //in-line scripts in the page 
+//    LiftRules.noticesAutoFadeOut.default.set( (notices: NoticeType.Value) => {
+//        notices match {
+//          case NoticeType.Notice => Full((8 seconds, 4 seconds))
+//          case _ => Empty
+//        }
+//     }
+//    )
+    
+    
+    LiftRules.securityRules = () => {
+      SecurityRules(content = Some(ContentSecurityPolicy(
+        scriptSources = List(
+            ContentSourceRestriction.UnsafeEval,
+            ContentSourceRestriction.Self),
+        frameSources = List(
+            ContentSourceRestriction.Host("https://www.youtube.com/embed/"),
+            ContentSourceRestriction.Host("http://ghbtns.com/github-btn.html")),  
+        styleSources = List(
+            ContentSourceRestriction.UnsafeInline,
+            ContentSourceRestriction.Self)
+            )))
+    } 
     
     // Make a transaction span the whole HTTP request
     S.addAround(DB.buildLoanWrapper)

@@ -9,6 +9,22 @@ import net.liftweb.http.js.JE.JsRaw
 /*This snippet is injecting the roundtrip binding scripts into the tail of the html page body.*/
 class RoundTripBindingInjector extends PersonRT with SimpleRT {
   
+  /*
+   * This is a quick fix to move the scripts out of the page and into “page JS” file instead
+   * There are most likely a more elegant solution. 
+   */
+  def render() : NodeSeq = {
+    val functions = ((for {
+      session <- S.session
+    } yield 
+       <lift:tail>{
+       S.appendGlobalJs(JsRaw(s"var myRTFunctions = ${session.buildRoundtrip(getRoundTrips).toJsCmd}").cmd)
+       }</lift:tail>
+    ) openOr NodeSeq.Empty)
+    functions  
+  }
+  
+  /*
   def render() : NodeSeq = {
     val functions = ((for {
       session <- S.session
@@ -17,5 +33,5 @@ class RoundTripBindingInjector extends PersonRT with SimpleRT {
         )}</lift:tail>) openOr NodeSeq.Empty)
     functions
   }  
-
+  */
 }

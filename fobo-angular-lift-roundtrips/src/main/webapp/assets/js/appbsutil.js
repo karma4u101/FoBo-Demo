@@ -1,7 +1,9 @@
 !function ($) {
 
+  document.write('<base href="' + document.location + '" />'); 
+    
   $(function(){
-
+      
     var $window = $(window)
     var $body   = $(document.body)
 
@@ -13,6 +15,7 @@
     })
 
     $window.on('load', function () {
+      prettyPrint();
       $body.scrollspy('refresh')
     })
    
