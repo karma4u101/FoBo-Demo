@@ -54,8 +54,7 @@ class Boot {
     //Init the FoBo - Front-End Toolkit module, 
     //see http://liftweb.net/lift_modules for more info
     //FoBo.InitParam.JQuery=FoBo.JQuery1111 //FoBo.JQuery1102  
-    FoBo.InitParam.JQuery=FoBo.JQuery1111 //FoBo.JQuery191  
-    //FoBo.InitParam.JQuery=FoBo.JQueryMigrate121    
+    FoBo.InitParam.JQuery=FoBo.JQuery1111   
     FoBo.InitParam.ToolKit=FoBo.Bootstrap335
     FoBo.InitParam.ToolKit=FoBo.FontAwesome430
     FoBo.InitParam.ToolKit=FoBo.AngularJS141
