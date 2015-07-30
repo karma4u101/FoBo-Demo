@@ -17,3 +17,5 @@ project/plugins/project/
 /.project
 /bin
 /.worksheet
+/.cache-main
+/lift_proto.db.h2.db
