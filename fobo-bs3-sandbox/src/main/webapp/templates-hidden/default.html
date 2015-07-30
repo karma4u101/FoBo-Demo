@@ -26,44 +26,6 @@
 <script id="json" src="/classpath/json.js" type="text/javascript"></script>
 <script src="/assets/js/app.js" type="text/javascript"></script>
 
-
-<script type="text/javascript">
-	$(window).load(
-			function() {
-				$('#sidebarLD > a').on(
-						'click',
-						function(e) {
-							e.preventDefault();
-							if (!$(this).hasClass("active")) {
-								var lastActive = $(this).closest("#sidebarLD")
-										.children(".active");
-								lastActive.removeClass("active");
-								lastActive.next('div').collapse('hide');
-								$(this).addClass("active");
-								$(this).next('div').collapse('show');
-							}
-						});
-			});
-</script>
-<script type="text/javascript">
-	$(window).load(
-			function() {
-				$('#sidebarFid > a').on(
-						'click',
-						function(e) {
-							e.preventDefault();
-							if (!$(this).hasClass("active")) {
-								var lastActive = $(this).closest("#sidebarFid")
-										.children(".active");
-								lastActive.removeClass("active");
-								lastActive.next('div').collapse('hide');
-								$(this).addClass("active");
-								$(this).next('div').collapse('show');
-							}
-						});
-			});
-</script>
-
 </head>
 <body>
 
@@ -98,25 +60,6 @@
 
 		<script src="/classpath/fobo/bootstrap.js" type="text/javascript"></script>
 		<script src="/assets/js/bootstrap3-wysihtml5.all.js" type="text/javascript"></script>
-
-        <script>
-          $('#mytxtinput').wysihtml5({
-        	    toolbar: {
-        	        'html': true,
-        	        fa: true
-        	      },
-        	  parserRules: {
-        	    classes: {
-        		  'mytxtimg': 1
-        	    },
-        	    tags: {
-        		  'img': { 
-        			  'set_class': 'mytxtimg'
-        		  }
-                }
-        	  }
-          });
-        </script>
 
 	</div>
 </body>

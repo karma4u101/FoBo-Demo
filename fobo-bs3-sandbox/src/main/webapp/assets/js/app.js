@@ -1,6 +1,65 @@
 
-!function ($) {
+function copyVals() {
+    console.log('here');
+    $('#mytxtoutput').html($('#mytxtinput').val());
+}
 
+
+
+!function ($) {
+        	    	
+
+    	$(window).load(
+	    function() {
+		$('#sidebarLD > a').on(
+			'click',
+			function(e) {
+			    e.preventDefault();
+			    if (!$(this).hasClass("active")) {
+				var lastActive = $(this).closest("#sidebarLD")
+					.children(".active");
+				lastActive.removeClass("active");
+				lastActive.next('div').collapse('hide');
+				$(this).addClass("active");
+				$(this).next('div').collapse('show');
+			    }
+			});
+	    });
+
+    $(window).load(
+	    function() {
+		$('#sidebarFid > a').on(
+			'click',
+			function(e) {
+			    e.preventDefault();
+			    if (!$(this).hasClass("active")) {
+				var lastActive = $(this).closest("#sidebarFid")
+					.children(".active");
+				lastActive.removeClass("active");
+				lastActive.next('div').collapse('hide');
+				$(this).addClass("active");
+				$(this).next('div').collapse('show');
+			    }
+			});
+	    });
+
+    $('#mytxtinput').wysihtml5({
+	toolbar : {
+	    'html' : true,
+	    fa : true
+	},
+	parserRules : {
+	    classes : {
+		'mytxtimg' : 1
+	    },
+	    tags : {
+		'img' : {
+		    'set_class' : 'mytxtimg'
+		}
+	    }
+	}
+    });	    	
+        
   $(function(){
 
     var $window = $(window)

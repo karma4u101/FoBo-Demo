@@ -19,3 +19,4 @@ project/plugins/project/
 /.worksheet
 /.cache-main
 /lift_proto.db.h2.db
+/lift_proto.db.lock.db
