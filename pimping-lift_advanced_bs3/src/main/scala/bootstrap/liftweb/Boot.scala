@@ -49,9 +49,9 @@ class Boot {
 
     //Init the FoBo - Front-End Toolkit module, 
     //see http://liftweb.net/lift_modules for more info
-    FoBo.InitParam.JQuery=FoBo.JQuery1102  
-    FoBo.InitParam.ToolKit=FoBo.Bootstrap320 //FoBo.Bootstrap301
-    FoBo.InitParam.ToolKit=FoBo.FontAwesome403 //FoBo.FontAwesome401
+    FoBo.InitParam.JQuery=FoBo.JQuery1111  
+    FoBo.InitParam.ToolKit=FoBo.Bootstrap335 
+    FoBo.InitParam.ToolKit=FoBo.FontAwesome430 
     FoBo.init() 
     
     //Show the spinny image when an Ajax call starts
@@ -79,6 +79,8 @@ class Boot {
         }
      }
     ) 
+    
+    
     
     // Make a transaction span the whole HTTP request
     S.addAround(DB.buildLoanWrapper)
