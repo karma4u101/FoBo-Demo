@@ -7,10 +7,10 @@
     <environment>
         <moduleId>
             <groupId>se.media4u101</groupId>
-            <artifactId>fobo-angular-lift-roundtrips</artifactId>
-            <version>0.6.7</version>
-        </moduleId>
-        <dependencies>
+            <artifactId>fobo-angular-lift-roundtrips</artifactId> 
+            <version>0.6.8</version>
+        </moduleId> 
+        <dependencies> 
         
         </dependencies>
         <import-package> !org.apache.commons.codec*</import-package>
@@ -19,4 +19,5 @@
    <context-root>/fobo-angular-lift-roundtrips</context-root>
                 
 </web-app>
+
 

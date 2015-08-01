@@ -1,6 +1,6 @@
 moduleName := "FoBo-Angular-Lift-RoundTrips"
 
-version := "0.6.7-SNAPSHOT"
+version := "0.6.8-SNAPSHOT"
 
 organization := "net.liftweb"
 
@@ -10,7 +10,7 @@ liftEdition <<= liftVersion apply { _.substring(0,3) }
 
 scalaVersion := "2.11.4"
 
-crossScalaVersions := Seq("2.11.2") 
+crossScalaVersions := Seq("2.11.4") 
 
 //javaOptions in run += "-Drun.mode=production"
 
