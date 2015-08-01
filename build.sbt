@@ -42,7 +42,7 @@ libraryDependencies <++= (liftVersion,liftEdition,version) { (v,e,mv) =>
 //we are debuging the bs3 sandbox stuff that the only reason we need this extra stuff here right now.
 libraryDependencies ++= Seq(
     "org.eclipse.jetty"       % "jetty-webapp"            % "8.1.7.v20120910"     % "container,test",
-    "org.eclipse.jetty.orbit" % "javax.servlet"           % "3.0.0.v201112011016" % "container,test" artifacts Artifact("javax.servlet", "jar", "jar"),
+    "org.eclipse.jetty.orbit" % "javax.servlet"           % "3.0.0.v201112011016" % "container,test" artifacts Artifact("javax.servlet", "jar", "jar")
    /* "ch.qos.logback"          % "logback-classic"         % "1.0.6", */
    /* "com.typesafe.slick"      %% "slick"                  % "2.1.0",*/
    /* "com.h2database"          % "h2"                      % "1.3.167",*/
