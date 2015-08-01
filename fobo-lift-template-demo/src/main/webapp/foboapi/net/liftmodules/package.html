@@ -1,0 +1,354 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>liftmodules - net.liftmodules</title>
+          <meta name="description" content="liftmodules - net.liftmodules" />
+          <meta name="keywords" content="liftmodules net.liftmodules" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../lib/template.js"></script>
+      <script type="text/javascript" src="../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../index.html';
+            var hash = 'net.liftmodules.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img src="../../lib/package_big.png" />
+        <p id="owner"><a href="../package.html" class="extype" name="net">net</a></p>
+        <h1>liftmodules</h1> <span class="permalink">
+      <a href="../../index.html#net.liftmodules.package" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">liftmodules</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Proceed to starting point for this document =&gt; <a href="FoBo/package.html" class="extype" name="net.liftmodules.FoBo">net.liftmodules.FoBo</a></p></div><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By inheritance</span></li>
+              </ol>
+            </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="net.liftmodules"><span>liftmodules</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show all</span></li>
+            </ol>
+            <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#members" target="_blank">Learn more about member selection</a>
+          </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="net.liftmodules.FoBo" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="FoBo"></a>
+      <a id="FoBo:FoBo"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="FoBo/package.html"><span class="name">FoBo</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#net.liftmodules.package@FoBo" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">The <a href="FoBo/package.html" class="extype" name="net.liftmodules.FoBo">net.liftmodules.FoBo</a> Package is the starting point for this API.</p><div class="fullcomment"><div class="comment cmt"><h4>Welcome to FoBo - A generic Front-End Toolkit Lift Module</h4><p>The <a href="FoBo/package.html" class="extype" name="net.liftmodules.FoBo">net.liftmodules.FoBo</a> Package is the starting point for this API.
+The FoBo modules Github home is <a href="https://github.com/karma4u101/FoBo" target="_blank">here</a></p><h5>What FoBo will do for you</h5><p>This module gives you quick and easy integration of some of the industry leading web-centric open source
+front-end toolkits with some carefully thought throw Scala/Lift inherit extra benefits.</p><p>Among the benefits is:</p><ul><li>Due to a small footprint and uniform declaration and integration points across toolkit versions only a
+   small amount of changes will bee needed for a up/down-grading of a used Toolkit, optimally, if the toolkit
+   has no breaking changes it will just be a version change of the FoBo.Initparam in Lift bootstrap.liftweb.Boot.</li><li>The module provides debug-able js and css files in development and minimized files otherwise and simultaneously
+   supporting several versions, makes development, maintenance, upgrade and fall-back quick and easy.</li><li>The modules included lib Classes and Snippet helpers will ease you from writing some commonly used toolkit
+   component integration scripts making it a simple snippet invocation.
+   At this writing the snippet helpers is few but expect the numbers to grow as the module matures.</li><li>Great mobile scalability with some mobile enabled toolkits.</li><li>With FoBo great toolkits and toolsets for building the framework most suited to your application development
+   will be available to you just a FoBo.Initparam away.</li></ul><h5>FoBo supported toolkits and plugins</h5><p>The following is a list of available toolkits and plugins</p><ul><li>JQuery [v1.7.2, v1.8.2, v1.9.1, v1.10.2, v1.11.0, v1.11.1, v.2.1.1, v.2.1.4] <a href="FoBoJQ/package.html" class="extype" name="net.liftmodules.FoBoJQ">net.liftmodules.FoBoJQ</a></li><li>Bootstrap v3.x serie [v3.0.1, v3.1.1, v3.2.0, v3.3.5] <a href="FoBoBs/package.html" class="extype" name="net.liftmodules.FoBoBs">net.liftmodules.FoBoBs</a></li><li>Bootstrap v2.x serie [v2.1.0, v2.2.0, v2.2.2, v2.3.0, v2.3.1, v2.3.2] <a href="FoBoTB/package.html" class="extype" name="net.liftmodules.FoBoTB">net.liftmodules.FoBoTB</a></li><li>Font Awesome [v3.2.1, v4.0.3, v4.1.0, v4.3.0] <a href="FoBoFA/package.html" class="extype" name="net.liftmodules.FoBoFA">net.liftmodules.FoBoFA</a></li><li>Kinetic JS [v5.1.0]</li><li>Google Code Prettify [vJun2011]</li><li>Angular JS [v1.0.6, v1.2.11, v1.2.19, v1.3.15, v1.4.1] (angular core modules)</li><li>Angular UI Bootstrap [v0.2.0, v0.7.0, v0.10.0] (angular component)</li><li>Angular NG-Grid [v2.0.4, v2.0.7] (angular component)</li><li>Angular Material design [v0.10.0] (angular component)</li></ul><h5>Heads up</h5><p>This API is young so if you make direct usage of some FoBoHelpers in lib chances is that things change.
+If you want to stay a bit more on the safe side usage of FoBo snippets and init operations should be fairly safe.
+After a stable release changes to a API method will be announced as deprecated at least one release cycle before
+method signature changes or removal.</p><h5>Help out!</h5><p>There is a lot more that can be done within the boundaries of this API and the FoBo module as a hole so
+your help, suggestions, encouragement, engagement, patches (pull requests) bug-fixes/reports are highly appreciated.</p><h5>Setup</h5><ul><li>The module is known to work with Lift v2.4/v2.5/v2.6 and v3.0-SNAPSHOT and it's supported Scala versions.</li><li>For a demonstration of this module see the live <a href="http://www.media4u101.se/fobo-lift-template-demo/" target="_blank">FoBo demo</a>
+</li></ul></div><dl class="attributes block"> <div class="block">Example:
+               <ol><li class="cmt"><p>To initiate this module for usage in your Lift project
+set something like the following in the projects Lift bootstrap.liftweb.Boot. For information on FoBoToolkitName see
+respective toolkit below.</p><pre><span class="kw">import</span> net.liftmodules.FoBo
+ :
+ :
+<span class="cmt">//If using defaults FoBo init params can be omitted</span>
+FoBo.InitParam.JQuery=FoBo.JQueryXYZ  <span class="cmt">//one jquery version</span>
+FoBo.InitParam.ToolKit=FoBo.FoBoToolkitNameXYZ <span class="cmt">//one or more toolkits</span>
+FoBo.InitParam.ToolKit=FoBo.FoBoToolkitNameXYZ
+ :
+FoBo.init() <span class="cmt">//now do init</span></pre></li></ol>
+            </div><dt>Version</dt><dd><p>v1.4</p></dd></dl></div>
+    </li><li name="net.liftmodules.FoBoAJS" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="FoBoAJS"></a>
+      <a id="FoBoAJS:FoBoAJS"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="FoBoAJS/package.html"><span class="name">FoBoAJS</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#net.liftmodules.package@FoBoAJS" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">This package object is only of interest to you if you are using this module
+as a stand alone artifact dependency in your project (without FoBo).</p><div class="fullcomment"><div class="comment cmt"><h4>FoBo - Sub-module</h4><p>This package object is only of interest to you if you are using this module
+as a stand alone artifact dependency in your project (without FoBo).
+This package object provides information on how to initiate and use this module
+in your project. If you are using this module in FoBo see <a href="FoBo/package.html" class="extype" name="net.liftmodules.FoBo">net.liftmodules.FoBo</a>
+for usage information.
+</p></div></div>
+    </li><li name="net.liftmodules.FoBoBs" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="FoBoBs"></a>
+      <a id="FoBoBs:FoBoBs"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="FoBoBs/package.html"><span class="name">FoBoBs</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#net.liftmodules.package@FoBoBs" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">This package object is only of interest to you if you are using this module
+as a stand alone artifact dependency in your project (without FoBo).</p><div class="fullcomment"><div class="comment cmt"><h4>FoBo - Sub-module</h4><p>This package object is only of interest to you if you are using this module
+as a stand alone artifact dependency in your project (without FoBo).
+This package object provides information on how to initiate and use this module
+in your project. If you are using this module in FoBo see <a href="FoBo/package.html" class="extype" name="net.liftmodules.FoBo">net.liftmodules.FoBo</a>
+for usage information.
+</p></div></div>
+    </li><li name="net.liftmodules.FoBoFA" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="FoBoFA"></a>
+      <a id="FoBoFA:FoBoFA"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="FoBoFA/package.html"><span class="name">FoBoFA</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#net.liftmodules.package@FoBoFA" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">This package object is only of interest to you if you are using this module
+as a stand alone artifact dependency in your project (without FoBo).</p><div class="fullcomment"><div class="comment cmt"><h4>FoBo - Sub-module</h4><p>This package object is only of interest to you if you are using this module
+as a stand alone artifact dependency in your project (without FoBo).
+This package object provides information on how to initiate and use this module
+in your project. If you are using this module in FoBo see <a href="FoBo/package.html" class="extype" name="net.liftmodules.FoBo">net.liftmodules.FoBo</a>
+for usage information.
+</p></div></div>
+    </li><li name="net.liftmodules.FoBoGCP" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="FoBoGCP"></a>
+      <a id="FoBoGCP:FoBoGCP"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="FoBoGCP/package.html"><span class="name">FoBoGCP</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#net.liftmodules.package@FoBoGCP" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">This package object is only of interest to you if you are using this module
+as a stand alone artifact dependency in your project (without FoBo).</p><div class="fullcomment"><div class="comment cmt"><h4>FoBo - Sub-module</h4><p>This package object is only of interest to you if you are using this module
+as a stand alone artifact dependency in your project (without FoBo).
+This package object provides information on how to initiate and use this module
+in your project. If you are using this module in FoBo see <a href="FoBo/package.html" class="extype" name="net.liftmodules.FoBo">net.liftmodules.FoBo</a>
+for usage information.
+</p></div></div>
+    </li><li name="net.liftmodules.FoBoJQ" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="FoBoJQ"></a>
+      <a id="FoBoJQ:FoBoJQ"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="FoBoJQ/package.html"><span class="name">FoBoJQ</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#net.liftmodules.package@FoBoJQ" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">This package object is only of interest to you if you are using this module
+as a stand alone artifact dependency in your project (without FoBo).</p><div class="fullcomment"><div class="comment cmt"><h4>FoBo - Sub-module</h4><p>This package object is only of interest to you if you are using this module
+as a stand alone artifact dependency in your project (without FoBo).
+This package object provides information on how to initiate and use this module
+in your project. If you are using this module in FoBo see <a href="FoBo/package.html" class="extype" name="net.liftmodules.FoBo">net.liftmodules.FoBo</a>
+for usage information.
+</p></div></div>
+    </li><li name="net.liftmodules.FoBoKi" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="FoBoKi"></a>
+      <a id="FoBoKi:FoBoKi"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="FoBoKi/package.html"><span class="name">FoBoKi</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#net.liftmodules.package@FoBoKi" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">This package object is only of interest to you if you are using this module
+as a stand alone artifact dependency in your project (without FoBo).</p><div class="fullcomment"><div class="comment cmt"><h4>FoBo - Sub-module</h4><p>This package object is only of interest to you if you are using this module
+as a stand alone artifact dependency in your project (without FoBo).
+This package object provides information on how to initiate and use this module
+in your project. If you are using this module in FoBo see <a href="FoBo/package.html" class="extype" name="net.liftmodules.FoBo">net.liftmodules.FoBo</a>
+for usage information.
+</p></div></div>
+    </li><li name="net.liftmodules.FoBoPa" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="FoBoPa"></a>
+      <a id="FoBoPa:FoBoPa"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="FoBoPa/package.html"><span class="name">FoBoPa</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#net.liftmodules.package@FoBoPa" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">This package object is only of interest to you if you are using this module
+as a stand alone artifact dependency in your project (without FoBo).</p><div class="fullcomment"><div class="comment cmt"><h4>FoBo - Sub-module</h4><p>This package object is only of interest to you if you are using this module
+as a stand alone artifact dependency in your project (without FoBo).
+This package object provides information on how to initiate and use this module
+in your project. If you are using this module in FoBo see <a href="FoBo/package.html" class="extype" name="net.liftmodules.FoBo">net.liftmodules.FoBo</a>
+for usage information.
+</p></div></div>
+    </li><li name="net.liftmodules.FoBoTB" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="FoBoTB"></a>
+      <a id="FoBoTB:FoBoTB"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="FoBoTB/package.html"><span class="name">FoBoTB</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#net.liftmodules.package@FoBoTB" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">This package object is only of interest to you if you are using this module
+as a stand alone artifact dependency in your project (without FoBo).</p><div class="fullcomment"><div class="comment cmt"><h4>FoBo - Sub-module</h4><p>This package object is only of interest to you if you are using this module
+as a stand alone artifact dependency in your project (without FoBo).
+This package object provides information on how to initiate and use this module
+in your project. If you are using this module in FoBo see <a href="FoBo/package.html" class="extype" name="net.liftmodules.FoBo">net.liftmodules.FoBo</a>
+for usage information.
+</p></div></div>
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+
+
+    </body>
+      </html>

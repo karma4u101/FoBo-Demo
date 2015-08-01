@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<web-app xmlns="http://geronimo.apache.org/xml/ns/j2ee/web-1.2">
+<environment>
+  <moduleId>
+    <groupId>se.media4u101</groupId>
+    <artifactId>fobo-lift-template-demo-bs3</artifactId>
+    <version>2.9.2</version>
+  </moduleId>
+  <dependencies>
+  </dependencies>
+  <import-package> !org.apache.commons.codec*</import-package>
+  
+</environment>
+
+<context-root>/fobo-lift-template-demo</context-root>
+
+</web-app>
