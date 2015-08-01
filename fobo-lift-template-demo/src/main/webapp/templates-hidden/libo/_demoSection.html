@@ -10,19 +10,16 @@
 <body class="lift:content_id=fobo-bo-demo">
 
 	<section class="demo-section" id="fobo-bo-demo">
-		<head_merge> </head_merge>
+	<div class="container-fluid">
+		
 
-		<!-- 		<div class="row-fluid"> -->
-		<!-- 			<div class="span12"> -->
-
-		<div class="row-fluid">
-			<div class="span3">
+		<div class="row">
+			<div class="col-sm-3">
 				<ul class="row-fluid nav nav-list bs-docs-sidenav" data-spy="affix">
-				<span data-lift="FoBo.TBNavLiList.builder?group=liboAffix"></span>	
+				<span data-lift="FoBo.Bs3NavLiList.builder?group=liboAffix"></span>	
 				</ul>
 			</div>
-			<div class="span9">
-                
+			<div class="col-sm-9">
 				<a id="gstarted"></a>
 				<section>
 					<h2 class="capital">
@@ -56,9 +53,7 @@
 						about to start a new Lift project that includes FoBo with
 						Bootstrap v3.x you can get a kick start by forking the 
 						<a href="http://www.media4u101.se/lift-advanced-bs3/">Lift v2.6 Template Applications - Bootstrap v3.x</a> 
-						project or if you want to use Bootstrap v2.x the 
-						<a href="https://github.com/karma4u101/Templating-With-Twitter-Bootstrap">Templating-With-Twitter-Bootstrap</a>, 
-						they uses the FoBo module pre-set-up for use with the latest v3.y.z/v2.y.z respective release of Bootstrap. 
+						project it uses the FoBo module pre-set-up for use with a v3.y.z release of Bootstrap. 
 					</p>
 					<p>	
 					    If you already have a Lift project that you want to extend with FoBo/Bootstrap functionality the next
@@ -82,22 +77,22 @@
 						extract the needed information, its pretty straight forward and
 						easy.
 					</p>
-					<span class="label">SBT setup for FoBo usage </span>
+					<span class="label label-default">SBT setup for FoBo usage </span>
 					<pre class="prettyprint linenums lang-scala">
  ⋮
 // Lift  
 libraryDependencies ++= {
-  val liftVersion = "2.5" // Put the current/latest lift version here
+  val liftVersion = "2.6.2" // Put the current/latest lift version here
   Seq(
     "net.liftweb"     %% "lift-webkit" % liftVersion % "compile" withSources(),
          ⋮
-    "net.liftmodules" %% "fobo_2.5"    % "1.1"       % "compile"
+    "net.liftmodules" %% "fobo_2.6"    % "1.4"       % "compile"
     )
 }                            
 
 // Customize any further dependencies as desired
 libraryDependencies ++= Seq(
-  "org.eclipse.jetty"        % "jetty-webapp"   % "8.0.3.v20111011"  % "container",
+  "org.eclipse.jetty"       % "jetty-webapp"            % "8.1.7.v20120910"     % "container,test",
      ⋮
    )
 						</pre>
@@ -128,12 +123,8 @@ libraryDependencies ++= Seq(
 						<dt>Examples on github:</dt>
 						<dd>
 						    Here is the complete <a href="https://github.com/lift/lift_26_sbt/blob/master/scala_210/lift_advanced_bs3/build.sbt">build.sbt file</a>
-						    used in <a href="https://github.com/lift/lift_26_sbt/blob/master/scala_210/lift_advanced_bs3/">Lift v2.6 Template Applications - Bootstrap v3.x</a>
-						    and here is the complete <a
-								href="https://github.com/karma4u101/Templating-With-Twitter-Bootstrap/blob/master/build.sbt">build.sbt
-								file</a> used in <a
-								href="https://github.com/karma4u101/Templating-With-Twitter-Bootstrap">Templating
-								With Twitter Bootstrap</a>
+						    used in <a href="https://github.com/lift/lift_26_sbt/blob/master/scala_211/lift_advanced_bs3/">Lift v2.6 Template Applications - Bootstrap v3.x</a>
+						    
 						</dd>
 					</dl>
 
@@ -147,7 +138,7 @@ libraryDependencies ++= Seq(
 					</p>
 
 
-					<span class="label">FoBo Bootstrap setup in Lift Boot</span>
+					<span class="label label-default">FoBo Bootstrap setup in Lift Boot</span>
 					<pre class="prettyprint linenums lang-scala">
    ⋮
 import net.liftmodules.FoBo
@@ -159,14 +150,15 @@ import net.liftmodules.FoBo
   class Boot extends Loggable {
     def boot {
            ⋮
-      FoBo.InitParam.JQuery=FoBo.JQuery191  
-      FoBo.InitParam.ToolKit=FoBo.Bootstrap232 
+      FoBo.InitParam.JQuery=FoBo.JQuery1111  
+      FoBo.InitParam.ToolKit=FoBo.Bootstrap335
+      FoBo.InitParam.ToolKit=FoBo.FontAwesome430 
       FoBo.init()
            ⋮     
 					</pre>
 					<p>In Lift's html5 template:s add (depending on your setup)
 						something like this:</p>
-					<span class="label">Lift surround template</span>
+					<span class="label label-default">Lift surround template</span>
 					<pre class="prettyprint linenums lang-html">
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -175,7 +167,7 @@ import net.liftmodules.FoBo
      &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
      &lt;!--Main css for the Bootstrap v2.x module option --&gt;
      &lt;link href="/classpath/fobo/bootstrap.css" type="text/css" rel="stylesheet"&gt;
-     &lt;link href="/classpath/fobo/bootstrap-responsive.css" type="text/css" rel="stylesheet"&gt;
+     &lt;link href="/classpath/fobo/bootstrap-theme.css" type="text/css" rel="stylesheet"&gt;
      &lt;!--app specific tweeks and overrides external to module goes here--&gt;
      &lt;link href="[path to your projects app css]" type="text/css" rel="stylesheet"&gt;  
          ⋮                       
@@ -210,13 +202,19 @@ import net.liftmodules.FoBo
 					In most cases the only things you need to change in your project to upgrade to a newer toolkit version 
 					is the FoBo modules version number in build.sbt    
 				    <code style="font-size:10px;">"net.liftmodules" %% "fobo" % (liftVersion+"-X.Y.Z-SNAPSHOT") withJavadoc() withSources()</code>
-					and the init param line <code>FoBo.InitParam.ToolKit=FoBo.BootstrapXYZ</code> in your projects Boot.scala file. 
+					and the init param line <code>FoBo.InitParam.ToolKit = FoBo.BootstrapXYZ</code> in your projects Boot.scala file. 
 					</p>
 					<p>
 					If there are some breaking changes in the toolkit you may need to downgrade to your previous toolkit version and
 					take messure to fix the problem, for that you just have to change back the init param line in Boot.scala. 
 					FoBo will always have a resonable number of toolkit versions avwailable in it's module bundle. 
+					 
 					</p>
+					<div class="alert alert-info">
+					 A toolkit version that is to be removed will always be marked as depricated prior to be removed. 
+					 A depricated toolkit version will always (if nothing else has been comunicated) have a compatible 
+					 upgrade awailable.
+					</div>
 				</section>
 
                 <hr/>
@@ -229,85 +227,84 @@ import net.liftmodules.FoBo
 					<h4>Font Awesome</h4>
 					
 					<p>
-					   With FoBo included Bootstrap v2.2.2+ you can optionally replace, and in Bootstrap v3.x add to, 
-					   the bootstrap provided icon set with <a href="http://fortawesome.github.com/Font-Awesome/">Font Awesome</a>  
-					   this is done by using the init parram <code>FoBo.InitParam.ToolKit=FoBo.FontAwesomeXYZ</code>.
+					   You can add to the bootstrap provided icon set with <a href="http://fortawesome.github.com/Font-Awesome/">Font Awesome</a>  
+					   this is done by using the init parram <code>FoBo.InitParam.ToolKit = FoBo.FontAwesomeXYZ</code>.
 					   The v4.x sereies of the Font Awesome icon set is compatible with the Bootstrap v3.x serie.
 					</p>
 
 					<div class="alert alert-info">
 					 The Font Awesome icon set is compatible with bootstrap but can be used as-is even if you are not using bootstrap. 
 					 </div>							
-					<div  class="label">Font Awesome - Boot.scala Setup</div>
+					<div  class="label label-default">Font Awesome - Boot.scala Setup</div>
 <pre class="prettyprint linenums lang-scala">⋮
-FoBo.InitParam.ToolKit=FoBo.Bootstrap232
-FoBo.InitParam.ToolKit=FoBo.FontAwesome321 
+FoBo.InitParam.ToolKit=FoBo.Bootstrap335
+FoBo.InitParam.ToolKit=FoBo.FontAwesome430 
 FoBo.init()
 ⋮</pre>					 						
-					<div  class="label">Font Awesome - Template Setup</div>
+					<div  class="label label-default">Font Awesome - Template Setup</div>
 <pre class="prettyprint linenums lang-html">&lt;link rel="stylesheet" type='text/css' href="/classpath/fobo/bootstrap.css"/&gt;
  :
 &lt;link rel="stylesheet" href="/classpath/fobo/font-awesome.css"&gt;</pre>
 				
-<!-- 					<div class="alert alert-info"> -->
-<!-- 					 If you are using FoBo v0.7.10-SNAPSHOT with FoBo.Bootstrap222 and FoBo.FontAwesome200  -->
-<!-- 					 you need to explicitly specify that you are using a font-awesome modified bootstrap css in  -->
-<!-- 					 your template as <code>bootstrap-no-icons.css</code>. -->
-<!-- 					 In newer version of FoBo with for example the FoBo.FontAwesome200TB222 (font-awesome for twitter bootstrap v2.2.2)  -->
-<!-- 					 declaration FoBo will automatically identify that you are using font-awesome and serve the correct bootsrap css  -->
-<!-- 					 without a explicit "-no-icons" specification in the css file name.  -->
-<!-- 					 </div>	 -->
 
+	<div  class="label label-default" style="margin-bottom:5px;">Font Awesome Example - Rendering login icons</div>	
 
-	<div  class="label" style="margin-bottom:5px;">Font Awesome Example - Rendering login icons</div>	
-	 		
-    <form>
-    <div class="input-prepend">
-    <span class="add-on"><i class="icon-envelope"></i></span>
-    <input class="span9" type="text" placeholder="Email address">
-    </div>
-    <div class="input-prepend">
-    <span class="add-on"><i class="icon-key"></i></span>
-    <input class="span9" type="password" placeholder="Password">
-    </div>
-    </form>
+<form class="form-horizontal">
+<div class="row">
+  <div class="col-sm-3">
+      <label class="sr-only" for="exampleInput">Email address</label>
+      <div class="input-group">
+        <div class="input-group-addon"><i class="fa fa-envelope"></i></div>
+        <input type="email" class="form-control" id="exampleInput" placeholder="Email address">
+     </div>
+   </div> 
+</div>
+<div class="row">
+  <div class="col-sm-3">
+      <label class="sr-only" for="exampleInput2">Password</label>
+      <div class="input-group">
+        <div class="input-group-addon"><i class="fa fa-key"></i></div>
+        <input type="password" class="form-control" id="exampleInput2"  placeholder="Password">
+     </div>
+   </div> 
+</div>
+</form>	
 
-    
-	<div  class="label">Font Awesome Example - The code</div>	
+    <p></p>
+	<div  class="label label-default">Font Awesome Example - The code</div>	
 	<pre class="prettyprint linenums lang-html">			
-&lt;form&gt;
-  &lt;div class="input-prepend"&gt;
-    &lt;span class="add-on"&gt;&lt;i class="icon-envelope"&gt;&lt;/i&gt;&lt;/span&gt;
-    &lt;input class="span2" type="text" placeholder="Email address"&gt;
+&lt;form class="form-horizontal"&gt;
+&lt;div class="row"&gt;
+  &lt;div class="col-sm-3"&gt;
+    &lt;label class="sr-only" for="exampleInput"&gt;Email address&lt;/label&gt;
+    &lt;div class="input-group"&gt;
+    &lt;div class="input-group-addon""&gt;&lt;i class="fa fa-envelope"&gt;&lt;/i&gt;&lt;/div&gt;
+    &lt;input type="email" class="form-control" id="exampleInput"  placeholder="Email address"&gt;
   &lt;/div&gt;
-  &lt;div class="input-prepend"&gt;
-    &lt;span class="add-on"&gt;&lt;i class="icon-key"&gt;&lt;/i&gt;&lt;/span&gt;
-    &lt;input class="span2" type="password" placeholder="Password"&gt;
+&lt;/div&gt; 
+&lt;div class="row"&gt;
+  &lt;div class="col-sm-3"&gt;
+    &lt;label class="sr-only" for="exampleInput2"&gt;Password&lt;/label&gt;
+    &lt;div class="input-group"&gt;
+    &lt;div class="input-group-addon""&gt;&lt;i class="fa fa-key"&gt;&lt;/i&gt;&lt;/div&gt;
+    &lt;input type="password" class="form-control" id="exampleInput2"  placeholder="Password"&gt;
   &lt;/div&gt;
+&lt;/div&gt; 
 &lt;/form&gt;   
     </pre>
    	<p>This is just one smal example, the FoBo Github button (in the upper right on this page) is using <code>font-size: 24px;</code> 
    	to slightly scale up the icon with a Font Awesome Social icon, the social icons is one set of extra icons available in Font Awesome, 
-   	in fact all icons on this page is replaced by Font Awesome icons but as it is fully compatible with Twitter Bootstrap 2.x 
+   	in fact all icons on this page is replaced by Font Awesome icons but as it is fully compatible with Twitter Bootstrap  
    	it blends in nicely.
 					
-<!-- 					<h4>FoBo-Less</h4> -->
-<!-- 					<p> -->
-<!-- 						For common use it is mostly sufficient to use the pre-compiled artifact -->
-<!-- 						but by using FoBo and the sub project <a -->
-<!-- 							href="https://github.com/karma4u101/FoBo/tree/master/FoBo-Less">FoBo-Less</a> it -->
-<!-- 						is also possible to do heavy customization of bootstraps "Look&Feel" -->
-<!-- 						using less variables, however, this requires that you manage your own  -->
-<!-- 						build of FoBo and FoBo-Less locally.  -->
-<!-- 					</p> -->
 				</section>
 
                 <hr/>
 
                 <a id="foboprotousr"></a>
                 <section>
-                <h2 class="capital">F<span>o</span>B<span>o's</span> B<span>ootstrap</span>M<span>eta</span>M<span>ega</span>P<span>roto</span>U<span>ser</span> <small>(since v1.1)</small></h2>
-                <p>In FoBo v1.1 with Bootstrap v3.x, FoBo comes with a MetaMegaProtoUser trait <strong>BootstrapMegaMetaProtoUser</strong> that you can extend your mapper User object 
+                <h2 class="capital">F<span>o</span>B<span>o's</span> B<span>ootstrap</span> M<span>eta</span> M<span>ega</span> P<span>roto</span> U<span>ser</span> <small>(since v1.1)</small></h2>
+                <p>FoBo comes with a MetaMegaProtoUser trait <strong>BootstrapMegaMetaProtoUser</strong> that you can extend your mapper User object 
                 with to get Bootstrap v3.x ProtoUser form views. For a example see the code.module.User object in the lift_advanced_bs project at 
                 <a href="https://github.com/lift/lift_26_sbt/">Lift v2.6 Template Applications - On Github</a> and the 
                 <a href="http://www.media4u101.se/lift-advanced-bs3/">live Demo</a> for viewing the result.</p>
@@ -328,29 +325,29 @@ FoBo.init()
 						For more information see the <span data-lift="Menu.item?name=FoBoAPI;lift:Loc.i;"><span data-lift="Loc.i">FoBoAPI</span></span>							. 
 					</p>
 					
-                   <div class="alert alert-warning">
-                      The <strong>snippet names used below</strong> is the names used in FoBo's Bootstrap v2.x serie support, for names used and snippets available in 
-                      FoBo's Bootstrap v3.x serie see the <span data-lift="Menu.item?name=FoBoAPI;lift:Loc.i;a:class=addclassshowofdummy">FoBo API</span>  
-                   </div> 					
+<!--                    <div class="alert alert-warning"> -->
+<!--                       The <strong>snippet names used below</strong> is the names used in FoBo's Bootstrap v2.x serie support, for names used and snippets available in  -->
+<!--                       FoBo's Bootstrap v3.x serie see the <span data-lift="Menu.item?name=FoBoAPI;lift:Loc.i;a:class=addclassshowofdummy">FoBo API</span>   -->
+<!--                    </div> 					 -->
 					
                     <br/>
                     <section>
-                      <h4>The FoBo.TBNavLiList Snippet <small>(since v1.2)</small></h4>
+                      <h4>The FoBo.Bs3NavLiList Snippet <small>(since v1.3)</small></h4>
                       <p>If you are on a desktop computer (wide screen device) the Affix menu to the left uses this snippet to build it's list of ancors.</p>
                       
-                      <span class="label">TBNavLiList Usage</span>
+                      <span class="label label-default">Bs3NavLiList Usage</span>
 <pre class="prettyprint linenums lang-html">&lt;span data-lift="FoBo.TBNavLiList.builder?group=[LocGroup-Name]"&gt;&lt;/span&gt;</pre>
 
                       <p>The above shows you how to transform SiteMap items to list items in a NavLiList.</p>
                       					    
-					  <span class="label">TBNavLiList Example - The rendering</span>
+					  <span class="label label-default">Bs3NavLiList Example - The rendering</span>
 					  <ul class="nav nav-list navlilist-demo" style="max-width: 220px;">
-				        <span data-lift="FoBo.TBNavLiList.builder?group=liboAffix"></span>	
+				        <span data-lift="FoBo.Bs3NavLiList.builder?group=liboAffix"></span>	
 				      </ul> 
 				                           
-                      <p>The following is a example usage of the TBNavLiList (as seen above)</p>
+                      <p>The following is a example usage of the Bs3NavLiList (as seen above)</p>
                       
-					  <span class="label">TBNavLiList Example - The template code</span>			       			
+					  <span class="label label-default">Bs3NavLiList Example - The template code</span>			       			
 					  <pre class="prettyprint linenums lang-html">					
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -358,7 +355,7 @@ FoBo.init()
   &lt;body"&gt;
      ⋮
 &lt;ul class="nav nav-list navlist-demo" style="max-width: 220px;"&gt;
-  &lt;span data-lift="FoBo.TBNavLiList.builder?group=liboAffix">&lt;/span&gt;
+  &lt;span data-lift="FoBo.Bs3NavLiList.builder?group=liboAffix">&lt;/span&gt;
 &lt;/ul&gt;			
        ⋮ 
   &lt;/body&gt;        
@@ -370,34 +367,36 @@ FoBo.init()
                     <br/>
                     
 					<section>
-						<h4>The FoBo.TBNavbar Snippet <small>(since v1.0)</small></h4>
-						<p>The FoBo.TBNavbar snippet gives you a simple way to build your Bootstrap nav from Lift SiteMap item's, 
+						<h4>The FoBo.Bs3Navbar Snippet <small>(since v1.0)</small></h4>
+						<p>The FoBo.Bs3Navbar snippet gives you a simple way to build your Bootstrap nav from Lift SiteMap item's, 
 						combine this with the use of the FoBo.TBLocInfo object and you can do pretty much anything you are used to
 						only a lot easier and with a lot less code.</p>
-						<span class="label">Navbar Usage</span>
-<pre class="prettyprint linenums lang-html">&lt;span data-lift="FoBo.TBNavbar.builder?group=[LocGroup-Name]"&gt;&lt;/span&gt;
-&lt;span data-lift="FoBo.TBNavbar.builderPullRight?group=[LocGroup-Name]"&gt;&lt;/span&gt;</pre>
+						<span class="label label-default">Navbar Usage</span>
+<pre class="prettyprint linenums lang-html">&lt;span data-lift="FoBo.Bs3Navbar.builder?group=[LocGroup-Name]"&gt;&lt;/span&gt;
+&lt;span data-lift="FoBo.Bs3Navbar.builderPullRight?group=[LocGroup-Name]"&gt;&lt;/span&gt;</pre>
 					    
 					    <p>The above shows you how to transform SiteMap items to nav items in a NavBar. 
 					    You can specify one or more <strong>nav</strong> builder's, i.e groups of items, on a NavBar where each
 					    group is specified by it's Lift LocGroup belonging. Items in a builder group can be pulled to the right 
 					    in the NavBar by using the pull right builder.</p>
 					    
-					    <span  class="label">TBNavbar Example - The rendering</span>
+					    <span  class="label label-default">Bs3Navbar Example - The rendering</span>
 						<div id="mdemo1" class="dropdown clearfix" style="padding-right: 30px;">
-							<div class="navbar">
-								<div class="navbar-inner">
-									<div class="container-fluid">
-										<a data-target=".nav-collapse" data-toggle="collapse"
-											class="btn btn-navbar"> <span class="icon-bar"></span> <span
-											class="icon-bar"></span> <span class="icon-bar"></span>
-										</a> <a href="#" class="brand">Navbar Example</a>
-										<div class="nav-collapse">
-
-											<span data-lift="FoBo.TBNavbar.builder?group=mdemo1"></span>
-											<span data-lift="FoBo.TBNavbar.builderPullRight?group=mdemo2"></span>
-
-										</div>
+							<div class="navbar navbar-default">
+								<div class="container-fluid">
+			                        <div class="navbar-header ">
+				                        <button type="button" class="navbar-toggle" data-toggle="collapse"
+					                        data-target=".navbar-ex1-collapse">
+					                        <span class="sr-only">Navbar Example</span> 
+					                            <span class="icon-bar"></span> 
+					            	            <span class="icon-bar"></span> 
+						                        <span class="icon-bar"></span>
+				                        </button>
+				                        <a class="navbar-brand" href="#">Navbar Example</a>
+			                        </div>
+									<div class="collapse navbar-collapse navbar-ex1-collapse">
+										<span data-lift="FoBo.Bs3Navbar.builder?group=mdemo1"></span>
+										<span data-lift="FoBo.Bs3Navbar.builderPullRight?group=mdemo2"></span>
 									</div>
 								</div>
 							</div>
@@ -413,34 +412,37 @@ FoBo.init()
                         </p>
 						
 					    			
-					    <span class="label">TBNavbar Example - The template code</span>			       			
+					    <span class="label label-default">TBNavbar Example - The template code</span>			       			
 						<pre class="prettyprint linenums lang-html">					
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
     ⋮
   &lt;body"&gt;
      ⋮
-   &lt;div class="navbar"&gt; &lt;!-- for example 'navbar navbar-fixed-top' --&gt;
-     &lt;div class="navbar-inner"&gt;
-	   &lt;div class="container-fluid"&gt;
-          &lt;a data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar"&gt; 
-            &lt;span class="icon-bar"&gt;&lt;/span&gt; 
-            &lt;span class="icon-bar"&gt;&lt;/span&gt; 
-            &lt;span class="icon-bar"&gt;&lt;/span&gt;
-          &lt;/a&gt; &lt;a href="#" class="brand">Navbar Example&lt;/a&gt;
-          &lt;div class="nav-collapse"&gt;
-            &lt;span data-lift="FoBo.TBNavbar.builder?group=mdemo1"&gt;&lt;/span&gt;
-            &lt;span data-lift="FoBo.TBNavbar.builderPullRight?group=mdemo2"&gt;&lt;/span&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
+   &lt;div class="navbar navbar-default"&gt; &lt;!-- for example 'navbar navbar-default navbar-fixed-top' --&gt;
+     &lt;div class="container-fluid"&gt;
+       &lt;div class="navbar-header "&gt;
+         &lt;button type="button" class="navbar-toggle" data-toggle="collapse"
+             data-target=".navbar-ex1-collapse"&gt;
+             &lt;span class="sr-only">Navbar Example&lt;/span&gt; 
+                &lt;span class="icon-bar"&gt;&lt;/span&gt; 
+                &lt;span class="icon-bar"&gt;&lt;/span&gt; 
+                &lt;span class="icon-bar"&gt;&lt;/span&gt;
+         &lt;/button&gt;
+         &lt;a class="navbar-brand" href="#">Navbar Example&lt;/a&gt;
+       &lt;/div&gt;	   
+       &lt;div class="collapse navbar-collapse navbar-ex1-collapse"&gt;
+          &lt;span data-lift="FoBo.Bs3Navbar.builder?group=mdemo1"&gt;&lt;/span&gt;
+          &lt;span data-lift="FoBo.Bs3Navbar.builderPullRight?group=mdemo2"&gt;&lt;/span&gt;
+       &lt;/div&gt;          
+     &lt;/div&gt;
+   &lt;/div&gt;
        ⋮ 
   &lt;/body&gt;        
 &lt;/html&gt; 					 
 					    </pre>
 					    
-					<span class="label">TBNavbar Example - The SiteMap</span> Showing the <b>LocGroup's</b> that will be transformed into Bootstrap Navbar items for this example.
+					<span class="label label-default">TBNavbar Example - The SiteMap</span> Showing the <b>LocGroup's</b> that will be transformed into Bootstrap Navbar items for this example.
 					<pre class="prettyprint linenums lang-scala">   
    ⋮
   def sitemap = SiteMap(
@@ -448,9 +450,7 @@ FoBo.init()
     liboIndex,
     hdivider1 >> LocGroup("mdemo1") >> FoBo.TBLocInfo.DividerVertical,   
     contentDD >> LocGroup("liboTop1","mdemo1") >> PlaceHolder submenus ( 
-      bootstrap210Doc ,
-      bootstrap220Doc ,
-      bootstrap222Doc ,
+      bootstrap3xxDoc ,
       divider1  >> FoBo.TBLocInfo.Divider,
       foboApiDoc 
     ), 
@@ -466,43 +466,41 @@ FoBo.init()
 					<br/>
 
 					<section>
-						<h4>The FoBo.TBNavlist Snippet <small>(since v1.0)</small></h4>
-						<p>The FoBo.TBNavlist snippet gives you a simple way to build a Bootstrap navlist from Lift SiteMap item's, 
+						<h4>The FoBo.Bs3NavLiList Snippet <small>(since v1.0)</small></h4>
+						<p>The FoBo.Bs3NavLiList snippet gives you a simple way to build a Bootstrap navlist from Lift SiteMap item's, 
 						</p>
-						<span class="label">TBNavlist Usage</span>
-<pre class="prettyprint linenums lang-html">&lt;span data-lift="FoBo.TBNavlist.builder?group=[LocGroup-Name]"&gt;&lt;/span&gt;</pre>
+						<span class="label label-default">Bs3NavLiList Usage</span>
+<pre class="prettyprint linenums lang-html">&lt;span data-lift="FoBo.Bs3NavLiList.builder?group=[LocGroup-Name]"&gt;&lt;/span&gt;</pre>
 					    
 					    <p>The above shows you how to transform SiteMap items to list items in a Navlist. </p>
 					    
-					    <span class="label">TBNavlist Example - The rendering</span>
-					    <div class="well" style="max-width: 220px; padding: 8px 0;">
-					       <span data-lift="FoBo.TBNavlist.builder?group=nldemo1"></span>
-					    </div>				
+					    <span class="label label-default">Bs3NavLiList Example - The rendering</span>
+					    <ul class="well" id="exnavlilist" >
+					       <span data-lift="FoBo.Bs3NavLiList.builder?group=nldemo1"></span>
+					    </ul>				
 
                         <p>This navlist example have some SiteMap menu link items and 
-                        <strong>nav header's/menu lable's</strong> and a menu divider. The label's is set 
-                        in Lift's SiteMap by "marking" the item as a <code>FoBo.TBLocInfo.NavHeader</code> item,  
-                        The menu divider is "marked" by using <code>FoBo.TBLocInfo.Divider</code>  
-                        in the SiteMap.
+                        <strong>nav header's/menu lable's</strong>. The label's is set 
+                        in Lift's SiteMap by "marking" the item as a <code>FoBo.Bs3NavLiList.NavHeader</code> item.
                         </p>
 						
 					    			
-					    <span class="label">TBNavlist Example - The template code</span>			       			
+					    <span class="label label-default">Bs3NavLiList Example - The template code</span>			       			
 						<pre class="prettyprint linenums lang-html">					
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
     ⋮
   &lt;body"&gt;
      ⋮
-&lt;div class="well" style="max-width: 220px; padding: 8px 0;"&gt;
-  &lt;span data-lift="FoBo.TBNavlist.builder?group=nldemo1">&lt;/span&gt;
-&lt;/div&gt;			
+&lt;ul class="well" id="exnavlilist"&gt;
+  &lt;span data-lift="FoBo.Bs3NavLiList.builder?group=nldemo1">&lt;/span&gt;
+&lt;/ul&gt;			
        ⋮ 
   &lt;/body&gt;        
 &lt;/html&gt; 					 
 					    </pre>
 					    
-					<span class="label">TBNavlist Example - The SiteMap</span> Showing the <b>LocGroup nldemo1</b> that will be transformed into Bootstrap Navlist items for this example.
+					<span class="label label-default">TBNavlist Example - The SiteMap</span> Showing the <b>LocGroup nldemo1</b> that will be transformed into Bootstrap Navlist items for this example.
 					<pre class="prettyprint linenums lang-scala">
  
    ⋮
@@ -514,13 +512,11 @@ FoBo.init()
        ⋮
     contentDD >> LocGroup("liboTop1","mdemo1") >> PlaceHolder submenus ( 
            ⋮
-      bootstrap220Doc ,
-      bootstrap222Doc ,
+      bootstrap3xxDoc ,
            ⋮
       foboApiDoc 
     ), 
        ⋮  
-    divider3 >> LocGroup("nldemo1") >> FoBo.TBLocInfo.Divider,
     nlHelp >> LocGroup("nldemo1")     
   ) 
 						</pre>
@@ -543,152 +539,158 @@ FoBo.init()
                    <p>For more information see <a href="https://github.com/karma4u101/FoBo/issues/22#issuecomment-11932972" target="blank">FoBo sitemap with User.AddUserMenusAfter (authentication) ... how to?</a></p>
                    </section>
 
-                    <br/>					
-                    <section>
-					<h4>The FoBo.Bootstrap Snippet <small>(since v1.0)</small></h4>
-
-					<span class="label">Activate dropdown</span>
-					<pre class="prettyprint linenums lang-html">
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    ⋮
-  &lt;script data-lift="FoBo.ScriptHelper.registerLoadEventFactory"&gt;&lt;/script&gt;         
-  &lt;script data-lift="FoBo.Bootstrap.activateDropdown?on=.dropdown-toggle"&gt;&lt;/script&gt;              
-  &lt;/head&gt;
-    ⋮       
-&lt;/html&gt;    
-						</pre>
-
-					<span class="label">Set a popover</span> and preventing default
-					on-click action
-					<pre class="prettyprint linenums lang-html">
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-    ⋮
-  &lt;body"&gt;
-           ⋮
-      &lt;a href="#" rel="popover" title="The Title" data-content="The content ..." id="theId"&gt;...&lt;/a&gt;
-      &lt;script data-lift="FoBo.Bootstrap.popover?id=#theId&options=placement:'left'"&gt;&lt;/script&gt;
-      &lt;script data-lift="FoBo.Bootstrap.popoverPreventDefault">&lt;/script&gt;
-           ⋮ 
-  &lt;/body&gt;        
-&lt;/html&gt;    
-						</pre>
-
-					<p>
-						<b>.... instead of doing the following </b> (a common bootstrap
-						component init use case)
-					</p>
-					<span class="label">Transformed output</span>
-					<pre class="prettyprint linenums lang-html">
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-       ⋮
-    &lt;script type="text/javascript"&gt;         		
-	  function addLoadEvent(func) {
-	 	 var oldonload = window.onload;
-	 	 if (typeof window.onload != 'function') {
-	 	   window.onload = func;
-	 	 } else {
-	 	   window.onload = function() {
-	 		 if (oldonload) {
-	 		   oldonload();
-	 		 }
-	 		 func();
-	 	   }
-	  	 }
-	  }
-	  addLoadEvent(function() {
-		 $('.dropdown-toggle').dropdown()
-	  });	   			               
-    &lt;/script&gt;                                
-  &lt;/head&gt;
-&lt;body"&gt;
-           ⋮
-      &lt;!-- Set a boostrap popover element --&gt;   
-	  &lt;a href="#" rel="popover" title="The Title" data-content="The content ..." id="theId"&gt;...&lt;/a&gt;
-      &lt;!-- Initiate the popover and place it on the left --&gt;
-	  &lt;script&gt;
-        $(function () { 
-          $("#theId").popover({placement:'left'});
-        }); 
-      &lt;/script&gt; 
-      &lt;!-- Prevent the default action for click on the popover --&gt;
-      &lt;script&gt; 
-        $(function(){
-          $("a[rel=popover]")
-            .popover()
-            .click(function(e) {
-              e.preventDefault()
-          });
-        });
-      &lt;/script&gt; 
-           ⋮
-  &lt;/body&gt;        
-&lt;/html&gt;    
-						</pre>
-
-					<span class="label">A Bootstrap tooltip</span>
-					<pre class="prettyprint linenums lang-html">
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-   ⋮
-  &lt;body"&gt;
-       ⋮
-    This pages demonstrates a optional 
-    &lt;a id="lift-tt" title="The most powerful, most secure web framework available today. It simply rocks!" href="http://liftweb.net/"&gt;Lift&lt;/a&gt; 
-    module...   
-       ⋮ 
-    &lt;script data-lift="FoBo.Bootstrap.tooltip?id=#lift-tt"&gt;&lt;/script&gt;
-       ⋮ 
-  &lt;/body&gt;        
-&lt;/html&gt;    
-						</pre>
-
-					<div class="alert alert-info">I am using the html5 attribute
-						"data-lift" for hocks to Lift but if you like you are wellcome to
-						use the class attribute instead like class="lift:...."</div>
-
-
-
-					<p>
-						At this writing the available snippet helpers are few but expect
-						the numbers to grow. You are wellcome to contribute code and/or
-						ideas. Take a look att the API documentation on how to invoke the
-						helpers and description on what result it produces for example
-						look att the FoBo.ScriptHelper.registerLoadEventFactory snippet
-						function by open <a
-							href="/foboapi/#net.liftmodules.FoBo.snippet.FoBo.ScriptHelper">FoBo.ScriptHelper
-							page</a> and click on the <b>registerLoadEventFactory</b> function
-						name for details.
-					</p>
-					</section>
-					
-<!-- 					<hr /> -->
+                    <br/>		
                     
-				</section>
+                    
+                    			
+<!--                     <section> -->
+<!-- 					<h4>The FoBo.Bootstrap Snippet <small>(since v1.0)</small></h4> -->
+
+<!-- 					<span class="label label-default">Activate dropdown</span> -->
+<!-- 					<pre class="prettyprint linenums lang-html"> -->
+<!-- &lt;!DOCTYPE html&gt; -->
+<!-- &lt;html&gt; -->
+<!--   &lt;head&gt; -->
+<!--     ⋮ -->
+<!--   &lt;script data-lift="FoBo.ScriptHelper.registerLoadEventFactory"&gt;&lt;/script&gt;          -->
+<!--   &lt;script data-lift="FoBo.Bootstrap.activateDropdown?on=.dropdown-toggle"&gt;&lt;/script&gt;               -->
+<!--   &lt;/head&gt; -->
+<!--     ⋮        -->
+<!-- &lt;/html&gt;     -->
+<!-- 						</pre> -->
+
+<!-- 					<span class="label label-default">Set a popover</span> and preventing default -->
+<!-- 					on-click action -->
+<!-- 					<pre class="prettyprint linenums lang-html"> -->
+<!-- &lt;!DOCTYPE html&gt; -->
+<!-- &lt;html&gt; -->
+<!--     ⋮ -->
+<!--   &lt;body"&gt; -->
+<!--            ⋮ -->
+<!--       &lt;a href="#" rel="popover" title="The Title" data-content="The content ..." id="theId"&gt;...&lt;/a&gt; -->
+<!--       &lt;script data-lift="FoBo.Bootstrap.popover?id=#theId&options=placement:'left'"&gt;&lt;/script&gt; -->
+<!--       &lt;script data-lift="FoBo.Bootstrap.popoverPreventDefault">&lt;/script&gt; -->
+<!--            ⋮  -->
+<!--   &lt;/body&gt;         -->
+<!-- &lt;/html&gt;     -->
+<!-- 						</pre> -->
+
+<!-- 					<p> -->
+<!-- 						<b>.... instead of doing the following </b> (a common bootstrap -->
+<!-- 						component init use case) -->
+<!-- 					</p> -->
+<!-- 					<span class="label label-default">Transformed output</span> -->
+<!-- 					<pre class="prettyprint linenums lang-html"> -->
+<!-- &lt;!DOCTYPE html&gt; -->
+<!-- &lt;html&gt; -->
+<!--   &lt;head&gt; -->
+<!--        ⋮ -->
+<!--     &lt;script type="text/javascript"&gt;         		 -->
+<!-- 	  function addLoadEvent(func) { -->
+<!-- 	 	 var oldonload = window.onload; -->
+<!-- 	 	 if (typeof window.onload != 'function') { -->
+<!-- 	 	   window.onload = func; -->
+<!-- 	 	 } else { -->
+<!-- 	 	   window.onload = function() { -->
+<!-- 	 		 if (oldonload) { -->
+<!-- 	 		   oldonload(); -->
+<!-- 	 		 } -->
+<!-- 	 		 func(); -->
+<!-- 	 	   } -->
+<!-- 	  	 } -->
+<!-- 	  } -->
+<!-- 	  addLoadEvent(function() { -->
+<!-- 		 $('.dropdown-toggle').dropdown() -->
+<!-- 	  });	   			                -->
+<!--     &lt;/script&gt;                                 -->
+<!--   &lt;/head&gt; -->
+<!-- &lt;body"&gt; -->
+<!--            ⋮ -->
+<!--       &lt;!-- Set a boostrap popover element --&gt;    -->
+<!-- 	  &lt;a href="#" rel="popover" title="The Title" data-content="The content ..." id="theId"&gt;...&lt;/a&gt; -->
+<!--       &lt;!-- Initiate the popover and place it on the left --&gt; -->
+<!-- 	  &lt;script&gt; -->
+<!--         $(function () {  -->
+<!--           $("#theId").popover({placement:'left'}); -->
+<!--         });  -->
+<!--       &lt;/script&gt;  -->
+<!--       &lt;!-- Prevent the default action for click on the popover --&gt; -->
+<!--       &lt;script&gt;  -->
+<!--         $(function(){ -->
+<!--           $("a[rel=popover]") -->
+<!--             .popover() -->
+<!--             .click(function(e) { -->
+<!--               e.preventDefault() -->
+<!--           }); -->
+<!--         }); -->
+<!--       &lt;/script&gt;  -->
+<!--            ⋮ -->
+<!--   &lt;/body&gt;         -->
+<!-- &lt;/html&gt;     -->
+<!-- 						</pre> -->
+
+<!-- 					<span class="label label-default">A Bootstrap tooltip</span> -->
+<!-- 					<pre class="prettyprint linenums lang-html"> -->
+<!-- &lt;!DOCTYPE html&gt; -->
+<!-- &lt;html&gt; -->
+<!--    ⋮ -->
+<!--   &lt;body"&gt; -->
+<!--        ⋮ -->
+<!--     This pages demonstrates a optional  -->
+<!--     &lt;a id="lift-tt" title="The most powerful, most secure web framework available today. It simply rocks!" href="http://liftweb.net/"&gt;Lift&lt;/a&gt;  -->
+<!--     module...    -->
+<!--        ⋮  -->
+<!--     &lt;script data-lift="FoBo.Bootstrap.tooltip?id=#lift-tt"&gt;&lt;/script&gt; -->
+<!--        ⋮  -->
+<!--   &lt;/body&gt;         -->
+<!-- &lt;/html&gt;     -->
+<!-- 						</pre> -->
+
+<!-- 					<div class="alert alert-info">I am using the html5 attribute -->
+<!-- 						"data-lift" for hocks to Lift but if you like you are wellcome to -->
+<!-- 						use the class attribute instead like class="lift:...."</div> -->
+
+
+
+<!-- 					<p> -->
+<!-- 						At this writing the available snippet helpers are few but expect -->
+<!-- 						the numbers to grow. You are wellcome to contribute code and/or -->
+<!-- 						ideas. Take a look att the API documentation on how to invoke the -->
+<!-- 						helpers and description on what result it produces for example -->
+<!-- 						look att the FoBo.ScriptHelper.registerLoadEventFactory snippet -->
+<!-- 						function by open <a -->
+<!-- 							href="/foboapi/#net.liftmodules.FoBo.snippet.FoBo.ScriptHelper">FoBo.ScriptHelper -->
+<!-- 							page</a> and click on the <b>registerLoadEventFactory</b> function -->
+<!-- 						name for details. -->
+<!-- 					</p> -->
+<!-- 					</section> -->
+					
+                    
+<!-- 				</section> -->
+
 
 
 			</div>
 		</div>
 
-				<div class="row-fluid">
-					<div class="span3">
+				<div class="row">
+					<div class="col-sm-3">
+<!-- 					<div class="span3"> -->
 						<iframe
 							class="github-btn" src="http://ghbtns.com/github-btn.html?user=karma4u101&type=follow&count=false&size=large"
 							allowtransparency="true" frameborder="0" scrolling="0"
 							width="220px" height="30px"></iframe>
 
 					</div>				
-					<div class="span3">
+					<div class="col-sm-3">
+<!-- 					<div class="span3"> -->
 						<iframe
 							class="github-btn" src="http://ghbtns.com/github-btn.html?user=karma4u101&repo=fobo&type=watch&count=true&size=large"
 							allowtransparency="true" frameborder="0" scrolling="0"
 							width="170px" height="30px"></iframe>
 					</div>
-					<div class="span3">
+					<div class="col-sm-3">
+<!-- 					<div class="span3"> -->
 						<a href="https://twitter.com/karma4u101"
 							class="twitter-follow-button" data-show-count="false"
 							data-size="large">Follow @karma4u101</a>
@@ -704,7 +706,8 @@ FoBo.init()
 							}(document, "script", "twitter-wjs");
 						</script>
 					</div>					
-					<div class="span3">
+					<div class="col-sm-3">
+<!-- 					<div class="span3"> -->
 						<a href="https://twitter.com/share" class="twitter-share-button"
 							data-url="http://www.media4u101.se/fobo-lift-template-demo/"
 							data-text="FoBo - A Generic Lift Front-End Toolkit Module / Demo"
@@ -724,8 +727,9 @@ FoBo.init()
 				</div>	
 
 	<section id="poweredby">
-	<div class="row-fluid">
-	  <div class="span12">
+	<div class="row">
+	  <div class="col-sm-12">
+<!-- 	  <div class="span12"> -->
 	  <hr/>
 	   <h4  class="alt">The <a target="_blank" href="https://github.com/karma4u101/FoBo"><i>FoBo</i></a> 
 	   <a target="_blank" href="https://github.com/karma4u101/FoBo-Lift-Template"><i>Demo</i></a> is Powered by <a target="_blank" href="http://www.liftweb.net"><i>Lift</i></a> 
@@ -740,6 +744,7 @@ FoBo.init()
 	</div>
 	</section>
 
+    </div>
 	</section>
 
 </body>

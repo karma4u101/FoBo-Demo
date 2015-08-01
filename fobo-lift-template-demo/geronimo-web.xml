@@ -8,12 +8,28 @@
         <moduleId>
             <groupId>se.media4u101</groupId>
             <artifactId>fobo-lift-template-demo</artifactId>
-            <version>2.8.2</version>
+            <version>2.9.2</version>
         </moduleId>
-        <dependencies>
+        <dependencies> 
         
-        </dependencies>
+        </dependencies> 
+        
         <import-package> !org.apache.commons.codec*</import-package>
+        
+<hidden-classes>
+<!--     <filter>org.w3c.dom</filter> -->
+<!--     <filter>org.apache.xerces</filter> -->
+<!--         <filter>org.apache.commons.logging</filter> -->
+<!--         <filter>org.apache.log4j</filter> -->
+<!--         <filter>org.apache.axiom</filter> -->
+<!--         <filter>org.apache.axis2</filter> -->
+<!--         <filter>org.w3c.dom</filter> -->
+<!--         <filter>org.apache.commons.beanutils</filter> -->
+<!--         <filter>org.apache.struts</filter> -->
+<!--         <filter>org.directwebremoting</filter> -->
+<!--         <filter>com.thoughtworks</filter> -->
+</hidden-classes>        
+        
     </environment>
 
    <context-root>/fobo-lift-template-demo</context-root>

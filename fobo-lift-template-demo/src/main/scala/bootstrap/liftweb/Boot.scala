@@ -15,8 +15,8 @@ import _root_.net.liftweb.util.{ Props }
 import _root_.net.liftweb.http.provider.HTTPRequest
 import _root_.net.liftweb.http.auth.{ HttpBasicAuthentication, AuthRole, userRoles }
 
-import code.model._
-//import code.snippet._
+//import code.model._
+
 
 import net.liftmodules.{FoBo/*,FoBoFA,FoBoTB*/}
 
@@ -30,17 +30,10 @@ class Boot extends Loggable {
   def boot {
 
     //FoBo init params 
-    FoBo.InitParam.JQuery=FoBo.JQuery191 //1102
-    FoBo.InitParam.ToolKit=FoBo.Foundation215
+    FoBo.InitParam.JQuery=FoBo.JQuery1111 
     FoBo.InitParam.ToolKit=FoBo.PrettifyJun2011
-    FoBo.InitParam.ToolKit=FoBo.JQueryMobile110
-    FoBo.InitParam.ToolKit=FoBo.DataTables190
-    FoBo.InitParam.ToolKit=FoBo.Knockout221
-    FoBo.InitParam.ToolKit=FoBo.Bootstrap232
-    FoBo.InitParam.ToolKit=FoBo.FontAwesome321
-    FoBo.InitParam.ToolKit=FoBo.AngularJS1211      //The core files 
-    FoBo.InitParam.ToolKit=FoBo.AJSUIBootstrap020 //Angular UI Bootstrap
-    FoBo.InitParam.ToolKit=FoBo.AJSNGGrid207      //Angular NG-Grid    
+    FoBo.InitParam.ToolKit=FoBo.Bootstrap335 
+    FoBo.InitParam.ToolKit=FoBo.FontAwesome430 
     FoBo.InitParam.ToolKit=FoBo.Pace0415
     FoBo.init()  
     
@@ -48,7 +41,9 @@ class Boot extends Loggable {
     LiftRules.addToPackages("code")
 
     /*un-comment and switch to db of your liking */
-    MySchemaHelper.initSquerylRecordWithInMemoryDB
+    
+    //MySchemaHelper.initSquerylRecordWithInMemoryDB
+   
     //MySchemaHelper.initSquerylRecordWithMySqlDB
     //MySchemaHelper.initSquerylRecordWithPostgresDB
 
@@ -57,24 +52,14 @@ class Boot extends Loggable {
         logger.info("RunMode is DEVELOPMENT")
         /*OBS! do no use this in a production env*/
         if (Props.getBool("db.schemify", false)) {
-          MySchemaHelper.dropAndCreateSchema
-        }
-        // pass paths that start with 'console' to be processed by the H2Console servlet
-        if (MySchemaHelper.isUsingH2Driver) {
-          /* make db console browser-accessible in dev mode at /console 
-           * see http://www.h2database.com/html/tutorial.html#tutorial_starting_h2_console 
-           * Embedded Mode JDBC URL: jdbc:h2:mem:test User Name:test Password:test */
-          logger.info("Set up H2 db console at /console ")
-          LiftRules.liftRequest.append({
-            case r if (r.path.partPath match { case "console" :: _ => true case _ => false }) => false
-          })
+          //MySchemaHelper.dropAndCreateSchema
         }
       }
       case Props.RunModes.Production => {
         logger.info("RunMode is PRODUCTION")
         if (Props.getBool("db.schemify", false)) {
           logger.warn("DB.SCHEMIFY is TRUE in production.props, db data will be reset on restart of app")
-          MySchemaHelper.dropAndCreateSchema
+          //MySchemaHelper.dropAndCreateSchema
         }else{
             logger.info("db.shemify is disabled in production.props")
         }        
@@ -89,7 +74,6 @@ class Boot extends Loggable {
 
     // set the sitemap.  Note if you don't want access control for
     // each page, just comment this line out.
-    //LiftRules.setSiteMap(SiteMap(entries: _*))
     LiftRules.setSiteMap(Paths.sitemap)
     
     //Show the spinny image when an Ajax call starts
@@ -132,9 +116,7 @@ object Paths {
   
   val content1DD       = Menu.i("Content1DD") / "ddlabel1"
   val content11DD      = Menu.i("Content11DD") / "ddlabel11"  
-  
-    val content2DD       = Menu.i("Content2DD") / "ddlabel2"
-  //val content11DD      = Menu.i("Content11DD") / "ddlabel11"  
+  val content2DD       = Menu.i("Content2DD") / "ddlabel2"
   
   val index            = Menu.i("Home") / "index"
   val liboIndex        = Menu.i("LiBo") / "libo"
@@ -152,24 +134,13 @@ object Paths {
   val libospysetup     = Menu(Loc("LiboSpySetup" , Link(List("libospysetup") , true, "#spysetup") , S.loc("LiboSpySetup", Text("Setup"))     , LocGroup("liboSpyTop")))
   val libospyfooter    = Menu(Loc("LiboSpyFooter", Link(List("libospyfooter"), true, "#spyfooter"), S.loc("LiboSpyRef"  , Text("Referenser")), LocGroup("liboSpyTop")))
     
-  val foundationDoc    = Menu(Loc("Foundation"     , Link(List("foundation")     , true, "/foundation/index")                     , "Foundation"))
-  val bootstrap204Doc  = Menu(Loc("Bootstrap"      , Link(List("bootstrap")      , true, "/bootstrap/index")                      , "Bootstrap"))
-
-  val bootstrap222Doc  = Menu(Loc("Bootstrap-2.2.2", Link(List("bootstrap-2.2.2"), true, "/bootstrap-2.2.2/index")                , S.loc("Bootstrap-2.2.2", Text("Bootstrap-2.2.2")), LocGroup("nldemo1")   ))
   val bootstrap3xxDoc  = Menu(Loc("Bootstrap-3.x.x", ExtLink("http://getbootstrap.com/") , S.loc("Bootstrap-3.x.x", Text("Bootstrap-3.x.x")), LocGroup("nldemo1"),FoBo.TBLocInfo.LinkTargetBlank))
-  val jqueryMobileDoc  = Menu(Loc("JQuery-mobile"  , Link(List("jquery-mobile")  , true, "/jquery-mobile/1.1.0/demos/index")      , "JQuery-mobile"))
-  val datatablesDoc    = Menu(Loc("DataTables"     , Link(List("datatables")     , true, "/datatables/1.9.0/index")               , "DataTables"))
   val foboApiDoc       = Menu(Loc("FoBoAPI"        , Link(List("foboapi")        , true, "/foboapi/index.html#net.liftmodules.FoBo.package"), S.loc("FoBoAPI"  , Text("FoBo API")), LocGroup("liboTop2","mdemo2","nldemo1"),FoBo.TBLocInfo.LinkTargetBlank ))
-  //index.html#net.liftmodules.FoBo.package
   val nlHelp           = Menu.i("NLHelp") / "helpindex"
-  
-  //val angularDemo = Menu(Loc("fobo-angular-sandbox", ExtLink("http://www.media4u101.se/fobo-angular-sandbox/"), S.loc("fobo-angular-sandbox", Text("AngularJS demo")) ,FoBo.TBLocInfo.LinkTargetBlank  ) )
-  
+    
   val roundTripDemo = Menu(Loc("fobo-angular-lift-roundtrips", ExtLink("http://www.media4u101.se/fobo-angular-lift-roundtrips/"), S.loc("fobo-angular-lift-roundtrips", Text("Lift round trip tutorial")) ,FoBo.TBLocInfo.LinkTargetBlank  ) )
   
-  
   val starterTemplateDemo = Menu(Loc("lift_advanced_bs3", ExtLink("http://www.media4u101.se/lift-advanced-bs3/"), S.loc("lift_advanced_bs3", Text("Lift TB3 templates")) ,FoBo.TBLocInfo.LinkTargetBlank  ) )
-  //https://github.com/lift/lift_26_sbt/
   val starterTemplateGitHub = Menu(Loc("lift_advanced_bs3", ExtLink("http://www.media4u101.se/lift-advanced-bs3/"), S.loc("lift_advanced_bs3", Text("Lift TB3 templates")) ,FoBo.TBLocInfo.LinkTargetBlank  ) )
   
   def sitemap = SiteMap(
@@ -183,22 +154,14 @@ object Paths {
       libospysetup,
       libospyfooter,
       content1DD >> LocGroup("liboDD1","mdemo1") >> PlaceHolder submenus ( 
-/*          bootstrap210Doc ,
-          bootstrap220Doc , */
-          bootstrap222Doc ,
           bootstrap3xxDoc ,
           divider1  >> FoBo.TBLocInfo.Divider,
-//         starterTemplates,
           foboApiDoc 
       ),
       content2DD >> LocGroup("liboDD2") >> PlaceHolder submenus ( 
               starterTemplateDemo,
               roundTripDemo
       ), 
-      foundationDoc,
-      jqueryMobileDoc,
-      datatablesDoc,
-      divider3 >> LocGroup("nldemo1") >> FoBo.TBLocInfo.Divider,
       nlHelp >> LocGroup("nldemo1"),
       libogstarted ,
       libostarterproj,

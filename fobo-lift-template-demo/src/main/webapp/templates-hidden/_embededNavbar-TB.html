@@ -14,45 +14,49 @@
     <!--Note: For historical reasons this page navbar is not implemented using the Fobo navbar snippet even though 
     it could be, if you are looking for FoBo navbar snippet code check out the libo/_navbar.html file used on the 
     Bootstrap dedicated demo page. -->
-	<div class="navbar navbar-inverse navbar-fixed-top" id="fobo-navbar">	    
-		<div class="navbar-inner">
-		   
-			<div style="width: auto;" class="container-fluid">
-				<a data-target=".nav-collapse" data-toggle="collapse"
-					class="btn btn-navbar"> <span class="icon-bar"></span> <span
-					class="icon-bar"></span> <span class="icon-bar"></span>
-				</a> <a href="#" class="brand">FoBo</a>
-				<div class="nav-collapse">
+	<header class="navbar navbar-default navbar-fixed-top" id="fobo-navbar" role="navigation">	    
 
-					<!-- create the 'main' menu items -->
-					<ul class="nav">
+        <div class="container-fluid">
+		   			
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target=".navbar-ex1-collapse">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="brand" href="#">FoBo</a>
+			</div>
+									
+                    <div class="collapse navbar-collapse navbar-ex1-collapse">
+					<ul class="nav navbar-nav">
 
-						<li><a href="#spyhome"> <i class="icon-home icon-white"></i>
+						<li><a href="#spyhome"> <i class="fa fa-home"></i>
 								<span data-lift="Loc.i">Home</span>
 						</a></li>
 
 						<li>
 						   <a href="#spyabout"> <i
-								class="icon-question-sign icon-white"></i> <span
+								class="fa fa-question-circle"></i> <span
 								data-lift="Loc?locid=about.link.text">About</span>
 						   </a>
 						</li>
 
 						<li>
 						  <a href="#spysetup"> 
-						    <i class="icon-asterisk icon-white"></i> <span data-lift="Loc?locid=setup.link.text">Setup</span>
+						    <i class="fa fa-asterisk"></i> <span data-lift="Loc?locid=setup.link.text">Setup</span>
 						  </a>
 						</li>
 
 						<li>
 						  <a href="#spyfooter"> <i 
-								class="icon-info-sign icon-white"></i> <span
+								class="fa fa-info-circle"></i> <span
 								data-lift="Loc?locid=ref.link.text">References</span>
 						  </a>
 						</li>
                       </ul>
                    
-                      <ul class="nav">
+                      <ul class="nav navbar-nav">
                       
 						<li class="dropdown">
 						  <a id="content-dropdown"
@@ -64,68 +68,53 @@
 							<ul class="dropdown-menu">
 								<li><span
 									data-lift="Menu.item?name=Home;?linkToSelf=true;">
-										<i class="icon-home"></i> <span data-lift="Loc.i">Home</span>
+										<i class="fa fa-home"></i> <span data-lift="Loc.i">Home</span>
 								</span></li>
 								
-								<li><a href="#spyabout"> <i class="icon-question-sign"></i>
+								<li><a href="#spyabout"> <i class="fa fa-question-circle"></i>
 										<span data-lift="Loc?locid=about.link.text">About</span>
 								</a></li>
 
-								<li><a href="#spysetup"> <i class="icon-asterisk "></i>
+								<li><a href="#spysetup"> <i class="fa fa-asterisk"></i>
 										<span data-lift="Loc?locid=setup.link.text">Setup</span>
 								</a></li>
 
-								<li><a href="#spyfooter"> <i class="icon-info-sign"></i>
+								<li><a href="#spyfooter"> <i class="fa fa-info-circle"></i>
 										<span data-lift="Loc?locid=ref.link.text">References</span>
 								</a></li>
 								<li class="divider"></li>
 								<li><span data-lift="Menu.item?name=LiBo;"> <span data-lift="Loc.i">LiBo</span>
 								</span></li>
-								<li><span data-lift="Menu.item?name=Bootstrap-2.2.2;">
-										<i class="icon-book"></i> <span data-lift="Loc.i">Bootstrap-2.2.2</span>
-								</span></li>
 
 								<li><span data-lift="Menu.item?name=Bootstrap-3.x.x;">
-										<i class="icon-book"></i> <span data-lift="Loc.i">Bootstrap-3.x.x</span> <i class="icon-external-link"></i>
+										<i class="fa fa-book"></i> <span data-lift="Loc.i">Bootstrap-3.x.x</span> <i class="fa fa-external-link"></i>
 								</span></li>								
 								<li class="divider"></li>
 
 								<li><span data-lift="Menu.item?name=fobo-angular-lift-roundtrips;"> <i
-										class="icon-book"></i> <span data-lift="Loc.i">fobo-angular-lift-roundtrips</span> 
+										class="fa fa-book"></i> <span data-lift="Loc.i">fobo-angular-lift-roundtrips</span> 
 								</span></li>
 
-<!-- 								<li><span -->
-<!-- 									data-lift="Menu.item?name=Foundation;a:class=addclassshowofdummy;"> -->
-<!-- 										<i class="icon-book"></i> <span data-lift="Loc.i">Foundation</span> -->
-<!-- 								</span></li> -->
-
-<!-- 								<li><span data-lift="Menu.item?name=JQuery-mobile;"> -->
-<!-- 										<i class="icon-book"></i> <span data-lift="Loc.i">JQuery-mobile</span> -->
-<!-- 								</span></li> -->
-
-<!-- 								<li><span data-lift="Menu.item?name=DataTables;"> <i -->
-<!-- 										class="icon-book"></i> <span data-lift="Loc.i">DataTables</span> -->
-<!-- 								</span></li> -->
 
 								<li class="divider"></li>
 
 								<li><span data-lift="Menu.item?name=FoBoAPI;"> <i
-										class="icon-book"></i> <span
+										class="fa fa-book"></i> <span
 										data-lift="Loc?locid=api.link.text">FoBo API</span>
 								</span></li>
 
 							</ul></li>
 					</ul>
 
-					<ul class="nav pull-right">
+					<ul class="nav navbar-nav pull-right">
 						<li><span data-lift="Menu.item?name=FoBoAPI;"> <i
-								class="icon-book icon-white"></i> <span
+								class="fa fa-book"></i> <span
 								data-lift="Loc?locid=api.link.text">FoBo API</span>
 						</span></li>
 					</ul>
 				</div>
-			</div>
+<!-- 			</div> -->
 		</div>
-	</div>
+	</header>
 	
 </body>
