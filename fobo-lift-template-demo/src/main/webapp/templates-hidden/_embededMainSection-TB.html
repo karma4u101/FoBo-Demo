@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
 <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
@@ -17,7 +17,7 @@
 				    <div class="col-sm-12">
 					    <div class="page-header">
 						  <h1 class="capital">
-				           <img id="mobile-popover" style="max-height:40px;width:auto;" src="/resources/images/mobile_device_128x128.png" />							
+				           <img class="mobile-popover" data-content="Use your favorite barcode reader to quick and easy load this page in your mobile." title="View in Mobile!" style="max-height:40px;width:auto;" src="/resources/images/mobile_device_128x128.png" />							
                             F<span>o</span>B<span>o</span> <small>&lt;<span>...data-lift=</span>"F<span>ront-</span>E<span>nd </span>T<span>ool</span>k<span>it </span>M<span>odule</span>"/&gt;</small> 
 						  </h1>
 						</div>
@@ -48,9 +48,9 @@
 						</span> functions that give you even more ease of usage, power and control.   
 						</p>
 												
-						<script data-lift="FoBo.Bootstrap.tooltip?id=#lift-tt"></script>  
-						<script data-lift="FoBo.Bootstrap.popover?id=#bcode-popover&options=trigger:'hover'"></script>						
-						<script data-lift="FoBo.Bootstrap.popoverPreventDefault?on=#bcode-popover"></script>						
+						<script data-lift="FoBo.Bs3Comp.tooltipAppendJs?id=#lift-tt"></script>  
+						<script data-lift="FoBo.Bs3Comp.popoverAppendJs?id=#bcode-popover&options=trigger:'hover',placement:'auto left'"></script>						
+						<script data-lift="FoBo.Bs3Comp.popoverAppendJsPreventDefault?on=#bcode-popover"></script>						
 						
 						<p>
 						Other from reading the <span data-lift="Menu.item?name=LiBo;lift:Loc.i;"><span data-lift="Loc.i">BootstrapSetupUsage</span></span> 
@@ -78,7 +78,7 @@
 				<div class="row">
 					<div class="col-sm-12">
 						<h2 class="capital">
-						<img id="mobile-popover" data-content="Use your favorite barcode reader to quick and easy load this page in your mobile." title="View in Mobile!" rel="popover" style="max-height:40px;width:auto;" src="/resources/images/mobile_device_128x128.png" />
+						<img class="mobile-popover" data-content="Use your favorite barcode reader to quick and easy load this page in your mobile." title="View in Mobile!" rel="popover" style="max-height:40px;width:auto;" src="/resources/images/mobile_device_128x128.png" />
 <!-- 					    M<span>obile</span> S<span>calability with</span> F<span>o</span>B<span>o</span>	  -->
 						R<span>esponsive</span> D<span>esign</span> <span>with</span> F<span>o</span>B<span>o</span>	 
 						</h2>  
@@ -86,7 +86,7 @@
 						Angular Material Design and Twitter Bootstrap are both great responsive and media scalable toolkits. 
 					    </p>
                           												
-						<script data-lift="FoBo.Bootstrap.popover?id=#mobile-popover&options=trigger:'hover'"></script>	
+						<script data-lift="FoBo.Bs3Comp.popoverAppendJs?id=.mobile-popover&options=trigger:'hover'"></script>	
 						<hr />
 					</div>
 				</div>				
@@ -110,7 +110,7 @@
 				        and here is a  
 				        podcast by David <a href="http://skillsmatter.com/podcast/scala/across-time-and-address-space-lift-3-0">Across Time and Address Space: Lift 3.0</a> over at SkillsMatter, Functional Programming eXchange 2013.
 				         
-				        <script data-lift="FoBo.Bootstrap.tooltip?id=#lift-home"></script>
+				        <script data-lift="FoBo.Bs3Comp.tooltipAppendJs?id=#lift-home"></script>
                       </div>
 				      <div class="col-sm-7" >
                           <div class="thumbnail">
@@ -152,7 +152,7 @@
 						toolkit with lots of components and candy. It’s simple and flexible and has popular user interface 
 						components and interactions. FoBo inculdes both the v2.x and v3.x series of Bootstrap</p> 
 						
-						<script data-lift="FoBo.Bootstrap.tooltip?id=#less-tt"></script>
+						
 						
 						<div class="alert alert-info" style="width:70%;">
                          There is a separate page dedicated to setting up and using Twitter Bootstrap with FoBo 
@@ -341,14 +341,11 @@
 						</h2>
                        
  					 <br/>
-<a class="twitter-timeline"  href="https://twitter.com/search?q=%23LiftWeb"  data-widget-id="308285580251373568">Tweets about "#LiftWeb"</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<a class="twitter-timeline" href="https://twitter.com/search?q=%23LiftWeb"  data-widget-id="308285580251373568">Tweets about "#LiftWeb"</a>
  <br/>
-<a class="twitter-timeline"  href="https://twitter.com/karma4u101"  data-widget-id="308273193272098816">Tweets by @karma4u101</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<a class="twitter-timeline" href="https://twitter.com/karma4u101"  data-widget-id="308273193272098816">Tweets by @karma4u101</a>
  <br/>
-<a class="twitter-timeline"  href="https://twitter.com/search?q=%23LiftFoBo"  data-widget-id="308289356710428673">Tweets about "#LiftFoBo"</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<a class="twitter-timeline" href="https://twitter.com/search?q=%23LiftFoBo"  data-widget-id="308289356710428673">Tweets about "#LiftFoBo"</a>
  <br/>                      
  						<iframe
 							class="github-btn" src="http://ghbtns.com/github-btn.html?user=karma4u101&repo=fobo&type=watch&count=true&size=large"
@@ -360,35 +357,13 @@
 						<a href="https://twitter.com/karma4u101"
 							class="twitter-follow-button" data-show-count="false"
 							data-size="large">Follow @karma4u101</a>
-						<script>
- 							!function(d, s, id) {
- 								var js, fjs = d.getElementsByTagName(s)[0];
- 								if (!d.getElementById(id)) {
- 									js = d.createElement(s);
- 									js.id = id;
- 									js.src = "//platform.twitter.com/widgets.js";
- 									fjs.parentNode.insertBefore(js, fjs);
- 								}
- 							}(document, "script", "twitter-wjs");
- 						</script>	 
 						<br/>
 						<a href="https://twitter.com/share" class="twitter-share-button"
 							data-url="http://www.media4u101.se/fobo-lift-template-demo/"
 							via="karma4u101"
 							data-counturl="http://www.media4u101.se/fobo-lift-template-demo/"
-							data-text="FoBo - A Generic Lift Front-End Toolkit Module / Demo"
-							data-size="large" data-hashtags="FoBo, Lift">Tweet</a>
-						<script>
- 							!function(d, s, id) {
- 								var js, fjs = d.getElementsByTagName(s)[0];
- 								if (!d.getElementById(id)) {
- 									js = d.createElement(s);
- 									js.id = id;
- 									js.src = "//platform.twitter.com/widgets.js";
- 									fjs.parentNode.insertBefore(js, fjs);
- 								}
- 							}(document, "script", "twitter-wjs");
- 						</script> 
+							data-text="FoBo - A Generic Lift Front-End Toolkit Module"
+							data-size="large" data-hashtags="LiftFoBo, LiftWeb">Tweet</a>
 						<br/>
 						<iframe
 							class="github-btn" src="http://ghbtns.com/github-btn.html?user=karma4u101&type=follow&count=false&size=smal"

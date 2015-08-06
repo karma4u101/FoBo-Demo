@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
 <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
@@ -21,7 +21,7 @@
                              <img id="mobile-popover" style="max-height:40px;width:auto;" src="/resources/images/mobile_device_128x128.png" />T<span>he</span> F<span>o</span>B<span>o</span> M<span>odule and</span> B<span>ootstrap</span>
                           </h2>
                       </div>
-                      <script data-lift="FoBo.Bootstrap.popover?id=#mobile-popover&options=placement:'right',trigger:'hover'"></script>
+                      <script data-lift="FoBo.Bs3Comp.popoverAppendJs?id=#mobile-popover&options=placement:'right',trigger:'hover'"></script>
                        
                         
 						<p>                    	
@@ -30,8 +30,8 @@
                     	This page focus on the FoBo/Lift Bootstrap v3.x and includes general bootstrap usage and information on 
                     	how to use some of <span data-lift="Menu.item?name=FoBoAPI;lift:Loc.i;a:class=addclassshowofdummy">
 							FoBo's API functions</span>.   
-						<script data-lift="FoBo.Bootstrap.tooltip?id=#fobo-tt&options=placement:'right'"></script> 	
-					    <script data-lift="FoBo.Bootstrap.tooltip?id=#lift-tt"></script>  
+						<script data-lift="FoBo.Bs3Comp.tooltipAppendJs?id=#fobo-tt&options=placement:'right'"></script> 	
+					    <script data-lift="FoBo.Bs3Comp.tooltipAppendJs?id=#lift-tt"></script>  
                        
                         There is also a <a href="https://github.com/lift/lift_26_sbt/">
                         Lift v2.6 Template Applications - On Github</a> that uses FoBo for it's Bootstrap v3.x and FoBo's 
@@ -117,35 +117,15 @@
 						<a href="https://twitter.com/karma4u101"
 							class="twitter-follow-button" data-show-count="false"
 							data-size="large">Follow @karma4u101</a>
-						<script>
- 							!function(d, s, id) {
- 								var js, fjs = d.getElementsByTagName(s)[0];
- 								if (!d.getElementById(id)) {
- 									js = d.createElement(s);
- 									js.id = id;
- 									js.src = "//platform.twitter.com/widgets.js";
- 									fjs.parentNode.insertBefore(js, fjs);
- 								}
- 							}(document, "script", "twitter-wjs");
- 						</script>	 
+ 
 						<br/>
 						<a href="https://twitter.com/share" class="twitter-share-button"
 							data-url="http://www.media4u101.se/fobo-lift-template-demo/"
 							via="karma4u101"
 							data-counturl="http://www.media4u101.se/fobo-lift-template-demo/"
-							data-text="FoBo - A Generic Lift Front-End Toolkit Module / Demo"
-							data-size="large" data-hashtags="FoBo, Lift">Tweet</a>
-						<script>
- 							!function(d, s, id) {
- 								var js, fjs = d.getElementsByTagName(s)[0];
- 								if (!d.getElementById(id)) {
- 									js = d.createElement(s);
- 									js.id = id;
- 									js.src = "//platform.twitter.com/widgets.js";
- 									fjs.parentNode.insertBefore(js, fjs);
- 								}
- 							}(document, "script", "twitter-wjs");
- 						</script> 
+							data-text="FoBo - A Generic Lift Front-End Toolkit Module"
+							data-size="large" data-hashtags="LiftFoBo, LiftWeb">Tweet</a>
+
 					    <br/>				
 						<iframe
 							class="github-btn" src="http://ghbtns.com/github-btn.html?user=karma4u101&type=follow&count=false&size=smal"

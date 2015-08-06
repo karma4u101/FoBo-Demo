@@ -1,16 +1,16 @@
 moduleName := "FoBo-Lift-Template-Demo"
 
-version := "2.9.2-SNAPSHOT" 
+version := "2.9.3-SNAPSHOT" 
 
 organization := "se.media4u101"
 
-liftVersion := "2.6.2" 
+liftVersion := "3.0-SNAPSHOT" 
 
 liftEdition <<= liftVersion apply { _.substring(0,3) }
 
-scalaVersion := "2.11.4"
+scalaVersion := "2.11.6"
 
-crossScalaVersions := Seq("2.11.4", "2.10.4", "2.9.2", "2.9.1-1", "2.9.1")
+crossScalaVersions := Seq("2.11.6", "2.10.4", "2.9.2", "2.9.1-1", "2.9.1")
 
 seq(webSettings :_*)
 

@@ -30,7 +30,7 @@ class Boot extends Loggable {
   def boot {
 
     //FoBo init params 
-    FoBo.InitParam.JQuery=FoBo.JQuery1111 
+    FoBo.InitParam.JQuery=FoBo.JQuery1113 
     FoBo.InitParam.ToolKit=FoBo.PrettifyJun2011
     FoBo.InitParam.ToolKit=FoBo.Bootstrap335 
     FoBo.InitParam.ToolKit=FoBo.FontAwesome430 
@@ -92,12 +92,45 @@ class Boot extends Loggable {
       new Html5Properties(r.userAgent))
 
     //notice fade out (start after x, fade out duration y)
-    LiftRules.noticesAutoFadeOut.default.set((notices: NoticeType.Value) => {
-      notices match {
-        case NoticeType.Notice => Full((8 seconds, 4 seconds))
-        case _                 => Empty
-      }
-    })
+//    LiftRules.noticesAutoFadeOut.default.set((notices: NoticeType.Value) => {
+//      notices match {
+//        case NoticeType.Notice => Full((8 seconds, 4 seconds))
+//        case _                 => Empty
+//      }
+//    })
+    
+    LiftRules.securityRules = () => {
+      SecurityRules(content = Some(ContentSecurityPolicy(
+        scriptSources = List( 
+            /*ContentSourceRestriction.UnsafeInline,*/
+            ContentSourceRestriction.Host("http://platform.twitter.com/widgets.js"),
+            ContentSourceRestriction.Host("https://platform.twitter.com/widgets.js"),
+            ContentSourceRestriction.Host("https://syndication.twitter.com"),
+            ContentSourceRestriction.Host("http://www.google-analytics.com/ga.js"),
+            ContentSourceRestriction.Host("https://cdn.syndication.twimg.com"),
+            ContentSourceRestriction.Host("https://apis.google.com"),
+            ContentSourceRestriction.Self),
+        frameSources = List(
+            ContentSourceRestriction.Host("https://player.vimeo.com"),
+            ContentSourceRestriction.Host("http://player.vimeo.com"),
+            ContentSourceRestriction.Host("https://platform.twitter.com"),
+            ContentSourceRestriction.Host("http://platform.twitter.com"),
+            ContentSourceRestriction.Host("https://syndication.twitter.com"),
+            ContentSourceRestriction.Host("https://accounts.google.com"),
+            ContentSourceRestriction.Host("https://apis.google.com"),
+            ContentSourceRestriction.Host("http://ghbtns.com/github-btn.html")),  
+        styleSources = List(
+            ContentSourceRestriction.Host("http://fonts.googleapis.com"),
+            ContentSourceRestriction.Host("http://platform.twitter.com"),
+            ContentSourceRestriction.UnsafeInline,
+            ContentSourceRestriction.Self),
+        fontSources = List(
+            ContentSourceRestriction.Self,
+            ContentSourceRestriction.Host("http://fonts.googleapis.com"),
+            ContentSourceRestriction.Host("http://fonts.gstatic.com")            
+            )    
+            )))
+    }     
 
   }
 }
