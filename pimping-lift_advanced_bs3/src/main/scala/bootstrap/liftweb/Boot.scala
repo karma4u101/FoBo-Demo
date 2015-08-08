@@ -49,7 +49,7 @@ class Boot {
 
     //Init the FoBo - Front-End Toolkit module, 
     //see http://liftweb.net/lift_modules for more info
-    FoBo.InitParam.JQuery=FoBo.JQuery1111  
+    FoBo.InitParam.JQuery=FoBo.JQuery1113  
     FoBo.InitParam.ToolKit=FoBo.Bootstrap335 
     FoBo.InitParam.ToolKit=FoBo.FontAwesome430 
     FoBo.init() 
@@ -72,15 +72,24 @@ class Boot {
     LiftRules.htmlProperties.default.set((r: Req) =>
       new Html5Properties(r.userAgent))    
       
-    LiftRules.noticesAutoFadeOut.default.set( (notices: NoticeType.Value) => {
-        notices match {
-          case NoticeType.Notice => Full((8 seconds, 4 seconds))
-          case _ => Empty
-        }
-     }
-    ) 
+//    LiftRules.noticesAutoFadeOut.default.set( (notices: NoticeType.Value) => {
+//        notices match {
+//          case NoticeType.Notice => Full((8 seconds, 4 seconds))
+//          case _ => Empty
+//        }
+//     }
+//    ) 
     
-    
+    LiftRules.securityRules = () => {
+      SecurityRules(content = Some(ContentSecurityPolicy(
+        scriptSources = List(
+            ContentSourceRestriction.UnsafeEval,
+            ContentSourceRestriction.Self),
+        styleSources = List(
+            ContentSourceRestriction.UnsafeInline,
+            ContentSourceRestriction.Self)
+            )))
+    } 
     
     // Make a transaction span the whole HTTP request
     S.addAround(DB.buildLoanWrapper)

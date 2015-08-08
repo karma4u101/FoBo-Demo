@@ -106,6 +106,7 @@ class Boot extends Loggable {
             ContentSourceRestriction.Self,
             /*Api doc generates inline scripts hens the need of UnsafeInline*/
             ContentSourceRestriction.UnsafeInline,
+            /*ContentSourceRestriction.UnsafeInline,*/
             //ContentSourceRestriction.Host("sha256-N3B-5wjqxdgS8Ku1ncUZGgkBp0XyKvXbEdWcE-pB-2g="),
             ContentSourceRestriction.Host("http://platform.twitter.com/widgets.js"),
             ContentSourceRestriction.Host("https://platform.twitter.com/widgets.js"),
