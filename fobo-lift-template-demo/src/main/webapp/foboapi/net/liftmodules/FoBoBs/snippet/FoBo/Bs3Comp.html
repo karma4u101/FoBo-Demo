@@ -203,7 +203,7 @@ with the Bootstrap toolkit components.
         <img src="../../../../../lib/permalink.png" />
       </a>
     </span>
-      <p class="shortcomment cmt">This function loads the dropdown activation</p><div class="fullcomment"><div class="comment cmt"><p>This function loads the dropdown activation</p><p><b>Snippet Param:</b></p><p>- <b>Param</b> <i>on</i> - The element id or class to activate dropdown on</p><p><b>Example</b></p><pre>&lt;head&gt;
+      <p class="shortcomment cmt">This function loads the dropdown activation</p><div class="fullcomment"><div class="comment cmt"><p>This function loads the dropdown activation</p></div><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>If you are using Lift 3 you should use the AppendJs alternative.</p><p><b>Snippet Param:</b></p><p>- <b>Param</b> <i>on</i> - The element id or class to activate dropdown on</p><p><b>Example</b></p><pre>&lt;head&gt;
   :
   &lt;script data-lift=<span class="lit">"FoBo.Bs3Comp.activateDropdown?on=.dropdown-toggle"</span>&gt;&lt;/script&gt;
   &lt;script data-lift=<span class="lit">"FoBo.Bs3ScriptHelper.registerLoadEventFactory"</span>&gt;&lt;/script&gt;
@@ -212,7 +212,30 @@ with the Bootstrap toolkit components.
     addLoadEvent(function() { $('.dropdown-toggle').dropdown(); });;
   <span class="cmt">// ]]></span>
 &lt;/script&gt;
-&lt;script <span class="kw">type</span>=<span class="lit">"text/javascript"</span>&gt;<span class="cmt">//registerLoadEventFactory script ...</script></span></pre></div></div>
+&lt;script <span class="kw">type</span>=<span class="lit">"text/javascript"</span>&gt;<span class="cmt">//registerLoadEventFactory script ...</script></span></pre></span></dd></dl></div>
+    </li><li name="net.liftmodules.FoBoBs.snippet.FoBo.Bs3Comp#activateDropdownAppendJs" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="activateDropdownAppendJs:net.liftweb.util.CssSel"></a>
+      <a id="activateDropdownAppendJs:CssSel"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">activateDropdownAppendJs</span><span class="result">: <span class="extype" name="net.liftweb.util.CssSel">CssSel</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.liftmodules.FoBoBs.snippet.FoBo.Bs3Comp@activateDropdownAppendJs:net.liftweb.util.CssSel" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt"><b>Lift 3 alternativ</b> -- This function loads the dropdown activation</p><div class="fullcomment"><div class="comment cmt"><p><b>Lift 3 alternativ</b> -- This function loads the dropdown activation</p><p><b>Snippet Param:</b></p><p>- <b>Param</b> <i>on</i> - The element id or class to activate dropdown on</p><p><b>Example</b></p><pre>&lt;head&gt;
+  :
+  &lt;script data-lift=<span class="lit">"FoBo.Bs3Comp.activateDropdownAppendJs?on=.dropdown-toggle"</span>&gt;&lt;/script&gt;
+  &lt;script data-lift=<span class="lit">"FoBo.ScriptHelper.registerLoadEventFactoryAppendGlobalJs"</span>&gt;&lt;/script&gt;
+&lt;/head&gt;</pre><p>The load event factory has to be registered ones before any activation can be loaded.</p><p><b>Result:</b> This example will result in the following being appended to lift's
+page-script document ready function:</p><pre>addLoadEvent(function() { $('.dropdown-toggle').dropdown(); });;</pre></div><dl class="attributes block"> <dt>Since</dt><dd><p>v1.4
+</p></dd></dl></div>
     </li><li name="net.liftweb.http.StatefulSnippet#addName" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="addName(name:String):Unit"></a>
       <a id="addName(String):Unit"></a>
@@ -513,11 +536,31 @@ with the Bootstrap toolkit components.
         <img src="../../../../../lib/permalink.png" />
       </a>
     </span>
-      <p class="shortcomment cmt">This function sets a popover action on a element.</p><div class="fullcomment"><div class="comment cmt"><p>This function sets a popover action on a element.</p><p><b>Snippet Params:</b></p><ul><li><b>Param</b> <i>id</i> - The element id</li><li><b>Param</b> <i>options</i> - The option string see bootstrap documentation for available options.</li></ul><p><b>Example</b></p><pre>&lt;script data-lift=<span class="lit">"FoBo.Bs3Comp.popover?id=#theId&options=placement:'left'"</span>&gt;&lt;/script&gt;</pre><p><b>Result:</b> This example will result in the following being injected in place of the snippet invocation:</p><pre>&lt;script <span class="kw">type</span>=<span class="lit">"text/javascript"</span>&gt;
+      <p class="shortcomment cmt">This function sets a popover action on a element by inlining a script snippet on the page.</p><div class="fullcomment"><div class="comment cmt"><p>This function sets a popover action on a element by inlining a script snippet on the page.</p><p><b>Snippet Params:</b></p><ul><li><b>Param</b> <i>id</i> - The element id</li><li><b>Param</b> <i>options</i> - The option string see bootstrap documentation for available options.</li></ul><p><b>Example</b></p><pre>&lt;script data-lift=<span class="lit">"FoBo.Bs3Comp.popover?id=#theId&options=placement:'left'"</span>&gt;&lt;/script&gt;</pre><p><b>Result:</b> This example will result in the following being injected in place of the snippet invocation:</p><pre>&lt;script <span class="kw">type</span>=<span class="lit">"text/javascript"</span>&gt;
   <span class="cmt">// <![CDATA[</span>
     $(function () { $(<span class="lit">'#theId'</span>).popover({placement:<span class="lit">'left'</span>}); }); ;
   <span class="cmt">// ]]></span>
 &lt;/script&gt;</pre></div></div>
+    </li><li name="net.liftmodules.FoBoBs.snippet.FoBo.Bs3Comp#popoverAppendJs" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="popoverAppendJs:net.liftweb.util.CssSel"></a>
+      <a id="popoverAppendJs:CssSel"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">popoverAppendJs</span><span class="result">: <span class="extype" name="net.liftweb.util.CssSel">CssSel</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.liftmodules.FoBoBs.snippet.FoBo.Bs3Comp@popoverAppendJs:net.liftweb.util.CssSel" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt"><b>Lift 3 alternativ</b> --
+This function sets a popover action on a element by appending a script snippet to lift's page-script on page load function.</p><div class="fullcomment"><div class="comment cmt"><p><b>Lift 3 alternativ</b> --
+This function sets a popover action on a element by appending a script snippet to lift's page-script on page load function.</p><p><b>Snippet Params:</b></p><ul><li><b>Param</b> <i>id</i> - The element id</li><li><b>Param</b> <i>options</i> - The option string see bootstrap documentation for available options.</li></ul><p><b>Example</b></p><pre>&lt;script data-lift=<span class="lit">"FoBo.Bs3Comp.popoverAppendJs?id=#theId&options=placement:'left'"</span>&gt;&lt;/script&gt;</pre><p><b>Result:</b> This example will result in the following being appended to lift's page-script on page load function:</p><pre>$(function () { $(<span class="lit">'#theId'</span>).popover({placement:<span class="lit">'left'</span>}); }); ;</pre></div><dl class="attributes block"> <dt>Since</dt><dd><p>v1.4
+</p></dd></dl></div>
     </li><li name="net.liftmodules.FoBoBs.snippet.FoBo.Bs3Comp#popoverPreventDefault" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="popoverPreventDefault:net.liftweb.util.CssSel"></a>
       <a id="popoverPreventDefault:CssSel"></a>
@@ -539,6 +582,25 @@ with the Bootstrap toolkit components.
     $(function(){$(<span class="lit">'#theId'</span>).popover().click(function(e){e.preventDefault()});});;
   <span class="cmt">// ]]></span>
 &lt;/script&gt;</pre></div></div>
+    </li><li name="net.liftmodules.FoBoBs.snippet.FoBo.Bs3Comp#popoverPreventDefaultAppendJs" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="popoverPreventDefaultAppendJs:net.liftweb.util.CssSel"></a>
+      <a id="popoverPreventDefaultAppendJs:CssSel"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">popoverPreventDefaultAppendJs</span><span class="result">: <span class="extype" name="net.liftweb.util.CssSel">CssSel</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.liftmodules.FoBoBs.snippet.FoBo.Bs3Comp@popoverPreventDefaultAppendJs:net.liftweb.util.CssSel" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt"><b>Lift 3 alternativ</b> -- This function prevents the default action on a popover element.</p><div class="fullcomment"><div class="comment cmt"><p><b>Lift 3 alternativ</b> -- This function prevents the default action on a popover element.</p><p><b>Snippet Params:</b></p><ul><li><b>Param</b> <i>on</i> - The element id or something more general like the default value a[rel=popover]</li></ul><p><b>Example</b></p><pre>&lt;script data-lift=<span class="lit">"FoBo.Bs3Comp.popoverPreventDefault?on=#theId"</span>&gt;&lt;/script&gt;</pre><p><b>Result:</b> This example will result in the following being appended to lift's
+page-script document ready function:</p><pre>$(function(){$(<span class="lit">'#theId'</span>).popover().click(function(e){e.preventDefault()});});;</pre></div><dl class="attributes block"> <dt>Since</dt><dd><p>v1.4
+</p></dd></dl></div>
     </li><li name="net.liftweb.http.StatefulSnippet#redirectTo" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="redirectTo(where:String):Nothing"></a>
       <a id="redirectTo(String):Nothing"></a>
@@ -640,14 +702,37 @@ with the Bootstrap toolkit components.
         <img src="../../../../../lib/permalink.png" />
       </a>
     </span>
-      <p class="shortcomment cmt">This function sets a tooltip action on a element.</p><div class="fullcomment"><div class="comment cmt"><p>This function sets a tooltip action on a element.</p><p><b>Snippet Params:</b></p><ul><li><b>Param</b> <i>id</i> - The element id</li><li><b>Param</b> <i>options</i> - The option string see bootstrap documentation for available options.</li></ul><p><b>Example</b> Showing a example element using the tooltip and the actual snippet invocation</p><pre>&lt;a id=<span class="lit">"aId"</span>
+      <p class="shortcomment cmt">This function inlines a tooltip action on a element in place of the snippet invocation.</p><div class="fullcomment"><div class="comment cmt"><p>This function inlines a tooltip action on a element in place of the snippet invocation.</p></div><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>If you are using Lift 3 you should use the AppendJs alternative.</p><p><b>Snippet Params:</b></p><ul><li><b>Param</b> <i>id</i> - The element id</li><li><b>Param</b> <i>options</i> - The option string see bootstrap documentation for available options.</li></ul><p><b>Example</b> Showing a example element using the tooltip and the actual snippet invocation</p><pre>&lt;a id=<span class="lit">"aId"</span>
    title=<span class="lit">"The most powerful, most secure web framework available today. It simply rocks!"</span>
    href=<span class="lit">"http://liftweb.net/"</span>&gt;Lift&lt;/a&gt;
 &lt;script data-lift=<span class="lit">"FoBo.Bs3Comp.tooltip?id=#aId&options=placement:'bottom'"</span>&gt;&lt;/script&gt;</pre><p><b>Result:</b> The script tag with the snippet invocation will result in the following being injected in place of the snippet invocation:</p><pre>&lt;script <span class="kw">type</span>=<span class="lit">"text/javascript"</span>&gt;
   <span class="cmt">// <![CDATA[</span>
     $(function () { $(<span class="lit">'#aId'</span>).tooltip({placement:<span class="lit">'bottom'</span>}); }); ;
   <span class="cmt">// ]]></span>
-&lt;/script&gt;</pre></div></div>
+&lt;/script&gt;</pre></span></dd><dt>See also</dt><dd><span class="cmt"><p><a href="../../lib/BootstrapSH.html#tooltipScript(id:String,options:String):net.liftweb.http.js.JsCmd" class="extmbr" name="net.liftmodules.FoBoBs.lib.BootstrapSH#tooltipScript">net.liftmodules.FoBoBs.lib.BootstrapSH.tooltipScript</a>
+</p></span></dd></dl></div>
+    </li><li name="net.liftmodules.FoBoBs.snippet.FoBo.Bs3Comp#tooltipAppendJs" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="tooltipAppendJs:net.liftweb.util.CssSel"></a>
+      <a id="tooltipAppendJs:CssSel"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">tooltipAppendJs</span><span class="result">: <span class="extype" name="net.liftweb.util.CssSel">CssSel</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.liftmodules.FoBoBs.snippet.FoBo.Bs3Comp@tooltipAppendJs:net.liftweb.util.CssSel" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt"><b>Lift 3 alternativ</b> -- This function sets a tooltip action on a element by appending to lift's page-script on page load function.</p><div class="fullcomment"><div class="comment cmt"><p><b>Lift 3 alternativ</b> -- This function sets a tooltip action on a element by appending to lift's page-script on page load function.</p><p><b>Snippet Params:</b></p><ul><li><b>Param</b> <i>id</i> - The element id</li><li><b>Param</b> <i>options</i> - The option string see bootstrap documentation for available options.</li></ul><p><b>Example</b> Showing a example element using the tooltip and the actual snippet invocation</p><pre>&lt;a id=<span class="lit">"aId"</span>
+   title=<span class="lit">"The most powerful, most secure web framework available today. It simply rocks!"</span>
+   href=<span class="lit">"http://liftweb.net/"</span>&gt;Lift&lt;/a&gt;
+&lt;script data-lift=<span class="lit">"FoBo.Bs3Comp.tooltip?id=#aId&options=placement:'bottom'"</span>&gt;&lt;/script&gt;</pre><p><b>Result:</b> The script tag with the snippet invocation will result in the following being
+injected in the lift page script :</p><pre>$(function () { $(<span class="lit">'#aId'</span>).tooltip({placement:<span class="lit">'bottom'</span>}); });</pre></div><dl class="attributes block"> <dt>Since</dt><dd><p>v1.4
+</p></dd></dl></div>
     </li><li name="net.liftweb.http.StatefulSnippet#unregisterThisSnippet" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="unregisterThisSnippet():Unit"></a>
       <a id="unregisterThisSnippet():Unit"></a>

@@ -52,7 +52,7 @@ This convenience script functions is used in the FoBo.ScriptHelper snippet but
 can also be used as a convenience helper in your own customized snippets.
 </p></div><dl class="attributes block"> <div class="block">Example:
                <ol><li class="cmt"><p>If you find that the net.liftmodules.FoBo.snippet.FoBo.ScriptHelper snippet dose not fit you exact needs
-your can still use the ScriptHelper class to customize your own project snippets.</p><pre><span class="kw">import</span> net.liftmodules.FoBo.lib.{ScriptHelper<span class="kw">=&gt;</span>sch}
+your can still use the ScriptHelper class to customize your own project snippets.</p><pre><span class="kw">import</span> net.liftmodules.FoBoBs.lib.{ScriptHelper<span class="kw">=&gt;</span>sch}
  :
 <span class="kw">class</span> MySnippet {
 
@@ -185,23 +185,6 @@ your can still use the ScriptHelper class to customize your own project snippets
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="net.liftmodules.FoBoBs.lib.ScriptHelper#addLoadEvent" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="addLoadEvent(event:String):scala.xml.Node"></a>
-      <a id="addLoadEvent(String):Node"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">addLoadEvent</span><span class="params">(<span name="event">event: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.xml.Node">Node</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#net.liftmodules.FoBoBs.lib.ScriptHelper@addLoadEvent(event:String):scala.xml.Node" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">This function adds a specific load event to the load event factory function.</p>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -350,6 +333,24 @@ your can still use the ScriptHelper class to customize your own project snippets
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="net.liftmodules.FoBoBs.lib.ScriptHelper#loadEventScript" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="loadEventScript(event:String):net.liftweb.http.js.JsCmd"></a>
+      <a id="loadEventScript(String):JsCmd"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">loadEventScript</span><span class="params">(<span name="event">event: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="net.liftweb.http.js.JsCmd">JsCmd</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.liftmodules.FoBoBs.lib.ScriptHelper@loadEventScript(event:String):net.liftweb.http.js.JsCmd" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">This function creates a script that wraps a given event into the addLoadEvent function.</p><div class="fullcomment"><div class="comment cmt"><p>This function creates a script that wraps a given event into the addLoadEvent function.</p></div><dl class="attributes block"> <dt>Since</dt><dd><p>v1.4
+</p></dd></dl></div>
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -401,23 +402,24 @@ your can still use the ScriptHelper class to customize your own project snippets
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="net.liftmodules.FoBoBs.lib.ScriptHelper#registerLoadEventFactory" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="registerLoadEventFactory():scala.xml.Node"></a>
-      <a id="registerLoadEventFactory():Node"></a>
+    </li><li name="net.liftmodules.FoBoBs.lib.ScriptHelper#registerLoadEventFactoryScript" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="registerLoadEventFactoryScript():net.liftweb.http.js.JsCmd"></a>
+      <a id="registerLoadEventFactoryScript():JsCmd"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">registerLoadEventFactory</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.xml.Node">Node</span></span>
+        <span class="name">registerLoadEventFactoryScript</span><span class="params">()</span><span class="result">: <span class="extype" name="net.liftweb.http.js.JsCmd">JsCmd</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#net.liftmodules.FoBoBs.lib.ScriptHelper@registerLoadEventFactory():scala.xml.Node" title="Permalink" target="_top">
+      <a href="../../../../index.html#net.liftmodules.FoBoBs.lib.ScriptHelper@registerLoadEventFactoryScript():net.liftweb.http.js.JsCmd" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" />
       </a>
     </span>
-      <p class="shortcomment cmt">This function creates a register load event factory function.</p>
+      <p class="shortcomment cmt">This function creates a register load event factory script.</p><div class="fullcomment"><div class="comment cmt"><p>This function creates a register load event factory script.</p></div><dl class="attributes block"> <dt>Since</dt><dd><p>v1.4
+</p></dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
@@ -526,7 +528,53 @@ your can still use the ScriptHelper class to customize your own project snippets
 
         
 
-        
+        <div id="values" class="values members">
+              <h3>Deprecated Value Members</h3>
+              <ol><li name="net.liftmodules.FoBoBs.lib.ScriptHelper#addLoadEvent" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="addLoadEvent(event:String):scala.xml.Node"></a>
+      <a id="addLoadEvent(String):Node"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version FoBo v1.4.0) Use the loadEventScript function and wrap it in JsCmds.Script">addLoadEvent</span><span class="params">(<span name="event">event: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.xml.Node">Node</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.liftmodules.FoBoBs.lib.ScriptHelper@addLoadEvent(event:String):scala.xml.Node" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">This function adds a specific load event to the load event factory function.</p><div class="fullcomment"><div class="comment cmt"><p>This function adds a specific load event to the load event factory function.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version FoBo v1.4.0)</i> Use the loadEventScript function and wrap it in JsCmds.Script</p></dd></dl></div>
+    </li><li name="net.liftmodules.FoBoBs.lib.ScriptHelper#registerLoadEventFactory" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="registerLoadEventFactory():scala.xml.Node"></a>
+      <a id="registerLoadEventFactory():Node"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version FoBo v1.4.0) Use the registerLoadEventFactoryScript function and wrap it in JsCmds.Script">registerLoadEventFactory</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.xml.Node">Node</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.liftmodules.FoBoBs.lib.ScriptHelper@registerLoadEventFactory():scala.xml.Node" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">This function creates a register load event factory function and
+injects it in place of the invocation.</p><div class="fullcomment"><div class="comment cmt"><p>This function creates a register load event factory function and
+injects it in place of the invocation.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version FoBo v1.4.0)</i> Use the registerLoadEventFactoryScript function and wrap it in JsCmds.Script</p></dd><dt>Note</dt><dd><span class="cmt"><p>If you are using Lift 3 you should use the AppendGlobalJs alternative.
+</p></span></dd></dl></div>
+    </li></ol>
+            </div>
         </div>
 
         <div id="inheritedMembers">
