@@ -8,7 +8,7 @@
         <moduleId>
             <groupId>se.media4u101</groupId>
             <artifactId>fobo-lift-template-demo</artifactId>
-            <version>2.9.3</version>
+            <version>3.0.2</version>
         </moduleId>
         <dependencies> 
         

@@ -103,14 +103,18 @@ class Boot extends Loggable {
       SecurityRules(content = Some(ContentSecurityPolicy(
         scriptSources = List( 
             /*ContentSourceRestriction.UnsafeInline,*/
+            ContentSourceRestriction.Self,
+            /*Api doc generates inline scripts hens the need of UnsafeInline*/
+            ContentSourceRestriction.UnsafeInline,
+            //ContentSourceRestriction.Host("sha256-N3B-5wjqxdgS8Ku1ncUZGgkBp0XyKvXbEdWcE-pB-2g="),
             ContentSourceRestriction.Host("http://platform.twitter.com/widgets.js"),
             ContentSourceRestriction.Host("https://platform.twitter.com/widgets.js"),
             ContentSourceRestriction.Host("https://syndication.twitter.com"),
             ContentSourceRestriction.Host("http://www.google-analytics.com/ga.js"),
             ContentSourceRestriction.Host("https://cdn.syndication.twimg.com"),
-            ContentSourceRestriction.Host("https://apis.google.com"),
-            ContentSourceRestriction.Self),
+            ContentSourceRestriction.Host("https://apis.google.com")),
         frameSources = List(
+            ContentSourceRestriction.Self,
             ContentSourceRestriction.Host("https://player.vimeo.com"),
             ContentSourceRestriction.Host("http://player.vimeo.com"),
             ContentSourceRestriction.Host("https://platform.twitter.com"),
