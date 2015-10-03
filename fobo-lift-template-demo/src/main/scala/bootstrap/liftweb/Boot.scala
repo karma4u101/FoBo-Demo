@@ -35,6 +35,8 @@ class Boot extends Loggable {
     FoBo.InitParam.ToolKit=FoBo.Bootstrap335 
     FoBo.InitParam.ToolKit=FoBo.FontAwesome430 
     FoBo.InitParam.ToolKit=FoBo.Pace0415
+    FoBo.InitParam.ToolKit=FoBo.AngularJS141
+    FoBo.InitParam.ToolKit=FoBo.AJMaterial0100
     FoBo.init()  
     
     // where to search snippet
@@ -105,11 +107,11 @@ class Boot extends Loggable {
             /*ContentSourceRestriction.UnsafeInline,*/
             ContentSourceRestriction.Self,
             /*Api doc generates inline scripts hens the need of UnsafeInline*/
-            ContentSourceRestriction.UnsafeInline,
+            /*ContentSourceRestriction.UnsafeInline,*/
             /*ContentSourceRestriction.UnsafeInline,*/
             //ContentSourceRestriction.Host("sha256-N3B-5wjqxdgS8Ku1ncUZGgkBp0XyKvXbEdWcE-pB-2g="),
-            ContentSourceRestriction.Host("http://platform.twitter.com/widgets.js"),
-            ContentSourceRestriction.Host("https://platform.twitter.com/widgets.js"),
+            ContentSourceRestriction.Host("http://platform.twitter.com"),
+            ContentSourceRestriction.Host("https://platform.twitter.com"),
             ContentSourceRestriction.Host("https://syndication.twitter.com"),
             ContentSourceRestriction.Host("http://www.google-analytics.com/ga.js"),
             ContentSourceRestriction.Host("https://cdn.syndication.twimg.com"),
@@ -173,7 +175,9 @@ object Paths {
   val libospyfooter    = Menu(Loc("LiboSpyFooter", Link(List("libospyfooter"), true, "#spyfooter"), S.loc("LiboSpyRef"  , Text("Referenser")), LocGroup("liboSpyTop")))
     
   val bootstrap3xxDoc  = Menu(Loc("Bootstrap-3.x.x", ExtLink("http://getbootstrap.com/") , S.loc("Bootstrap-3.x.x", Text("Bootstrap-3.x.x")), LocGroup("nldemo1"),FoBo.TBLocInfo.LinkTargetBlank))
-  val foboApiDoc       = Menu(Loc("FoBoAPI"        , Link(List("foboapi")        , true, "/foboapi/index.html#net.liftmodules.FoBo.package"), S.loc("FoBoAPI"  , Text("FoBo API")), LocGroup("liboTop2","mdemo2","nldemo1"),FoBo.TBLocInfo.LinkTargetBlank ))
+//  val foboApiDoc       = Menu(Loc("FoBoAPI"        , Link(List("foboapi")        , true, "/foboapi/index.html#net.liftmodules.FoBo.package"), S.loc("FoBoAPI"  , Text("FoBo API")), LocGroup("liboTop2","mdemo2","nldemo1"),FoBo.TBLocInfo.LinkTargetBlank ))
+  val foboApiDoc       = Menu(Loc("FoBoAPI"        , ExtLink("http://www.media4u101.se/fobo-lift-template-demo/foboapi/index.html#net.liftmodules.FoBo.package") , S.loc("FoBoAPI"  , Text("FoBo API")), LocGroup("liboTop2","mdemo2","nldemo1"),FoBo.TBLocInfo.LinkTargetBlank ))
+
   val nlHelp           = Menu.i("NLHelp") / "helpindex"
     
   val roundTripDemo = Menu(Loc("fobo-angular-lift-roundtrips", ExtLink("http://www.media4u101.se/fobo-angular-lift-roundtrips/"), S.loc("fobo-angular-lift-roundtrips", Text("Lift round trip tutorial")) ,FoBo.TBLocInfo.LinkTargetBlank  ) )
