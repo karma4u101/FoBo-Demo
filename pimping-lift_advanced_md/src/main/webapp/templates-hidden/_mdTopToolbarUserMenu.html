@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+
+<title>Embedded toolbar template</title>
+</head>
+
+<!-- This is an embedded piece of html -->
+<body class="lift:content_id=userMenu">
+
+   <md-menu  id="userMenu" >
+      <!-- hardcoded user not logged in -->
+      <md-button data-lift='test_cond.loggedout' aria-label="Open user menu" class="md-icon-button" ng-click="$mdOpenMenu($event)" >
+        <md-icon md-menu-origin md-font-icon="fa fa-user" style="color: greenyellow;font-size:24px;"></md-icon> 
+      </md-button>
+      <md-button data-lift='test_cond.loggedin' aria-label="Open user menu" class="md-icon-button" ng-click="$mdOpenMenu($event)" >
+        <md-tooltip>
+          Refresh
+        </md-tooltip>
+	    <span data-lift="helloWorld.usergrav" id="gravatar"></span>
+<!-- 	    <span data-lift="helloWorld.usergrav"> -->
+<!-- 	     <span id="gravatar">Gravatar goes here</span> -->
+<!-- 	    </span>	 -->
+      </md-button>      
+      	      
+      
+      <md-menu-content width="4">
+        <md-menu-item data-lift='test_cond.loggedout'>
+          <md-button ng-href="/user_mgt/login">
+            <md-icon md-font-icon="fa fa-user" md-menu-align-target style="font-size:20px;"></md-icon>
+            Logga In
+          </md-button>
+        </md-menu-item>
+        <md-menu-item>
+          <md-button ng-href="/user_mgt/sign_up">
+            <md-icon md-font-icon="fa fa-pencil" style="font-size:20px;"></md-icon>
+            Registrera dig
+          </md-button>
+        </md-menu-item>
+        <md-menu-divider></md-menu-divider>
+        <md-menu-item>
+          <md-button ng-href="/user_mgt/lost_password">
+            <md-icon md-font-icon="fa fa-envelope" style="font-size:20px;"></md-icon>
+            Glömt lösenord
+          </md-button>
+        </md-menu-item>
+        <md-menu-item data-lift='test_cond.loggedin'>
+          <md-button ng-href="/user_mgt/logout">
+            <md-icon md-font-icon="fa fa-user" md-menu-align-target style="font-size:20px;"></md-icon>
+            Logga Out
+          </md-button>
+        </md-menu-item>
+        
+      </md-menu-content> 
+              
+    </md-menu>
+    
+<!--     <md-menu data-lift='test_cond.loggedin' id="userMenu" > -->
+    
+<!--       <md-button aria-label="Open user menu" class="md-icon-button" ng-click="$mdOpenMenu($event)" > -->
+<!--         <md-icon md-menu-origin md-font-icon="fa fa-user" style="color: greenyellow;font-size:24px;"></md-icon>  -->
+<!--       </md-button> -->
+      
+<!--       <md-menu-content width="4"> -->
+<!--         <md-menu-item> -->
+<!--           <md-button ng-href="/user_mgt/logout"> -->
+<!--             <md-icon md-font-icon="fa fa-user" md-menu-align-target style="font-size:20px;"></md-icon> -->
+<!--             Logga Out -->
+<!--           </md-button> -->
+<!--         </md-menu-item> -->
+<!--       </md-menu-content> -->
+<!--     </md-menu> -->
+    
+  
+</body>
+</html>

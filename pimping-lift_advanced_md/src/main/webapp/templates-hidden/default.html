@@ -1,0 +1,89 @@
+<html ng-app="FoBoDemo" ng-csp="">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title class="lift:Menu.title">App:</title>
+
+<link href="/classpath/fobo/font-awesome.css" rel="stylesheet" type="text/css" />
+<link href="/classpath/fobo/angular-material.css" rel="stylesheet">
+
+<link href="/assets/css/app.css" rel="stylesheet"/>
+
+<script id="jquery" src="/classpath/fobo/jquery.js" type="text/javascript"></script>
+    
+</head>
+<body >
+
+<!-- md navbar -->
+
+<!-- md sidenav -->
+
+
+
+    
+<div ng-controller="AppCtrl" layout="column" style="min-height:500px;">
+
+
+  <span data-lift='embed?what=_mdTopToolbar'> Embedding the TopToolbar here</span>
+
+
+
+  <section layout="row" flex>
+  
+    <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+      <md-toolbar class="md-hue-2">
+        <h1 class="md-toolbar-tools">Sidenav Left</h1>
+      </md-toolbar>
+      <md-content layout-padding ng-controller="LeftCtrl">
+        
+        <md-button ng-click="close()" class="md-primary" hide-gt-md>
+          Close Sidenav Left
+        </md-button>
+        <p hide-md show-gt-md>
+          This sidenav is locked open on your device. To go back to the default behavior,
+          narrow your display.
+        </p>
+        <div class="lift:Msgs?showAll=true"></div>
+      </md-content>
+    </md-sidenav>
+
+<!-- content -->
+<!-- md content -->
+<div id="content">The main content will get bound here</div>
+
+
+
+    <md-sidenav class="md-sidenav-right md-whiteframe-z2" md-component-id="right">
+      <md-toolbar class="md-hue-2">
+        <h1 class="md-toolbar-tools">Sidenav Right</h1>
+      </md-toolbar>
+      <md-content ng-controller="RightCtrl" layout-padding>
+        <form>
+          <md-input-container>
+            <label for="testInput">Test input</label>
+            <input type="text" id="testInput"
+                   ng-model="data" md-sidenav-focus>
+          </md-input-container>
+        </form>
+        <md-button ng-click="close()" class="md-primary">
+          Close Sidenav Right
+        </md-button>
+      </md-content>
+    </md-sidenav>
+
+  </section>
+</div>
+
+
+
+<!-- fotter -->	
+
+	<script type="text/javascript" src="/classpath/fobo/angular.js"></script>
+	<script type="text/javascript" src="/classpath/fobo/angular-aria.js"></script>
+	<script type="text/javascript" src="/classpath/fobo/angular-animate.js"></script>
+	<script type="text/javascript" src="/classpath/fobo/angular-material.js"></script>
+    <script type="text/javascript" src="/assets/js/app.js"></script>    
+</body>
+</html>

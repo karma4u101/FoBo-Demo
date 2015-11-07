@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+
+<title>Embedded toolbar template</title>
+</head>
+
+<!-- This is an embedded piece of html -->
+<body class="lift:content_id=topToolbar">
+
+    <md-toolbar id="topToolbar" class="md-hue-2">
+      <div class="md-toolbar-tools ">
+        <md-button class="md-icon-button" aria-label="Settings" ng-click="toggleLeft()" hide-gt-md>
+          <md-icon md-font-icon="fa fa-bars" style="font-size:24px;"></md-icon>
+        </md-button>
+        <h2>
+          <a href="/">app</a>
+        </h2>
+        <span flex></span>
+
+        <span data-lift='embed?what=_mdTopToolbarUserMenu'> Embedding user menu here</span>
+        
+        <md-button class="md-icon-button" aria-label="More">
+          <md-icon md-font-icon="fa fa-ellipsis-v" style="font-size:24px;"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+
+</body>
+</html>

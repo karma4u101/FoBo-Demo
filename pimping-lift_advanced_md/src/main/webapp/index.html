@@ -1,0 +1,70 @@
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+    <title>Home</title>
+  </head>
+  <body data-lift-content-id="main">
+    <div id="main" data-lift="surround?with=default;at=content">
+    
+    <md-content flex layout-padding>
+      <div layout="column" layout-fill layout-align="top center">
+        <h1 class="md-title">Welcome to your project!</h1>
+        
+        <p>
+	    <span data-lift="helloWorld.howdy">
+	     Welcome to your Lift app at <span id="time">Time goes here</span>
+	    </span>
+	    <br>
+	    <span data-lift="helloWorld.usergrav">
+	     Errrm <span id="gravatar">Gravatar goes here</span>
+	    </span>	    
+        </p>
+        <p>
+        The left sidenav will 'lock open' on a medium (>=960px wide) device.
+        </p>
+        <p>
+        The right sidenav will focus on a specific child element.
+        </p>
+        <div>
+          <md-button ng-click="toggleLeft()"
+            class="md-primary" hide-gt-md>
+            Toggle left
+          </md-button>
+        </div>
+        <div>
+          <md-button ng-click="toggleRight()"
+            class="md-primary">
+            Toggle right
+          </md-button>
+        </div>
+      </div>
+      
+      <md-content layout-padding class="autoScroll">
+        <form name="loginForm">
+          <h1 class="md-title">Logga In</h1>
+          <md-input-container>
+            <!-- Use floating placeholder instead of label -->
+            <md-icon md-font-icon="fa fa-envelope" class="email"></md-icon>
+            <input type="email" ng-model="user.email" placeholder="Email (required)" ng-required="true">
+          </md-input-container>          
+          <md-input-container>
+            <!-- Use floating placeholder instead of label -->
+            <md-icon md-font-icon="fa fa-key" class="password"></md-icon>
+            <input type="password" ng-model="user.password" placeholder="Password (required)" ng-required="true">
+          </md-input-container>    
+          <section layout="row" layout-sm="column" layout-align="left center" layout-wrap>
+            <md-button class="md-raised md-primary">Logga In</md-button>
+            <md-button class="md-primary" href="/" >Glömt lösenord</md-button>
+          </section>
+        </form>  
+      </md-content>  
+      
+      <div flex></div>
+    </md-content>
+        
+
+      
+    </div>
+  </body>
+</html>
+

@@ -1,0 +1,10 @@
+/.settings
+/project
+/.classpath
+/.project
+/pimping-lift_advanced_md/
+/lift_proto.db.lock.db
+/lift_proto.db.h2.db.org
+/lift_proto.db.h2.db
+/geronimo-web.xml~
+/build.sbt~

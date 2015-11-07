@@ -1,0 +1,41 @@
+md-menu-item > .md-button {
+    display: inline;
+}
+
+md-toast.md-success-toast-theme {
+    background-color: #5cb85c;
+}
+md-toast.md-warning-toast-theme {
+    background-color: #f0ad4e;
+}
+md-toast.md-error-toast-theme {
+    background-color: #d9534f;
+}
+/*Lift stuff*/
+
+
+#lift__noticesContainer___notice ul, 
+#lift__noticesContainer___warning ul, 
+#lift__noticesContainer___error ul
+{
+    list-style-type: none;
+}
+
+/*Lift notice*/
+#lift__noticesContainer___notice {
+    background-color: #D9EDF7;
+    border-color: #BCE8F1;
+    color: #3A87AD;
+}
+
+#lift__noticesContainer___warning {
+    background-color: #FCF8E3;
+    border-color: #FBEED5;
+    color: #C09853;
+}
+
+#lift__noticesContainer___error {
+    background-color: #F2DEDE;
+    border-color: #EED3D7;
+    color: #B94A48;
+}
