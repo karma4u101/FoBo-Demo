@@ -10,18 +10,15 @@
 <body class="lift:content_id=userMenu">
 
    <md-menu  id="userMenu" >
-      <!-- hardcoded user not logged in -->
+      <!--  user not logged in -->
       <md-button data-lift='test_cond.loggedout' aria-label="Open user menu" class="md-icon-button" ng-click="$mdOpenMenu($event)" >
         <md-icon md-menu-origin md-font-icon="fa fa-user" style="color: greenyellow;font-size:24px;"></md-icon> 
       </md-button>
       <md-button data-lift='test_cond.loggedin' aria-label="Open user menu" class="md-icon-button" ng-click="$mdOpenMenu($event)" >
-        <md-tooltip>
-          Refresh
-        </md-tooltip>
+<!--         <md-tooltip> -->
+<!--           Refresh -->
+<!--         </md-tooltip> -->
 	    <span data-lift="helloWorld.usergrav" id="gravatar"></span>
-<!-- 	    <span data-lift="helloWorld.usergrav"> -->
-<!-- 	     <span id="gravatar">Gravatar goes here</span> -->
-<!-- 	    </span>	 -->
       </md-button>      
       	      
       
@@ -29,29 +26,45 @@
         <md-menu-item data-lift='test_cond.loggedout'>
           <md-button ng-href="/user_mgt/login">
             <md-icon md-font-icon="fa fa-user" md-menu-align-target style="font-size:20px;"></md-icon>
-            Logga In
+            <span data-lift="Loc.i">fobo.menu.loc.login</span>
           </md-button>
         </md-menu-item>
-        <md-menu-item>
+        <md-menu-item data-lift='test_cond.loggedout'>
           <md-button ng-href="/user_mgt/sign_up">
             <md-icon md-font-icon="fa fa-pencil" style="font-size:20px;"></md-icon>
-            Registrera dig
+            <span data-lift="Loc.i">fobo.menu.loc.sign.up</span>
           </md-button>
         </md-menu-item>
         <md-menu-divider></md-menu-divider>
-        <md-menu-item>
+        <md-menu-item data-lift='test_cond.loggedout'>
           <md-button ng-href="/user_mgt/lost_password">
             <md-icon md-font-icon="fa fa-envelope" style="font-size:20px;"></md-icon>
-            Glömt lösenord
+            <span data-lift="Loc.i">fobo.menu.loc.lost.password</span>
           </md-button>
         </md-menu-item>
+
+        
+        <md-menu-item data-lift='test_cond.loggedin'>
+          <md-button ng-href="/user_mgt/edit">
+            <md-icon md-font-icon="fa fa-pencil" md-menu-align-target style="font-size:20px;"></md-icon>
+            <span data-lift="Loc.i">fobo.menu.loc.edit.user</span>
+          </md-button>
+        </md-menu-item> 
+        
+        <md-menu-item data-lift='test_cond.loggedin'>
+          <md-button ng-href="/user_mgt/change_password">
+            <md-icon md-font-icon="fa fa-pencil" md-menu-align-target style="font-size:20px;"></md-icon>
+            <span data-lift="Loc.i">fobo.menu.loc.change.password</span>
+          </md-button>
+        </md-menu-item>                 
+
         <md-menu-item data-lift='test_cond.loggedin'>
           <md-button ng-href="/user_mgt/logout">
             <md-icon md-font-icon="fa fa-user" md-menu-align-target style="font-size:20px;"></md-icon>
-            Logga Out
+            <span data-lift="Loc.i">fobo.menu.loc.logout</span>
           </md-button>
         </md-menu-item>
-        
+                
       </md-menu-content> 
               
     </md-menu>

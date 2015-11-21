@@ -11,6 +11,17 @@ md-toast.md-warning-toast-theme {
 md-toast.md-error-toast-theme {
     background-color: #d9534f;
 }
+
+md-list-item, md-list-item .md-list-item-inner {
+	min-height: 38px;
+}
+a.navlist{
+	display:block;
+	width:100%;
+	height:100%;
+/* 	background:yellow; */
+}
+
 /*Lift stuff*/
 
 

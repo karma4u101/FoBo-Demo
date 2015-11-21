@@ -54,7 +54,6 @@ app.controller('RightCtrl', function ($scope, $timeout, $mdSidenav, $log) {
         
   });
 
-//$mdToast.simple().content('Epostadressen finns inte registrerad').position('bottom right').theme('bottom right').hideDelay(3000);;});
 app.controller('LiftMsgToastCtrl', function($scope, $mdToast, $animate, $log){
     $scope.showSimpleToast = function(msg,position,theme) {
 	$mdToast.show(
@@ -62,24 +61,3 @@ app.controller('LiftMsgToastCtrl', function($scope, $mdToast, $animate, $log){
 	);
     }
 });
-//app.controller('LiftMsgToastCtrl', function($scope, $mdToast, $animate, $log){
-//    $scope.showSimpleToast = function() {
-//	$log.debug("in LiftMsgToasCtrl::showSimpleToast");
-//	$mdToast.show({
-//	      controller: 'ToastCtrl',
-//	      templateUrl: '',
-//	      hideDelay: 3000,
-//	      position: 'bottom right'
-//	    });
-//    };
-//    $scope.closeToast = function() {
-//	      $mdToast.hide();
-//	    };
-//    $log.debug("in LiftMsgToasCtrl about to show toast");	    
-//    $scope.showSimpleToast();	  
-//});
-//app.controller('ToastCtrl', function($scope, $mdToast) {
-//    $scope.closeToast = function() {
-//      $mdToast.hide();
-//    };
-//  });

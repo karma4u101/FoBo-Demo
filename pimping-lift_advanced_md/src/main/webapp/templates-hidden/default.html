@@ -5,7 +5,6 @@
 <meta name="keywords" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title class="lift:Menu.title">App:</title>
-
 <link href="/classpath/fobo/font-awesome.css" rel="stylesheet" type="text/css" />
 <link href="/classpath/fobo/angular-material.css" rel="stylesheet">
 
@@ -38,7 +37,54 @@
       </md-toolbar>
       <md-content layout-padding ng-controller="LeftCtrl">
         
-        <md-button ng-click="close()" class="md-primary" hide-gt-md>
+        <md-list>         
+          <md-list-item md-ink-ripple>
+            <span data-lift="Menu.item?name=Home;?linkToSelf=true;?a:class=navlist">
+             <md-icon md-font-icon="fa fa-home"> <span data-lift="Loc.i">Home</span>
+            </span>
+<!--             <md-divider></md-divider> -->
+          </md-list-item> 
+          <md-list-item data-lift='test_cond.loggedout' md-ink-ripple>
+            <span data-lift="Menu.item?name=Login;?linkToSelf=true;?a:class=navlist">
+             <md-icon md-font-icon="fa fa-user"> <span data-lift="Loc.i">fobo.menu.loc.login</span>
+            </span>
+<!--             <md-divider></md-divider> -->
+          </md-list-item> 
+          <md-list-item data-lift='test_cond.loggedout' md-ink-ripple>
+            <span data-lift="Menu.item?name=CreateUser;?linkToSelf=true;?a:class=navlist">
+             <md-icon md-font-icon="fa fa-pencil"> <span data-lift="Loc.i">fobo.menu.loc.sign.up</span>
+            </span>
+<!--             <md-divider></md-divider> -->
+          </md-list-item>  
+          <md-list-item data-lift='test_cond.loggedout' md-ink-ripple>
+            <span data-lift="Menu.item?name=LostPassword;?linkToSelf=true;?a:class=navlist;">
+             <md-icon md-font-icon="fa fa-envelope"> <span data-lift="Loc.i">fobo.menu.loc.lost.password</span>
+            </span>
+          </md-list-item>   
+<!--           <md-list-item data-lift='test_cond.loggedout' md-ink-ripple> -->
+<!--             <md-button class="md-primary" ng-href="{{googleUrl}}" target="_blank"> -->
+<!--               <md-icon md-font-icon="fa fa-envelope"> <span data-lift="Loc.i">fobo.menu.loc.lost.password</span> -->
+<!--             </md-button> -->
+<!--           </md-list-item>                                            -->
+          <!-- data-lift='Menu.item name="Home" linkToSelf=true a:style="display:block;width:100%;height:100%;background:yellow;"
+          <md-icon md-font-icon="fa fa-home"></md-icon> <span data-lift="Loc.i">Home</span> -->
+          <md-list-item data-lift='test_cond.loggedin' md-ink-ripple>
+            <span data-lift="Menu.item?name=EditUser;?linkToSelf=true;?a:class=navlist;">
+             <md-icon md-font-icon="fa fa-pencil"> <span data-lift="Loc.i">fobo.menu.loc.edit.user</span>
+            </span>
+          </md-list-item> 
+          <md-list-item data-lift='test_cond.loggedin' md-ink-ripple>
+            <span data-lift="Menu.item?name=ChangePassword;?linkToSelf=true;?a:class=navlist;">
+             <md-icon md-font-icon="fa fa-pencil"> <span data-lift="Loc.i">fobo.menu.loc.change.password</span>
+            </span>
+          </md-list-item>  
+          <md-list-item data-lift='test_cond.loggedin' md-ink-ripple>
+            <span data-lift="Menu.item?name=Logout;?linkToSelf=true;?a:class=navlist;">
+             <md-icon md-font-icon="fa fa-user"> <span data-lift="Loc.i">fobo.menu.loc.logout</span>
+            </span>
+          </md-list-item>                      
+        </md-list>
+        <md-button ng-click="close()" class="md-primary md-raised" hide-gt-md>
           Close Sidenav Left
         </md-button>
         <p hide-md show-gt-md>
