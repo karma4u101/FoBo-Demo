@@ -2,13 +2,13 @@ name := "Pimping-Lift-Advanced-md"
 
 organization := "net.liftweb"
 
-version := "0.0.1-SNAPSHOT"
+version := "0.0.2-SNAPSHOT"
 
-liftVersion := "3.0-SNAPSHOT" //"2.6.2" 
+liftVersion := "3.0-SNAPSHOT" //"2.6.2" // 
 
 liftEdition <<= liftVersion apply { _.substring(0,3) }
 
-scalaVersion := "2.11.2"
+scalaVersion := "2.11.4"
 
 crossScalaVersions := Seq("2.11.2") 
 

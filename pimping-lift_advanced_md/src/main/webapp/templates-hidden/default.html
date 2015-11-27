@@ -42,32 +42,23 @@
             <span data-lift="Menu.item?name=Home;?linkToSelf=true;?a:class=navlist">
              <md-icon md-font-icon="fa fa-home"> <span data-lift="Loc.i">Home</span>
             </span>
-<!--             <md-divider></md-divider> -->
           </md-list-item> 
           <md-list-item data-lift='test_cond.loggedout' md-ink-ripple>
             <span data-lift="Menu.item?name=Login;?linkToSelf=true;?a:class=navlist">
              <md-icon md-font-icon="fa fa-user"> <span data-lift="Loc.i">fobo.menu.loc.login</span>
             </span>
-<!--             <md-divider></md-divider> -->
           </md-list-item> 
           <md-list-item data-lift='test_cond.loggedout' md-ink-ripple>
             <span data-lift="Menu.item?name=CreateUser;?linkToSelf=true;?a:class=navlist">
              <md-icon md-font-icon="fa fa-pencil"> <span data-lift="Loc.i">fobo.menu.loc.sign.up</span>
             </span>
-<!--             <md-divider></md-divider> -->
           </md-list-item>  
           <md-list-item data-lift='test_cond.loggedout' md-ink-ripple>
             <span data-lift="Menu.item?name=LostPassword;?linkToSelf=true;?a:class=navlist;">
              <md-icon md-font-icon="fa fa-envelope"> <span data-lift="Loc.i">fobo.menu.loc.lost.password</span>
             </span>
           </md-list-item>   
-<!--           <md-list-item data-lift='test_cond.loggedout' md-ink-ripple> -->
-<!--             <md-button class="md-primary" ng-href="{{googleUrl}}" target="_blank"> -->
-<!--               <md-icon md-font-icon="fa fa-envelope"> <span data-lift="Loc.i">fobo.menu.loc.lost.password</span> -->
-<!--             </md-button> -->
-<!--           </md-list-item>                                            -->
-          <!-- data-lift='Menu.item name="Home" linkToSelf=true a:style="display:block;width:100%;height:100%;background:yellow;"
-          <md-icon md-font-icon="fa fa-home"></md-icon> <span data-lift="Loc.i">Home</span> -->
+          
           <md-list-item data-lift='test_cond.loggedin' md-ink-ripple>
             <span data-lift="Menu.item?name=EditUser;?linkToSelf=true;?a:class=navlist;">
              <md-icon md-font-icon="fa fa-pencil"> <span data-lift="Loc.i">fobo.menu.loc.edit.user</span>
@@ -87,10 +78,7 @@
         <md-button ng-click="close()" class="md-primary md-raised" hide-gt-md>
           Close Sidenav Left
         </md-button>
-        <p hide-md show-gt-md>
-          This sidenav is locked open on your device. To go back to the default behavior,
-          narrow your display.
-        </p>
+
         <div class="lift:Msgs?showAll=true"></div>
       </md-content>
     </md-sidenav>
