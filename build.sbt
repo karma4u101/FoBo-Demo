@@ -4,7 +4,7 @@ organization := "net.liftweb"
 
 version in ThisBuild := "0.6-SNAPSHOT"
 
-liftVersion in ThisBuild <<= liftVersion ?? "2.6.2" //3.0-SNAPSHOT
+liftVersion in ThisBuild <<= liftVersion ?? "3.0-SNAPSHOT" //"2.6.2" 
 
 liftLatestVersion in ThisBuild <<= liftLatestVersion ?? "3.0-SNAPSHOT"
 
@@ -34,7 +34,7 @@ scalacOptions ++= Seq("-deprecation", "-unchecked")
 libraryDependencies <++= (liftVersion,liftEdition,version) { (v,e,mv) =>
     "net.liftweb"     %% "lift-webkit"            % v    % "compile" ::
     "net.liftweb"     %% "lift-mapper"            % v    % "compile" ::
-    "net.liftmodules" %% ("fobo"+"_"+e)          % "1.4" % "compile" ::
+    "net.liftmodules" %% ("fobo"+"_"+e)          % "1.5-SNAPSHOT" % "compile" ::
     Nil
 }
 

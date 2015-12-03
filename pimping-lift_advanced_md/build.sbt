@@ -1,4 +1,4 @@
-name := "Pimping-Lift-Advanced-md"
+name := "Pimping-Lift-Advanced-MD"
 
 organization := "net.liftweb"
 
