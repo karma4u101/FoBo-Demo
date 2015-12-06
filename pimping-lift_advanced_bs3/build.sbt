@@ -2,13 +2,13 @@ name := "Pimping-Lift-Advanced-Bs3"
 
 organization := "net.liftweb"
 
-version := "0.2.4-SNAPSHOT"
+version := "0.3.0-SNAPSHOT"
 
 liftVersion := "3.0-SNAPSHOT" //"2.6.2" 
 
 liftEdition <<= liftVersion apply { _.substring(0,3) }
 
-scalaVersion := "2.11.2"
+scalaVersion := "2.11.7"
 
 crossScalaVersions := Seq("2.11.2") 
 

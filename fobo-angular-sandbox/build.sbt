@@ -8,7 +8,7 @@ liftVersion := "3.0-SNAPSHOT"
 
 liftEdition <<= liftVersion apply { _.substring(0,3) }
 
-scalaVersion := "2.11.2"
+scalaVersion := "2.11.7"
 
 crossScalaVersions := Seq("2.11.2") 
 
