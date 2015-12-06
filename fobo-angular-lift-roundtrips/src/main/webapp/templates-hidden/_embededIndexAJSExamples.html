@@ -267,7 +267,7 @@
 					    Scala functions: <code>NodeSeq => NodeSeq</code>.</p> 
 					    
 					    <p>Below is the actual snippet implementation that renders the <i>hook up</i> functions as javascript code 
-					    in the bottom of the html page. Our use case specific <i>hook up</i> functions is added by calling 
+					    that appends to lift's page script file. Our use case specific <i>hook up</i> functions is added by calling 
 					    our <code>getRoundTrips</code> function. The essential Lift round trip building magic is condensed into
 					    the <code>buildRoundtrip</code> <code>toJsCmd</code> transformation. 
 					    In this example our use case specific server side round trip functions is declared in the <code>SimpleRT</code> trait, 

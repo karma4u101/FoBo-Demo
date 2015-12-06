@@ -16,10 +16,14 @@ a.md-button {
   border-bottom: none;
 }
 
-md-whiteframe .notice {
+md-whiteframe.notice {
+	margin-top:10px;
+/* 	padding-top:20px; */
+	padding-bottom:20px;
+	padding-left:10px;
 	background: #F5F6F7 none repeat scroll 0% 0%;
-  border-left: 4px solid #8BC34A;
-  border-radius: 4px;
+  border-left: 8px solid #8BC34A;
+/*   border-radius: 4px; */
 } 
 
 md-menu-item > .md-button {

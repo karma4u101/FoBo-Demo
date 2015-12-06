@@ -72,13 +72,13 @@ class Boot {
     LiftRules.htmlProperties.default.set((r: Req) =>
       new Html5Properties(r.userAgent))    
       
-//    LiftRules.noticesAutoFadeOut.default.set( (notices: NoticeType.Value) => {
-//        notices match {
-//          case NoticeType.Notice => Full((8 seconds, 4 seconds))
-//          case _ => Empty
-//        }
-//     }
-//    ) 
+    LiftRules.noticesAutoFadeOut.default.set( (notices: NoticeType.Value) => {
+        notices match {
+          case NoticeType.Notice => Full((8 seconds, 4 seconds))
+          case _ => Empty
+        }
+     }
+    ) 
     
     LiftRules.securityRules = () => {
       SecurityRules(content = Some(ContentSecurityPolicy(

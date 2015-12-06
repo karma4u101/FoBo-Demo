@@ -1,6 +1,5 @@
 package code.snippet
 
-//import code.snippet.SimpleRoundTrips
 import scala.xml._
 import net.liftweb.http._
 import net.liftweb.http.js.JsCmds._
@@ -10,28 +9,17 @@ import net.liftweb.http.js.JE.JsRaw
 class RoundTripBindingInjector extends PersonRT with SimpleRT {
   
   /*
-   * This is a quick fix to move the scripts out of the page and into “page JS” file instead
-   * There are most likely a more elegant solution. 
+   * Appends the roundtrip binding scripts to Lift's page script file.
    */
   def render() : NodeSeq = {
     val functions = ((for {
       session <- S.session
-    } yield 
-       <lift:tail>{
+    } yield {
        S.appendGlobalJs(JsRaw(s"var myRTFunctions = ${session.buildRoundtrip(getRoundTrips).toJsCmd}").cmd)
-       }</lift:tail>
+       NodeSeq.Empty
+       }
     ) openOr NodeSeq.Empty)
     functions  
   }
   
-  /*
-  def render() : NodeSeq = {
-    val functions = ((for {
-      session <- S.session
-    } yield <lift:tail>{Script(
-        JsRaw(s"var myRTFunctions = ${session.buildRoundtrip(getRoundTrips).toJsCmd}").cmd
-        )}</lift:tail>) openOr NodeSeq.Empty)
-    functions
-  }  
-  */
 }

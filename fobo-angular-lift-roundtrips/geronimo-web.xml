@@ -8,7 +8,7 @@
         <moduleId>
             <groupId>se.media4u101</groupId>
             <artifactId>fobo-angular-lift-roundtrips</artifactId> 
-            <version>0.6.8</version>
+            <version>0.8.0</version>
         </moduleId> 
         <dependencies> 
         

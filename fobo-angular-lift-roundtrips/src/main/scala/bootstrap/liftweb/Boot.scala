@@ -54,10 +54,10 @@ class Boot {
     //Init the FoBo - Front-End Toolkit module, 
     //see http://liftweb.net/lift_modules for more info
     //FoBo.InitParam.JQuery=FoBo.JQuery1111 //FoBo.JQuery1102  
-    FoBo.InitParam.JQuery=FoBo.JQuery1111   
-    FoBo.InitParam.ToolKit=FoBo.Bootstrap335
+    FoBo.InitParam.JQuery=FoBo.JQuery1113    
+    FoBo.InitParam.ToolKit=FoBo.Bootstrap336
     FoBo.InitParam.ToolKit=FoBo.FontAwesome430
-    FoBo.InitParam.ToolKit=FoBo.AngularJS141
+    FoBo.InitParam.ToolKit=FoBo.AngularJS148 //AngularJS141
     FoBo.InitParam.ToolKit=FoBo.AJSNGGrid207
     FoBo.InitParam.ToolKit=FoBo.AJSUIBootstrap0100
     FoBo.InitParam.ToolKit=FoBo.PrettifyJun2011
@@ -83,13 +83,13 @@ class Boot {
       
       //this is not working as we are no longer allowing (see securityRules below) 
       //in-line scripts in the page 
-//    LiftRules.noticesAutoFadeOut.default.set( (notices: NoticeType.Value) => {
-//        notices match {
-//          case NoticeType.Notice => Full((8 seconds, 4 seconds))
-//          case _ => Empty
-//        }
-//     }
-//    )
+    LiftRules.noticesAutoFadeOut.default.set( (notices: NoticeType.Value) => {
+        notices match {
+          case NoticeType.Notice => Full((8 seconds, 4 seconds))
+          case _ => Empty
+        }
+     }
+    )
     
     
     LiftRules.securityRules = () => {
