@@ -51,8 +51,8 @@ class Boot {
     //see http://liftweb.net/lift_modules for more info
     FoBo.InitParam.JQuery=FoBo.JQuery1113  
     FoBo.InitParam.ToolKit=FoBo.FontAwesome430 
-    FoBo.InitParam.ToolKit=FoBo.AngularJS148 //.AngularJS141
-    FoBo.InitParam.ToolKit=FoBo.AJMaterial100RC
+    FoBo.InitParam.ToolKit=FoBo.AngularJS148 
+    FoBo.InitParam.ToolKit=FoBo.AJMaterial100
     FoBo.init() 
     
     //Show the spinny image when an Ajax call starts

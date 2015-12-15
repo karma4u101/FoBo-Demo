@@ -4,37 +4,23 @@
     <title>Home</title>
   </head>
   <body data-lift-content-id="main">
-    <div id="main" data-lift="surround?with=default;at=content">
+
+    <md-content id="main" data-lift="surround?with=default;at=content" class="md-padding" layout="row" layout-wrap layout-align="center start">
     
-    <md-content flex class="md-padding" >
       <div layout="column" layout-fill layout-align="top left">
         <h1 >Welcome to your project!</h1>
         <p><span data-lift="helloWorld.howdy">Welcome to your Lift app at <span id="time">Time goes here</span></span></p>
-        
+           
         <md-card>
-          <img ng-src="assets/images/20150711_145645.jpg" class="md-card-image" alt="Washed Out">
-          <md-card-content>
-          
+          <img ng-src="assets/images/20150711_145645.jpg" class="md-card-image" alt="The sky is the limit">
 
-          
+            <md-card-content>
+             
             <h2 class="md-title">Lift v2.6 Template Applications</h2>
             <span data-lift="Loc?locid=index.card.content.text"> 
               Index card content text goes here 
             </span> 
-<!--             <p> -->
-<!--               <md-icon md-font-icon="fa fa-quote-left fa-2x pull-left "></md-icon> -->
-<!--               This is a demo of a <a target="_blank" href="http://liftweb.net/"> -->
-<!--               <md-tooltip md-direction="top"> -->
-<!--                 The most powerful, most secure web framework available today. It simply rocks! -->
-<!--               </md-tooltip>Lift</a>  -->
-<!--               (starter) Template Application. Several flavors of Lift (starter) Template Applications  -->
-<!--               is available on Github for you convenience, they are excellent starting point for new  -->
-<!--               Lift application project's making it super easy to get started with Lift. -->
-<!--             </p>  -->
-<!--             <p> -->
-<!--               Just clone the code on Github, read a few steps of instructions and you will have a Lift  -->
-<!--               Application up and running within a few minutes. -->
-<!--             </p> -->
+
             <div class="ng-scope layout-row" layout-sm="column" layout="row">
             <md-whiteframe class="md-whiteframe-6dp notice flex-gt-sm-66 flex-100" flex="100" layout layout-align="left center">
             <h4>
@@ -45,6 +31,7 @@
             </md-whiteframe>
             </div>            
           </md-card-content>
+          
           <md-card-actions layout="row" layout-align="end center">
             <md-button class="md-raised md-primary" target="_blank" ng-href="https://github.com/lift/lift_26_sbt/">
               <md-icon md-font-icon="fa fa-github-square fa-2x"></md-icon> <b> Lift Templates on Github</b>
@@ -52,17 +39,10 @@
            <md-button class="md-raised md-primary" target="_blank" ng-href="http://liftweb.net/">
              <md-icon  aria-label="Lift"  md-svg-icon="assets/images/lift_24px.svg"></md-icon> <b> Lift</b>
             </md-button>           
-
-          </md-card-actions>
+          </md-card-actions> 
         </md-card>        
-        
-<!--          <md-whiteframe class="md-whiteframe-6dp" flex-sm="45" flex-gt-sm="35" flex-gt-md="25" layout layout-align="center center"> -->
-<!--          <span>.md-whiteframe-6dp</span> -->
-<!--          </md-whiteframe> -->
-<!--         <p> -->
-<!--         The left sidenav will 'lock open' on a medium (>=960px wide) device. -->
-<!--         <br> -->
-<!--         The right sidenav will focus on a specific child element. -->
+       
+                              
         
         <div hide-gt-md>
           <md-button ng-click="toggleLeft()" class="md-primary" >Toggle left</md-button>or use the menu icon on the top bar to toggle the left navbar.
@@ -72,13 +52,9 @@
         </div>
        
       </div>
-      
-      
+            
     </md-content>
-        
 
-      
-    </div>
   </body>
 </html>
 
