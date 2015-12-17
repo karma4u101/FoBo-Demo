@@ -50,6 +50,9 @@ a.navlist{
 /* 	background:yellow; */
 }
 
+md-input-container > div.label {
+	color: rgba(0, 0, 0, 0.26);
+}
 /*Lift stuff*/
 
 

@@ -126,11 +126,11 @@ class Boot {
         S.loc("StaticContent" , scala.xml.Text("Static Content")),
         LocGroup("lg2","topRight") ))
         
-    val twbs       = Menu(Loc("Bootstrap3", 
-        Link(List("bootstrap301"), true, "/bootstrap301/index"),
-        S.loc("Bootstrap3" , scala.xml.Text("Bootstrap3")),
-        LocGroup("lg2"),
-        FoBo.TBLocInfo.LinkTargetBlank ))
+    val AMDesign       = Menu(Loc("AMDesign", 
+        ExtLink("https://material.angularjs.org/"), 
+        S.loc("AMDesign" , scala.xml.Text("Angular Material")),
+        LocGroup("lg2")/*,
+        FoBo.TBLocInfo.LinkTargetBlank */ ))   
      
     val FLTDemo       = Menu(Loc("FLTDemo", 
         ExtLink("http://www.media4u101.se/fobo-lift-template-demo/"), 
@@ -141,7 +141,7 @@ class Boot {
     def sitemap = SiteMap(
         home          >> LocGroup("lg1"),
         static,
-        twbs,
+        AMDesign,
         FLTDemo,
         ddLabel1
 //        ddLabel1      >> LocGroup("topRight") >> PlaceHolder submenus (

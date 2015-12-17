@@ -7,12 +7,12 @@
 
     <md-content id="main" data-lift="surround?with=default;at=content" class="md-padding" layout="row" layout-wrap layout-align="center start">
     
-      <div layout="column" layout-fill layout-align="top left">
+      <div data-layout="column" data-layout-fill data-layout-align="top left">
         <h1 >Welcome to your project!</h1>
         <p><span data-lift="helloWorld.howdy">Welcome to your Lift app at <span id="time">Time goes here</span></span></p>
            
         <md-card>
-          <img ng-src="assets/images/20150711_145645.jpg" class="md-card-image" alt="The sky is the limit">
+          <img data-ng-src="assets/images/20150711_145645.jpg" class="md-card-image" alt="The sky is the limit">
 
             <md-card-content>
              
@@ -21,7 +21,7 @@
               Index card content text goes here 
             </span> 
 
-            <div class="ng-scope layout-row" layout-sm="column" layout="row">
+            <div class="ng-scope layout-row" data-layout-sm="column" data-layout="row">
             <md-whiteframe class="md-whiteframe-6dp notice flex-gt-sm-66 flex-100" flex="100" layout layout-align="left center">
             <h4>
               <md-icon md-font-icon="fa fa-exclamation-triangle"></md-icon>
@@ -41,20 +41,15 @@
             </md-button>           
           </md-card-actions> 
         </md-card>        
-       
-                              
-        
-        <div hide-gt-md>
+                    
+        <div data-hide-gt-md>
           <md-button ng-click="toggleLeft()" class="md-primary" >Toggle left</md-button>or use the menu icon on the top bar to toggle the left navbar.
         </div>
         <div>
           <md-button ng-click="toggleRight()" class="md-primary">Toggle right</md-button>
         </div>
-       
       </div>
-            
     </md-content>
-
   </body>
 </html>
 

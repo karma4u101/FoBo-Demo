@@ -124,6 +124,7 @@ class Boot {
         S.loc("Bootstrap3" , scala.xml.Text("Bootstrap3")),
         LocGroup("lg2"),
         FoBo.TBLocInfo.LinkTargetBlank ))
+       
      
     val FLTDemo       = Menu(Loc("FLTDemo", 
         ExtLink("http://www.media4u101.se/fobo-lift-template-demo/"), 

@@ -1,4 +1,4 @@
-<html ng-app="FoBoDemo" ng-csp="">
+<html data-ng-app="FoBoDemo" data-ng-csp="">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 <meta name="description" content="" />
@@ -15,21 +15,11 @@
 </head>
 <body >
 
-<!-- md navbar -->
-
-<!-- md sidenav -->
-
-
-
-    
-<div ng-controller="AppCtrl" layout="column" style="min-height:500px;">
-
+<div data-ng-controller="AppCtrl" data-layout="column" style="min-height:500px;">
 
   <span data-lift='embed?what=_mdTopToolbar'> Embedding the TopToolbar here</span>
 
-
-
-  <section layout="row" flex>
+  <section data-layout="row" data-flex>
   
     <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
       <md-toolbar class="md-hue-2">
@@ -40,40 +30,61 @@
         <md-list>         
           <md-list-item md-ink-ripple>
             <span data-lift="Menu.item?name=Home;?linkToSelf=true;?a:class=navlist">
-             <md-icon md-font-icon="fa fa-home"> <span data-lift="Loc.i">Home</span>
+             <span data-lift="Loc.i">Home</span>
             </span>
           </md-list-item> 
+         
+                               
+          
+          
           <md-list-item data-lift='test_cond.loggedout' md-ink-ripple>
             <span data-lift="Menu.item?name=Login;?linkToSelf=true;?a:class=navlist">
-             <md-icon md-font-icon="fa fa-user"> <span data-lift="Loc.i">fobo.menu.loc.login</span>
+              <span data-lift="Loc.i">fobo.menu.loc.login</span>
             </span>
           </md-list-item> 
           <md-list-item data-lift='test_cond.loggedout' md-ink-ripple>
             <span data-lift="Menu.item?name=CreateUser;?linkToSelf=true;?a:class=navlist">
-             <md-icon md-font-icon="fa fa-pencil"> <span data-lift="Loc.i">fobo.menu.loc.sign.up</span>
+             <span data-lift="Loc.i">fobo.menu.loc.sign.up</span>
             </span>
           </md-list-item>  
           <md-list-item data-lift='test_cond.loggedout' md-ink-ripple>
             <span data-lift="Menu.item?name=LostPassword;?linkToSelf=true;?a:class=navlist;">
-             <md-icon md-font-icon="fa fa-envelope"> <span data-lift="Loc.i">fobo.menu.loc.lost.password</span>
+             <span data-lift="Loc.i">fobo.menu.loc.lost.password</span>
             </span>
           </md-list-item>   
           
           <md-list-item data-lift='test_cond.loggedin' md-ink-ripple>
             <span data-lift="Menu.item?name=EditUser;?linkToSelf=true;?a:class=navlist;">
-             <md-icon md-font-icon="fa fa-pencil"> <span data-lift="Loc.i">fobo.menu.loc.edit.user</span>
+              <span data-lift="Loc.i">fobo.menu.loc.edit.user</span>
             </span>
           </md-list-item> 
           <md-list-item data-lift='test_cond.loggedin' md-ink-ripple>
             <span data-lift="Menu.item?name=ChangePassword;?linkToSelf=true;?a:class=navlist;">
-             <md-icon md-font-icon="fa fa-pencil"> <span data-lift="Loc.i">fobo.menu.loc.change.password</span>
+              <span data-lift="Loc.i">fobo.menu.loc.change.password</span>
             </span>
           </md-list-item>  
           <md-list-item data-lift='test_cond.loggedin' md-ink-ripple>
             <span data-lift="Menu.item?name=Logout;?linkToSelf=true;?a:class=navlist;">
-             <md-icon md-font-icon="fa fa-user"> <span data-lift="Loc.i">fobo.menu.loc.logout</span>
+              <span data-lift="Loc.i">fobo.menu.loc.logout</span>
             </span>
-          </md-list-item>                      
+          </md-list-item>        
+          
+          <md-list-item md-ink-ripple>
+            <span data-lift="Menu.item?name=Static;?linkToSelf=true;?a:class=navlist">
+              <span data-lift="Loc.i">StaticContent</span>
+            </span>
+          </md-list-item>          
+          <md-list-item md-ink-ripple>
+            <span data-lift="Menu.item?name=AMDesign;?a:class=navlist?a:target=_blank">
+              <span data-lift="Loc.i">AMDesign</span>
+            </span>
+          </md-list-item>   
+          <md-list-item md-ink-ripple>
+            <span data-lift="Menu.item?name=FLTDemo;?a:class=navlist?a:target=_blank">
+              <span data-lift="Loc.i">FLTDemo</span>
+            </span>
+          </md-list-item>            
+                        
         </md-list>
         <md-button ng-click="close()" class="md-primary md-raised" hide-gt-md>
           Close Sidenav Left
@@ -98,7 +109,7 @@
           <md-input-container>
             <label for="testInput">Test input</label>
             <input type="text" id="testInput"
-                   ng-model="data" md-sidenav-focus>
+                   data-ng-model="data" data-md-sidenav-focus>
           </md-input-container>
         </form>
         <md-button ng-click="close()" class="md-primary">
@@ -109,8 +120,6 @@
 
   </section>
 </div>
-
-
 
 <!-- fotter -->	
 
