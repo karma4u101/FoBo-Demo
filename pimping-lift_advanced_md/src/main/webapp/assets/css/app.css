@@ -30,13 +30,13 @@ md-menu-item > .md-button {
     display: inline;
 }
 
-md-toast.md-success-toast-theme {
+md-toast.md-success-toast-theme > div.md-toast-content {
     background-color: #5cb85c;
 }
-md-toast.md-warning-toast-theme {
+md-toast.md-warning-toast-theme > div.md-toast-content {
     background-color: #f0ad4e;
 }
-md-toast.md-error-toast-theme {
+md-toast.md-error-toast-theme > div.md-toast-content {
     background-color: #d9534f;
 }
 
