@@ -35,8 +35,8 @@ class Boot extends Loggable {
     FoBo.InitParam.ToolKit=FoBo.Bootstrap336 
     FoBo.InitParam.ToolKit=FoBo.FontAwesome430 
     FoBo.InitParam.ToolKit=FoBo.Pace0415
-    FoBo.InitParam.ToolKit=FoBo.AngularJS141
-    FoBo.InitParam.ToolKit=FoBo.AJMaterial100RC
+    FoBo.InitParam.ToolKit=FoBo.AngularJS148
+    FoBo.InitParam.ToolKit=FoBo.AJMaterial100
     FoBo.init()  
     
     // where to search snippet
