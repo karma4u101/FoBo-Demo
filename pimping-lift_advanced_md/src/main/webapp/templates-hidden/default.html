@@ -29,7 +29,7 @@
         
         <md-list>         
           <md-list-item md-ink-ripple>
-            <span data-lift="Menu.item?name=Home;?linkToSelf=true;?a:class=navlist">
+            <span data-lift="Menu.item?name=Home;?linkToSelf=true;?a:class=navlist with-border;">
              <span data-lift="Loc.i">Home</span>
             </span>
           </md-list-item> 
@@ -38,49 +38,49 @@
           
           
           <md-list-item data-lift='test_cond.loggedout' md-ink-ripple>
-            <span data-lift="Menu.item?name=Login;?linkToSelf=true;?a:class=navlist">
+            <span data-lift="Menu.item?name=Login;?linkToSelf=true;?a:class=navlist with-border;">
               <span data-lift="Loc.i">fobo.menu.loc.login</span>
             </span>
           </md-list-item> 
           <md-list-item data-lift='test_cond.loggedout' md-ink-ripple>
-            <span data-lift="Menu.item?name=CreateUser;?linkToSelf=true;?a:class=navlist">
+            <span data-lift="Menu.item?name=CreateUser;?linkToSelf=true;?a:class=navlist with-border;">
              <span data-lift="Loc.i">fobo.menu.loc.sign.up</span>
             </span>
           </md-list-item>  
           <md-list-item data-lift='test_cond.loggedout' md-ink-ripple>
-            <span data-lift="Menu.item?name=LostPassword;?linkToSelf=true;?a:class=navlist;">
+            <span data-lift="Menu.item?name=LostPassword;?linkToSelf=true;?a:class=navlist with-border;">
              <span data-lift="Loc.i">fobo.menu.loc.lost.password</span>
             </span>
           </md-list-item>   
           
           <md-list-item data-lift='test_cond.loggedin' md-ink-ripple>
-            <span data-lift="Menu.item?name=EditUser;?linkToSelf=true;?a:class=navlist;">
+            <span data-lift="Menu.item?name=EditUser;?linkToSelf=true;?a:class=navlist with-border;">
               <span data-lift="Loc.i">fobo.menu.loc.edit.user</span>
             </span>
           </md-list-item> 
           <md-list-item data-lift='test_cond.loggedin' md-ink-ripple>
-            <span data-lift="Menu.item?name=ChangePassword;?linkToSelf=true;?a:class=navlist;">
+            <span data-lift="Menu.item?name=ChangePassword;?linkToSelf=true;?a:class=navlist with-border;">
               <span data-lift="Loc.i">fobo.menu.loc.change.password</span>
             </span>
           </md-list-item>  
           <md-list-item data-lift='test_cond.loggedin' md-ink-ripple>
-            <span data-lift="Menu.item?name=Logout;?linkToSelf=true;?a:class=navlist;">
+            <span data-lift="Menu.item?name=Logout;?linkToSelf=true;?a:class=navlist with-border;">
               <span data-lift="Loc.i">fobo.menu.loc.logout</span>
             </span>
           </md-list-item>        
           
           <md-list-item md-ink-ripple>
-            <span data-lift="Menu.item?name=Static;?linkToSelf=true;?a:class=navlist">
+            <span data-lift="Menu.item?name=Static;?linkToSelf=true;?a:class=navlist with-border;">
               <span data-lift="Loc.i">StaticContent</span>
             </span>
           </md-list-item>          
           <md-list-item md-ink-ripple>
-            <span data-lift="Menu.item?name=AMDesign;?a:class=navlist?a:target=_blank">
+            <span data-lift="Menu.item?name=AMDesign;?a:class=navlist with-border;?a:target=_blank">
               <span data-lift="Loc.i">AMDesign</span>
             </span>
           </md-list-item>   
           <md-list-item md-ink-ripple>
-            <span data-lift="Menu.item?name=FLTDemo;?a:class=navlist?a:target=_blank">
+            <span data-lift="Menu.item?name=FLTDemo;?a:class=navlist with-border;?a:target=_blank">
               <span data-lift="Loc.i">FLTDemo</span>
             </span>
           </md-list-item>            
@@ -121,7 +121,13 @@
   </section>
 </div>
 
-<!-- fotter -->	
+<fotter data-layout="row" data-flex data-layout data-layout-align="center center" data-layout-padding>
+  <div class="alt" >
+    <a href="http://www.liftweb.net"><i>Lift</i></a> is Copyright 
+    2007-2015 WorldWide Conferencing, LLC. Distributed under an Apache 2.0 License.
+  </div>
+</fotter>
+
 
 	<script type="text/javascript" src="/classpath/fobo/angular.js"></script>
 	<script type="text/javascript" src="/classpath/fobo/angular-aria.js"></script>
