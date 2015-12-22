@@ -1,1 +1,1 @@
-var app = angular.module('foboDemoApp',['ngGrid','ui.bootstrap']);
+var app = angular.module('foboDemoApp',['ui.grid','ui.bootstrap']);

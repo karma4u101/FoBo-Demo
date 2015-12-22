@@ -58,7 +58,8 @@ class Boot {
     FoBo.InitParam.ToolKit=FoBo.Bootstrap336
     FoBo.InitParam.ToolKit=FoBo.FontAwesome430
     FoBo.InitParam.ToolKit=FoBo.AngularJS148 //AngularJS141
-    FoBo.InitParam.ToolKit=FoBo.AJSNGGrid207
+    //FoBo.InitParam.ToolKit=FoBo.AJSNGGrid207
+    FoBo.InitParam.ToolKit=FoBo.AJSUIGrid307
     FoBo.InitParam.ToolKit=FoBo.AJSUIBootstrap0100
     FoBo.InitParam.ToolKit=FoBo.PrettifyJun2011
     FoBo.init() 
