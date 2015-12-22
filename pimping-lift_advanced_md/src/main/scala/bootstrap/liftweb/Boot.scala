@@ -106,7 +106,7 @@ class Boot {
     def userDDLabel:NodeSeq = { 
       def gravatar:NodeSeq = {
         val gurl = Gravatar(User.currentUser.map(u => u.email.get).openOrThrowException("Something wicked happened #1")).size(36).avatarUrl
-        <img class="responsive-img img-rounded gravatar" src={gurl}/> 
+        <img class="gravatar" src={gurl}/> 
       }      
       lazy val username = User.currentUser.map(u => u.firstName + " "+ u.lastName)
       User.loggedIn_? match {
@@ -115,7 +115,7 @@ class Boot {
       }
     }
 
-    val ddLabel1   = Menu(userDDLabel) / "ddlabel1"
+    //val ddLabel1   = Menu(userDDLabel) / "ddlabel1"
     val divider1   = Menu("divider1") / "divider1"
     val home       = Menu.i("Home") / "index" 
     
@@ -142,8 +142,8 @@ class Boot {
         home          >> LocGroup("lg1"),
         static,
         AMDesign,
-        FLTDemo,
-        ddLabel1
+        FLTDemo
+//        ddLabel1
 //        ddLabel1      >> LocGroup("topRight") >> PlaceHolder submenus (
 //            divider1  /*>> FoBo.TBLocInfo.Divider*/ >> userMenu
 //            )

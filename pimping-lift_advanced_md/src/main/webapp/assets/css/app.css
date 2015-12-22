@@ -1,3 +1,8 @@
+img.gravatar{
+  margin-top:-2px;
+  margin-left:-8px; 
+
+}
 a {
   color: #106CC8;
   text-decoration: none;
@@ -14,6 +19,9 @@ a:hover, a:focus {
 }
 a.md-button {
   border-bottom: none;
+}
+button > md-icon {
+	height: auto;
 }
 
 md-whiteframe.notice {

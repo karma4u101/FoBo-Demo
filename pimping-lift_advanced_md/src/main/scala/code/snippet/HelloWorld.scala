@@ -21,7 +21,7 @@ class HelloWorld {
   
     def userDDLabel:NodeSeq = { 
       def gravatar:NodeSeq = {
-        val gurl = Gravatar(User.currentUser.map(u => u.email.get).openOrThrowException("Something wicked happened #1")).size(50).avatarUrl
+        val gurl = Gravatar(User.currentUser.map(u => u.email.get).openOrThrowException("Something wicked happened #1")).size(45).avatarUrl
         <img class="gravatar" src={gurl}/> 
       }      
       lazy val username = User.currentUser.map(u => u.firstName + " "+ u.lastName)
