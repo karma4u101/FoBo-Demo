@@ -20,3 +20,4 @@ project/plugins/project/
 /.cache-main
 /lift_proto.db.h2.db
 /lift_proto.db.lock.db
+/README.md~
