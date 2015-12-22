@@ -13,13 +13,16 @@
 
 		<div class="row">
 			<div class="col-sm-12">
-				<a id="section-2"></a>
-				<h2><span data-lift="Loc.i">Section 2</span></h2>
+				<div id="section-2"></div>
+				<div id="/section-2"></div>
+				<h2 ><span data-lift="Loc.i">Section 2</span></h2>
 
                 <p>This section contains Angular examples alongside with descriptions of the involved functions and code. 
-                We start with a trivial example, proceed with fairly simple <mark>round trip</mark> example and in the 
-                end we will use <mark>round trip's</mark> to implement a excel like data grid example with CRUD 
-                back-end data functionality that interact with the server using Lift 3's round trip functions.</p>  
+                We start with a trivial example, proceeds with a fairly simple <mark>round trip</mark> example with a
+                thorough explanation of how it utilizes the <mark>round trip</mark> concept. 
+                We then proceed with a serie of example where we add more and more functionality to a data-grid that 
+                in the end implements a "excel like" data-grid with CRUD data functionality that interact with the 
+                server using Lift 3's round trip functions.</p>  
                 <p>For overall setup and configuration of required resources see the <a href="#section-1" target="_self"><span data-lift="Loc.i">Section 1</span></a> 
                 section. </p>              
 
@@ -47,8 +50,9 @@
 
 				<div class="row">
 					<div class="col-sm-12">
-						<a id="section-2-1"></a>
-						<h3>Example 1:</h3>
+						<div id="section-2-1"></div>
+						<div id="/section-2-1"></div>
+						<h3 >Example 1:</h3>
 				<p>
 					If you are new to Angular this example is for you, taken from the introduction on <a target="_blank" 
 						href="http://angularjs.org/">AngularJS home <i class="fa fa-external-link"></i></a>, 
@@ -110,7 +114,7 @@
 						<span data-lift='embed?what=embeddedPretty/ex1-formWithNgModule'>
 							Embedding the prettyprint ex1 form code here</span> 
 						
-						<p>This example we are creating a Angular model 
+						<p>In this example we are creating a Angular model 
 						<a target="_blank" href="https://docs.angularjs.org/api/ng/directive/ngModel">ngModel <i class="fa fa-external-link"></i></a> 
 						(<code>ng-model="yourName"</code>) with the assignable <a target="_blank" href="https://docs.angularjs.org/guide/expression">Angular expression <i class="fa fa-external-link"></i></a> 
 						<code>"yourName"</code>, we are then using this expression in a binding <code><span>{{</span> expression <span>}}</span></code> on the heading as shown below.</p>
@@ -126,8 +130,9 @@
 
 				<div class="row">
 					<div class="col-sm-12 ">
-						<a id="section-2-2"></a>
-						<h3>Example 2:</h3>
+						<div id="section-2-2"></div>
+						<div id="/section-2-2"></div>
+						<h3 >Example 2:</h3>
 						<p>In this example we are doing a Lift 3 round trip to the server and back. 
 						Still we are keeping the function simple to get you familiar with the concept.</p>
 						 
@@ -173,9 +178,9 @@
 					<h4>
 						<i class="fa fa-exclamation-triangle fa-2x"></i> Modeling Lift Round Trips!
 					</h4>
-					    <p>As there are many ways to model the Lift round trips functionality you may see other blog post 
-					    or tutorials doing thing's in a slightly different way, my hope is that the pattern used 
-					    in this tutorial is simple enough that you will understand and see the overall "wiring" yet 
+					    <p>As there are many ways to model the Lift round trips functionality you may see other blog post,  
+					    articles or tutorials  doing thing's in a slightly different way, my hope is that the pattern used 
+					    in this article is simple enough that you will understand and see the overall "wiring" yet 
 					    flexible enough for most use cases.</p>
 				</div>
 				
@@ -262,7 +267,7 @@
 					    Scala functions: <code>NodeSeq => NodeSeq</code>.</p> 
 					    
 					    <p>Below is the actual snippet implementation that renders the <i>hook up</i> functions as javascript code 
-					    in the bottom of the html page. Our use case specific <i>hook up</i> functions is added by calling 
+					    that appends to lift's page script file. Our use case specific <i>hook up</i> functions is added by calling 
 					    our <code>getRoundTrips</code> function. The essential Lift round trip building magic is condensed into
 					    the <code>buildRoundtrip</code> <code>toJsCmd</code> transformation. 
 					    In this example our use case specific server side round trip functions is declared in the <code>SimpleRT</code> trait, 
@@ -336,7 +341,7 @@
 						<a target="_blank" href="http://slick.typesafe.com/">Slick <i class="fa fa-external-link"></i></a> 
 						and display it using the 
 						<a target="_blank" href="http://angular-ui.github.io/ng-grid/">Angular NG-Grid UI module <i class="fa fa-external-link"></i></a>.</p> 
-						<p>In example 4 and 5 we will expand up on the functionality in example 3 to in the grid have, not only, read 
+						<p>In example 4 to 6 we will expand up on the functionality in example 3 to in the grid have, not only, read 
 						operations but also create, update and delete operations. 
 						</p>
 					</div>
@@ -345,8 +350,9 @@
 
 				<div class="row">
 					<div class="col-sm-12 ">
-						<a id="section-2-3"></a>
-						<h3>Example 3:</h3>
+						<div id="section-2-3"></div>
+						<div id="/section-2-3"></div>
+						<h3 >Example 3:</h3>
 						<p>Using the <a target="_blank" href="http://angular-ui.github.io/ng-grid/">Angular NG-Grid UI module <i class="fa fa-external-link"></i></a>, 
 						   provided via the <span data-lift="Menu.item?name=FLTDemo;">FoBo module <i class="fa fa-external-link"></i></span>, 
 						   this example is doing a round trip to the server to fetch
@@ -400,8 +406,9 @@
 
 				<div class="row">
 					<div class="col-sm-12 ">
-						<a id="section-2-4"></a>
-						<h3>Example 4:</h3>
+						<div id="section-2-4"></div>
+						<div id="/section-2-4"></div>
+						<h3 >Example 4:</h3>
 						<p>Building on example 3 we are now adding the ability to create and <b>add new Person</b> data to the back-end store and display 
 						it in the grid by doing a roundtrip to the server to add the Person data and then update the grid with the new data.</p>
 					</div>
@@ -446,7 +453,7 @@
 							the prettyprint ex4 code here</span>
 							
 				<h4>The controller</h4>			
-				<p>Added to the controller compared to example 2 is the <code>$scope.doAdd</code> function 
+				<p>Added to the controller compared to example 3 is the <code>$scope.doAdd</code> function 
 				where in we now also is sending json data from the client to the server via the round 
 				trip function <code>addPersonCmd</code>. Then when data has been inserted into the back-end 
 				store we also make sure the grid is updated with the newly added data.</p>				
@@ -473,8 +480,9 @@
 
 				<div class="row">
 					<div class="col-sm-12">
-						<a id="section-2-5"></a>
-						<h3>Example 5:</h3>
+						<div id="section-2-5"></div>
+						<div id="/section-2-5"></div>
+						<h3 >Example 5:</h3>
 						<p>Building on example 3 and 4 we now also add <b>excel like cell edit</b> operations. 
 						We also add a discrete <b>delete button</b> column for <b>entity delete</b> operations and
 						as before we have the <b>add</b> function. </p>
@@ -542,14 +550,15 @@
 				
 				<div class="row">
 					<div class="col-sm-12">
-						<a id="section-2-6"></a>
-						<h3>Example 6:</h3>
+						<div id="section-2-6"></div>
+						<div id="/section-2-6"></div>
+						<h3 >Example 6:</h3>
 						<p>Building on example 3 - 5, while the view stays the same as in example 5   
-						we are now doing some refactoring to move out the back-end calls (the round trip calls) 
+						we have now done some refactoring and moved out the back-end calls (the round trip calls) 
 						from the <code>PersonGridCtrl</code> into a <code>PersonFactory</code> service. 
 						The <code>PersonFactory</code> is a angular factory service 
 						<a target="_blank" href="http://blog.xebia.com/2013/09/01/differences-between-providers-in-angularjs/">provider <i class="fa fa-external-link"></i></a>.
-						This separation of concerns also makes it easy to add some client side 
+						This separation of concerns has also made it easy to add some simple client side 
 						cashing to avoid unnecessary server calls. 
 						</p>
 					</div>

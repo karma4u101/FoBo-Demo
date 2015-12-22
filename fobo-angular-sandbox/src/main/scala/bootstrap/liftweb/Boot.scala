@@ -33,7 +33,7 @@ class Boot {
 
       DB.defineConnectionManager(DefaultConnectionIdentifier, vendor)
     }
-
+ 
     //Init slick tables 
     SlickHelper.initSchema 
     SlickHelper.demoRun
@@ -54,11 +54,10 @@ class Boot {
     //Init the FoBo - Front-End Toolkit module, 
     //see http://liftweb.net/lift_modules for more info
     //FoBo.InitParam.JQuery=FoBo.JQuery1111 //FoBo.JQuery1102  
-    FoBo.InitParam.JQuery=FoBo.JQuery1111 //FoBo.JQuery191  
-    //FoBo.InitParam.JQuery=FoBo.JQueryMigrate121    
-    FoBo.InitParam.ToolKit=FoBo.Bootstrap320
-    FoBo.InitParam.ToolKit=FoBo.FontAwesome410
-    FoBo.InitParam.ToolKit=FoBo.AngularJS1219
+    FoBo.InitParam.JQuery=FoBo.JQuery1113    
+    FoBo.InitParam.ToolKit=FoBo.Bootstrap336
+    FoBo.InitParam.ToolKit=FoBo.FontAwesome430
+    FoBo.InitParam.ToolKit=FoBo.AngularJS148 //AngularJS141
     FoBo.InitParam.ToolKit=FoBo.AJSNGGrid207
     FoBo.InitParam.ToolKit=FoBo.AJSUIBootstrap0100
     FoBo.InitParam.ToolKit=FoBo.PrettifyJun2011
@@ -82,13 +81,30 @@ class Boot {
     LiftRules.htmlProperties.default.set((r: Req) =>
       new Html5Properties(r.userAgent))    
       
+      //this is not working as we are no longer allowing (see securityRules below) 
+      //in-line scripts in the page 
     LiftRules.noticesAutoFadeOut.default.set( (notices: NoticeType.Value) => {
         notices match {
           case NoticeType.Notice => Full((8 seconds, 4 seconds))
           case _ => Empty
         }
      }
-    ) 
+    )
+    
+    
+    LiftRules.securityRules = () => {
+      SecurityRules(content = Some(ContentSecurityPolicy(
+        scriptSources = List(
+            ContentSourceRestriction.UnsafeEval,
+            ContentSourceRestriction.Self),
+        frameSources = List(
+            ContentSourceRestriction.Host("https://www.youtube.com/embed/"),
+            ContentSourceRestriction.Host("http://ghbtns.com/github-btn.html")),  
+        styleSources = List(
+            ContentSourceRestriction.UnsafeInline,
+            ContentSourceRestriction.Self)
+            )))
+    } 
     
     // Make a transaction span the whole HTTP request
     S.addAround(DB.buildLoanWrapper)

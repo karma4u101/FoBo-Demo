@@ -1,6 +1,6 @@
 moduleName := "FoBo-Angular-Sandbox"
 
-version := "0.5.7-SNAPSHOT"
+version := "0.5.8-SNAPSHOT"
 
 organization := "net.liftweb"
 
@@ -8,9 +8,9 @@ liftVersion := "3.0-SNAPSHOT"
 
 liftEdition <<= liftVersion apply { _.substring(0,3) }
 
-scalaVersion := "2.11.7"
+scalaVersion := "2.11.4"
 
-crossScalaVersions := Seq("2.11.2") 
+crossScalaVersions := Seq("2.11.4") 
 
 //javaOptions in run += "-Drun.mode=production"
 
@@ -28,7 +28,7 @@ scalacOptions ++= Seq("-deprecation", "-unchecked")
 libraryDependencies <++= (liftVersion,liftEdition,version) { (v,e,mv) =>
     "net.liftweb"     %% "lift-webkit"            % v    % "compile" ::
     "net.liftweb"     %% "lift-mapper"            % v    % "compile" ::
-    "net.liftmodules" %% ("fobo"+"_"+e)          % "1.4" % "compile" ::
+    "net.liftmodules" %% ("fobo"+"_"+e)          % "1.5-SNAPSHOT" % "compile" ::
     Nil
 }
 

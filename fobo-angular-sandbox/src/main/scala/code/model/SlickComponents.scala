@@ -37,19 +37,11 @@ trait PersonComponent extends SlickComponent {
     p <- persons; if p.id === id
   } yield p  
   
-  
-  /*
-  def insertPerson(person: Person)(implicit session: Session): Person = {
-    val id = personsAutoInc.insert(person.name, person.age)
-    person.copy(name = person.name, age = person.age)
-  } 
-  */
-  def updatePerson(person: Person): Person = db.withSession {
+  def updatePerson(person: Person): Unit = db.withSession {
     implicit session =>
     logger.debug("updatePerson person="+person.toString)  
     val p = findGById(person.id)
     p.update(person.id,person.name,person.age)
-    person.copy(name = person.name, age = person.age)
   }
   
   def deletePerson(person: Person): Unit = db.withSession {
@@ -57,16 +49,13 @@ trait PersonComponent extends SlickComponent {
     logger.debug("deletePerson person="+person.toString)  
     val p = findGById(person.id)
     val affectedRowsCount = p.delete
-    logger.info("deletePerson affectedRowsCount="+affectedRowsCount)
-    val invoker = p.deleteInvoker
-    val statement = p.deleteStatement    
+    logger.debug("deletePerson affectedRowsCount="+affectedRowsCount) 
   }  
     
-  def insertPerson(person: Person): Person = db.withSession {
+  def insertPerson(person: Person): Unit = db.withSession {
     implicit session =>
     logger.debug("insertPerson person="+person.toString)  
     val id = personsAutoInc.insert(person.name, person.age)
-    person.copy(id=id,name = person.name, age = person.age)
   }   
   
   private val queryAll = for (p <- persons) yield (p.id,p.name,p.age)

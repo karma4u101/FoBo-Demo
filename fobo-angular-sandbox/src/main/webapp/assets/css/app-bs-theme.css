@@ -11,6 +11,11 @@ body { padding-top: 70px; }
  padding: 8px 15px;
 }
 
+.rt-nav {
+margin-bottom: 0;
+border-bottom: 0;
+}
+
 /* Main navigation */
 .navbar {
     background-image: linear-gradient(to bottom, #003366 0%, #006699 100%);
@@ -306,8 +311,15 @@ a.list-group-item:hover, a.list-group-item:focus {
 #section-3, #section-3-1,#section-3-2,#section-3-3,#section-3-4,#section-3-5,
 #section-4, #section-4-1,#section-4-2,#section-4-3,#section-4-4,#section-4-5 {
     position: relative;
-    top: -40px;
+    top: -50px;
 }
+
+#\/section-1, #s\/ection-1-1,#\/section-1-2,#\/section-1-3,#\/section-1-4,
+#\/section-2, #\/section-2-1,#\/section-2-2,#\/section-2-3,#\/section-2-4,#\/section-2-5,#\/section-2-6{
+    position: relative;
+    top: -50px;
+}
+
 /*end bootstrap theme*/
 
 /**/

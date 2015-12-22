@@ -11,14 +11,16 @@
 <section id="pretty">
 <span class="label label-default">RoundTripBindingInjector.scala</span>
 <pre class="prettyprint linenums scala">
-/*This snippet is injecting the roundtrip scripts into the tail of the html page body.*/
+/*This snippet is appending the roundtrip scripts into lift's page script file.*/
 class RoundTripBindingInjector extends PersonRT with SimpleRT {
   def render() : NodeSeq = {
     val functions = ((for {
       session &lt;- S.session
-    } yield &lt;lift:tail&gt;{Script(
-        JsRaw(s"var myRTFunctions = ${session.buildRoundtrip(getRoundTrips).toJsCmd}").cmd
-        )}&lt;/lift:tail&gt;) openOr NodeSeq.Empty)
+    } yield {
+       S.appendGlobalJs(JsRaw(s"var myRTFunctions = ${session.buildRoundtrip(getRoundTrips).toJsCmd}").cmd)
+       NodeSeq.Empty
+     }
+    ) openOr NodeSeq.Empty)
     functions
   }  
 }
