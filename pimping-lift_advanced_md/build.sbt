@@ -2,7 +2,7 @@ name := "Pimping-Lift-Advanced-MD"
 
 organization := "net.liftweb"
 
-version := "0.0.2-SNAPSHOT"
+version := "1.0.0-SNAPSHOT"
 
 liftVersion := "3.0-SNAPSHOT" //"2.6.2" // 
 
