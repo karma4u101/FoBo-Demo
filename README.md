@@ -10,10 +10,12 @@ Sandbox projects for [FoBo](https://github.com/karma4u101/FoBo) demos/articles/t
 - fobo-angular-sandbox -- sandbox for FoBo angular stuff (status: just some randome unmaintaned stuff)
 - fobo-bs3-sandbox -- A WIP FoBo boostrap 3 demo/tutorial (status: just some random unmaintaned stuff) 
 
+Most of the demos above kan be seen running via links at [FoBo Template Demo](http://www.media4u101.se/fobo-lift-template-demo/) 
+
 Quick Start
 -----------
 The only prerequisites for running a FoBo demo example is that you have Git and Java installed and configured on the target computer.
-You don't need to use it but the project also includes Eclipse and IDEA plug-in for browsing and following/working with the code, see the [Scala IDE Support] section bellow.   
+You don't need to use it but the project also includes Eclipse and IDEA plug-in for browsing and following/working with the code, see the [Scala IDE Support] section bellow. 
  
 1) Clone this project 
 
