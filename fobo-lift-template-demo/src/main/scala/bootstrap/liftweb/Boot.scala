@@ -36,7 +36,7 @@ class Boot extends Loggable {
     FoBo.InitParam.ToolKit=FoBo.FontAwesome430 
     FoBo.InitParam.ToolKit=FoBo.Pace0415
     FoBo.InitParam.ToolKit=FoBo.AngularJS148
-    FoBo.InitParam.ToolKit=FoBo.AJMaterial100
+    FoBo.InitParam.ToolKit=FoBo.AJMaterial101
     FoBo.init()  
     
     // where to search snippet
@@ -94,12 +94,12 @@ class Boot extends Loggable {
       new Html5Properties(r.userAgent))
 
     //notice fade out (start after x, fade out duration y)
-//    LiftRules.noticesAutoFadeOut.default.set((notices: NoticeType.Value) => {
-//      notices match {
-//        case NoticeType.Notice => Full((8 seconds, 4 seconds))
-//        case _                 => Empty
-//      }
-//    })
+    LiftRules.noticesAutoFadeOut.default.set((notices: NoticeType.Value) => {
+      notices match {
+        case NoticeType.Notice => Full((8 seconds, 4 seconds))
+        case _                 => Empty
+      }
+    })
     
     LiftRules.securityRules = () => {
       SecurityRules(content = Some(ContentSecurityPolicy(
@@ -182,9 +182,12 @@ object Paths {
     
   val roundTripDemo = Menu(Loc("fobo-angular-lift-roundtrips", ExtLink("http://www.media4u101.se/fobo-angular-lift-roundtrips/"), S.loc("fobo-angular-lift-roundtrips", Text("Lift round trip tutorial")) ,FoBo.TBLocInfo.LinkTargetBlank  ) )
   
-  val starterTemplateDemo = Menu(Loc("lift_advanced_bs3", ExtLink("http://www.media4u101.se/lift-advanced-bs3/"), S.loc("lift_advanced_bs3", Text("Lift TB3 templates")) ,FoBo.TBLocInfo.LinkTargetBlank  ) )
-  val starterTemplateGitHub = Menu(Loc("lift_advanced_bs3", ExtLink("http://www.media4u101.se/lift-advanced-bs3/"), S.loc("lift_advanced_bs3", Text("Lift TB3 templates")) ,FoBo.TBLocInfo.LinkTargetBlank  ) )
-  
+  val bsStarterTemplateDemo = Menu(Loc("lift_advanced_bs3", ExtLink("http://www.media4u101.se/lift-advanced-bs3/"), S.loc("lift_advanced_bs3", Text("Lift TB3 templates")) ,FoBo.TBLocInfo.LinkTargetBlank  ) )
+  val bsStarterTemplateGitHub = Menu(Loc("lift_advanced_bs3", ExtLink("http://www.media4u101.se/lift-advanced-bs3/"), S.loc("lift_advanced_bs3", Text("Lift TB3 templates")) ,FoBo.TBLocInfo.LinkTargetBlank  ) )
+
+  val mdStarterTemplateDemo = Menu(Loc("lift_advanced_md", ExtLink("http://www.media4u101.se/lift-advanced-md/"), S.loc("lift_advanced_md", Text("Lift MD templates")) ,FoBo.TBLocInfo.LinkTargetBlank  ) )
+  val mdStarterTemplateGitHub = Menu(Loc("lift_advanced_md", ExtLink("http://www.media4u101.se/lift-advanced-md/"), S.loc("lift_advanced_md", Text("Lift MD templates")) ,FoBo.TBLocInfo.LinkTargetBlank  ) )
+
   def sitemap = SiteMap(
       navHeader1 >> LocGroup("nldemo1") >> FoBo.TBLocInfo.NavHeader,
       index >> LocGroup("mdemo1","nldemo1"),
@@ -201,7 +204,8 @@ object Paths {
           foboApiDoc 
       ),
       content2DD >> LocGroup("liboDD2") >> PlaceHolder submenus ( 
-              starterTemplateDemo,
+              bsStarterTemplateDemo,
+              mdStarterTemplateDemo,
               roundTripDemo
       ), 
       nlHelp >> LocGroup("nldemo1"),
