@@ -4,6 +4,7 @@
 <meta name="description" content="" />
 <meta name="keywords" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="/assets/images/lift-icon.png" type="image/x-icon">
 <title data-lift="Menu.title">App:</title>
 <link href="/classpath/fobo/font-awesome.css" rel="stylesheet" type="text/css" />
 <link href="/classpath/fobo/angular-material.css" rel="stylesheet">
@@ -23,7 +24,7 @@
   
     <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
       <md-toolbar class="md-hue-2">
-        <h1 class="md-toolbar-tools">Sidenav Left</h1>
+        <h1 class="md-toolbar-tools"><span data-lift="Loc?locid=sidenav.left.label">Sidenav Left</span></h1>
       </md-toolbar>
       <md-content layout-padding ng-controller="LeftCtrl">
         
@@ -102,7 +103,7 @@
 
     <md-sidenav class="md-sidenav-right md-whiteframe-z2" md-component-id="right">
       <md-toolbar class="md-hue-2">
-        <h1 class="md-toolbar-tools">Sidenav Right</h1>
+        <h1 class="md-toolbar-tools"><span data-lift="Loc?locid=sidnav.right.label">Sidenav Right</span></h1>
       </md-toolbar>
       <md-content ng-controller="RightCtrl" layout-padding>
         <form>
@@ -113,7 +114,7 @@
           </md-input-container>
         </form>
         <md-button ng-click="close()" class="md-primary">
-          Close Sidenav Right
+          <span data-lift="Loc?locid=sidnav.right.close.button.txt">Close Sidenav Right</span>
         </md-button>
       </md-content>
     </md-sidenav>

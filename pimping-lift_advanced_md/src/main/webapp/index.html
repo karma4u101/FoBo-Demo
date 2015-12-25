@@ -8,50 +8,53 @@
     <md-content id="main" data-lift="surround?with=default;at=content" class="md-padding" layout="row" layout-wrap layout-align="center start">
     
       <div data-layout="column" data-layout-fill data-layout-align="top left">
-        <h1 >Welcome to your project!</h1>
-        <div><span data-lift="helloWorld.howdy">Welcome to your Lift app at <span id="time">Time goes here</span></span></div>
+        <h1 ><span data-lift="Loc?locid=index.welcome.label">Welcome to your project!</span></h1>
+        <div>
+          <span data-lift="helloWorld.howdy">
+            <span data-lift="Loc?locid=index.howdy.txt">Welcome to your Lift app at</span> <span id="time">Time goes here</span>
+          </span>
+        </div>
            
         <md-card>
           <img data-ng-src="assets/images/20150711_145645.jpg" class="md-card-image" alt="The sky is the limit">
-
-            <md-card-content>
-             
+          <md-card-content> 
             <h2 class="md-title">Lift v2.6 Template Applications</h2>
+           
             <span data-lift="Loc?locid=index.card.content.text"> 
               Index card content text goes here 
             </span> 
 
             <div class="ng-scope layout-row" data-layout-sm="column" data-layout="row">
-            <md-whiteframe class="md-whiteframe-4dp notice flex-gt-sm-66 flex-100" flex="100" layout layout-align="left center">
-            <div>
-            <h4>
-              <md-icon class="md-primary" md-font-icon="fa fa-2x fa-exclamation-triangle"></md-icon> Lift Template Application 
-            </h4>
-            <div>This Lift Template Application <a href="https://github.com/karma4u101/FoBo-Demo/tree/master/pimping-lift_advanced_md">pimping-lift_advanced_md</a> 
-              complements the traditional blueprint css Lift's template application with <a href="https://material.angularjs.org/">Angular Material Design</a> via the 
-              <a href="http://www.media4u101.se/fobo-lift-template-demo/">FoBo</a> <a href="http://liftweb.net/">Lift</a> 
-              <a href="http://liftweb.net/lift_modules">Module</a>.
-            </div>            
-            </div>
-            </md-whiteframe>
+              <md-whiteframe class="md-whiteframe-4dp notice flex-gt-sm-66 flex-100" flex="100" layout layout-align="left center">
+                <div>
+                  <h4>
+                    <md-icon class="md-primary" md-font-icon="fa fa-2x fa-exclamation-triangle"></md-icon> <span data-lift="Loc?locid=index.notice.about.templates.label"> Lift Template Application</span>
+                  </h4>
+                  <div>
+                    <span data-lift="Loc?locid=index.notice.about.templates.txt"> notice text goes here</span>
+                  </div>            
+                </div>
+              </md-whiteframe>
             </div>            
           </md-card-content>
           
           <md-card-actions layout="row" layout-align="end center">
             <md-button class="md-raised md-primary" target="_blank" ng-href="https://github.com/lift/lift_26_sbt/">
-              <md-icon md-font-icon="fa fa-github-square fa-2x"></md-icon> <b> Lift Templates on Github</b>
+              <md-icon md-font-icon="fa fa-github-square fa-2x"></md-icon> 
+              <span data-lift="Loc?locid=index.lift.github.templates.button.txt"><b> Lift Templates on Github</b></span>
             </md-button>
            <md-button class="md-raised md-primary" target="_blank" ng-href="http://liftweb.net/">
+             <span data-lift="Loc?locid=index.lift.button.txt"></span>
              <md-icon  aria-label="Lift"  md-svg-icon="assets/images/lift_24px.svg"></md-icon> <b> Lift</b>
             </md-button>           
           </md-card-actions> 
         </md-card>        
                     
         <div data-hide-gt-md>
-          <md-button ng-click="toggleLeft()" class="md-primary" >Toggle left</md-button>or use the menu icon on the top bar to toggle the left navbar.
+          <md-button ng-click="toggleLeft()" class="md-primary" ><span data-lift="Loc?locid=index.toggle.left.button.txt">Toggle left</span></md-button> or use the menu icon on the top bar to toggle the left navbar.
         </div>
         <div>
-          <md-button ng-click="toggleRight()" class="md-primary">Toggle right</md-button>
+          <md-button ng-click="toggleRight()" class="md-primary"><span data-lift="Loc?locid=index.toggle.right.button.txt">Toggle right</span></md-button>
         </div>
       </div>
     </md-content>
