@@ -18,7 +18,7 @@ import _root_.net.liftweb.http.auth.{ HttpBasicAuthentication, AuthRole, userRol
 //import code.model._
 
 
-import net.liftmodules.{FoBo/*,FoBoFA,FoBoTB*/}
+import net.liftmodules.{FoBo,FoBoPa,FoBoPaRes/*,FoBoTB*/}
 
 object localeOverride extends SessionVar[Box[Locale]](Empty)
 
@@ -34,9 +34,15 @@ class Boot extends Loggable {
     FoBo.InitParam.ToolKit=FoBo.PrettifyJun2011
     FoBo.InitParam.ToolKit=FoBo.Bootstrap336 
     FoBo.InitParam.ToolKit=FoBo.FontAwesome430 
-    FoBo.InitParam.ToolKit=FoBo.Pace0415
     FoBo.InitParam.ToolKit=FoBo.AngularJS148
     FoBo.InitParam.ToolKit=FoBo.AJMaterial101
+    //FoBo.InitParam.ToolKit=FoBo.Pace0415
+    FoBo.ToolKit.Init=FoBo.ToolKit.Pace0415
+    //FoBoPa.ToolKit.Init=FoBoPa.ToolKit.Pace0415
+    //FoBoPa.Resource.Init=FoBoPa.Resource.Pace0415
+    //FoBoPa.API.Init=FoBoPa.API.Pace0415
+    //FoBoPaRes.Resource.Init=FoBoPaRes.Resource.Pace0415
+    //FoBoPaAPI.API.Init=FoBoPaAPI.API.Pace0415
     FoBo.init()  
     
     // where to search snippet
@@ -45,7 +51,6 @@ class Boot extends Loggable {
     /*un-comment and switch to db of your liking */
     
     //MySchemaHelper.initSquerylRecordWithInMemoryDB
-   
     //MySchemaHelper.initSquerylRecordWithMySqlDB
     //MySchemaHelper.initSquerylRecordWithPostgresDB
 
