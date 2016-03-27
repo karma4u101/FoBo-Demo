@@ -6,7 +6,7 @@ version in ThisBuild := "0.7-SNAPSHOT"
 
 liftVersion in ThisBuild <<= liftVersion ?? "3.0-SNAPSHOT" //"2.6.2" // 
 
-liftLatestVersion in ThisBuild <<= liftLatestVersion ?? "3.0-SNAPSHOT"
+liftLatestVersion in ThisBuild <<= liftLatestVersion ?? "3.0-RC1"
 
 liftEdition in ThisBuild <<= liftVersion apply { _.substring(0,3) }
 

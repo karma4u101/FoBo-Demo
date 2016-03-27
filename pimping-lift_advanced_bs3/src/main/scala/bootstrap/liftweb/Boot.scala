@@ -12,7 +12,7 @@ import Loc._
 import mapper.{DB,StandardDBVendor,Schemifier}
 
 import code.model._
-import net.liftmodules.{FoBo}
+import net.liftmodules.{FoBo,FoBoBs}
 import scravatar.{Gravatar,DefaultImage}
 
 
@@ -49,10 +49,10 @@ class Boot {
 
     //Init the FoBo - Front-End Toolkit module, 
     //see http://liftweb.net/lift_modules for more info
-    FoBo.InitParam.JQuery=FoBo.JQuery1113  
-    FoBo.InitParam.ToolKit=FoBo.Bootstrap336 
-    FoBo.InitParam.ToolKit=FoBo.FontAwesome430 
-    FoBo.init() 
+    FoBo.ToolKit.Init=FoBo.ToolKit.JQuery1113
+    FoBo.ToolKit.Init=FoBo.ToolKit.Bootstrap336
+    FoBo.ToolKit.Init=FoBo.ToolKit.FontAwesome450
+    
     
     //Show the spinny image when an Ajax call starts
     LiftRules.ajaxStart =
@@ -123,7 +123,7 @@ class Boot {
         Link(List("bootstrap301"), true, "/bootstrap301/index"),
         S.loc("Bootstrap3" , scala.xml.Text("Bootstrap3")),
         LocGroup("lg2"),
-        FoBo.TBLocInfo.LinkTargetBlank ))
+        FoBoBs.BSLocInfo.LinkTargetBlank ))
        
      
     val FLTDemo       = Menu(Loc("FLTDemo", 

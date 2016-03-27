@@ -4,7 +4,7 @@ version := "0.5.8-SNAPSHOT"
 
 organization := "net.liftweb"
 
-liftVersion := "3.0-SNAPSHOT" 
+liftVersion := "3.0-RC1" 
 
 liftEdition <<= liftVersion apply { _.substring(0,3) }
 

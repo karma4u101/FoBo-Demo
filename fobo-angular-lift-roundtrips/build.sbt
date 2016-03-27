@@ -1,10 +1,10 @@
 moduleName := "FoBo-Angular-Lift-RoundTrips"
 
-version := "0.8.0-SNAPSHOT"
+version := "0.9.0-SNAPSHOT"
 
 organization := "net.liftweb"
 
-liftVersion := "3.0-SNAPSHOT" 
+liftVersion := "3.0-RC1" 
 
 liftEdition <<= liftVersion apply { _.substring(0,3) }
 

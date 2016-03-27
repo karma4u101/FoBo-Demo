@@ -14,11 +14,7 @@ import java.sql.DriverManager
 import _root_.net.liftweb.util.{ Props }
 import _root_.net.liftweb.http.provider.HTTPRequest
 import _root_.net.liftweb.http.auth.{ HttpBasicAuthentication, AuthRole, userRoles }
-
-//import code.model._
-
-
-import net.liftmodules.{FoBo,FoBoPa,FoBoPaRes/*,FoBoTB*/}
+import net.liftmodules.{FoBo,FoBoBs}
 
 object localeOverride extends SessionVar[Box[Locale]](Empty)
 
@@ -30,20 +26,14 @@ class Boot extends Loggable {
   def boot {
 
     //FoBo init params 
-    FoBo.InitParam.JQuery=FoBo.JQuery1113 
-    FoBo.InitParam.ToolKit=FoBo.PrettifyJun2011
-    FoBo.InitParam.ToolKit=FoBo.Bootstrap336 
-    FoBo.InitParam.ToolKit=FoBo.FontAwesome430 
-    FoBo.InitParam.ToolKit=FoBo.AngularJS148
-    FoBo.InitParam.ToolKit=FoBo.AJMaterial101
+    FoBo.ToolKit.Init=FoBo.ToolKit.JQuery1113 
+    FoBo.ToolKit.Init=FoBo.ToolKit.PrettifyJun2011
+    FoBo.ToolKit.Init=FoBo.ToolKit.Bootstrap336 
+    FoBo.ToolKit.Init=FoBo.ToolKit.FontAwesome430 
+    FoBo.ToolKit.Init=FoBo.ToolKit.AngularJS148
+    FoBo.ToolKit.Init=FoBo.ToolKit.AJMaterial101
     //FoBo.InitParam.ToolKit=FoBo.Pace0415
-    FoBo.ToolKit.Init=FoBo.ToolKit.Pace0415
-    //FoBoPa.ToolKit.Init=FoBoPa.ToolKit.Pace0415
-    //FoBoPa.Resource.Init=FoBoPa.Resource.Pace0415
-    //FoBoPa.API.Init=FoBoPa.API.Pace0415
-    //FoBoPaRes.Resource.Init=FoBoPaRes.Resource.Pace0415
-    //FoBoPaAPI.API.Init=FoBoPaAPI.API.Pace0415
-    FoBo.init()  
+    FoBo.ToolKit.Init=FoBo.ToolKit.Pace0415 
     
     // where to search snippet
     LiftRules.addToPackages("code")
@@ -179,33 +169,33 @@ object Paths {
   val libospysetup     = Menu(Loc("LiboSpySetup" , Link(List("libospysetup") , true, "#spysetup") , S.loc("LiboSpySetup", Text("Setup"))     , LocGroup("liboSpyTop")))
   val libospyfooter    = Menu(Loc("LiboSpyFooter", Link(List("libospyfooter"), true, "#spyfooter"), S.loc("LiboSpyRef"  , Text("Referenser")), LocGroup("liboSpyTop")))
     
-  val bootstrap3xxDoc  = Menu(Loc("Bootstrap-3.x.x", ExtLink("http://getbootstrap.com/") , S.loc("Bootstrap-3.x.x", Text("Bootstrap-3.x.x")), LocGroup("nldemo1"),FoBo.TBLocInfo.LinkTargetBlank))
-  val foboApiDoc       = Menu(Loc("FoBoAPI"        , Link(List("foboapi")        , true, "/foboapi/index.html#net.liftmodules.FoBo.package"), S.loc("FoBoAPI"  , Text("FoBo API")), LocGroup("liboTop2","mdemo2","nldemo1"),FoBo.TBLocInfo.LinkTargetBlank ))
+  val bootstrap3xxDoc  = Menu(Loc("Bootstrap-3.x.x", ExtLink("http://getbootstrap.com/") , S.loc("Bootstrap-3.x.x", Text("Bootstrap-3.x.x")), LocGroup("nldemo1"),FoBoBs.BSLocInfo.LinkTargetBlank))
+  val foboApiDoc       = Menu(Loc("FoBoAPI"        , Link(List("foboapi")        , true, "/foboapi/index.html#net.liftmodules.FoBo.package"), S.loc("FoBoAPI"  , Text("FoBo API")), LocGroup("liboTop2","mdemo2","nldemo1"),FoBoBs.BSLocInfo.LinkTargetBlank ))
 //  val foboApiDoc       = Menu(Loc("FoBoAPI"        , ExtLink("http://www.media4u101.se/fobo-lift-template-demo/foboapi/index.html#net.liftmodules.FoBo.package") , S.loc("FoBoAPI"  , Text("FoBo API")), LocGroup("liboTop2","mdemo2","nldemo1"),FoBo.TBLocInfo.LinkTargetBlank ))
 
   val nlHelp           = Menu.i("NLHelp") / "helpindex"
     
-  val roundTripDemo = Menu(Loc("fobo-angular-lift-roundtrips", ExtLink("http://www.media4u101.se/fobo-angular-lift-roundtrips/"), S.loc("fobo-angular-lift-roundtrips", Text("Lift round trip tutorial")) ,FoBo.TBLocInfo.LinkTargetBlank  ) )
+  val roundTripDemo = Menu(Loc("fobo-angular-lift-roundtrips", ExtLink("http://www.media4u101.se/fobo-angular-lift-roundtrips/"), S.loc("fobo-angular-lift-roundtrips", Text("Lift round trip tutorial")) ,FoBoBs.BSLocInfo.LinkTargetBlank  ) )
   
-  val bsStarterTemplateDemo = Menu(Loc("lift_advanced_bs3", ExtLink("http://www.media4u101.se/lift-advanced-bs3/"), S.loc("lift_advanced_bs3", Text("Lift TB3 templates")) ,FoBo.TBLocInfo.LinkTargetBlank  ) )
-  val bsStarterTemplateGitHub = Menu(Loc("lift_advanced_bs3", ExtLink("http://www.media4u101.se/lift-advanced-bs3/"), S.loc("lift_advanced_bs3", Text("Lift TB3 templates")) ,FoBo.TBLocInfo.LinkTargetBlank  ) )
+  val bsStarterTemplateDemo = Menu(Loc("lift_advanced_bs3", ExtLink("http://www.media4u101.se/lift-advanced-bs3/"), S.loc("lift_advanced_bs3", Text("Lift TB3 templates")) ,FoBoBs.BSLocInfo.LinkTargetBlank  ) )
+  val bsStarterTemplateGitHub = Menu(Loc("lift_advanced_bs3", ExtLink("http://www.media4u101.se/lift-advanced-bs3/"), S.loc("lift_advanced_bs3", Text("Lift TB3 templates")) ,FoBoBs.BSLocInfo.LinkTargetBlank  ) )
 
-  val mdStarterTemplateDemo = Menu(Loc("lift_advanced_md", ExtLink("http://www.media4u101.se/lift-advanced-md/"), S.loc("lift_advanced_md", Text("Lift MD templates")) ,FoBo.TBLocInfo.LinkTargetBlank  ) )
-  val mdStarterTemplateGitHub = Menu(Loc("lift_advanced_md", ExtLink("http://www.media4u101.se/lift-advanced-md/"), S.loc("lift_advanced_md", Text("Lift MD templates")) ,FoBo.TBLocInfo.LinkTargetBlank  ) )
+  val mdStarterTemplateDemo = Menu(Loc("lift_advanced_md", ExtLink("http://www.media4u101.se/lift-advanced-md/"), S.loc("lift_advanced_md", Text("Lift MD templates")) ,FoBoBs.BSLocInfo.LinkTargetBlank  ) )
+  val mdStarterTemplateGitHub = Menu(Loc("lift_advanced_md", ExtLink("http://www.media4u101.se/lift-advanced-md/"), S.loc("lift_advanced_md", Text("Lift MD templates")) ,FoBoBs.BSLocInfo.LinkTargetBlank  ) )
 
   def sitemap = SiteMap(
-      navHeader1 >> LocGroup("nldemo1") >> FoBo.TBLocInfo.NavHeader,
+      navHeader1 >> LocGroup("nldemo1") >> FoBoBs.BSLocInfo.NavHeader,
       index >> LocGroup("mdemo1","nldemo1"),
-      navHeader2 >> LocGroup("nldemo1") >> FoBo.TBLocInfo.NavHeader,
+      navHeader2 >> LocGroup("nldemo1") >> FoBoBs.BSLocInfo.NavHeader,
       liboIndex,
-      hdivider1 >> LocGroup("mdemo1") >> FoBo.TBLocInfo.DividerVertical,
+      hdivider1 >> LocGroup("mdemo1") >> FoBoBs.BSLocInfo.DividerVertical,
       libospyhome ,
       libospyabout,
       libospysetup,
       libospyfooter,
       content1DD >> LocGroup("liboDD1","mdemo1") >> PlaceHolder submenus ( 
           bootstrap3xxDoc ,
-          divider1  >> FoBo.TBLocInfo.Divider,
+          divider1  >> FoBoBs.BSLocInfo.Divider,
           foboApiDoc 
       ),
       content2DD >> LocGroup("liboDD2") >> PlaceHolder submenus ( 

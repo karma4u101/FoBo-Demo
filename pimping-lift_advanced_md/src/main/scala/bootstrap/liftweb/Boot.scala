@@ -49,11 +49,11 @@ class Boot {
 
     //Init the FoBo - Front-End Toolkit module, 
     //see http://liftweb.net/lift_modules for more info
-    FoBo.InitParam.JQuery=FoBo.JQuery1113  
-    FoBo.InitParam.ToolKit=FoBo.FontAwesome430 
-    FoBo.InitParam.ToolKit=FoBo.AngularJS148 
-    FoBo.InitParam.ToolKit=FoBo.AJMaterial101
-    FoBo.init() 
+    FoBo.Resource.Init=FoBo.Resource.JQuery1113  
+    FoBo.Resource.Init=FoBo.Resource.FontAwesome450 
+    FoBo.Resource.Init=FoBo.Resource.AngularJS148
+    FoBo.Resource.Init=FoBo.Resource.AJMaterial101
+    FoBo.API.Init=FoBo.API.Angular1
     
     //Show the spinny image when an Ajax call starts
     LiftRules.ajaxStart =

@@ -1,10 +1,10 @@
 moduleName := "FoBo-Lift-Template-Demo"
 
-version := "3.1.4-SNAPSHOT" 
+version := "3.2.0-SNAPSHOT" 
 
 organization := "se.media4u101"
 
-liftVersion := "3.0-SNAPSHOT" 
+liftVersion := "3.0-RC1" 
 
 liftEdition <<= liftVersion apply { _.substring(0,3) }
 
