@@ -52,7 +52,7 @@ class Boot {
     FoBo.Resource.Init=FoBo.Resource.JQuery1113  
     FoBo.Resource.Init=FoBo.Resource.FontAwesome450 
     FoBo.Resource.Init=FoBo.Resource.AngularJS148
-    FoBo.Resource.Init=FoBo.Resource.AJMaterial101
+    FoBo.Resource.Init=FoBo.Resource.AJMaterial107
     FoBo.API.Init=FoBo.API.Angular1
     
     //Show the spinny image when an Ajax call starts
