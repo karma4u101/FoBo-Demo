@@ -32,8 +32,9 @@ class Boot extends Loggable {
     FoBo.ToolKit.Init=FoBo.ToolKit.FontAwesome430 
     FoBo.ToolKit.Init=FoBo.ToolKit.AngularJS148
     FoBo.ToolKit.Init=FoBo.ToolKit.AJMaterial101
-    //FoBo.InitParam.ToolKit=FoBo.Pace0415
-    FoBo.ToolKit.Init=FoBo.ToolKit.Pace0415 
+    //FoBo.ToolKit.Init=FoBo.ToolKit.Pace0415 
+    FoBo.ToolKit.Init=FoBo.ToolKit.Pace102
+    FoBo.API.Init=FoBo.API.FoBo1 //build info 
     
     // where to search snippet
     LiftRules.addToPackages("code")

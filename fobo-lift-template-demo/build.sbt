@@ -4,7 +4,7 @@ version := "3.2.0-SNAPSHOT"
 
 organization := "se.media4u101"
 
-liftVersion := "3.0-RC1" 
+liftVersion := "3.0-RC2" 
 
 liftEdition <<= liftVersion apply { _.substring(0,3) }
 
