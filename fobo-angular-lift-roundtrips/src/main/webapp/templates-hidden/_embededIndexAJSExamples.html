@@ -91,7 +91,7 @@
 											<label for="name" class="col-sm-2 control-label">Name:</label>
 											<div class="col-sm-10">
 												<input id="name" class="form-control" type="text"
-													ng-model="yourName" placeholder="Enter a name here">
+													data-ng-model="yourName" placeholder="Enter a name here">
 											</div>
 										</div>
 									</div>
@@ -116,7 +116,7 @@
 						
 						<p>In this example we are creating a Angular model 
 						<a target="_blank" href="https://docs.angularjs.org/api/ng/directive/ngModel">ngModel <i class="fa fa-external-link"></i></a> 
-						(<code>ng-model="yourName"</code>) with the assignable <a target="_blank" href="https://docs.angularjs.org/guide/expression">Angular expression <i class="fa fa-external-link"></i></a> 
+						(<code>data-ng-model="yourName"</code>) with the assignable <a target="_blank" href="https://docs.angularjs.org/guide/expression">Angular expression <i class="fa fa-external-link"></i></a> 
 						<code>"yourName"</code>, we are then using this expression in a binding <code><span>{{</span> expression <span>}}</span></code> on the heading as shown below.</p>
 							
 						<span
@@ -155,12 +155,12 @@
 						<div class="panel panel-default" style="padding: 10px;">
 							<div class="row">
 								<div class="col-sm-10 col-sm-offset-2">
-									<div ng-controller="SimpleRTCtrl">
+									<div data-ng-controller="SimpleRTCtrl">
 										<pre>{{lrtResModel}}</pre>
 										<button type="button" class="btn btn-default"
-											ng-click="doSimpleLiftRT()">Simple RT</button>
+											data-ng-click="doSimpleLiftRT()">Simple RT</button>
 										<button type="button" class="btn btn-default"
-											ng-click="doResetRT()">Reset</button>
+											data-ng-click="doResetRT()">Reset</button>
 									</div>
 								</div>
 							</div>
@@ -199,7 +199,7 @@
 							data-lift='embed?what=embeddedPretty/ex2-ng-app-foboDemoApp'> Embedding
 							the prettyprint ex2 code here</span>
 						
-						<p>The <a target="_blank" href="https://docs.angularjs.org/api/ng/directive/ngApp"><code>ng-app</code><i class="fa fa-external-link"></i></a> attribute represents an Angular directive named ngApp. 
+						<p>The <a target="_blank" href="https://docs.angularjs.org/api/ng/directive/ngApp"><code>data-ng-app</code><i class="fa fa-external-link"></i></a> attribute represents an Angular directive named ngApp. 
 						This directive is used to flag the html element that Angular should consider to be the 
 						root element of the Angular application scope.
 						In our case the root element will be the <code>div id=main</code> element.</p> 
@@ -211,7 +211,7 @@
 					<p>
 						Although it is common to have only one <code>ng-app</code> directive in a 
 						application (typical in a <mark>single-page</mark> application) it is possible to 
-						have more than one <code>ng-app</code> directives in one and the same application 
+						have more than one <code>data-ng-app</code> directives in one and the same application 
 						(one per page). 
 					</p>
 				</div>						
@@ -222,7 +222,7 @@
 							
 						<p>Here we are loading the <code>foboDemoApp</code> <a target="_blank" href="https://docs.angularjs.org/guide/module">module <i class="fa fa-external-link"></i></a> 
 						with it's configuration and run blocks. Although not necessary in this example we are also loading some module 
-						dependencies <code>['ngGrid','ui.bootstrap']</code>. As the module dependencies is not used in this example 
+						dependencies <code>['ui.grid','ui.bootstrap']</code>. As the module dependencies is not used in this example 
 					    we could have made it a empty list <code>[]</code>, we are however going to use the 
 						dependancies in later examples.</p> 						
 						
@@ -340,7 +340,7 @@
 						data collected from the back-end store  
 						<a target="_blank" href="http://slick.typesafe.com/">Slick <i class="fa fa-external-link"></i></a> 
 						and display it using the 
-						<a target="_blank" href="http://angular-ui.github.io/ng-grid/">Angular NG-Grid UI module <i class="fa fa-external-link"></i></a>.</p> 
+						<a target="_blank" href="http://ui-grid.info/">Angular UI-Grid UI module <i class="fa fa-external-link"></i></a>.</p> 
 						<p>In example 4 to 6 we will expand up on the functionality in example 3 to in the grid have, not only, read 
 						operations but also create, update and delete operations. 
 						</p>
@@ -353,7 +353,7 @@
 						<div id="section-2-3"></div>
 						<div id="/section-2-3"></div>
 						<h3 >Example 3:</h3>
-						<p>Using the <a target="_blank" href="http://angular-ui.github.io/ng-grid/">Angular NG-Grid UI module <i class="fa fa-external-link"></i></a>, 
+						<p>Using the <a target="_blank" href="http://ui-grid.info/">Angular UI-Grid UI module <i class="fa fa-external-link"></i></a>, 
 						   provided via the <span data-lift="Menu.item?name=FLTDemo;">FoBo module <i class="fa fa-external-link"></i></span>, 
 						   this example is doing a round trip to the server to fetch
 							and display grid data from the back-end store handled by
@@ -369,8 +369,8 @@
 						<div class="panel panel-default" style="padding: 10px;">
 							<div class="row">
 								<div class="col-sm-10 col-sm-offset-2">
-									<div ng-controller="PersonGridCtrl">
-										<div class="gridStyle" ng-grid="simpleGridOptions"></div>
+									<div data-ng-controller="PersonGridCtrl">
+										<div class="gridStyle" data-ui-grid="simpleGridOptions"></div>
 									</div>
 								</div>
 							</div>
@@ -420,19 +420,19 @@
 						<div class="panel panel-default" style="padding: 10px;">
 							<div class="row">
 								<div class="col-sm-10 col-sm-offset-2">
-									<div ng-controller="PersonGridCtrl">
-										<div class="gridStyle" ng-grid="simpleGridOptions"></div>
+									<div data-ng-controller="PersonGridCtrl">
+										<div class="gridStyle" data-ui-grid="simpleGridOptions"></div>
 										<div class="form-inline" role="form">
 											<div class="form-group">
-												<input type="hidden" id="pid" ng-model="person.id">
+												<input type="hidden" id="pid" data-ng-model="person.id">
 												<label class="sr-only" for="pname">Name</label> 
-												<input type="text" class="form-control" id="pname" placeholder="Enter name" ng-model="person.name">
+												<input type="text" class="form-control" id="pname" placeholder="Enter name" data-ng-model="person.name">
 											</div>
 											<div class="form-group">
 												<label class="sr-only" for="page">Age</label> 
-												<input type="number" class="form-control" id="page" placeholder="Enter age" ng-model="person.age">
+												<input type="number" class="form-control" id="page" placeholder="Enter age" data-ng-model="person.age">
 											</div>
-											<button class="btn btn-default" ng-click='doAdd()'>Add</button>
+											<button class="btn btn-default" data-ng-click='doAdd()'>Add</button>
 										</div>
 									</div>
 								</div>
@@ -446,8 +446,8 @@
                 <h4>The view bindings</h4>
                 <p>Below is the html scoped by the person grid controller. It has grown a bit compared with 
                 example 3 as we now add some, bootstrap styled, input fields and a button to submit the field values. 
-                The interesting and new Angular stuff, compared to example 3, is the <code>ng-model</code> and the 
-                <code>ng-click</code> bindings on input and button.</p>
+                The interesting and new Angular stuff, compared to example 3, is the <code>data-ng-model</code> and the 
+                <code>data-ng-click</code> bindings on input and button.</p>
                 
                 <span data-lift='embed?what=embeddedPretty/ex4-template-PersonCtrl'> Embedding
 							the prettyprint ex4 code here</span>
@@ -494,19 +494,19 @@
 						<div class="panel panel-default" style="padding: 10px;">
 							<div class="row">
 								<div class="col-sm-10 col-sm-offset-2">
-									<div ng-controller="PersonGridCtrl">
-										<div class="gridStyle" ng-grid="gridOptions"></div>
+									<div data-ng-controller="PersonGridCtrl">
+										<div class="gridStyle" data-ui-grid="gridOptions"></div>
 										<div class="form-inline" role="form">
 											<div class="form-group">
-												<input type="hidden" id="p2id" ng-model="person.id">
+												<input type="hidden" id="p2id" data-ng-model="person.id">
 												<label class="sr-only" for="p2name">Name</label> 
-												<input type="text" class="form-control" id="p2name" placeholder="Enter name" ng-model="person.name">
+												<input type="text" class="form-control" id="p2name" placeholder="Enter name" data-ng-model="person.name">
 											</div>
 											<div class="form-group">
 												<label class="sr-only" for="p2age">Age</label> 
-												<input type="number" class="form-control" id="p2age" placeholder="Enter age" ng-model="person.age">
+												<input type="number" class="form-control" id="p2age" placeholder="Enter age" data-ng-model="person.age">
 											</div>
-											<button class="btn btn-default" ng-click='doAdd()'>Add</button>											    
+											<button class="btn btn-default" data-ng-click='doAdd()'>Add</button>											    
 										</div>
 									</div>
 								</div>
@@ -527,13 +527,13 @@
 				
 				<h4>The view bindings</h4>
 				<p>Below is the html for example 5 scoped by the person controller, the only difference from 
-				example 4 is a change in grid options from <code>ng-grid="simpleGridOptions"</code> to 
-				<code>ng-grid="gridOptions"</code></p>	
+				example 4 is a change in grid options from <code>ui-grid="simpleGridOptions"</code> to 
+				<code>ui-grid="gridOptions"</code></p>	
                 <span data-lift='embed?what=embeddedPretty/ex5-template-PersonCtrl'> Embedding
 							the prettyprint ex5 code here</span>	
 							
 			    <h4>The controller</h4>								
-				<p>Below is the controller handling the CRUD operations on the ng-grid.</p>
+				<p>Below is the controller handling the CRUD operations on the ui-grid.</p>
                 <span data-lift='embed?what=embeddedPretty/ex5-ng-controller'> Embedding
 							the prettyprint ex5 code here</span>
 								
@@ -542,7 +542,7 @@
                 <span data-lift='embed?what=embeddedPretty/ex5-code-snippet-PersonRT'> Embedding
 							the prettyprint ex5 code here</span>
 											
-<!-- 				<p>This completes the Lift round trip example serie as we now have CRUD operations on the ng-grid  -->
+<!-- 				<p>This completes the Lift round trip example serie as we now have CRUD operations on the ui-grid  -->
 <!-- 				Now that you have seen a smal part of how well Angular and Lift fits togheter here is 50 more  -->
 <!-- 				Angular examples.</p>			 -->
 				
@@ -569,19 +569,19 @@
 						<div class="panel panel-default" style="padding: 10px;">
 							<div class="row">
 								<div class="col-sm-10 col-sm-offset-2">
-									<div ng-controller="PersonGridCtrl">
-										<div class="gridStyle" ng-grid="gridOptions"></div>
+									<div data-ng-controller="PersonGridCtrl">
+										<div class="gridStyle" data-ui-grid="gridOptions"></div>
 										<div class="form-inline" role="form">
 											<div class="form-group">
-												<input type="hidden" id="p2id" ng-model="person.id">
+												<input type="hidden" id="p2id" data-ng-model="person.id">
 												<label class="sr-only" for="p2name">Name</label> 
-												<input type="text" class="form-control" id="p2name" placeholder="Enter name" ng-model="person.name">
+												<input type="text" class="form-control" id="p2name" placeholder="Enter name" data-ng-model="person.name">
 											</div>
 											<div class="form-group">
 												<label class="sr-only" for="p2age">Age</label> 
-												<input type="number" class="form-control" id="p2age" placeholder="Enter age" ng-model="person.age">
+												<input type="number" class="form-control" id="p2age" placeholder="Enter age" data-ng-model="person.age">
 											</div>
-											<button class="btn btn-default" ng-click='doAdd()'>Add</button>											    
+											<button class="btn btn-default" data-ng-click='doAdd()'>Add</button>											    
 										</div>
 									</div>
 								</div>
@@ -605,7 +605,7 @@
                 <span data-lift='embed?what=embeddedPretty/ex6-factory-service'> Embedding
 							the prettyprint ex6 code here</span>
 											
-				<p>This completes the Lift round trip example series as we now have CRUD operations on the ng-grid 
+				<p>This completes the Lift round trip example series as we now have CRUD operations on the ui-grid 
 				and some client side data cashing and a good separation of concerns.
 				Now that you have seen a small part of how well Angular and Lift fits together you may like to 
 				learn more about Angular so here is 50 more Angular examples that start from the basics and beyond.
@@ -645,8 +645,8 @@
                         <p><i class="fa fa-exclamation-triangle fa-3x" style="color:#f0ad4e;"></i> Are you sure you wish to delete person: {{ entity.name }} </p> 
                       </div> 
                       <div class='modal-footer'> 
-                        <button class='btn btn-danger' ng-click='ok()'>OK</button> 
-                        <button class='btn btn-default' ng-click='cancel()'>Cancel</button> 
+                        <button class='btn btn-danger' data-ng-click='ok()'>OK</button> 
+                        <button class='btn btn-default' data-ng-click='cancel()'>Cancel</button> 
                       </div>
                 </script> 
 		

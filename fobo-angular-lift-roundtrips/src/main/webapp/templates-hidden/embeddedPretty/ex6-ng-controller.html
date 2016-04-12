@@ -92,8 +92,8 @@ app.controller('PersonGridCtrl',['$scope','$modal','PersonFactory',
 	 });     	
   }
     
-  //a ng-grid callback event that can be used to handle cell edit updates
-  $scope.$on('ngGridEventEndCellEdit', function(evt){
+  //a ui-grid callback event that can be used to handle cell edit updates
+  $scope.$on('uiGridEventEndCellEdit', function(evt){
      //Detect changes and send entity to server 
      $scope.updatePerson(evt.targetScope.row.entity)     
   });    
@@ -118,8 +118,8 @@ app.controller('PersonGridCtrl',['$scope','$modal','PersonFactory',
         },{ 
             field: 'remove',
             displayName: 'Delete',
-            cellTemplate: '&lt;button type="button" ng-model="row.entity.remove"  
-                           ng-click="remove(row.entity)" class="close"  
+            cellTemplate: '&lt;button type="button" data-ng-model="row.entity.remove"  
+                           data-ng-click="remove(row.entity)" class="close"  
                            style="float:left;margin-left:5px;color: darkred;opacity: 0.3;"&gt;
                            &lt;span aria-hidden="true"&gt;&times;&lt;/span&gt;
                            &lt;span class="sr-only"&gt;Remove&lt;/span&gt;

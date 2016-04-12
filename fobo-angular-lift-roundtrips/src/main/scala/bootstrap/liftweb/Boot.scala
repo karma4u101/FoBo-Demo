@@ -58,9 +58,10 @@ class Boot {
     FoBo.ToolKit.Init=FoBo.ToolKit.Bootstrap336
     FoBo.ToolKit.Init=FoBo.ToolKit.FontAwesome430
     FoBo.ToolKit.Init=FoBo.ToolKit.AngularJS148 //AngularJS141
-    FoBo.ToolKit.Init=FoBo.ToolKit.AJSNGGrid207
+    FoBo.ToolKit.Init=FoBo.ToolKit.AJSUIGrid307
     FoBo.ToolKit.Init=FoBo.ToolKit.AJSUIBootstrap0100
     FoBo.ToolKit.Init=FoBo.ToolKit.PrettifyJun2011
+    FoBo.API.Init=FoBo.API.FoBo1
     
     //Show the spinny image when an Ajax call starts
     LiftRules.ajaxStart =

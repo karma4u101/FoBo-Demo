@@ -12,19 +12,19 @@
 <span class="label label-default">index.html</span>
 <pre class="prettyprint linenums lang-html">
  ⋮
-&lt;div ng-controller="PersonGridCtrl"&gt;
-   &lt;div class="gridStyle" ng-grid="gridOptions"&gt;&lt;/div&gt;
+&lt;div data-ng-controller="PersonGridCtrl"&gt;
+   &lt;div class="gridStyle" data-ui-grid="gridOptions"&gt;&lt;/div&gt;
    &lt;div class="form-inline" role="form"&gt;
       &lt;div class="form-group"&gt;
-         &lt;input type="hidden" id="pid" ng-model="person.id"&gt;
+         &lt;input type="hidden" id="pid" data-ng-model="person.id"&gt;
          &lt;label class="sr-only" for="pname"&gt;Name&lt;/label&gt; 
-         &lt;input type="text" class="form-control" id="pname" placeholder="Enter name" ng-model="person.name"&gt;
+         &lt;input type="text" class="form-control" id="pname" placeholder="Enter name" data-ng-model="person.name"&gt;
       &lt;/div&gt;
       &lt;div class="form-group"&gt;
          &lt;label class="sr-only" for="page">Age&lt;/label&gt; 
-         &lt;input type="number" class="form-control" id="page" placeholder="Enter age" ng-model="person.age"&gt;
+         &lt;input type="number" class="form-control" id="page" placeholder="Enter age" data-ng-model="person.age"&gt;
       &lt;/div&gt;
-         &lt;button class="btn btn-default" ng-click='doAdd()'&gt;Add&lt;/button&gt;
+         &lt;button class="btn btn-default" data-ng-click='doAdd()'&gt;Add&lt;/button&gt;
       &lt;/div&gt;
    &lt;/div&gt; 
 &lt;/div&gt;

@@ -139,7 +139,7 @@ app.controller('PersonGridCtrl',['$scope','$log','$modal','PersonFactory',functi
         	field: 'remove',
             displayName: 'Delete',
             cellTemplate: '<button type="button" ng-model="row.entity.remove" ng-click="remove(row.entity)" class="close" style="float:left;margin-left:5px;color: darkred;opacity: 0.3;"><span aria-hidden="true">&times;</span><span class="sr-only">Remove</span></button>',
-            width: '55px'
+            width: '55'
         }]
     };     
     
