@@ -9,6 +9,7 @@
 <!-- This is an embedded piece of html -->
 <body class="lift:content_id=userMenu">
 
+
    <md-menu  id="userMenu" >
       <!--  user not logged in -->
       <md-button data-lift='test_cond.loggedout' aria-label="Open user menu" class="md-icon-button" ng-click="$mdOpenMenu($event)" >
@@ -20,37 +21,37 @@
       	      
       <md-menu-content width="4">
         <md-menu-item data-lift='test_cond.loggedout'>
-          <md-button ng-href="/user_mgt/login">
+          <md-button ng-href="user_mgt/login">
             <span data-lift="Loc.i">fobo.menu.loc.login</span>
           </md-button>
         </md-menu-item>
         <md-menu-item data-lift='test_cond.loggedout'>
-          <md-button ng-href="/user_mgt/sign_up">
+          <md-button ng-href="user_mgt/sign_up">
             <span data-lift="Loc.i">fobo.menu.loc.sign.up</span>
           </md-button>
         </md-menu-item>
         <md-menu-divider></md-menu-divider>
         <md-menu-item data-lift='test_cond.loggedout'>
-          <md-button ng-href="/user_mgt/lost_password">
+          <md-button ng-href="user_mgt/lost_password">
             <span data-lift="Loc.i">fobo.menu.loc.lost.password</span>
           </md-button>
         </md-menu-item>
-
+        
         
         <md-menu-item data-lift='test_cond.loggedin'>
-          <md-button ng-href="/user_mgt/edit">
+          <md-button ng-href="user_mgt/edit">
             <span data-lift="Loc.i">fobo.menu.loc.edit.user</span>
           </md-button>
         </md-menu-item> 
         
         <md-menu-item data-lift='test_cond.loggedin'>
-          <md-button ng-href="/user_mgt/change_password">
+          <md-button ng-href="user_mgt/change_password">
             <span data-lift="Loc.i">fobo.menu.loc.change.password</span>
           </md-button>
         </md-menu-item>                 
 
         <md-menu-item data-lift='test_cond.loggedin'>
-          <md-button ng-href="/user_mgt/logout">
+          <md-button ng-href="user_mgt/logout">
             <span data-lift="Loc.i">fobo.menu.loc.logout</span>
           </md-button>
         </md-menu-item>
