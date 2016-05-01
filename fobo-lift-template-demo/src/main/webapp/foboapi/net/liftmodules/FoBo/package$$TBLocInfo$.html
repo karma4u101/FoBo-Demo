@@ -43,13 +43,13 @@
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <span class="name">TBLocInfo</span>
+        <span class="name deprecated" title="Deprecated: (Since version 1.6.0) Use BSLocInfo or TBLocInfo provided by FoBoBs or FoBoTB ">TBLocInfo</span>
       </span>
       </h4>
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Extends your Lift SiteMap with various common bootstrap menu manipulations such
 as horizontal and vertical menu dividers and menu labels (labels coming soon).</p><p>This object should be used in conjunction with the TB* or BS3* menu builder objects in
-<a href="../FoBoTB/snippet/FoBo/package.html" class="extype" name="net.liftmodules.FoBoTB.snippet.FoBo">net.liftmodules.FoBoTB.snippet.FoBo</a> or <span class="extype" name="net.liftmodules.FoBoBS.snippet.FoBo">net.liftmodules.FoBoBS.snippet.FoBo</span> snippet's.</p><p><b>Example:</b></p><pre> :
+<a href="../FoBoTB/snippet/FoBo/package.html" class="extype" name="net.liftmodules.FoBoTB.snippet.FoBo">net.liftmodules.FoBoTB.snippet.FoBo</a> or <a href="../FoBoBs/snippet/FoBo/package.html" class="extype" name="net.liftmodules.FoBoBs.snippet.FoBo">net.liftmodules.FoBoBs.snippet.FoBo</a> snippet's.</p><p><b>Example:</b></p><pre> :
 <span class="cmt">//add a horizontal menu divider</span>
 divider1 &gt;&gt; LocGroup(...) &gt;&gt; FoBo.TBLocInfo.Divider,
  :
@@ -58,7 +58,10 @@ divider2 &gt;&gt; LocGroup(...) &gt;&gt; FoBo.TBLocInfo.DividerVertical,
  :
 <span class="cmt">//open link in new tab</span>
 ... FoBo.TBLocInfo.LinkTargetBlank
- :</pre></div><dl class="attributes block"> <dt>Since</dt><dd><p>v1.0
+ :</pre></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Use BSLocInfo or TBLocInfo provided by FoBoBs or FoBoTB </p></dd><dt>Since</dt><dd><p>v1.0
 </p></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>

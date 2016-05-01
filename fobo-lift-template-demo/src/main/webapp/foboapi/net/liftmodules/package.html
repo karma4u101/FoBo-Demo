@@ -110,27 +110,32 @@
       </a>
     </span>
       <p class="shortcomment cmt">The <a href="FoBo/package.html" class="extype" name="net.liftmodules.FoBo">net.liftmodules.FoBo</a> Package is the starting point for this API.</p><div class="fullcomment"><div class="comment cmt"><h4>Welcome to FoBo - A Comprehensive Front-End Toolkit Lift Module</h4><p>The <a href="FoBo/package.html" class="extype" name="net.liftmodules.FoBo">net.liftmodules.FoBo</a> Package is the starting point for this API.
-The FoBo modules Github home is <a href="https://github.com/karma4u101/FoBo" target="_blank">here</a></p><h5>What FoBo will do for you</h5><p>This module gives you quick and easy integration of some of the industry leading web-centric open source
-front-end toolkits.</p><p>Among the benefits is:</p><ul><li>Due to uniform declaration and integration points across toolkit versions only a small amount of changes
-   is needed for a up/down-grading of a used Toolkit, optimally, if the toolkit has no breaking changes
+The FoBo modules Github home is <a href="https://github.com/karma4u101/FoBo" target="_blank">here</a></p><h5>What FoBo will do for you</h5><p>The FoBo/FoBo module gives you quick and easy integration of some of the industry leading web-centric open source
+front-end toolkits. FoBo is highly modular, all FoBo toolkit modules are built up of a resource module and possibly
+a FoBo/Lift API module.
+You can depend on the FoBo/FoBo module to get access to all FoBo's toolkit/resource/api modules or you can pick the
+module(s) you need, for example, just the bootstrap API module where you provide your own resources or you may chose
+any combination of modules.</p><p>Usage benefits:</p><ul><li>Due to uniform declaration and integration points across toolkit versions only a small amount of changes
+   is needed for a up/down-grading of a used Toolkit/resource, optimally, if the toolkit has no breaking changes
    it will just be a version change of the FoBo.Initparam in Lift bootstrap.liftweb.Boot.</li><li>The module provides debug-able js and css files in development and minimized files otherwise.</li><li>FoBo is simultaneously supporting several versions of each toolkit which makes development, maintenance,
-   upgrade and fall-back quick and easy.</li><li>Most of the FoBo toolkit modules provides Snippet helpers and lib classes that will ease you from writing
-   some commonly used toolkit component integration scripts making it a simple snippet invocation.</li><li>Great responsive scalability with responsive toolkits.</li><li>FoBo strives to be modular. FoBo is built up by independent sub-modules (artefacts) that can be used
-   independant of the FoBo assembly module.</li></ul><h5>FoBo supported toolkits and plugins</h5><p>The following is a list of available toolkits and plugins</p><ul><li>JQuery [v1.7.2, v1.8.2, v1.9.1, v1.10.2, v1.11.1, v1.11.3, v.2.1.1, v.2.1.4] <a href="FoBoJQ/package.html" class="extype" name="net.liftmodules.FoBoJQ">net.liftmodules.FoBoJQ</a></li><li>Bootstrap v3.x series [v3.0.1, v3.1.1, v3.2.0, v3.3.5, v3.3.6] <a href="FoBoBs/package.html" class="extype" name="net.liftmodules.FoBoBs">net.liftmodules.FoBoBs</a></li><li>Bootstrap v2.x series [v2.3.2] <a href="FoBoTB/package.html" class="extype" name="net.liftmodules.FoBoTB">net.liftmodules.FoBoTB</a></li><li>Font Awesome [v3.2.1, v4.0.3, v4.1.0, v4.3.0] <a href="FoBoFA/package.html" class="extype" name="net.liftmodules.FoBoFA">net.liftmodules.FoBoFA</a></li><li>Kinetic JS [v5.1.0]</li><li>Google Code Prettify [vJun2011]</li><li>Angular JS [v1.0.6, v1.2.11, v1.2.19, v1.3.15, v1.4.1, v1.4.8] (angular core modules)</li><li>Angular UI Bootstrap [v0.2.0, v0.7.0, v0.10.0] (angular component)</li><li>Angular NG-Grid [v2.0.4, v2.0.7] (angular component)</li><li>Angular UI-Grid [v3.0.7] (angular component)</li><li>Angular Material design [v0.10.0, v1.0.1] (angular component)</li></ul><h5>Help out!</h5><p>There is a lot more that can be done within the boundaries of this API and the FoBo module as a hole so
+   upgrade and fall-back quick and easy.</li><li>Most of the FoBo toolkit modules provides a API sub-module with Snippet helpers and lib classes that will
+   ease you from writing some commonly used toolkit component integration scripts making it a simple snippet invocation.</li><li>Great responsive scalability with responsive toolkits.</li><li>FoBo strives to be highly modular. FoBo is built up by independent toolkit/resource/api module artifacts that
+   can be used independent of the FoBo/FoBo assembly module.</li></ul><h5>FoBo supported toolkits/resources</h5><p>The following is a list of available toolkits resources</p><ul><li>JQuery [v1.7.2, v1.8.2, v1.9.1, v1.10.2, v1.11.3, v.2.1.1, v.2.1.4] <a href="FoBoJQ/package.html" class="extype" name="net.liftmodules.FoBoJQ">net.liftmodules.FoBoJQ</a></li><li>JQueryMigrate [v1.2.1] <a href="FoBoJQ/package.html" class="extype" name="net.liftmodules.FoBoJQ">net.liftmodules.FoBoJQ</a></li><li>Bootstrap v3.x series [v3.0.1, v3.1.1, v3.2.0, v3.3.5, v3.3.6] <a href="FoBoBs/package.html" class="extype" name="net.liftmodules.FoBoBs">net.liftmodules.FoBoBs</a></li><li>Bootstrap v2.x series [v2.3.2] <a href="FoBoTB/package.html" class="extype" name="net.liftmodules.FoBoTB">net.liftmodules.FoBoTB</a></li><li>Font Awesome [v3.2.1, v4.0.3, v4.1.0, v4.3.0, v4.5.0] <a href="FoBoFA/package.html" class="extype" name="net.liftmodules.FoBoFA">net.liftmodules.FoBoFA</a></li><li>Kinetic JS [v5.1.0] <a href="FoBoKi/package.html" class="extype" name="net.liftmodules.FoBoKi">net.liftmodules.FoBoKi</a></li><li>Google Code Prettify [vJun2011] <a href="FoBoGCP/package.html" class="extype" name="net.liftmodules.FoBoGCP">net.liftmodules.FoBoGCP</a></li><li>Highlight JS [v9.3.0] <a href="FoBoHL/package.html" class="extype" name="net.liftmodules.FoBoHL">net.liftmodules.FoBoHL</a></li><li>Pace [v0.4.15, v1.0.2] <a href="FoBoPa/package.html" class="extype" name="net.liftmodules.FoBoPa">net.liftmodules.FoBoPa</a></li><li>Angular JS [v1.0.6, v1.2.11, v1.2.19, v1.3.15, v1.4.1, v1.4.8, v1.5.3] (angular core modules) <a href="FoBoAJS/package.html" class="extype" name="net.liftmodules.FoBoAJS">net.liftmodules.FoBoAJS</a></li><li>Angular UI Bootstrap [v0.2.0, v0.7.0, v0.10.0] (angular component) <a href="FoBoAJS/package.html" class="extype" name="net.liftmodules.FoBoAJS">net.liftmodules.FoBoAJS</a></li><li>Angular NG-Grid [v2.0.4, v2.0.7] (angular component) <a href="FoBoAJS/package.html" class="extype" name="net.liftmodules.FoBoAJS">net.liftmodules.FoBoAJS</a></li><li>Angular UI-Grid [v3.0.7] (angular component) <a href="FoBoAJS/package.html" class="extype" name="net.liftmodules.FoBoAJS">net.liftmodules.FoBoAJS</a></li><li>Angular Material design [v0.10.0, v1.0.1, v1.0.8] (angular component) <a href="FoBoAJS/package.html" class="extype" name="net.liftmodules.FoBoAJS">net.liftmodules.FoBoAJS</a></li></ul><h5>Help out!</h5><p>There is a lot more that can be done within the boundaries of the FoBo API modules and the FoBo modules as a hole so
 your help, suggestions, encouragement, engagement, patches (pull requests) bug-fixes/reports are highly appreciated.</p><h5>Setup</h5><ul><li>This module has published artifacts for Lift v2.6 and v3.0 and it's supported Scala versions.
-   Older versions of FoBo also supports Lift v2.4/v2.5</li><li>For a demonstration of this module see the live <a href="http://www.media4u101.se/fobo-lift-template-demo/" target="_blank">FoBo demo</a>
+   Older versions of FoBo also supports Lift v2.4/v2.5</li><li>For a introduction to FoBo see <a href="http://www.media4u101.se/fobo-lift-template-demo/" target="_blank">FoBo introduction</a>
 </li></ul></div><dl class="attributes block"> <div class="block">Example:
                <ol><li class="cmt"><p>To initiate this module for usage in your Lift project set something like the following in
-your projects Lift bootstrap.liftweb.Boot boot method. Here the FoBoToolkitNameXYZ
-represent one of FoBo's available FoBoTolkit objects listed below.</p><pre><span class="kw">import</span> net.liftmodules.FoBo
+your projects Lift bootstrap.liftweb.Boot boot method. Here the FoBo ToolkitObjectNameXYZ
+represent one of FoBo's available FoBo ToolKit objects.</p><pre><span class="kw">import</span> net.liftmodules.FoBo
  :
  :
-FoBo.InitParam.JQuery=FoBo.JQueryXYZ  <span class="cmt">//one jquery version</span>
-FoBo.InitParam.ToolKit=FoBo.FoBoToolkitNameXYZ <span class="cmt">//one or more toolkits</span>
-FoBo.InitParam.ToolKit=FoBo.FoBoToolkitNameXYZ
- :
-FoBo.init()</pre></li></ol>
-            </div><dt>Version</dt><dd><p>v1.5</p></dd></dl></div>
+FoBo.ToolKit.Init=FoBo.ToolKit.JQueryXYZ  <span class="cmt">//the fobo jquery module, version xyz</span>
+FoBo.ToolKit.Init=FoBo.ToolKit.ToolkitObjectNameXYZ <span class="cmt">//one or more fobo toolkits</span>
+FoBo.ToolKit.Init=FoBo.ToolKit.ToolkitObjectNameXYZ</pre><p>You may substitute ToolKit for Resource or API and if you wish also adjust the artifact dependencies
+accordingly to include just the FoBo modules you use, but if size is not a issue using the FoBo/FoBo
+module is convenient and gives you a lot to pick from.
+</p></li></ol>
+            </div><dt>Version</dt><dd><p>v1.6</p></dd></dl></div>
     </li><li name="net.liftmodules.FoBoAJS" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="FoBoAJS"></a>
       <a id="FoBoAJS:FoBoAJS"></a>
@@ -147,13 +152,68 @@ FoBo.init()</pre></li></ol>
         <img src="../../lib/permalink.png" />
       </a>
     </span>
-      <p class="shortcomment cmt">This package object is only of interest to you if you are using this module
-as a stand alone artifact dependency in your project (without FoBo).</p><div class="fullcomment"><div class="comment cmt"><h4>FoBo - Sub-module</h4><p>This package object is only of interest to you if you are using this module
-as a stand alone artifact dependency in your project (without FoBo).
-This package object provides information on how to initiate and use this module
-in your project. If you are using this module in FoBo see <a href="FoBo/package.html" class="extype" name="net.liftmodules.FoBo">net.liftmodules.FoBo</a>
-for usage information.
+      <p class="shortcomment cmt">This FoBo toolkit module provides AngularJS API and Resource components to the FoBo Module,
+but can also be used as-is, see below for setup information.</p><div class="fullcomment"><div class="comment cmt"><h4>FoBo AngularJS Toolkit Module</h4><p>This FoBo toolkit module provides AngularJS API and Resource components to the FoBo Module,
+but can also be used as-is, see below for setup information.</p><p>If you are using this module via the FoBo/FoBo module see also <a href="FoBo/package.html" class="extype" name="net.liftmodules.FoBo">net.liftmodules.FoBo</a> for setup information.
 </p></div></div>
+    </li><li name="net.liftmodules.FoBoAJSAPI" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="FoBoAJSAPI"></a>
+      <a id="FoBoAJSAPI:FoBoAJSAPI"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="FoBoAJSAPI/package.html"><span class="name">FoBoAJSAPI</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#net.liftmodules.package@FoBoAJSAPI" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">This FoBo API module provides FoBo/Lift API components for the AngularJS Toolkit Module,
+but can also be used as-is, see below for setup information.</p><div class="fullcomment"><div class="comment cmt"><h4>FoBo AngularJS API Module</h4><p>This FoBo API module provides FoBo/Lift API components for the AngularJS Toolkit Module,
+but can also be used as-is, see below for setup information.</p><p>If you are using this module via the FoBo/FoBo module see also <a href="FoBo/package.html" class="extype" name="net.liftmodules.FoBo">net.liftmodules.FoBo</a> for setup information.
+</p></div></div>
+    </li><li name="net.liftmodules.FoBoAJSRes" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="FoBoAJSRes"></a>
+      <a id="FoBoAJSRes:FoBoAJSRes"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="FoBoAJSRes/package.html"><span class="name">FoBoAJSRes</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#net.liftmodules.package@FoBoAJSRes" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">This resource module provides AngularJS resource components to the FoBo AngularJS Toolkit module,
+but can also be used as-is, see below for setup information.</p><div class="fullcomment"><div class="comment cmt"><h4>FoBo AngularJS Resource Module</h4><p>This resource module provides AngularJS resource components to the FoBo AngularJS Toolkit module,
+but can also be used as-is, see below for setup information.</p><p>If you are using this module via the FoBo/FoBo module see also <a href="FoBo/package.html" class="extype" name="net.liftmodules.FoBo">net.liftmodules.FoBo</a> for setup information.</p></div></div>
+    </li><li name="net.liftmodules.FoBoAPI" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="FoBoAPI"></a>
+      <a id="FoBoAPI:FoBoAPI"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="FoBoAPI/package.html"><span class="name">FoBoAPI</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#net.liftmodules.package@FoBoAPI" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">This FoBo / FoBo API module provides FoBo/Lift API components for the FoBo Module,
+but can also be used as-is.</p><div class="fullcomment"><div class="comment cmt"><h4>FoBo / FoBo API Module</h4><p>This FoBo / FoBo API module provides FoBo/Lift API components for the FoBo Module,
+but can also be used as-is.</p><p>If you are using this module via the FoBo/FoBo module see also <a href="FoBo/package.html" class="extype" name="net.liftmodules.FoBo">net.liftmodules.FoBo</a> for setup information.</p></div></div>
     </li><li name="net.liftmodules.FoBoBs" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="FoBoBs"></a>
       <a id="FoBoBs:FoBoBs"></a>
@@ -170,13 +230,55 @@ for usage information.
         <img src="../../lib/permalink.png" />
       </a>
     </span>
-      <p class="shortcomment cmt">This package object is only of interest to you if you are using this module
-as a stand alone artifact dependency in your project (without FoBo).</p><div class="fullcomment"><div class="comment cmt"><h4>FoBo - Sub-module</h4><p>This package object is only of interest to you if you are using this module
-as a stand alone artifact dependency in your project (without FoBo).
-This package object provides information on how to initiate and use this module
-in your project. If you are using this module in FoBo see <a href="FoBo/package.html" class="extype" name="net.liftmodules.FoBo">net.liftmodules.FoBo</a>
-for usage information.
-</p></div></div>
+      <p class="shortcomment cmt">This FoBo toolkit module provides Bootstrap v3.x API and Resource components to the
+FoBo / FoBo Module, but can also be used as-is, see below for setup information.</p><div class="fullcomment"><div class="comment cmt"><h4>FoBo Bootstrap 3 Toolkit Module</h4><p>This FoBo toolkit module provides Bootstrap v3.x API and Resource components to the
+FoBo / FoBo Module, but can also be used as-is, see below for setup information.</p><p>If you are using this module via the FoBo/FoBo artifact module see also <a href="FoBo/package.html" class="extype" name="net.liftmodules.FoBo">net.liftmodules.FoBo</a> for setup information.</p></div><dl class="attributes block"> <div class="block">Example:
+               <ol><li class="cmt"><p>To initiate this module for usage in your Lift project set something like the following in
+your projects Lift bootstrap.liftweb.Boot boot method.</p><pre><span class="kw">import</span> net.liftmodules.{FoBoBs <span class="kw">=&gt;</span> FoBo}
+ :
+ :
+FoBo.ToolKit.Init=FoBo.ToolKit.Bootstrap336 <span class="cmt">//or any other companion toolkit object</span></pre><p>You may substitute ToolKit for Resource or API and if you wish also adjust the artifact dependencies
+accordingly to include just the FoBo modules you use.
+</p></li></ol>
+            </div></dl></div>
+    </li><li name="net.liftmodules.FoBoBsAPI" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="FoBoBsAPI"></a>
+      <a id="FoBoBsAPI:FoBoBsAPI"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="FoBoBsAPI/package.html"><span class="name">FoBoBsAPI</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#net.liftmodules.package@FoBoBsAPI" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">This FoBo API module provides FoBo/Lift API components for the Bootstrap v3.x Toolkit Module,
+but can also be used as-is, see below for setup information.</p><div class="fullcomment"><div class="comment cmt"><h4>FoBo Bootstrap 3 API Module</h4><p>This FoBo API module provides FoBo/Lift API components for the Bootstrap v3.x Toolkit Module,
+but can also be used as-is, see below for setup information.</p><p>If you are using this module via the FoBo/FoBo artifact module see also <a href="FoBo/package.html" class="extype" name="net.liftmodules.FoBo">net.liftmodules.FoBo</a> for setup information.</p></div></div>
+    </li><li name="net.liftmodules.FoBoBsRes" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="FoBoBsRes"></a>
+      <a id="FoBoBsRes:FoBoBsRes"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="FoBoBsRes/package.html"><span class="name">FoBoBsRes</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#net.liftmodules.package@FoBoBsRes" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">This resource module provides Bootstrap resource components to the FoBo Bootstrap 3 Toolkit module,
+but can also be used as-is, see below for setup information.</p><div class="fullcomment"><div class="comment cmt"><h4>FoBo Bootstrap 3 Resource Module</h4><p>This resource module provides Bootstrap resource components to the FoBo Bootstrap 3 Toolkit module,
+but can also be used as-is, see below for setup information.</p><p>If you are using this module via the FoBo/FoBo module see also <a href="FoBo/package.html" class="extype" name="net.liftmodules.FoBo">net.liftmodules.FoBo</a> for setup information.</p></div></div>
     </li><li name="net.liftmodules.FoBoFA" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="FoBoFA"></a>
       <a id="FoBoFA:FoBoFA"></a>
@@ -193,12 +295,28 @@ for usage information.
         <img src="../../lib/permalink.png" />
       </a>
     </span>
-      <p class="shortcomment cmt">This package object is only of interest to you if you are using this module
-as a stand alone artifact dependency in your project (without FoBo).</p><div class="fullcomment"><div class="comment cmt"><h4>FoBo - Sub-module</h4><p>This package object is only of interest to you if you are using this module
-as a stand alone artifact dependency in your project (without FoBo).
-This package object provides information on how to initiate and use this module
-in your project. If you are using this module in FoBo see <a href="FoBo/package.html" class="extype" name="net.liftmodules.FoBo">net.liftmodules.FoBo</a>
-for usage information.
+      <p class="shortcomment cmt">This FoBo toolkit module provides Font Awesome API and Resource components to the
+FoBo / FoBo Module, but can also be used as-is, see below for setup information.</p><div class="fullcomment"><div class="comment cmt"><h4>FoBo Font Awesome Toolkit Module</h4><p>This FoBo toolkit module provides Font Awesome API and Resource components to the
+FoBo / FoBo Module, but can also be used as-is, see below for setup information.</p><p>If you are using this module via the FoBo/FoBo artifact module see also <a href="FoBo/package.html" class="extype" name="net.liftmodules.FoBo">net.liftmodules.FoBo</a> for setup information.</p></div></div>
+    </li><li name="net.liftmodules.FoBoFARes" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="FoBoFARes"></a>
+      <a id="FoBoFARes:FoBoFARes"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="FoBoFARes/package.html"><span class="name">FoBoFARes</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#net.liftmodules.package@FoBoFARes" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">This resource module provides Font Awesome resource components to the FoBo Font Awesome Toolkit module,
+but can also be used as-is, see below for setup information.</p><div class="fullcomment"><div class="comment cmt"><h4>FoBo Font Awesome Resource Module</h4><p>This resource module provides Font Awesome resource components to the FoBo Font Awesome Toolkit module,
+but can also be used as-is, see below for setup information.</p><p>If you are using this module via the FoBo/FoBo module see also <a href="FoBo/package.html" class="extype" name="net.liftmodules.FoBo">net.liftmodules.FoBo</a> for setup information.
 </p></div></div>
     </li><li name="net.liftmodules.FoBoGCP" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="FoBoGCP"></a>
@@ -216,13 +334,86 @@ for usage information.
         <img src="../../lib/permalink.png" />
       </a>
     </span>
-      <p class="shortcomment cmt">This package object is only of interest to you if you are using this module
-as a stand alone artifact dependency in your project (without FoBo).</p><div class="fullcomment"><div class="comment cmt"><h4>FoBo - Sub-module</h4><p>This package object is only of interest to you if you are using this module
-as a stand alone artifact dependency in your project (without FoBo).
-This package object provides information on how to initiate and use this module
-in your project. If you are using this module in FoBo see <a href="FoBo/package.html" class="extype" name="net.liftmodules.FoBo">net.liftmodules.FoBo</a>
-for usage information.
+      <p class="shortcomment cmt">This FoBo toolkit module provides Google Code Prettify API and Resource components to the
+FoBo / FoBo Module, but can also be used as-is, see below for setup information.</p><div class="fullcomment"><div class="comment cmt"><h4>FoBo Google Code Prettify Toolkit Module</h4><p>This FoBo toolkit module provides Google Code Prettify API and Resource components to the
+FoBo / FoBo Module, but can also be used as-is, see below for setup information.</p><p>If you are using this module via the FoBo/FoBo artifact module see also <a href="FoBo/package.html" class="extype" name="net.liftmodules.FoBo">net.liftmodules.FoBo</a> for setup information.</p></div></div>
+    </li><li name="net.liftmodules.FoBoGCPRes" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="FoBoGCPRes"></a>
+      <a id="FoBoGCPRes:FoBoGCPRes"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="FoBoGCPRes/package.html"><span class="name">FoBoGCPRes</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#net.liftmodules.package@FoBoGCPRes" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">This resource module provides Google Code Prettify resource components to the FoBo Google Code Prettify Toolkit module,
+but can also be used as-is, see below for setup information.</p><div class="fullcomment"><div class="comment cmt"><h4>FoBo Google Code Prettify Resource Module</h4><p>This resource module provides Google Code Prettify resource components to the FoBo Google Code Prettify Toolkit module,
+but can also be used as-is, see below for setup information.</p><p>If you are using this module via the FoBo/FoBo module see also <a href="FoBo/package.html" class="extype" name="net.liftmodules.FoBo">net.liftmodules.FoBo</a> for setup information.</p></div></div>
+    </li><li name="net.liftmodules.FoBoHL" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="FoBoHL"></a>
+      <a id="FoBoHL:FoBoHL"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="FoBoHL/package.html"><span class="name">FoBoHL</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#net.liftmodules.package@FoBoHL" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">This FoBo toolkit module provides Highlight API and Resource components to the
+FoBo / FoBo Module, but can also be used as-is, see below for setup information.</p><div class="fullcomment"><div class="comment cmt"><h4>FoBo Highlight Toolkit Module</h4><p>This FoBo toolkit module provides Highlight API and Resource components to the
+FoBo / FoBo Module, but can also be used as-is, see below for setup information.</p><p>If you are using this module via the FoBo/FoBo artifact module see also <a href="FoBo/package.html" class="extype" name="net.liftmodules.FoBo">net.liftmodules.FoBo</a> for setup information.</p></div></div>
+    </li><li name="net.liftmodules.FoBoHLAPI" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="FoBoHLAPI"></a>
+      <a id="FoBoHLAPI:FoBoHLAPI"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="FoBoHLAPI/package.html"><span class="name">FoBoHLAPI</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#net.liftmodules.package@FoBoHLAPI" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">This FoBo API module provides FoBo/Lift API components for the Highlight Toolkit Module,
+but can also be used as-is, see below for setup information.</p><div class="fullcomment"><div class="comment cmt"><h4>FoBo Highlight API Module</h4><p>This FoBo API module provides FoBo/Lift API components for the Highlight Toolkit Module,
+but can also be used as-is, see below for setup information.</p><p>If you are using this module via the FoBo/FoBo module see also <a href="FoBo/package.html" class="extype" name="net.liftmodules.FoBo">net.liftmodules.FoBo</a> for setup information.
 </p></div></div>
+    </li><li name="net.liftmodules.FoBoHLRes" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="FoBoHLRes"></a>
+      <a id="FoBoHLRes:FoBoHLRes"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="FoBoHLRes/package.html"><span class="name">FoBoHLRes</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#net.liftmodules.package@FoBoHLRes" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">This resource module provides Highlight JS resource components to the FoBo Highlight JS Toolkit module,
+but can also be used as-is, see below for setup information.</p><div class="fullcomment"><div class="comment cmt"><h4>FoBo Highlight JS Resource Module</h4><p>This resource module provides Highlight JS resource components to the FoBo Highlight JS Toolkit module,
+but can also be used as-is, see below for setup information.</p><p>If you are using this module via the FoBo/FoBo module see also <a href="FoBo/package.html" class="extype" name="net.liftmodules.FoBo">net.liftmodules.FoBo</a> for setup information.</p></div></div>
     </li><li name="net.liftmodules.FoBoJQ" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="FoBoJQ"></a>
       <a id="FoBoJQ:FoBoJQ"></a>
@@ -239,12 +430,47 @@ for usage information.
         <img src="../../lib/permalink.png" />
       </a>
     </span>
-      <p class="shortcomment cmt">This package object is only of interest to you if you are using this module
-as a stand alone artifact dependency in your project (without FoBo).</p><div class="fullcomment"><div class="comment cmt"><h4>FoBo - Sub-module</h4><p>This package object is only of interest to you if you are using this module
-as a stand alone artifact dependency in your project (without FoBo).
-This package object provides information on how to initiate and use this module
-in your project. If you are using this module in FoBo see <a href="FoBo/package.html" class="extype" name="net.liftmodules.FoBo">net.liftmodules.FoBo</a>
-for usage information.
+      <p class="shortcomment cmt">This FoBo toolkit module provides JQuery API and Resource components to the
+FoBo / FoBo Module, but can also be used as-is, see below for setup information.</p><div class="fullcomment"><div class="comment cmt"><h4>FoBo JQuery Toolkit Module</h4><p>This FoBo toolkit module provides JQuery API and Resource components to the
+FoBo / FoBo Module, but can also be used as-is, see below for setup information.</p><p>If you are using this module via the FoBo/FoBo artifact module see also <a href="FoBo/package.html" class="extype" name="net.liftmodules.FoBo">net.liftmodules.FoBo</a> for setup information.</p></div></div>
+    </li><li name="net.liftmodules.FoBoJQAPI" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="FoBoJQAPI"></a>
+      <a id="FoBoJQAPI:FoBoJQAPI"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="FoBoJQAPI/package.html"><span class="name">FoBoJQAPI</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#net.liftmodules.package@FoBoJQAPI" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">This FoBo API module provides FoBo/Lift API components for the JQuery Toolkit Module,
+but can also be used as-is, see below for setup information.</p><div class="fullcomment"><div class="comment cmt"><h4>FoBo JQuery API Module</h4><p>This FoBo API module provides FoBo/Lift API components for the JQuery Toolkit Module,
+but can also be used as-is, see below for setup information.</p><p>If you are using this module via the FoBo/FoBo artifact module see also <a href="FoBo/package.html" class="extype" name="net.liftmodules.FoBo">net.liftmodules.FoBo</a> for setup information.</p></div></div>
+    </li><li name="net.liftmodules.FoBoJQRes" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="FoBoJQRes"></a>
+      <a id="FoBoJQRes:FoBoJQRes"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="FoBoJQRes/package.html"><span class="name">FoBoJQRes</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#net.liftmodules.package@FoBoJQRes" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">This resource module provides JQuery resource components to the FoBo JQuery Toolkit module,
+but can also be used as-is, see below for setup information.</p><div class="fullcomment"><div class="comment cmt"><h4>FoBo JQuery Resource Module</h4><p>This resource module provides JQuery resource components to the FoBo JQuery Toolkit module,
+but can also be used as-is, see below for setup information.</p><p>If you are using this module via the FoBo/FoBo module see also <a href="FoBo/package.html" class="extype" name="net.liftmodules.FoBo">net.liftmodules.FoBo</a> for setup information.
 </p></div></div>
     </li><li name="net.liftmodules.FoBoKi" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="FoBoKi"></a>
@@ -262,12 +488,28 @@ for usage information.
         <img src="../../lib/permalink.png" />
       </a>
     </span>
-      <p class="shortcomment cmt">This package object is only of interest to you if you are using this module
-as a stand alone artifact dependency in your project (without FoBo).</p><div class="fullcomment"><div class="comment cmt"><h4>FoBo - Sub-module</h4><p>This package object is only of interest to you if you are using this module
-as a stand alone artifact dependency in your project (without FoBo).
-This package object provides information on how to initiate and use this module
-in your project. If you are using this module in FoBo see <a href="FoBo/package.html" class="extype" name="net.liftmodules.FoBo">net.liftmodules.FoBo</a>
-for usage information.
+      <p class="shortcomment cmt">This FoBo toolkit module provides KineticJs API and Resource components to the
+FoBo / FoBo Module, but can also be used as-is, see below for setup information.</p><div class="fullcomment"><div class="comment cmt"><h4>FoBo KineticJs Toolkit Module</h4><p>This FoBo toolkit module provides KineticJs API and Resource components to the
+FoBo / FoBo Module, but can also be used as-is, see below for setup information.</p><p>If you are using this module via the FoBo/FoBo artifact module see also <a href="FoBo/package.html" class="extype" name="net.liftmodules.FoBo">net.liftmodules.FoBo</a> for setup information.</p></div></div>
+    </li><li name="net.liftmodules.FoBoKiRes" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="FoBoKiRes"></a>
+      <a id="FoBoKiRes:FoBoKiRes"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="FoBoKiRes/package.html"><span class="name">FoBoKiRes</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#net.liftmodules.package@FoBoKiRes" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">This resource module provides JQuery resource components to the FoBo KineticJs Toolkit module,
+but can also be used as-is, see below for setup information.</p><div class="fullcomment"><div class="comment cmt"><h4>FoBo KineticJs Resource Module</h4><p>This resource module provides JQuery resource components to the FoBo KineticJs Toolkit module,
+but can also be used as-is, see below for setup information.</p><p>If you are using this module via the FoBo/FoBo module see also <a href="FoBo/package.html" class="extype" name="net.liftmodules.FoBo">net.liftmodules.FoBo</a> for setup information.
 </p></div></div>
     </li><li name="net.liftmodules.FoBoPa" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="FoBoPa"></a>
@@ -285,12 +527,28 @@ for usage information.
         <img src="../../lib/permalink.png" />
       </a>
     </span>
-      <p class="shortcomment cmt">This package object is only of interest to you if you are using this module
-as a stand alone artifact dependency in your project (without FoBo).</p><div class="fullcomment"><div class="comment cmt"><h4>FoBo - Sub-module</h4><p>This package object is only of interest to you if you are using this module
-as a stand alone artifact dependency in your project (without FoBo).
-This package object provides information on how to initiate and use this module
-in your project. If you are using this module in FoBo see <a href="FoBo/package.html" class="extype" name="net.liftmodules.FoBo">net.liftmodules.FoBo</a>
-for usage information.
+      <p class="shortcomment cmt">This FoBo toolkit module provides Pace API and Resource components to the
+FoBo / FoBo Module, but can also be used as-is, see below for setup information.</p><div class="fullcomment"><div class="comment cmt"><h4>FoBo Pace Toolkit Module</h4><p>This FoBo toolkit module provides Pace API and Resource components to the
+FoBo / FoBo Module, but can also be used as-is, see below for setup information.</p><p>If you are using this module via the FoBo/FoBo artifact module see also <a href="FoBo/package.html" class="extype" name="net.liftmodules.FoBo">net.liftmodules.FoBo</a> for setup information.</p></div></div>
+    </li><li name="net.liftmodules.FoBoPaRes" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="FoBoPaRes"></a>
+      <a id="FoBoPaRes:FoBoPaRes"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="FoBoPaRes/package.html"><span class="name">FoBoPaRes</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#net.liftmodules.package@FoBoPaRes" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">This resource module provides JQuery resource components to the FoBo Pace Toolkit module,
+but can also be used as-is, see below for setup information.</p><div class="fullcomment"><div class="comment cmt"><h4>FoBo Pace Resource Module</h4><p>This resource module provides JQuery resource components to the FoBo Pace Toolkit module,
+but can also be used as-is, see below for setup information.</p><p>If you are using this module via the FoBo/FoBo module see also <a href="FoBo/package.html" class="extype" name="net.liftmodules.FoBo">net.liftmodules.FoBo</a> for setup information.
 </p></div></div>
     </li><li name="net.liftmodules.FoBoTB" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="FoBoTB"></a>
@@ -308,13 +566,56 @@ for usage information.
         <img src="../../lib/permalink.png" />
       </a>
     </span>
-      <p class="shortcomment cmt">This package object is only of interest to you if you are using this module
-as a stand alone artifact dependency in your project (without FoBo).</p><div class="fullcomment"><div class="comment cmt"><h4>FoBo - Sub-module</h4><p>This package object is only of interest to you if you are using this module
-as a stand alone artifact dependency in your project (without FoBo).
-This package object provides information on how to initiate and use this module
-in your project. If you are using this module in FoBo see <a href="FoBo/package.html" class="extype" name="net.liftmodules.FoBo">net.liftmodules.FoBo</a>
-for usage information.
-</p></div></div>
+      <p class="shortcomment cmt">This FoBo toolkit module provides Twitter Bootstrap v2.x API and Resource components to the
+FoBo / FoBo Module, but can also be used as-is, see below for setup information.</p><div class="fullcomment"><div class="comment cmt"><h4>FoBo Twitter Bootstrap Toolkit Module</h4><p>This FoBo toolkit module provides Twitter Bootstrap v2.x API and Resource components to the
+FoBo / FoBo Module, but can also be used as-is, see below for setup information.</p><p>If you are using this module via the FoBo/FoBo artifact module see also <a href="FoBo/package.html" class="extype" name="net.liftmodules.FoBo">net.liftmodules.FoBo</a> for setup information.
+</p></div><dl class="attributes block"> <div class="block">Example:
+               <ol><li class="cmt"><p>To initiate this module for usage in your Lift project set something like the following in
+your projects Lift bootstrap.liftweb.Boot boot method.</p><pre><span class="kw">import</span> net.liftmodules.{FoBoTB <span class="kw">=&gt;</span> FoBo}
+ :
+ :
+FoBo.ToolKit.Init=FoBo.ToolKit.Bootstrap232 <span class="cmt">//or any other toolkit object</span></pre><p>You may substitute ToolKit for Resource or API and if you wish also adjust the artifact dependencies
+accordingly to include just the FoBo modules you use.
+</p></li></ol>
+            </div></dl></div>
+    </li><li name="net.liftmodules.FoBoTBAPI" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="FoBoTBAPI"></a>
+      <a id="FoBoTBAPI:FoBoTBAPI"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="FoBoTBAPI/package.html"><span class="name">FoBoTBAPI</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#net.liftmodules.package@FoBoTBAPI" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">This FoBo API module provides FoBo/Lift API components for the Twitter Bootstrap v2.x Toolkit Module,
+but can also be used as-is, see below for setup information.</p><div class="fullcomment"><div class="comment cmt"><h4>FoBo Twitter Bootstrap API Module</h4><p>This FoBo API module provides FoBo/Lift API components for the Twitter Bootstrap v2.x Toolkit Module,
+but can also be used as-is, see below for setup information.</p><p>If you are using this module via the FoBo/FoBo artifact module see also <a href="FoBo/package.html" class="extype" name="net.liftmodules.FoBo">net.liftmodules.FoBo</a> for setup information.</p></div></div>
+    </li><li name="net.liftmodules.FoBoTBRes" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="FoBoTBRes"></a>
+      <a id="FoBoTBRes:FoBoTBRes"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="FoBoTBRes/package.html"><span class="name">FoBoTBRes</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#net.liftmodules.package@FoBoTBRes" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">This resource module provides Twitter Bootstrap resource components to the FoBo Twitter Bootstrap Toolkit module,
+but can also be used as-is, see below for setup information.</p><div class="fullcomment"><div class="comment cmt"><h4>FoBo Twitter Bootstrap Resource Module</h4><p>This resource module provides Twitter Bootstrap resource components to the FoBo Twitter Bootstrap Toolkit module,
+but can also be used as-is, see below for setup information.</p><p>If you are using this module via the FoBo/FoBo module see also <a href="FoBo/package.html" class="extype" name="net.liftmodules.FoBo">net.liftmodules.FoBo</a> for setup information.</p></div></div>
     </li></ol>
             </div>
 

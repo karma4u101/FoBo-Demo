@@ -47,12 +47,8 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><h4>FoBo - Sub-module</h4><p>This package object is only of interest to you if you are using this module
-as a stand alone artifact dependency in your project (without FoBo).
-This package object provides information on how to initiate and use this module
-in your project. If you are using this module in FoBo see <a href="../FoBo/package.html" class="extype" name="net.liftmodules.FoBo">net.liftmodules.FoBo</a>
-for usage information.
-</p></div><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><h4>FoBo JQuery Toolkit Module</h4><p>This FoBo toolkit module provides JQuery API and Resource components to the
+FoBo / FoBo Module, but can also be used as-is, see below for setup information.</p><p>If you are using this module via the FoBo/FoBo artifact module see also <a href="../FoBo/package.html" class="extype" name="net.liftmodules.FoBo">net.liftmodules.FoBo</a> for setup information.</p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
@@ -94,23 +90,89 @@ for usage information.
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="net.liftmodules.FoBoJQ.FoBoJQ" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+              <ol><li name="net.liftmodules.FoBoJQ.API" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="APIextendsAnyRef"></a>
+      <a id="API:API"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$API.html"><span class="name">API</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.liftmodules.FoBoJQ.package@APIextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Initiate FoBo's JQuery API in you bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Initiate FoBo's JQuery API in you bootstrap liftweb Boot.</p><p> <b>Example:</b></p><pre><span class="kw">import</span> net.liftmodules.{FoBoJQ <span class="kw">=&gt;</span> FoBo}
+ :
+FoBo.API.Init=FoBo.API.[API <span class="std">Object</span>]</pre><p><b>Note:</b> To see available objects click on the round trait icon in the header of this page.
+</p></div></div>
+    </li><li name="net.liftmodules.FoBoJQ.Resource" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="ResourceextendsAnyRef"></a>
+      <a id="Resource:Resource"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$Resource.html"><span class="name">Resource</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.liftmodules.FoBoJQ.package@ResourceextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Initiate FoBo's JQuery Resource(s) in you bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Initiate FoBo's JQuery Resource(s) in you bootstrap liftweb Boot.</p><p> <b>Example:</b></p><pre><span class="kw">import</span> net.liftmodules.{FoBoJQ <span class="kw">=&gt;</span> FoBo}
+ :
+FoBo.Resource.Init=FoBo.Resource.[Resource <span class="std">Object</span>]</pre><p><b>Note:</b> To see available objects click on the round trait icon in the header of this page.
+</p></div></div>
+    </li><li name="net.liftmodules.FoBoJQ.ToolKit" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="ToolKitextendsAnyRef"></a>
+      <a id="ToolKit:ToolKit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$ToolKit.html"><span class="name">ToolKit</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.liftmodules.FoBoJQ.package@ToolKitextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Initiate FoBo's JQuery ToolKit(s) in you bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Initiate FoBo's JQuery ToolKit(s) in you bootstrap liftweb Boot.
+Using the ToolKit initiation you will bring in both the
+toolkit's resources and FoBo/Lift API associated
+with the toolkit.</p><p> <b>Example:</b></p><pre><span class="kw">import</span> net.liftmodules.{FoBoJQ <span class="kw">=&gt;</span> FoBo}
+ :
+FoBo.ToolKit.Init=FoBo.ToolKit.[ToolKit <span class="std">Object</span>]</pre><p><b>Note:</b> To see available objects click on the round trait icon in the header of this page.
+</p></div></div>
+    </li><li name="net.liftmodules.FoBoJQ.FoBoJQ" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="FoBoJQextendsAnyRef"></a>
       <a id="FoBoJQ:FoBoJQ"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier"></span>
+        <span class="modifier">sealed </span>
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="package$$FoBoJQ.html"><span class="name">FoBoJQ</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <a href="package$$FoBoJQ.html"><span class="name deprecated" title="Deprecated: (Since version 1.6.0) Use ToolKit or Resouce">FoBoJQ</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#net.liftmodules.FoBoJQ.package@FoBoJQextendsAnyRef" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" />
       </a>
     </span>
-      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Use ToolKit or Resouce</p></dd></dl></div>
     </li></ol>
             </div>
 
@@ -118,7 +180,82 @@ for usage information.
 
         <div id="values" class="values members">
               <h3>Value Members</h3>
-              <ol><li name="net.liftmodules.FoBoJQ.InitParam" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+              <ol><li name="net.liftmodules.FoBoJQ.API" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="API"></a>
+      <a id="API:API"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$API$.html"><span class="name">API</span></a><span class="result"> extends <a href="package$$API.html" class="extype" name="net.liftmodules.FoBoJQ.API">API</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.liftmodules.FoBoJQ.package@API" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="net.liftmodules.FoBoJQ.Resource" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Resource"></a>
+      <a id="Resource:Resource"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$Resource$.html"><span class="name">Resource</span></a><span class="result"> extends <a href="package$$Resource.html" class="extype" name="net.liftmodules.FoBoJQ.Resource">Resource</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.liftmodules.FoBoJQ.package@Resource" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="net.liftmodules.FoBoJQ.ToolKit" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ToolKit"></a>
+      <a id="ToolKit:ToolKit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$ToolKit$.html"><span class="name">ToolKit</span></a><span class="result"> extends <a href="package$$ToolKit.html" class="extype" name="net.liftmodules.FoBoJQ.ToolKit">ToolKit</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.liftmodules.FoBoJQ.package@ToolKit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="net.liftmodules.FoBoJQ#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <a id="toString():String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.liftmodules.FoBoJQ.package@toString():String" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="net.liftmodules.FoBoJQ">FoBoJQ</a> → AnyRef → Any</dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Deprecated Value Members</h3>
+              <ol><li name="net.liftmodules.FoBoJQ.InitParam" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="InitParam"></a>
       <a id="InitParam:InitParam"></a>
       <h4 class="signature">
@@ -127,14 +264,17 @@ for usage information.
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="package$$InitParam$.html"><span class="name">InitParam</span></a><span class="result"> extends <a href="package$$FoBoJQ.html" class="extype" name="net.liftmodules.FoBoJQ.FoBoJQ">FoBoJQ</a></span>
+        <a href="package$$InitParam$.html"><span class="name deprecated" title="Deprecated: (Since version 1.6.0) Use FoBoJQ.ToolKit.Init=FoBoJQ.ToolKit.[Toolkit Object]">InitParam</span></a><span class="result"> extends <a href="package$$FoBoJQ.html" class="extype" name="net.liftmodules.FoBoJQ.FoBoJQ">FoBoJQ</a></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#net.liftmodules.FoBoJQ.package@InitParam" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" />
       </a>
     </span>
-      <p class="shortcomment cmt"></p>
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Use FoBoJQ.ToolKit.Init=FoBoJQ.ToolKit.[Toolkit Object]</p></dd></dl></div>
     </li><li name="net.liftmodules.FoBoJQ.JQuery1102" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="JQuery1102"></a>
       <a id="JQuery1102:JQuery1102"></a>
@@ -144,14 +284,17 @@ for usage information.
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="package$$JQuery1102$.html"><span class="name">JQuery1102</span></a><span class="result"> extends <a href="package$$FoBoJQ.html" class="extype" name="net.liftmodules.FoBoJQ.FoBoJQ">FoBoJQ</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="package$$JQuery1102$.html"><span class="name deprecated" title="Deprecated: (Since version 1.6.0) Use FoBoJQ.ToolKit.Init=FoBoJQ.ToolKit.JQuery1102">JQuery1102</span></a><span class="result"> extends <a href="package$$FoBoJQ.html" class="extype" name="net.liftmodules.FoBoJQ.FoBoJQ">FoBoJQ</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#net.liftmodules.FoBoJQ.package@JQuery1102" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" />
       </a>
     </span>
-      <p class="shortcomment cmt">Enable usage of JQuery version 1&#8228;10&#8228;2 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of JQuery version 1&#8228;10&#8228;2 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Version</dt><dd><p>1.10.2</p><p><b>Example:</b></p><pre>FoBoJQ.InitParam.JQuery=FoBoJQ.JQuery1102</pre></dd></dl></div>
+      <p class="shortcomment cmt">Enable usage of JQuery version 1&#8228;10&#8228;2 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of JQuery version 1&#8228;10&#8228;2 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Use FoBoJQ.ToolKit.Init=FoBoJQ.ToolKit.JQuery1102</p></dd><dt>Version</dt><dd><p>1.10.2</p><p><b>Example:</b></p><pre>FoBoJQ.InitParam.JQuery=FoBoJQ.JQuery1102</pre></dd></dl></div>
     </li><li name="net.liftmodules.FoBoJQ.JQuery1113" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="JQuery1113"></a>
       <a id="JQuery1113:JQuery1113"></a>
@@ -161,14 +304,17 @@ for usage information.
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="package$$JQuery1113$.html"><span class="name">JQuery1113</span></a><span class="result"> extends <a href="package$$FoBoJQ.html" class="extype" name="net.liftmodules.FoBoJQ.FoBoJQ">FoBoJQ</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="package$$JQuery1113$.html"><span class="name deprecated" title="Deprecated: (Since version 1.6.0) Use FoBoJQ.ToolKit.Init=FoBoJQ.ToolKit.JQuery1113">JQuery1113</span></a><span class="result"> extends <a href="package$$FoBoJQ.html" class="extype" name="net.liftmodules.FoBoJQ.FoBoJQ">FoBoJQ</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#net.liftmodules.FoBoJQ.package@JQuery1113" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" />
       </a>
     </span>
-      <p class="shortcomment cmt">Enable usage of JQuery version 1&#8228;11&#8228;3 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of JQuery version 1&#8228;11&#8228;3 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Version</dt><dd><p>1.11.3</p><p><b>Example:</b></p><pre>FoBoJQ.InitParam.JQuery=FoBoJQ.JQuery1113</pre></dd><dt>Since</dt><dd><p>v1.4
+      <p class="shortcomment cmt">Enable usage of JQuery version 1&#8228;11&#8228;3 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of JQuery version 1&#8228;11&#8228;3 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Use FoBoJQ.ToolKit.Init=FoBoJQ.ToolKit.JQuery1113</p></dd><dt>Version</dt><dd><p>1.11.3</p><p><b>Example:</b></p><pre>FoBoJQ.InitParam.JQuery=FoBoJQ.JQuery1113</pre></dd><dt>Since</dt><dd><p>v1.4
 </p></dd></dl></div>
     </li><li name="net.liftmodules.FoBoJQ.JQuery172" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="JQuery172"></a>
@@ -179,14 +325,17 @@ for usage information.
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="package$$JQuery172$.html"><span class="name">JQuery172</span></a><span class="result"> extends <a href="package$$FoBoJQ.html" class="extype" name="net.liftmodules.FoBoJQ.FoBoJQ">FoBoJQ</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="package$$JQuery172$.html"><span class="name deprecated" title="Deprecated: (Since version 1.6.0) Use FoBoJQ.ToolKit.Init=FoBoJQ.ToolKit.JQuery172">JQuery172</span></a><span class="result"> extends <a href="package$$FoBoJQ.html" class="extype" name="net.liftmodules.FoBoJQ.FoBoJQ">FoBoJQ</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#net.liftmodules.FoBoJQ.package@JQuery172" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" />
       </a>
     </span>
-      <p class="shortcomment cmt">Enable usage of JQuery version 1&#8228;7&#8228;2 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of JQuery version 1&#8228;7&#8228;2 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Version</dt><dd><p>1.7.2</p><p><b>Example:</b></p><pre>FoBoJQ.InitParam.JQuery=FoBoJQ.JQuery172</pre></dd></dl></div>
+      <p class="shortcomment cmt">Enable usage of JQuery version 1&#8228;7&#8228;2 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of JQuery version 1&#8228;7&#8228;2 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Use FoBoJQ.ToolKit.Init=FoBoJQ.ToolKit.JQuery172</p></dd><dt>Version</dt><dd><p>1.7.2</p><p><b>Example:</b></p><pre>FoBoJQ.InitParam.JQuery=FoBoJQ.JQuery172</pre></dd></dl></div>
     </li><li name="net.liftmodules.FoBoJQ.JQuery182" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="JQuery182"></a>
       <a id="JQuery182:JQuery182"></a>
@@ -196,14 +345,17 @@ for usage information.
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="package$$JQuery182$.html"><span class="name">JQuery182</span></a><span class="result"> extends <a href="package$$FoBoJQ.html" class="extype" name="net.liftmodules.FoBoJQ.FoBoJQ">FoBoJQ</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="package$$JQuery182$.html"><span class="name deprecated" title="Deprecated: (Since version 1.6.0) Use FoBoJQ.ToolKit.Init=FoBoJQ.ToolKit.JQuery182">JQuery182</span></a><span class="result"> extends <a href="package$$FoBoJQ.html" class="extype" name="net.liftmodules.FoBoJQ.FoBoJQ">FoBoJQ</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#net.liftmodules.FoBoJQ.package@JQuery182" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" />
       </a>
     </span>
-      <p class="shortcomment cmt">Enable usage of JQuery version 1&#8228;8&#8228;2 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of JQuery version 1&#8228;8&#8228;2 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Version</dt><dd><p>1.8.2</p><p><b>Example:</b></p><pre>FoBoJQ.InitParam.JQuery=FoBoJQ.JQuery182</pre></dd></dl></div>
+      <p class="shortcomment cmt">Enable usage of JQuery version 1&#8228;8&#8228;2 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of JQuery version 1&#8228;8&#8228;2 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Use FoBoJQ.ToolKit.Init=FoBoJQ.ToolKit.JQuery182</p></dd><dt>Version</dt><dd><p>1.8.2</p><p><b>Example:</b></p><pre>FoBoJQ.InitParam.JQuery=FoBoJQ.JQuery182</pre></dd></dl></div>
     </li><li name="net.liftmodules.FoBoJQ.JQuery191" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="JQuery191"></a>
       <a id="JQuery191:JQuery191"></a>
@@ -213,14 +365,17 @@ for usage information.
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="package$$JQuery191$.html"><span class="name">JQuery191</span></a><span class="result"> extends <a href="package$$FoBoJQ.html" class="extype" name="net.liftmodules.FoBoJQ.FoBoJQ">FoBoJQ</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="package$$JQuery191$.html"><span class="name deprecated" title="Deprecated: (Since version 1.6.0) Use FoBoJQ.ToolKit.Init=FoBoJQ.ToolKit.JQuery191">JQuery191</span></a><span class="result"> extends <a href="package$$FoBoJQ.html" class="extype" name="net.liftmodules.FoBoJQ.FoBoJQ">FoBoJQ</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#net.liftmodules.FoBoJQ.package@JQuery191" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" />
       </a>
     </span>
-      <p class="shortcomment cmt">Enable usage of JQuery version 1&#8228;9&#8228;1 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of JQuery version 1&#8228;9&#8228;1 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Version</dt><dd><p>1.9.1</p><p><b>Example:</b></p><pre>FoBoJQ.InitParam.JQuery=FoBoJQ.JQuery191</pre></dd></dl></div>
+      <p class="shortcomment cmt">Enable usage of JQuery version 1&#8228;9&#8228;1 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of JQuery version 1&#8228;9&#8228;1 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Use FoBoJQ.ToolKit.Init=FoBoJQ.ToolKit.JQuery191</p></dd><dt>Version</dt><dd><p>1.9.1</p><p><b>Example:</b></p><pre>FoBoJQ.InitParam.JQuery=FoBoJQ.JQuery191</pre></dd></dl></div>
     </li><li name="net.liftmodules.FoBoJQ.JQuery211" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="JQuery211"></a>
       <a id="JQuery211:JQuery211"></a>
@@ -230,14 +385,17 @@ for usage information.
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="package$$JQuery211$.html"><span class="name">JQuery211</span></a><span class="result"> extends <a href="package$$FoBoJQ.html" class="extype" name="net.liftmodules.FoBoJQ.FoBoJQ">FoBoJQ</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="package$$JQuery211$.html"><span class="name deprecated" title="Deprecated: (Since version 1.6.0) Use FoBoJQ.ToolKit.Init=FoBoJQ.ToolKit.JQuery211">JQuery211</span></a><span class="result"> extends <a href="package$$FoBoJQ.html" class="extype" name="net.liftmodules.FoBoJQ.FoBoJQ">FoBoJQ</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#net.liftmodules.FoBoJQ.package@JQuery211" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" />
       </a>
     </span>
-      <p class="shortcomment cmt">Enable usage of JQuery version 2&#8228;1&#8228;1 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of JQuery version 2&#8228;1&#8228;1 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Version</dt><dd><p>2.1.1
+      <p class="shortcomment cmt">Enable usage of JQuery version 2&#8228;1&#8228;1 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of JQuery version 2&#8228;1&#8228;1 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Use FoBoJQ.ToolKit.Init=FoBoJQ.ToolKit.JQuery211</p></dd><dt>Version</dt><dd><p>2.1.1
 OBS! JQuery 2.x dose not support Internet Explorer 6, 7, or 8.</p><p><b>Example:</b></p><pre>JQueryModule.InitParam.JQuery=JQueryModule.JQuery211</pre></dd><dt>Since</dt><dd><p>v1.3
 </p></dd></dl></div>
     </li><li name="net.liftmodules.FoBoJQ.JQuery214" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -249,14 +407,17 @@ OBS! JQuery 2.x dose not support Internet Explorer 6, 7, or 8.</p><p><b>Example:
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="package$$JQuery214$.html"><span class="name">JQuery214</span></a><span class="result"> extends <a href="package$$FoBoJQ.html" class="extype" name="net.liftmodules.FoBoJQ.FoBoJQ">FoBoJQ</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="package$$JQuery214$.html"><span class="name deprecated" title="Deprecated: (Since version 1.6.0) Use FoBoJQ.ToolKit.Init=FoBoJQ.ToolKit.JQuery214">JQuery214</span></a><span class="result"> extends <a href="package$$FoBoJQ.html" class="extype" name="net.liftmodules.FoBoJQ.FoBoJQ">FoBoJQ</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#net.liftmodules.FoBoJQ.package@JQuery214" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" />
       </a>
     </span>
-      <p class="shortcomment cmt">Enable usage of JQuery version 2&#8228;1&#8228;4 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of JQuery version 2&#8228;1&#8228;4 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Version</dt><dd><p>2.1.4
+      <p class="shortcomment cmt">Enable usage of JQuery version 2&#8228;1&#8228;4 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of JQuery version 2&#8228;1&#8228;4 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Use FoBoJQ.ToolKit.Init=FoBoJQ.ToolKit.JQuery214</p></dd><dt>Version</dt><dd><p>2.1.4
 OBS! JQuery 2.x dose not support Internet Explorer 6, 7, or 8.</p><p><b>Example:</b></p><pre>JQueryModule.InitParam.JQuery=JQueryModule.JQuery211</pre></dd><dt>Since</dt><dd><p>v1.3
 </p></dd></dl></div>
     </li><li name="net.liftmodules.FoBoJQ.JQueryMigrate121" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -268,16 +429,19 @@ OBS! JQuery 2.x dose not support Internet Explorer 6, 7, or 8.</p><p><b>Example:
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="package$$JQueryMigrate121$.html"><span class="name">JQueryMigrate121</span></a><span class="result"> extends <a href="package$$FoBoJQ.html" class="extype" name="net.liftmodules.FoBoJQ.FoBoJQ">FoBoJQ</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="package$$JQueryMigrate121$.html"><span class="name deprecated" title="Deprecated: (Since version 1.6.0) Use FoBoJQ.ToolKit.Init=FoBoJQ.ToolKit.JQueryMigrate121">JQueryMigrate121</span></a><span class="result"> extends <a href="package$$FoBoJQ.html" class="extype" name="net.liftmodules.FoBoJQ.FoBoJQ">FoBoJQ</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#net.liftmodules.FoBoJQ.package@JQueryMigrate121" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" />
       </a>
     </span>
-      <p class="shortcomment cmt">Enable usage of JQuery-migrate version 1&#8228;2&#8228;1 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of JQuery-migrate version 1&#8228;2&#8228;1 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Version</dt><dd><p>1.2.1</p><p><b>Example:</b></p><pre>JQueryModule.InitParam.JQuery=JQueryModule.JQueryMigrate121</pre></dd><dt>Since</dt><dd><p>v1.3
+      <p class="shortcomment cmt">Enable usage of JQuery-migrate version 1&#8228;2&#8228;1 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of JQuery-migrate version 1&#8228;2&#8228;1 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Use FoBoJQ.ToolKit.Init=FoBoJQ.ToolKit.JQueryMigrate121</p></dd><dt>Version</dt><dd><p>1.2.1</p><p><b>Example:</b></p><pre>JQueryModule.InitParam.JQuery=JQueryModule.JQueryMigrate121</pre></dd><dt>Since</dt><dd><p>v1.3
 </p></dd></dl></div>
-    </li><li name="net.liftmodules.FoBoJQ#init" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="net.liftmodules.FoBoJQ#init" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="init():Unit"></a>
       <a id="init():Unit"></a>
       <h4 class="signature">
@@ -286,63 +450,18 @@ OBS! JQuery 2.x dose not support Internet Explorer 6, 7, or 8.</p><p><b>Example:
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">init</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name deprecated" title="Deprecated: (Since version 1.6.0) Init no longer nessesary as it is now automaticaly done for respective FoBoJQ.InitParam">init</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#net.liftmodules.FoBoJQ.package@init():Unit" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" />
       </a>
     </span>
-      
-    </li></ol>
-            </div>
-
-        
-
-        <div id="values" class="values members">
-              <h3>Deprecated Value Members</h3>
-              <ol><li name="net.liftmodules.FoBoJQ.JQuery1110" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="JQuery1110"></a>
-      <a id="JQuery1110:JQuery1110"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$JQuery1110$.html"><span class="name deprecated" title="Deprecated: (Since version 1.3) Use v1.11.1 or later">JQuery1110</span></a><span class="result"> extends <a href="package$$FoBoJQ.html" class="extype" name="net.liftmodules.FoBoJQ.FoBoJQ">FoBoJQ</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#net.liftmodules.FoBoJQ.package@JQuery1110" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Enable usage of JQuery version 1&#8228;11&#8228;0 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of JQuery version 1&#8228;11&#8228;0 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+      <p class="shortcomment cmt">Object for initiating FoBo API packages.</p><div class="fullcomment"><div class="comment cmt"><p>Object for initiating FoBo API packages.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
                 <span class="name">@deprecated</span>
               
-        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.3)</i> Use v1.11.1 or later</p></dd><dt>Version</dt><dd><p>1.11.0</p><p><b>Example:</b></p><pre>FoBoJQ.InitParam.JQuery=FoBoJQ.JQuery1110</pre></dd><dt>Since</dt><dd><p>v1.2
-</p></dd></dl></div>
-    </li><li name="net.liftmodules.FoBoJQ.JQuery1111" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="JQuery1111"></a>
-      <a id="JQuery1111:JQuery1111"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$JQuery1111$.html"><span class="name deprecated" title="Deprecated: (Since version 1.4) Use v1.11.3 or later">JQuery1111</span></a><span class="result"> extends <a href="package$$FoBoJQ.html" class="extype" name="net.liftmodules.FoBoJQ.FoBoJQ">FoBoJQ</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#net.liftmodules.FoBoJQ.package@JQuery1111" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Enable usage of JQuery version 1&#8228;11&#8228;1 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of JQuery version 1&#8228;11&#8228;1 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
-                <span class="name">@deprecated</span>
-              
-        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.4)</i> Use v1.11.3 or later</p></dd><dt>Version</dt><dd><p>1.11.1</p><p><b>Example:</b></p><pre>FoBoJQ.InitParam.JQuery=FoBoJQ.JQuery1111</pre></dd><dt>Since</dt><dd><p>v1.3
-</p></dd></dl></div>
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Init no longer nessesary as it is now automaticaly done for respective FoBoJQ.InitParam</p></dd></dl></div>
     </li></ol>
             </div>
         </div>

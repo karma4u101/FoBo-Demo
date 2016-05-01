@@ -53,3 +53,14 @@
 }
 
 /*end data table fixes*/
+
+/* highlight responsive adjustments */
+.hl-resp-tb-wrapper {
+	border:none;
+}
+
+.hl-table-adjust {
+	min-width:500px;
+	border-top: none;
+	padding:0;
+}

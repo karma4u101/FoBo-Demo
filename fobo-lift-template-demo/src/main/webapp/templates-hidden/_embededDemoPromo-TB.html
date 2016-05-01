@@ -38,7 +38,42 @@
 							</span>							
 						</div>
 						
-						<span class="label label-default">FoBo setup in Lift Boot</span> 
+                                
+                       <div class="col-12 col-sm-12 col-lg-12">
+                         <span class="label label-default">FoBo setup in Lift Boot</span> 
+                         <div class="table-responsive hl-resp-tb-wrapper">
+                           <table class="table" >
+                             <tbody>
+                               <tr>
+                                 <td class="hl-table-adjust">                                       
+						           <pre><code class="scala">
+  :
+import net.liftmodules.FoBo
+
+/**
+* A class that's instantiated early and run.  
+* It allows the application to modify lift's environment                                       
+**/
+class Boot extends Loggable {
+  def boot {
+      :
+    FoBo.ToolKit.Init=FoBo.ToolKit.JQuery1111                           
+    FoBo.ToolKit.Init=FoBo.ToolKit.PrettifyJun2011
+    FoBo.ToolKit.Init=FoBo.ToolKit.HighlightJS930
+    FoBo.ToolKit.Init=FoBo.ToolKit.Bootstrap336
+    FoBo.ToolKit.Init=FoBo.ToolKit.FontAwesome430      
+    FoBo.ToolKit.Init=FoBo.ToolKit.Pace102  
+      :       						 
+						           </code></pre>
+                                 </td>
+                               </tr>
+                             </tbody>
+                           </table>
+                         </div>
+                       </div><!-- end col-12 -->
+                     </div><!-- end row -->  						
+						
+<!-- 						<span class="label label-default">FoBo setup in Lift Boot</span> 
 						<pre class="prettyprint linenums lang-scala">
                             :
                            import net.liftmodules.FoBo
@@ -58,32 +93,56 @@
                                   :                            
                                 FoBo.init()
                                   :      
-						</pre>
+						</pre> -->
+						
 						<p>In Lift's html5 template:s add (depending on your setup) something like this:</p>
-						<span class="label label-default">Lift surround template</span> 
-						<pre class="prettyprint linenums lang-html">
-                        &lt;!DOCTYPE html&gt;
-                        &lt;html&gt;
-                          &lt;head&gt;
-                             :
-                             &lt;!-- FoBo css setting--&gt;
-                             &lt;link href="/classpath/fobo/bootstrap.css" type="text/css" rel="stylesheet"&gt;
-                             &lt;link href="/classpath/fobo/bootstrap-theme.css" type="text/css" rel="stylesheet"&gt;
-                             &lt;!--app specific tweeks and overrides external to module goes here--&gt;
-                             &lt;link href="[path to your projects app css]" type="text/css" rel="stylesheet"&gt;  
-                             :                        
-                          &lt;/head&gt;
-                          &lt;!--Demo page setup for prettyprint and bootstrap scrollspy--&gt;
-                          &lt;body data-spy="scroll" data-target="#fobo-navbar" data-offset="40" onload="prettyPrint()"&gt;
-                             :
-                             &lt;!--In end of page (for fast pageload) add the scripts you need--&gt; 
-                             &lt;script src="/classpath/fobo/prettify.js" type="text/javascript"&gt;&lt;/script&gt;
-                             &lt;script src="/classpath/fobo/lang-scala.js" type="text/javascript"&gt;&lt;/script&gt;
-                             &lt;script src="/classpath/fobo/bootstrap.js" type="text/javascript"&gt;&lt;/script&gt;
-                             :
-                          &lt;/body&gt;        
-                        &lt;/html&gt;    
-						</pre>
+						
+                       <div class="col-12 col-sm-12 col-lg-12">
+                         <span class="label label-default">Lift surround template</span> 
+                         <div class="table-responsive hl-resp-tb-wrapper">
+                           <table class="table" >
+                             <tbody>
+                               <tr>
+                                 <td class="hl-table-adjust">                                       
+						           <pre><code class="html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    :
+    &lt;!-- FoBo css setting--&gt;
+    &lt;link href="/classpath/fobo/bootstrap.css" type="text/css" rel="stylesheet"&gt;
+    &lt;link href="/classpath/fobo/bootstrap-theme.css" type="text/css" rel="stylesheet"&gt;
+    
+    &lt;!--Init of highlight js avoiding inline javascript in Lift 3--&gt;
+    &lt;link rel="stylesheet" href="/classpath/fobo/highlight/gruvbox-dark.css"&gt;
+    &lt;script src="/classpath/fobo/highlight/highlight.pack.js"&gt;&lt;/script&gt;
+    &lt;script data-lift="FoBo.HLJS.initHighlightingOnLoad"&gt;&lt;/script&gt;
+    
+    &lt;!--app specific tweeks and overrides external to module goes here--&gt;
+    &lt;link href="[path to your projects app css]" type="text/css" rel="stylesheet"&gt;  
+    :                        
+  &lt;/head&gt;
+                          
+  &lt;!--Demo page setup for prettyprint and bootstrap scrollspy--&gt;
+  &lt;body data-spy="scroll" data-target="#fobo-navbar" data-offset="40" onload="prettyPrint()"&gt;
+    :
+    &lt;!--In end of page (for fast pageload) add the scripts you need--&gt; 
+    &lt;script src="/classpath/fobo/prettify.js" type="text/javascript"&gt;&lt;/script&gt;
+    &lt;script src="/classpath/fobo/lang-scala.js" type="text/javascript"&gt;&lt;/script&gt;
+    &lt;script src="/classpath/fobo/bootstrap.js" type="text/javascript"&gt;&lt;/script&gt;
+    :
+  &lt;/body&gt;        
+&lt;/html&gt;        						 
+						           </code></pre>
+                                 </td>
+                               </tr>
+                             </tbody>
+                           </table>
+                         </div>
+                       </div><!-- end col-12 -->
+                     </div><!-- end row -->  						
+						
+
 						<p>Note the uniform setup without any version references in the html templates or any appended 
 						-min.css/-min.js as FoBo takes care of that for you, 
 						making way for a smooth(er) toolkit upgrade. For more information see the <a href="https://github.com/karma4u101/FoBo">FoBo modules Github</a>.

@@ -4,7 +4,7 @@ organization := "net.liftweb"
 
 version in ThisBuild := "0.7-SNAPSHOT"
 
-liftVersion in ThisBuild <<= liftVersion ?? "3.0-SNAPSHOT" //"2.6.2" // 
+liftVersion in ThisBuild <<= liftVersion ?? "3.0-RC2" //"2.6.2" // 
 
 liftLatestVersion in ThisBuild <<= liftLatestVersion ?? "3.0-RC1"
 

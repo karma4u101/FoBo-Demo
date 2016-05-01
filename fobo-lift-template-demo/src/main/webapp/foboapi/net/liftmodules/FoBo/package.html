@@ -48,27 +48,32 @@
       </h4>
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><h4>Welcome to FoBo - A Comprehensive Front-End Toolkit Lift Module</h4><p>The <a href="" class="extype" name="net.liftmodules.FoBo">net.liftmodules.FoBo</a> Package is the starting point for this API.
-The FoBo modules Github home is <a href="https://github.com/karma4u101/FoBo" target="_blank">here</a></p><h5>What FoBo will do for you</h5><p>This module gives you quick and easy integration of some of the industry leading web-centric open source
-front-end toolkits.</p><p>Among the benefits is:</p><ul><li>Due to uniform declaration and integration points across toolkit versions only a small amount of changes
-   is needed for a up/down-grading of a used Toolkit, optimally, if the toolkit has no breaking changes
+The FoBo modules Github home is <a href="https://github.com/karma4u101/FoBo" target="_blank">here</a></p><h5>What FoBo will do for you</h5><p>The FoBo/FoBo module gives you quick and easy integration of some of the industry leading web-centric open source
+front-end toolkits. FoBo is highly modular, all FoBo toolkit modules are built up of a resource module and possibly
+a FoBo/Lift API module.
+You can depend on the FoBo/FoBo module to get access to all FoBo's toolkit/resource/api modules or you can pick the
+module(s) you need, for example, just the bootstrap API module where you provide your own resources or you may chose
+any combination of modules.</p><p>Usage benefits:</p><ul><li>Due to uniform declaration and integration points across toolkit versions only a small amount of changes
+   is needed for a up/down-grading of a used Toolkit/resource, optimally, if the toolkit has no breaking changes
    it will just be a version change of the FoBo.Initparam in Lift bootstrap.liftweb.Boot.</li><li>The module provides debug-able js and css files in development and minimized files otherwise.</li><li>FoBo is simultaneously supporting several versions of each toolkit which makes development, maintenance,
-   upgrade and fall-back quick and easy.</li><li>Most of the FoBo toolkit modules provides Snippet helpers and lib classes that will ease you from writing
-   some commonly used toolkit component integration scripts making it a simple snippet invocation.</li><li>Great responsive scalability with responsive toolkits.</li><li>FoBo strives to be modular. FoBo is built up by independent sub-modules (artefacts) that can be used
-   independant of the FoBo assembly module.</li></ul><h5>FoBo supported toolkits and plugins</h5><p>The following is a list of available toolkits and plugins</p><ul><li>JQuery [v1.7.2, v1.8.2, v1.9.1, v1.10.2, v1.11.1, v1.11.3, v.2.1.1, v.2.1.4] <a href="../FoBoJQ/package.html" class="extype" name="net.liftmodules.FoBoJQ">net.liftmodules.FoBoJQ</a></li><li>Bootstrap v3.x series [v3.0.1, v3.1.1, v3.2.0, v3.3.5, v3.3.6] <a href="../FoBoBs/package.html" class="extype" name="net.liftmodules.FoBoBs">net.liftmodules.FoBoBs</a></li><li>Bootstrap v2.x series [v2.3.2] <a href="../FoBoTB/package.html" class="extype" name="net.liftmodules.FoBoTB">net.liftmodules.FoBoTB</a></li><li>Font Awesome [v3.2.1, v4.0.3, v4.1.0, v4.3.0] <a href="../FoBoFA/package.html" class="extype" name="net.liftmodules.FoBoFA">net.liftmodules.FoBoFA</a></li><li>Kinetic JS [v5.1.0]</li><li>Google Code Prettify [vJun2011]</li><li>Angular JS [v1.0.6, v1.2.11, v1.2.19, v1.3.15, v1.4.1, v1.4.8] (angular core modules)</li><li>Angular UI Bootstrap [v0.2.0, v0.7.0, v0.10.0] (angular component)</li><li>Angular NG-Grid [v2.0.4, v2.0.7] (angular component)</li><li>Angular UI-Grid [v3.0.7] (angular component)</li><li>Angular Material design [v0.10.0, v1.0.1] (angular component)</li></ul><h5>Help out!</h5><p>There is a lot more that can be done within the boundaries of this API and the FoBo module as a hole so
+   upgrade and fall-back quick and easy.</li><li>Most of the FoBo toolkit modules provides a API sub-module with Snippet helpers and lib classes that will
+   ease you from writing some commonly used toolkit component integration scripts making it a simple snippet invocation.</li><li>Great responsive scalability with responsive toolkits.</li><li>FoBo strives to be highly modular. FoBo is built up by independent toolkit/resource/api module artifacts that
+   can be used independent of the FoBo/FoBo assembly module.</li></ul><h5>FoBo supported toolkits/resources</h5><p>The following is a list of available toolkits resources</p><ul><li>JQuery [v1.7.2, v1.8.2, v1.9.1, v1.10.2, v1.11.3, v.2.1.1, v.2.1.4] <a href="../FoBoJQ/package.html" class="extype" name="net.liftmodules.FoBoJQ">net.liftmodules.FoBoJQ</a></li><li>JQueryMigrate [v1.2.1] <a href="../FoBoJQ/package.html" class="extype" name="net.liftmodules.FoBoJQ">net.liftmodules.FoBoJQ</a></li><li>Bootstrap v3.x series [v3.0.1, v3.1.1, v3.2.0, v3.3.5, v3.3.6] <a href="../FoBoBs/package.html" class="extype" name="net.liftmodules.FoBoBs">net.liftmodules.FoBoBs</a></li><li>Bootstrap v2.x series [v2.3.2] <a href="../FoBoTB/package.html" class="extype" name="net.liftmodules.FoBoTB">net.liftmodules.FoBoTB</a></li><li>Font Awesome [v3.2.1, v4.0.3, v4.1.0, v4.3.0, v4.5.0] <a href="../FoBoFA/package.html" class="extype" name="net.liftmodules.FoBoFA">net.liftmodules.FoBoFA</a></li><li>Kinetic JS [v5.1.0] <a href="../FoBoKi/package.html" class="extype" name="net.liftmodules.FoBoKi">net.liftmodules.FoBoKi</a></li><li>Google Code Prettify [vJun2011] <a href="../FoBoGCP/package.html" class="extype" name="net.liftmodules.FoBoGCP">net.liftmodules.FoBoGCP</a></li><li>Highlight JS [v9.3.0] <a href="../FoBoHL/package.html" class="extype" name="net.liftmodules.FoBoHL">net.liftmodules.FoBoHL</a></li><li>Pace [v0.4.15, v1.0.2] <a href="../FoBoPa/package.html" class="extype" name="net.liftmodules.FoBoPa">net.liftmodules.FoBoPa</a></li><li>Angular JS [v1.0.6, v1.2.11, v1.2.19, v1.3.15, v1.4.1, v1.4.8, v1.5.3] (angular core modules) <a href="../FoBoAJS/package.html" class="extype" name="net.liftmodules.FoBoAJS">net.liftmodules.FoBoAJS</a></li><li>Angular UI Bootstrap [v0.2.0, v0.7.0, v0.10.0] (angular component) <a href="../FoBoAJS/package.html" class="extype" name="net.liftmodules.FoBoAJS">net.liftmodules.FoBoAJS</a></li><li>Angular NG-Grid [v2.0.4, v2.0.7] (angular component) <a href="../FoBoAJS/package.html" class="extype" name="net.liftmodules.FoBoAJS">net.liftmodules.FoBoAJS</a></li><li>Angular UI-Grid [v3.0.7] (angular component) <a href="../FoBoAJS/package.html" class="extype" name="net.liftmodules.FoBoAJS">net.liftmodules.FoBoAJS</a></li><li>Angular Material design [v0.10.0, v1.0.1, v1.0.8] (angular component) <a href="../FoBoAJS/package.html" class="extype" name="net.liftmodules.FoBoAJS">net.liftmodules.FoBoAJS</a></li></ul><h5>Help out!</h5><p>There is a lot more that can be done within the boundaries of the FoBo API modules and the FoBo modules as a hole so
 your help, suggestions, encouragement, engagement, patches (pull requests) bug-fixes/reports are highly appreciated.</p><h5>Setup</h5><ul><li>This module has published artifacts for Lift v2.6 and v3.0 and it's supported Scala versions.
-   Older versions of FoBo also supports Lift v2.4/v2.5</li><li>For a demonstration of this module see the live <a href="http://www.media4u101.se/fobo-lift-template-demo/" target="_blank">FoBo demo</a>
+   Older versions of FoBo also supports Lift v2.4/v2.5</li><li>For a introduction to FoBo see <a href="http://www.media4u101.se/fobo-lift-template-demo/" target="_blank">FoBo introduction</a>
 </li></ul></div><dl class="attributes block"> <div class="block">Example:
                <ol><li class="cmt"><p>To initiate this module for usage in your Lift project set something like the following in
-your projects Lift bootstrap.liftweb.Boot boot method. Here the FoBoToolkitNameXYZ
-represent one of FoBo's available FoBoTolkit objects listed below.</p><pre><span class="kw">import</span> net.liftmodules.FoBo
+your projects Lift bootstrap.liftweb.Boot boot method. Here the FoBo ToolkitObjectNameXYZ
+represent one of FoBo's available FoBo ToolKit objects.</p><pre><span class="kw">import</span> net.liftmodules.FoBo
  :
  :
-FoBo.InitParam.JQuery=FoBo.JQueryXYZ  <span class="cmt">//one jquery version</span>
-FoBo.InitParam.ToolKit=FoBo.FoBoToolkitNameXYZ <span class="cmt">//one or more toolkits</span>
-FoBo.InitParam.ToolKit=FoBo.FoBoToolkitNameXYZ
- :
-FoBo.init()</pre></li></ol>
-            </div><dt>Version</dt><dd><p>v1.5</p></dd></dl><div class="toggleContainer block">
+FoBo.ToolKit.Init=FoBo.ToolKit.JQueryXYZ  <span class="cmt">//the fobo jquery module, version xyz</span>
+FoBo.ToolKit.Init=FoBo.ToolKit.ToolkitObjectNameXYZ <span class="cmt">//one or more fobo toolkits</span>
+FoBo.ToolKit.Init=FoBo.ToolKit.ToolkitObjectNameXYZ</pre><p>You may substitute ToolKit for Resource or API and if you wish also adjust the artifact dependencies
+accordingly to include just the FoBo modules you use, but if size is not a issue using the FoBo/FoBo
+module is convenient and gives you a lot to pick from.
+</p></li></ol>
+            </div><dt>Version</dt><dd><p>v1.6</p></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
@@ -110,40 +115,113 @@ FoBo.init()</pre></li></ol>
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="net.liftmodules.FoBo.FoBoJQuery" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+              <ol><li name="net.liftmodules.FoBo.API" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="APIextendsAnyRef"></a>
+      <a id="API:API"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$API.html"><span class="name">API</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.liftmodules.FoBo.package@APIextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Initiate a toolkit's associated FoBo API in you bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Initiate a toolkit's associated FoBo API in you bootstrap liftweb Boot.
+You should use this if you want to use FoBo's API for the toolkit but
+want to provide the toolkit resources yourself.</p><p> <b>Example:</b></p><pre><span class="kw">import</span> net.liftmodules.FoBo
+ :
+FoBo.API.Init=FoBo.API.[API <span class="std">Object</span>]</pre><p><b>Note:</b> To see available objects click on the round trait icon in the header of this page.
+</p></div></div>
+    </li><li name="net.liftmodules.FoBo.Resource" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="ResourceextendsAnyRef"></a>
+      <a id="Resource:Resource"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$Resource.html"><span class="name">Resource</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.liftmodules.FoBo.package@ResourceextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Initiate the toolkit's associated resources in you bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Initiate the toolkit's associated resources in you bootstrap liftweb Boot.
+You should use this if you only want to initiate the FoBo provided toolkit
+resources but not the FoBo API associated with the toolkit.</p><p> <b>Example:</b></p><pre><span class="kw">import</span> net.liftmodules.FoBo
+ :
+FoBo.Resource.Init=FoBo.Resource.[Resource <span class="std">Object</span>]</pre><p><b>Note:</b> To see available objects click on the round trait icon in the header of this page.
+</p></div></div>
+    </li><li name="net.liftmodules.FoBo.ToolKit" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="ToolKitextendsAnyRef"></a>
+      <a id="ToolKit:ToolKit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$ToolKit.html"><span class="name">ToolKit</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.liftmodules.FoBo.package@ToolKitextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Initiate FoBo's ToolKit(s) in you bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Initiate FoBo's ToolKit(s) in you bootstrap liftweb Boot.
+Using the ToolKit initiation you will bring in both the
+toolkit's resources and if present the FoBo API associated
+with the toolkit.</p><p> <b>Example:</b></p><pre><span class="kw">import</span> net.liftmodules.FoBo
+ :
+FoBo.ToolKit.Init=FoBo.ToolKit.[ToolKit <span class="std">Object</span>]</pre><p><b>Note:</b> To see available objects click on the round trait icon in the header of this page.
+</p></div></div>
+    </li><li name="net.liftmodules.FoBo.FoBoJQuery" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="FoBoJQueryextendsAnyRef"></a>
       <a id="FoBoJQuery:FoBoJQuery"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier"></span>
+        <span class="modifier">sealed </span>
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="package$$FoBoJQuery.html"><span class="name">FoBoJQuery</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <a href="package$$FoBoJQuery.html"><span class="name deprecated" title="Deprecated: (Since version 1.6.0) Use FoBo.ToolKit.Init=FoBo.ToolKit.JQueryXXX">FoBoJQuery</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#net.liftmodules.FoBo.package@FoBoJQueryextendsAnyRef" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" />
       </a>
     </span>
-      
-    </li><li name="net.liftmodules.FoBo.FoBoToolkit" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Use FoBo.ToolKit.Init=FoBo.ToolKit.JQueryXXX</p></dd></dl></div>
+    </li><li name="net.liftmodules.FoBo.FoBoToolkit" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="FoBoToolkitextendsAnyRef"></a>
       <a id="FoBoToolkit:FoBoToolkit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier"></span>
+        <span class="modifier">sealed </span>
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="package$$FoBoToolkit.html"><span class="name">FoBoToolkit</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <a href="package$$FoBoToolkit.html"><span class="name deprecated" title="Deprecated: (Since version 1.6.0) Use FoBo.ToolKit.Init=FoBo.ToolKit.[Toolkit case object name]">FoBoToolkit</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#net.liftmodules.FoBo.package@FoBoToolkitextendsAnyRef" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" />
       </a>
     </span>
-      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Use FoBo.ToolKit.Init=FoBo.ToolKit.[Toolkit case object name]</p></dd></dl></div>
     </li></ol>
             </div>
 
@@ -151,690 +229,57 @@ FoBo.init()</pre></li></ol>
 
         <div id="values" class="values members">
               <h3>Value Members</h3>
-              <ol><li name="net.liftmodules.FoBo.AJMaterial101" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="AJMaterial101"></a>
-      <a id="AJMaterial101:AJMaterial101"></a>
+              <ol><li name="net.liftmodules.FoBo.API" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="API"></a>
+      <a id="API:API"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="package$$AJMaterial101$.html"><span class="name">AJMaterial101</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBo.FoBoToolkit">FoBoToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="package$$API$.html"><span class="name">API</span></a><span class="result"> extends <a href="package$$API.html" class="extype" name="net.liftmodules.FoBo.API">API</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#net.liftmodules.FoBo.package@AJMaterial101" title="Permalink" target="_top">
+      <a href="../../../index.html#net.liftmodules.FoBo.package@API" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" />
       </a>
     </span>
-      <p class="shortcomment cmt">Enable usage of Angular-Material version 1&#8228;0&#8228;1 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of Angular-Material version 1&#8228;0&#8228;1 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Version</dt><dd><p>1.0.1</p><p> <b>Example:</b></p><pre>FoBo.InitParam.Toolkit=FoBo.AJMaterial101</pre></dd><dt>Since</dt><dd><p>v1.5
-</p></dd></dl></div>
-    </li><li name="net.liftmodules.FoBo.AJSNGGrid207" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="AJSNGGrid207"></a>
-      <a id="AJSNGGrid207:AJSNGGrid207"></a>
+      
+    </li><li name="net.liftmodules.FoBo.Resource" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Resource"></a>
+      <a id="Resource:Resource"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="package$$AJSNGGrid207$.html"><span class="name">AJSNGGrid207</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBo.FoBoToolkit">FoBoToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="package$$Resource$.html"><span class="name">Resource</span></a><span class="result"> extends <a href="package$$Resource.html" class="extype" name="net.liftmodules.FoBo.Resource">Resource</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#net.liftmodules.FoBo.package@AJSNGGrid207" title="Permalink" target="_top">
+      <a href="../../../index.html#net.liftmodules.FoBo.package@Resource" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" />
       </a>
     </span>
-      <p class="shortcomment cmt">Enable usage of NG-Grid version 2&#8228;0&#8228;7 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of NG-Grid version 2&#8228;0&#8228;7 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Version</dt><dd><p>2.0.7</p><p> <b>Example:</b></p><pre>FoBo.InitParam.Toolkit=FoBo.AJSNGGrid207</pre></dd><dt>Since</dt><dd><p>v1.2
-</p></dd></dl></div>
-    </li><li name="net.liftmodules.FoBo.AJSUIBootstrap0100" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="AJSUIBootstrap0100"></a>
-      <a id="AJSUIBootstrap0100:AJSUIBootstrap0100"></a>
+      
+    </li><li name="net.liftmodules.FoBo.ToolKit" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ToolKit"></a>
+      <a id="ToolKit:ToolKit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="package$$AJSUIBootstrap0100$.html"><span class="name">AJSUIBootstrap0100</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBo.FoBoToolkit">FoBoToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="package$$ToolKit$.html"><span class="name">ToolKit</span></a><span class="result"> extends <a href="package$$ToolKit.html" class="extype" name="net.liftmodules.FoBo.ToolKit">ToolKit</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#net.liftmodules.FoBo.package@AJSUIBootstrap0100" title="Permalink" target="_top">
+      <a href="../../../index.html#net.liftmodules.FoBo.package@ToolKit" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" />
       </a>
     </span>
-      <p class="shortcomment cmt">Enable usage of AngularUI-Bootstrap version 0&#8228;10&#8228;0 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of AngularUI-Bootstrap version 0&#8228;10&#8228;0 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Version</dt><dd><p>0.10.0</p><p> <b>Example:</b></p><pre>FoBo.InitParam.Toolkit=FoBo.AJSUIBootstrap0100</pre></dd><dt>Since</dt><dd><p>v1.2
-</p></dd></dl></div>
-    </li><li name="net.liftmodules.FoBo.AJSUIBootstrap020" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="AJSUIBootstrap020"></a>
-      <a id="AJSUIBootstrap020:AJSUIBootstrap020"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$AJSUIBootstrap020$.html"><span class="name">AJSUIBootstrap020</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBo.FoBoToolkit">FoBoToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#net.liftmodules.FoBo.package@AJSUIBootstrap020" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Enable usage of AngularUI-Bootstrap version 0&#8228;2&#8228;0 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of AngularUI-Bootstrap version 0&#8228;2&#8228;0 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Version</dt><dd><p>0.2.0</p><p> <b>Example:</b></p><pre>FoBo.InitParam.Toolkit=FoBo.AJSUIBootstrap020</pre></dd><dt>Since</dt><dd><p>v1.0
-</p></dd></dl></div>
-    </li><li name="net.liftmodules.FoBo.AJSUIBootstrap070" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="AJSUIBootstrap070"></a>
-      <a id="AJSUIBootstrap070:AJSUIBootstrap070"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$AJSUIBootstrap070$.html"><span class="name">AJSUIBootstrap070</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBo.FoBoToolkit">FoBoToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#net.liftmodules.FoBo.package@AJSUIBootstrap070" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Enable usage of AngularUI-Bootstrap version 0&#8228;7&#8228;0 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of AngularUI-Bootstrap version 0&#8228;7&#8228;0 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Version</dt><dd><p>0.7.0</p><p> <b>Example:</b></p><pre>FoBo.InitParam.Toolkit=FoBo.AJSUIBootstrap070</pre></dd><dt>Since</dt><dd><p>v1.2
-</p></dd></dl></div>
-    </li><li name="net.liftmodules.FoBo.AJSUIGrid307" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="AJSUIGrid307"></a>
-      <a id="AJSUIGrid307:AJSUIGrid307"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$AJSUIGrid307$.html"><span class="name">AJSUIGrid307</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBo.FoBoToolkit">FoBoToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#net.liftmodules.FoBo.package@AJSUIGrid307" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Enable usage of UI-Grid version 3&#8228;0&#8228;7 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of UI-Grid version 3&#8228;0&#8228;7 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Version</dt><dd><p>3.0.7</p><p> <b>Example:</b></p><pre>FoBo.InitParam.Toolkit=FoBo.AJSUIGrid307</pre></dd><dt>Since</dt><dd><p>v1.5
-</p></dd></dl></div>
-    </li><li name="net.liftmodules.FoBo.AngularJS1219" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="AngularJS1219"></a>
-      <a id="AngularJS1219:AngularJS1219"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$AngularJS1219$.html"><span class="name">AngularJS1219</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBo.FoBoToolkit">FoBoToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#net.liftmodules.FoBo.package@AngularJS1219" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Enable usage of AngularJS version 1&#8228;2&#8228;19 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of AngularJS version 1&#8228;2&#8228;19 in your bootstrap liftweb Boot.
-</p></div><dl class="attributes block"> <dt>Version</dt><dd><p>1.2.19</p><p> <b>Lift Boot:</b></p><pre>FoBo.InitParam.Toolkit=FoBo.AngularJS1219
-FoBo.init()</pre></dd><dt>Since</dt><dd><p>v1.3
-</p></dd></dl></div>
-    </li><li name="net.liftmodules.FoBo.AngularJS1219i18n" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="AngularJS1219i18n"></a>
-      <a id="AngularJS1219i18n:AngularJS1219i18n"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$AngularJS1219i18n$.html"><span class="name">AngularJS1219i18n</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBo.FoBoToolkit">FoBoToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#net.liftmodules.FoBo.package@AngularJS1219i18n" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Enable usage of i18n files for AngularJS version 1&#8228;2&#8228;19 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of i18n files for AngularJS version 1&#8228;2&#8228;19 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Version</dt><dd><p>1.2.19</p><p> <b>Example:</b></p><pre>FoBo.InitParam.Toolkit=FoBo.AngularJS1219i18n</pre></dd><dt>Since</dt><dd><p>v1.3
-</p></dd></dl></div>
-    </li><li name="net.liftmodules.FoBo.AngularJS1315" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="AngularJS1315"></a>
-      <a id="AngularJS1315:AngularJS1315"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$AngularJS1315$.html"><span class="name">AngularJS1315</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBo.FoBoToolkit">FoBoToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#net.liftmodules.FoBo.package@AngularJS1315" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Enable usage of AngularJS version 1&#8228;3&#8228;15 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of AngularJS version 1&#8228;3&#8228;15 in your bootstrap liftweb Boot.
-</p></div><dl class="attributes block"> <dt>Version</dt><dd><p>1.3.15</p><p> <b>Lift Boot:</b></p><pre>FoBo.InitParam.Toolkit=FoBo.AngularJS1315
-FoBo.init()</pre></dd><dt>Since</dt><dd><p>v1.4
-</p></dd></dl></div>
-    </li><li name="net.liftmodules.FoBo.AngularJS1315i18n" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="AngularJS1315i18n"></a>
-      <a id="AngularJS1315i18n:AngularJS1315i18n"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$AngularJS1315i18n$.html"><span class="name">AngularJS1315i18n</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBo.FoBoToolkit">FoBoToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#net.liftmodules.FoBo.package@AngularJS1315i18n" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Enable usage of i18n files for AngularJS version 1&#8228;3&#8228;15 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of i18n files for AngularJS version 1&#8228;3&#8228;15 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Version</dt><dd><p>1.3.15</p><p> <b>Example:</b></p><pre>FoBo.InitParam.Toolkit=FoBo.AngularJS1315i18n</pre></dd><dt>Since</dt><dd><p>v1.4
-</p></dd></dl></div>
-    </li><li name="net.liftmodules.FoBo.AngularJS141" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="AngularJS141"></a>
-      <a id="AngularJS141:AngularJS141"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$AngularJS141$.html"><span class="name">AngularJS141</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBo.FoBoToolkit">FoBoToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#net.liftmodules.FoBo.package@AngularJS141" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Enable usage of AngularJS version 1&#8228;4&#8228;1 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of AngularJS version 1&#8228;4&#8228;1 in your bootstrap liftweb Boot.
-</p></div><dl class="attributes block"> <dt>Version</dt><dd><p>1.4.1</p><p> <b>Lift Boot:</b></p><pre>FoBo.InitParam.Toolkit=FoBo.AngularJS141
-FoBo.init()</pre></dd><dt>Since</dt><dd><p>v1.4
-</p></dd></dl></div>
-    </li><li name="net.liftmodules.FoBo.AngularJS141i18n" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="AngularJS141i18n"></a>
-      <a id="AngularJS141i18n:AngularJS141i18n"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$AngularJS141i18n$.html"><span class="name">AngularJS141i18n</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBo.FoBoToolkit">FoBoToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#net.liftmodules.FoBo.package@AngularJS141i18n" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Enable usage of i18n files for AngularJS version 1&#8228;4&#8228;1 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of i18n files for AngularJS version 1&#8228;4&#8228;1 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Version</dt><dd><p>1.4.1</p><p> <b>Example:</b></p><pre>FoBo.InitParam.Toolkit=FoBo.AngularJS141i18n</pre></dd><dt>Since</dt><dd><p>v1.4
-</p></dd></dl></div>
-    </li><li name="net.liftmodules.FoBo.AngularJS148" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="AngularJS148"></a>
-      <a id="AngularJS148:AngularJS148"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$AngularJS148$.html"><span class="name">AngularJS148</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBo.FoBoToolkit">FoBoToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#net.liftmodules.FoBo.package@AngularJS148" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Enable usage of AngularJS version 1&#8228;4&#8228;8 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of AngularJS version 1&#8228;4&#8228;8 in your bootstrap liftweb Boot.
-</p></div><dl class="attributes block"> <dt>Version</dt><dd><p>1.4.8</p><p> <b>Lift Boot:</b></p><pre>FoBo.InitParam.Toolkit=FoBo.AngularJS148
-FoBo.init()</pre></dd><dt>Since</dt><dd><p>v1.5
-</p></dd></dl></div>
-    </li><li name="net.liftmodules.FoBo.AngularJS148i18n" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="AngularJS148i18n"></a>
-      <a id="AngularJS148i18n:AngularJS148i18n"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$AngularJS148i18n$.html"><span class="name">AngularJS148i18n</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBo.FoBoToolkit">FoBoToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#net.liftmodules.FoBo.package@AngularJS148i18n" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Enable usage of i18n files for AngularJS version 1&#8228;4&#8228;8 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of i18n files for AngularJS version 1&#8228;4&#8228;8 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Version</dt><dd><p>1.4.8</p><p> <b>Example:</b></p><pre>FoBo.InitParam.Toolkit=FoBo.AngularJS148i18n</pre></dd><dt>Since</dt><dd><p>v1.5
-</p></dd></dl></div>
-    </li><li name="net.liftmodules.FoBo.Bootstrap232" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="Bootstrap232"></a>
-      <a id="Bootstrap232:Bootstrap232"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$Bootstrap232$.html"><span class="name">Bootstrap232</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBo.FoBoToolkit">FoBoToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#net.liftmodules.FoBo.package@Bootstrap232" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Enable usage of Twitter Bootstrap version 2&#8228;3&#8228;2 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of Twitter Bootstrap version 2&#8228;3&#8228;2 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Version</dt><dd><p>2.3.2</p><p><b>Example</b></p><pre>FoBo.InitParam.Toolkit=FoBo.Bootstrap232</pre></dd><dt>Since</dt><dd><p>v1.1
-</p></dd></dl></div>
-    </li><li name="net.liftmodules.FoBo.Bootstrap311" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="Bootstrap311"></a>
-      <a id="Bootstrap311:Bootstrap311"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$Bootstrap311$.html"><span class="name">Bootstrap311</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBo.FoBoToolkit">FoBoToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#net.liftmodules.FoBo.package@Bootstrap311" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Enable usage of Twitter Bootstrap version 3&#8228;1&#8228;1 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of Twitter Bootstrap version 3&#8228;1&#8228;1 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Version</dt><dd><p>3.1.1</p><p><b>Example</b></p><pre>FoBo.InitParam.Toolkit=FoBo.Bootstrap311</pre></dd><dt>Since</dt><dd><p>v1.2
-</p></dd></dl></div>
-    </li><li name="net.liftmodules.FoBo.Bootstrap320" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="Bootstrap320"></a>
-      <a id="Bootstrap320:Bootstrap320"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$Bootstrap320$.html"><span class="name">Bootstrap320</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBo.FoBoToolkit">FoBoToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#net.liftmodules.FoBo.package@Bootstrap320" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Enable usage of Twitter Bootstrap version 3&#8228;2&#8228;0 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of Twitter Bootstrap version 3&#8228;2&#8228;0 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Version</dt><dd><p>3.2.0</p><p><b>Example</b></p><pre>FoBo.InitParam.Toolkit=FoBo.Bootstrap320</pre></dd><dt>Since</dt><dd><p>v1.3
-</p></dd></dl></div>
-    </li><li name="net.liftmodules.FoBo.Bootstrap336" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="Bootstrap336"></a>
-      <a id="Bootstrap336:Bootstrap336"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$Bootstrap336$.html"><span class="name">Bootstrap336</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBo.FoBoToolkit">FoBoToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#net.liftmodules.FoBo.package@Bootstrap336" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Enable usage of Twitter Bootstrap version 3&#8228;3&#8228;6 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of Twitter Bootstrap version 3&#8228;3&#8228;6 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Version</dt><dd><p>3.3.6</p><p><b>Example</b></p><pre>FoBo.InitParam.Toolkit=FoBo.Bootstrap335</pre></dd><dt>Since</dt><dd><p>v1.5
-</p></dd></dl></div>
-    </li><li name="net.liftmodules.FoBo.FontAwesome321" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="FontAwesome321"></a>
-      <a id="FontAwesome321:FontAwesome321"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$FontAwesome321$.html"><span class="name">FontAwesome321</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBo.FoBoToolkit">FoBoToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#net.liftmodules.FoBo.package@FontAwesome321" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Enable usage of Font-Awesome version 3&#8228;2&#8228;1 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of Font-Awesome version 3&#8228;2&#8228;1 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Version</dt><dd><p>3.2.1</p><p> <b>Example:</b></p><pre>FoBo.InitParam.Toolkit=FoBo.FontAwesome321</pre></dd><dt>Since</dt><dd><p>v1.0
-</p></dd></dl></div>
-    </li><li name="net.liftmodules.FoBo.FontAwesome403" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="FontAwesome403"></a>
-      <a id="FontAwesome403:FontAwesome403"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$FontAwesome403$.html"><span class="name">FontAwesome403</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBo.FoBoToolkit">FoBoToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#net.liftmodules.FoBo.package@FontAwesome403" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Enable usage of Font-Awesome version 4&#8228;0&#8228;3 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of Font-Awesome version 4&#8228;0&#8228;3 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Version</dt><dd><p>4.0.3</p><p> <b>Example:</b></p><pre>FoBo.InitParam.Toolkit=FoBo.FontAwesome403</pre></dd><dt>Since</dt><dd><p>v1.2
-</p></dd></dl></div>
-    </li><li name="net.liftmodules.FoBo.FontAwesome410" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="FontAwesome410"></a>
-      <a id="FontAwesome410:FontAwesome410"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$FontAwesome410$.html"><span class="name">FontAwesome410</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBo.FoBoToolkit">FoBoToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#net.liftmodules.FoBo.package@FontAwesome410" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Enable usage of Font-Awesome version 4&#8228;1&#8228;0 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of Font-Awesome version 4&#8228;1&#8228;0 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Version</dt><dd><p>4.1.0</p><p> <b>Example:</b></p><pre>FoBo.InitParam.Toolkit=FoBo.FontAwesome410</pre></dd><dt>Since</dt><dd><p>v1.3
-</p></dd></dl></div>
-    </li><li name="net.liftmodules.FoBo.FontAwesome430" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="FontAwesome430"></a>
-      <a id="FontAwesome430:FontAwesome430"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$FontAwesome430$.html"><span class="name">FontAwesome430</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBo.FoBoToolkit">FoBoToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#net.liftmodules.FoBo.package@FontAwesome430" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Enable usage of Font-Awesome version 4&#8228;3&#8228;0 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of Font-Awesome version 4&#8228;3&#8228;0 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Version</dt><dd><p>4.3.0</p><p> <b>Example:</b></p><pre>FoBo.InitParam.Toolkit=FoBo.FontAwesome430</pre></dd><dt>Since</dt><dd><p>v1.4
-</p></dd></dl></div>
-    </li><li name="net.liftmodules.FoBo.InitParam" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="InitParam"></a>
-      <a id="InitParam:InitParam"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$InitParam$.html"><span class="name">InitParam</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBo.FoBoToolkit">FoBoToolkit</a> with <a href="package$$FoBoJQuery.html" class="extype" name="net.liftmodules.FoBo.FoBoJQuery">FoBoJQuery</a></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#net.liftmodules.FoBo.package@InitParam" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Enable Toolkit(s)/JQuery options for the FoBo module in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable Toolkit(s)/JQuery options for the FoBo module in your bootstrap liftweb Boot.</p><p><b>Example:</b></p><pre>FoBo.InitParam.JQuery=FoBo.JQuery182
-FoBo.InitParam.Toolkit=FoBo.Bootstrap336
-FoBo.InitParam.Toolkit=FoBo.PrettifyJun2011</pre><p>This example uses the Bootstrap v2.3.0 option and adds the Google code Prettify vJun2011
-to the enabled toolkits.
-</p></div></div>
-    </li><li name="net.liftmodules.FoBo.JQuery1102" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="JQuery1102"></a>
-      <a id="JQuery1102:JQuery1102"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$JQuery1102$.html"><span class="name">JQuery1102</span></a><span class="result"> extends <a href="package$$FoBoJQuery.html" class="extype" name="net.liftmodules.FoBo.FoBoJQuery">FoBoJQuery</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#net.liftmodules.FoBo.package@JQuery1102" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Enable usage of JQuery version 1&#8228;10&#8228;2 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of JQuery version 1&#8228;10&#8228;2 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Version</dt><dd><p>1.10.2</p><p><b>Example:</b></p><pre>FoBo.InitParam.JQuery=FoBo.JQuery1102</pre></dd><dt>Since</dt><dd><p>v1.1
-</p></dd></dl></div>
-    </li><li name="net.liftmodules.FoBo.JQuery1113" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="JQuery1113"></a>
-      <a id="JQuery1113:JQuery1113"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$JQuery1113$.html"><span class="name">JQuery1113</span></a><span class="result"> extends <a href="package$$FoBoJQuery.html" class="extype" name="net.liftmodules.FoBo.FoBoJQuery">FoBoJQuery</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#net.liftmodules.FoBo.package@JQuery1113" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Enable usage of JQuery version 1&#8228;11&#8228;3 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of JQuery version 1&#8228;11&#8228;3 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Version</dt><dd><p>1.11.3</p><p><b>Example:</b></p><pre>FoBo.InitParam.JQuery=FoBo.JQuery1113</pre></dd><dt>Since</dt><dd><p>v1.4
-</p></dd></dl></div>
-    </li><li name="net.liftmodules.FoBo.JQuery172" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="JQuery172"></a>
-      <a id="JQuery172:JQuery172"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$JQuery172$.html"><span class="name">JQuery172</span></a><span class="result"> extends <a href="package$$FoBoJQuery.html" class="extype" name="net.liftmodules.FoBo.FoBoJQuery">FoBoJQuery</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#net.liftmodules.FoBo.package@JQuery172" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Enable usage of JQuery version 1&#8228;7&#8228;2 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of JQuery version 1&#8228;7&#8228;2 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Version</dt><dd><p>1.7.2</p><p><b>Example:</b></p><pre>FoBo.InitParam.JQuery=FoBo.JQuery172</pre></dd><dt>Since</dt><dd><p>v0.7
-</p></dd></dl></div>
-    </li><li name="net.liftmodules.FoBo.JQuery182" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="JQuery182"></a>
-      <a id="JQuery182:JQuery182"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$JQuery182$.html"><span class="name">JQuery182</span></a><span class="result"> extends <a href="package$$FoBoJQuery.html" class="extype" name="net.liftmodules.FoBo.FoBoJQuery">FoBoJQuery</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#net.liftmodules.FoBo.package@JQuery182" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Enable usage of JQuery version 1&#8228;8&#8228;2 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of JQuery version 1&#8228;8&#8228;2 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Version</dt><dd><p>1.8.2</p><p><b>Example:</b></p><pre>FoBo.InitParam.JQuery=FoBo.JQuery182</pre></dd><dt>Since</dt><dd><p>v0.7
-</p></dd></dl></div>
-    </li><li name="net.liftmodules.FoBo.JQuery191" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="JQuery191"></a>
-      <a id="JQuery191:JQuery191"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$JQuery191$.html"><span class="name">JQuery191</span></a><span class="result"> extends <a href="package$$FoBoJQuery.html" class="extype" name="net.liftmodules.FoBo.FoBoJQuery">FoBoJQuery</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#net.liftmodules.FoBo.package@JQuery191" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Enable usage of JQuery version 1&#8228;9&#8228;1 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of JQuery version 1&#8228;9&#8228;1 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Version</dt><dd><p>1.9.1</p><p><b>Example:</b></p><pre>FoBo.InitParam.JQuery=FoBo.JQuery191</pre></dd><dt>Since</dt><dd><p>v1.0
-</p></dd></dl></div>
-    </li><li name="net.liftmodules.FoBo.JQuery211" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="JQuery211"></a>
-      <a id="JQuery211:JQuery211"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$JQuery211$.html"><span class="name">JQuery211</span></a><span class="result"> extends <a href="package$$FoBoJQuery.html" class="extype" name="net.liftmodules.FoBo.FoBoJQuery">FoBoJQuery</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#net.liftmodules.FoBo.package@JQuery211" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Enable usage of JQuery version 2&#8228;1&#8228;1 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of JQuery version 2&#8228;1&#8228;1 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Version</dt><dd><p>2.1.1
-OBS! JQuery 2.x dose not support Internet Explorer 6, 7, or 8.</p><p><b>Example:</b></p><pre>JQueryModule.InitParam.JQuery=JQueryModule.JQuery211</pre></dd><dt>Since</dt><dd><p>v1.3
-</p></dd></dl></div>
-    </li><li name="net.liftmodules.FoBo.JQuery214" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="JQuery214"></a>
-      <a id="JQuery214:JQuery214"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$JQuery214$.html"><span class="name">JQuery214</span></a><span class="result"> extends <a href="package$$FoBoJQuery.html" class="extype" name="net.liftmodules.FoBo.FoBoJQuery">FoBoJQuery</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#net.liftmodules.FoBo.package@JQuery214" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Enable usage of JQuery version 2&#8228;1&#8228;4 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of JQuery version 2&#8228;1&#8228;4 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Version</dt><dd><p>2.1.4
-OBS! JQuery 2.x dose not support Internet Explorer 6, 7, or 8.</p><p><b>Example:</b></p><pre>JQueryModule.InitParam.JQuery=JQueryModule.JQuery214</pre></dd><dt>Since</dt><dd><p>v1.4
-</p></dd></dl></div>
-    </li><li name="net.liftmodules.FoBo.JQueryMigrate121" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="JQueryMigrate121"></a>
-      <a id="JQueryMigrate121:JQueryMigrate121"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$JQueryMigrate121$.html"><span class="name">JQueryMigrate121</span></a><span class="result"> extends <a href="package$$FoBoJQuery.html" class="extype" name="net.liftmodules.FoBo.FoBoJQuery">FoBoJQuery</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#net.liftmodules.FoBo.package@JQueryMigrate121" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Enable usage of JQuery-migrate version 1&#8228;2&#8228;1 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of JQuery-migrate version 1&#8228;2&#8228;1 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Version</dt><dd><p>1.2.1</p><p><b>Example:</b></p><pre>JQueryModule.InitParam.JQuery=JQueryModule.JQueryMigrate121</pre></dd><dt>Since</dt><dd><p>v2.7
-</p></dd></dl></div>
-    </li><li name="net.liftmodules.FoBo.KineticJS510" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="KineticJS510"></a>
-      <a id="KineticJS510:KineticJS510"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$KineticJS510$.html"><span class="name">KineticJS510</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBo.FoBoToolkit">FoBoToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#net.liftmodules.FoBo.package@KineticJS510" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Enable usage of KineticJS version 5&#8228;1&#8228;0 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of KineticJS version 5&#8228;1&#8228;0 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Version</dt><dd><p>5.1.0</p><p> <b>Lift Boot:</b></p><pre>FoBo.InitParam.Toolkit=FoBo.KineticJS510
-FoBo.init()</pre></dd><dt>Since</dt><dd><p>v1.3
-</p></dd></dl></div>
-    </li><li name="net.liftmodules.FoBo.Pace0415" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="Pace0415"></a>
-      <a id="Pace0415:Pace0415"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$Pace0415$.html"><span class="name">Pace0415</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBo.FoBoToolkit">FoBoToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#net.liftmodules.FoBo.package@Pace0415" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Enable usage of Pace version 0&#8228;4&#8228;15 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of Pace version 0&#8228;4&#8228;15 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Version</dt><dd><p>0.4.15</p><p> <b>Lift Boot:</b></p><pre>FoBo.InitParam.Toolkit=FoBo.Pace0415
-FoBo.init()</pre></dd><dt>Since</dt><dd><p>v1.2
-</p></dd></dl></div>
-    </li><li name="net.liftmodules.FoBo.PrettifyJun2011" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="PrettifyJun2011"></a>
-      <a id="PrettifyJun2011:PrettifyJun2011"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$PrettifyJun2011$.html"><span class="name">PrettifyJun2011</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBo.FoBoToolkit">FoBoToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#net.liftmodules.FoBo.package@PrettifyJun2011" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Enable usage of Prettify version Jun2011 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of Prettify version Jun2011 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Version</dt><dd><p>Jun2011</p><p><b>Example:</b></p><pre>FoBo.InitParam.Toolkit=FoBo.PrettifyJun2011</pre></dd><dt>Since</dt><dd><p>v0.7
-</p></dd></dl></div>
-    </li><li name="net.liftmodules.FoBo.TBLocInfo" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="TBLocInfo"></a>
-      <a id="TBLocInfo:TBLocInfo"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$TBLocInfo$.html"><span class="name">TBLocInfo</span></a>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#net.liftmodules.FoBo.package@TBLocInfo" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Extends your Lift SiteMap with various common bootstrap menu manipulations such
-as horizontal and vertical menu dividers and menu labels (labels coming soon).</p><div class="fullcomment"><div class="comment cmt"><p>Extends your Lift SiteMap with various common bootstrap menu manipulations such
-as horizontal and vertical menu dividers and menu labels (labels coming soon).</p><p>This object should be used in conjunction with the TB* or BS3* menu builder objects in
-<a href="../FoBoTB/snippet/FoBo/package.html" class="extype" name="net.liftmodules.FoBoTB.snippet.FoBo">net.liftmodules.FoBoTB.snippet.FoBo</a> or <span class="extype" name="net.liftmodules.FoBoBS.snippet.FoBo">net.liftmodules.FoBoBS.snippet.FoBo</span> snippet's.</p><p><b>Example:</b></p><pre> :
-<span class="cmt">//add a horizontal menu divider</span>
-divider1 &gt;&gt; LocGroup(...) &gt;&gt; FoBo.TBLocInfo.Divider,
- :
-<span class="cmt">//add a vertical menu divider</span>
-divider2 &gt;&gt; LocGroup(...) &gt;&gt; FoBo.TBLocInfo.DividerVertical,
- :
-<span class="cmt">//open link in new tab</span>
-... FoBo.TBLocInfo.LinkTargetBlank
- :</pre></div><dl class="attributes block"> <dt>Since</dt><dd><p>v1.0
-</p></dd></dl></div>
-    </li><li name="net.liftmodules.FoBo#init" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="init():Unit"></a>
-      <a id="init():Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">init</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#net.liftmodules.FoBo.package@init():Unit" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">When your Lift application first starts up, it executes the code in Boot.scala
-By calling FoBo.init() in Boot.scala the FoBo API packages and toolkit resources
-will be available in your Lift application.</p><div class="fullcomment"><div class="comment cmt"><p>When your Lift application first starts up, it executes the code in Boot.scala
-By calling FoBo.init() in Boot.scala the FoBo API packages and toolkit resources
-will be available in your Lift application.</p></div><dl class="attributes block"> <div class="block">Example:
-               <ol><li class="cmt"><p>In method boot in the Boot class of package bootstrap.liftweb set</p><pre>FoBo.InitParam.JQuery=FoBo.JQueryXYZ  <span class="cmt">//one jquery version</span>
-FoBo.InitParam.ToolKit=FoBo.FoBoToolkitNameXYZ <span class="cmt">//one or more toolkits</span>
-FoBo.InitParam.ToolKit=FoBo.FoBoToolkitNameXYZ
- :
-FoBo.init()</pre></li></ol>
-            </div></dl></div>
+      
     </li><li name="net.liftmodules.FoBo.lib" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="lib"></a>
       <a id="lib:lib"></a>
@@ -869,6 +314,23 @@ FoBo.init()</pre></li></ol>
       </a>
     </span>
       
+    </li><li name="net.liftmodules.FoBo#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <a id="toString():String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.liftmodules.FoBo.package@toString():String" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="net.liftmodules.FoBo">FoBo</a> → AnyRef → Any</dd></dl></div>
     </li></ol>
             </div>
 
@@ -897,49 +359,328 @@ FoBo.init()</pre></li></ol>
               
         </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.5.0)</i> Use AJMaterial101 or later</p></dd><dt>Version</dt><dd><p>0.10.0</p><p> <b>Example:</b></p><pre>FoBo.InitParam.Toolkit=FoBo.AJMaterial0100</pre></dd><dt>Since</dt><dd><p>v1.4
 </p></dd></dl></div>
-    </li><li name="net.liftmodules.FoBo.AngularJS1211" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="AngularJS1211"></a>
-      <a id="AngularJS1211:AngularJS1211"></a>
+    </li><li name="net.liftmodules.FoBo.AJMaterial101" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="AJMaterial101"></a>
+      <a id="AJMaterial101:AJMaterial101"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="package$$AngularJS1211$.html"><span class="name deprecated" title="Deprecated: (Since version 1.3.0) Use AngularJS1219 or later">AngularJS1211</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBo.FoBoToolkit">FoBoToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="package$$AJMaterial101$.html"><span class="name deprecated" title="Deprecated: (Since version 1.6.0) Use FoBo.ToolKit.Init=FoBo.ToolKit.AJMaterial101">AJMaterial101</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBo.FoBoToolkit">FoBoToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#net.liftmodules.FoBo.package@AngularJS1211" title="Permalink" target="_top">
+      <a href="../../../index.html#net.liftmodules.FoBo.package@AJMaterial101" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" />
       </a>
     </span>
-      <p class="shortcomment cmt">Enable usage of AngularJS version 1&#8228;2&#8228;11 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of AngularJS version 1&#8228;2&#8228;11 in your bootstrap liftweb Boot.
+      <p class="shortcomment cmt">Enable usage of Angular-Material version 1&#8228;0&#8228;1 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of Angular-Material version 1&#8228;0&#8228;1 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Use FoBo.ToolKit.Init=FoBo.ToolKit.AJMaterial101</p></dd><dt>Version</dt><dd><p>1.0.1</p><p> <b>Example:</b></p><pre>FoBo.InitParam.Toolkit=FoBo.AJMaterial101</pre></dd><dt>Since</dt><dd><p>v1.5
+</p></dd></dl></div>
+    </li><li name="net.liftmodules.FoBo.AJSNGGrid207" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="AJSNGGrid207"></a>
+      <a id="AJSNGGrid207:AJSNGGrid207"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$AJSNGGrid207$.html"><span class="name deprecated" title="Deprecated: (Since version 1.6.0) Use FoBo.ToolKit.Init=FoBo.ToolKit.AJSNGGrid207">AJSNGGrid207</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBo.FoBoToolkit">FoBoToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.liftmodules.FoBo.package@AJSNGGrid207" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Enable usage of NG-Grid version 2&#8228;0&#8228;7 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of NG-Grid version 2&#8228;0&#8228;7 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Use FoBo.ToolKit.Init=FoBo.ToolKit.AJSNGGrid207</p></dd><dt>Version</dt><dd><p>2.0.7</p><p> <b>Example:</b></p><pre>FoBo.InitParam.Toolkit=FoBo.AJSNGGrid207</pre></dd><dt>Since</dt><dd><p>v1.2
+</p></dd></dl></div>
+    </li><li name="net.liftmodules.FoBo.AJSUIBootstrap0100" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="AJSUIBootstrap0100"></a>
+      <a id="AJSUIBootstrap0100:AJSUIBootstrap0100"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$AJSUIBootstrap0100$.html"><span class="name deprecated" title="Deprecated: (Since version 1.6.0) Use FoBo.ToolKit.Init=FoBo.ToolKit.AJSUIBootstrap0100">AJSUIBootstrap0100</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBo.FoBoToolkit">FoBoToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.liftmodules.FoBo.package@AJSUIBootstrap0100" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Enable usage of AngularUI-Bootstrap version 0&#8228;10&#8228;0 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of AngularUI-Bootstrap version 0&#8228;10&#8228;0 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Use FoBo.ToolKit.Init=FoBo.ToolKit.AJSUIBootstrap0100</p></dd><dt>Version</dt><dd><p>0.10.0</p><p> <b>Example:</b></p><pre>FoBo.InitParam.Toolkit=FoBo.AJSUIBootstrap0100</pre></dd><dt>Since</dt><dd><p>v1.2
+</p></dd></dl></div>
+    </li><li name="net.liftmodules.FoBo.AJSUIBootstrap020" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="AJSUIBootstrap020"></a>
+      <a id="AJSUIBootstrap020:AJSUIBootstrap020"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$AJSUIBootstrap020$.html"><span class="name deprecated" title="Deprecated: (Since version 1.6.0) Use FoBo.ToolKit.Init=FoBo.ToolKit.AJSUIBootstrap020">AJSUIBootstrap020</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBo.FoBoToolkit">FoBoToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.liftmodules.FoBo.package@AJSUIBootstrap020" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Enable usage of AngularUI-Bootstrap version 0&#8228;2&#8228;0 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of AngularUI-Bootstrap version 0&#8228;2&#8228;0 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Use FoBo.ToolKit.Init=FoBo.ToolKit.AJSUIBootstrap020</p></dd><dt>Version</dt><dd><p>0.2.0</p><p> <b>Example:</b></p><pre>FoBo.InitParam.Toolkit=FoBo.AJSUIBootstrap020</pre></dd><dt>Since</dt><dd><p>v1.0
+</p></dd></dl></div>
+    </li><li name="net.liftmodules.FoBo.AJSUIBootstrap070" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="AJSUIBootstrap070"></a>
+      <a id="AJSUIBootstrap070:AJSUIBootstrap070"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$AJSUIBootstrap070$.html"><span class="name deprecated" title="Deprecated: (Since version 1.6.0) Use FoBo.ToolKit.Init=FoBo.ToolKit.AJSUIBootstrap070">AJSUIBootstrap070</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBo.FoBoToolkit">FoBoToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.liftmodules.FoBo.package@AJSUIBootstrap070" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Enable usage of AngularUI-Bootstrap version 0&#8228;7&#8228;0 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of AngularUI-Bootstrap version 0&#8228;7&#8228;0 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Use FoBo.ToolKit.Init=FoBo.ToolKit.AJSUIBootstrap070</p></dd><dt>Version</dt><dd><p>0.7.0</p><p> <b>Example:</b></p><pre>FoBo.InitParam.Toolkit=FoBo.AJSUIBootstrap070</pre></dd><dt>Since</dt><dd><p>v1.2
+</p></dd></dl></div>
+    </li><li name="net.liftmodules.FoBo.AJSUIGrid307" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="AJSUIGrid307"></a>
+      <a id="AJSUIGrid307:AJSUIGrid307"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$AJSUIGrid307$.html"><span class="name deprecated" title="Deprecated: (Since version 1.6.0) Use FoBo.ToolKit.Init=FoBo.ToolKit.AJSUIGrid307">AJSUIGrid307</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBo.FoBoToolkit">FoBoToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.liftmodules.FoBo.package@AJSUIGrid307" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Enable usage of UI-Grid version 3&#8228;0&#8228;7 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of UI-Grid version 3&#8228;0&#8228;7 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Use FoBo.ToolKit.Init=FoBo.ToolKit.AJSUIGrid307</p></dd><dt>Version</dt><dd><p>3.0.7</p><p> <b>Example:</b></p><pre>FoBo.InitParam.Toolkit=FoBo.AJSUIGrid307</pre></dd><dt>Since</dt><dd><p>v1.5
+</p></dd></dl></div>
+    </li><li name="net.liftmodules.FoBo.AngularJS1219" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="AngularJS1219"></a>
+      <a id="AngularJS1219:AngularJS1219"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$AngularJS1219$.html"><span class="name deprecated" title="Deprecated: (Since version 1.6.0) Use FoBo.ToolKit.Init=FoBo.ToolKit.AngularJS1219">AngularJS1219</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBo.FoBoToolkit">FoBoToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.liftmodules.FoBo.package@AngularJS1219" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Enable usage of AngularJS version 1&#8228;2&#8228;19 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of AngularJS version 1&#8228;2&#8228;19 in your bootstrap liftweb Boot.
 </p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
                 <span class="name">@deprecated</span>
               
-        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.3.0)</i> Use AngularJS1219 or later</p></dd><dt>Version</dt><dd><p>1.2.11</p><p> <b>Lift Boot:</b></p><pre>FoBo.InitParam.Toolkit=FoBo.AngularJS1211
-FoBo.init()</pre></dd><dt>Since</dt><dd><p>v1.2
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Use FoBo.ToolKit.Init=FoBo.ToolKit.AngularJS1219</p></dd><dt>Version</dt><dd><p>1.2.19</p><p> <b>Lift Boot:</b></p><pre>FoBo.InitParam.Toolkit=FoBo.AngularJS1219
+FoBo.init()</pre></dd><dt>Since</dt><dd><p>v1.3
 </p></dd></dl></div>
-    </li><li name="net.liftmodules.FoBo.AngularJS1211i18n" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="AngularJS1211i18n"></a>
-      <a id="AngularJS1211i18n:AngularJS1211i18n"></a>
+    </li><li name="net.liftmodules.FoBo.AngularJS1219i18n" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="AngularJS1219i18n"></a>
+      <a id="AngularJS1219i18n:AngularJS1219i18n"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="package$$AngularJS1211i18n$.html"><span class="name deprecated" title="Deprecated: (Since version 1.3.0) Use AngularJS1219i18n or later">AngularJS1211i18n</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBo.FoBoToolkit">FoBoToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="package$$AngularJS1219i18n$.html"><span class="name deprecated" title="Deprecated: (Since version 1.6.0) Use FoBo.ToolKit.Init=FoBo.ToolKit.AngularJS1219i18n">AngularJS1219i18n</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBo.FoBoToolkit">FoBoToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#net.liftmodules.FoBo.package@AngularJS1211i18n" title="Permalink" target="_top">
+      <a href="../../../index.html#net.liftmodules.FoBo.package@AngularJS1219i18n" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" />
       </a>
     </span>
-      <p class="shortcomment cmt">Enable usage of i18n files for AngularJS version 1&#8228;2&#8228;11 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of i18n files for AngularJS version 1&#8228;2&#8228;11 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+      <p class="shortcomment cmt">Enable usage of i18n files for AngularJS version 1&#8228;2&#8228;19 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of i18n files for AngularJS version 1&#8228;2&#8228;19 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
                 <span class="name">@deprecated</span>
               
-        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.3.0)</i> Use AngularJS1219i18n or later</p></dd><dt>Version</dt><dd><p>1.2.11</p><p> <b>Example:</b></p><pre>FoBo.InitParam.Toolkit=FoBo.AngularJS1211i18n</pre></dd><dt>Since</dt><dd><p>v1.2
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Use FoBo.ToolKit.Init=FoBo.ToolKit.AngularJS1219i18n</p></dd><dt>Version</dt><dd><p>1.2.19</p><p> <b>Example:</b></p><pre>FoBo.InitParam.Toolkit=FoBo.AngularJS1219i18n</pre></dd><dt>Since</dt><dd><p>v1.3
+</p></dd></dl></div>
+    </li><li name="net.liftmodules.FoBo.AngularJS1315" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="AngularJS1315"></a>
+      <a id="AngularJS1315:AngularJS1315"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$AngularJS1315$.html"><span class="name deprecated" title="Deprecated: (Since version 1.6.0) Use FoBo.ToolKit.Init=FoBo.ToolKit.AngularJS1315">AngularJS1315</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBo.FoBoToolkit">FoBoToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.liftmodules.FoBo.package@AngularJS1315" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Enable usage of AngularJS version 1&#8228;3&#8228;15 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of AngularJS version 1&#8228;3&#8228;15 in your bootstrap liftweb Boot.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Use FoBo.ToolKit.Init=FoBo.ToolKit.AngularJS1315</p></dd><dt>Version</dt><dd><p>1.3.15</p><p> <b>Lift Boot:</b></p><pre>FoBo.InitParam.Toolkit=FoBo.AngularJS1315
+FoBo.init()</pre></dd><dt>Since</dt><dd><p>v1.4
+</p></dd></dl></div>
+    </li><li name="net.liftmodules.FoBo.AngularJS1315i18n" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="AngularJS1315i18n"></a>
+      <a id="AngularJS1315i18n:AngularJS1315i18n"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$AngularJS1315i18n$.html"><span class="name deprecated" title="Deprecated: (Since version 1.6.0) Use FoBo.ToolKit.Init=FoBo.ToolKit.AngularJS1315i18n">AngularJS1315i18n</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBo.FoBoToolkit">FoBoToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.liftmodules.FoBo.package@AngularJS1315i18n" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Enable usage of i18n files for AngularJS version 1&#8228;3&#8228;15 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of i18n files for AngularJS version 1&#8228;3&#8228;15 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Use FoBo.ToolKit.Init=FoBo.ToolKit.AngularJS1315i18n</p></dd><dt>Version</dt><dd><p>1.3.15</p><p> <b>Example:</b></p><pre>FoBo.InitParam.Toolkit=FoBo.AngularJS1315i18n</pre></dd><dt>Since</dt><dd><p>v1.4
+</p></dd></dl></div>
+    </li><li name="net.liftmodules.FoBo.AngularJS141" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="AngularJS141"></a>
+      <a id="AngularJS141:AngularJS141"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$AngularJS141$.html"><span class="name deprecated" title="Deprecated: (Since version 1.6.0) Use FoBo.ToolKit.Init=FoBo.ToolKit.AngularJS141">AngularJS141</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBo.FoBoToolkit">FoBoToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.liftmodules.FoBo.package@AngularJS141" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Enable usage of AngularJS version 1&#8228;4&#8228;1 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of AngularJS version 1&#8228;4&#8228;1 in your bootstrap liftweb Boot.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Use FoBo.ToolKit.Init=FoBo.ToolKit.AngularJS141</p></dd><dt>Version</dt><dd><p>1.4.1</p><p> <b>Lift Boot:</b></p><pre>FoBo.InitParam.Toolkit=FoBo.AngularJS141
+FoBo.init()</pre></dd><dt>Since</dt><dd><p>v1.4
+</p></dd></dl></div>
+    </li><li name="net.liftmodules.FoBo.AngularJS141i18n" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="AngularJS141i18n"></a>
+      <a id="AngularJS141i18n:AngularJS141i18n"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$AngularJS141i18n$.html"><span class="name deprecated" title="Deprecated: (Since version 1.6.0) Use FoBo.ToolKit.Init=FoBo.ToolKit.AngularJS141i18n">AngularJS141i18n</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBo.FoBoToolkit">FoBoToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.liftmodules.FoBo.package@AngularJS141i18n" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Enable usage of i18n files for AngularJS version 1&#8228;4&#8228;1 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of i18n files for AngularJS version 1&#8228;4&#8228;1 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Use FoBo.ToolKit.Init=FoBo.ToolKit.AngularJS141i18n</p></dd><dt>Version</dt><dd><p>1.4.1</p><p> <b>Example:</b></p><pre>FoBo.InitParam.Toolkit=FoBo.AngularJS141i18n</pre></dd><dt>Since</dt><dd><p>v1.4
+</p></dd></dl></div>
+    </li><li name="net.liftmodules.FoBo.AngularJS148" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="AngularJS148"></a>
+      <a id="AngularJS148:AngularJS148"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$AngularJS148$.html"><span class="name deprecated" title="Deprecated: (Since version 1.6.0) Use FoBo.ToolKit.Init=FoBo.ToolKit.AngularJS148">AngularJS148</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBo.FoBoToolkit">FoBoToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.liftmodules.FoBo.package@AngularJS148" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Enable usage of AngularJS version 1&#8228;4&#8228;8 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of AngularJS version 1&#8228;4&#8228;8 in your bootstrap liftweb Boot.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Use FoBo.ToolKit.Init=FoBo.ToolKit.AngularJS148</p></dd><dt>Version</dt><dd><p>1.4.8</p><p> <b>Lift Boot:</b></p><pre>FoBo.InitParam.Toolkit=FoBo.AngularJS148
+FoBo.init()</pre></dd><dt>Since</dt><dd><p>v1.5
+</p></dd></dl></div>
+    </li><li name="net.liftmodules.FoBo.AngularJS148i18n" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="AngularJS148i18n"></a>
+      <a id="AngularJS148i18n:AngularJS148i18n"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$AngularJS148i18n$.html"><span class="name deprecated" title="Deprecated: (Since version 1.6.0) Use FoBo.ToolKit.Init=FoBo.ToolKit.AngularJS148i18n">AngularJS148i18n</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBo.FoBoToolkit">FoBoToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.liftmodules.FoBo.package@AngularJS148i18n" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Enable usage of i18n files for AngularJS version 1&#8228;4&#8228;8 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of i18n files for AngularJS version 1&#8228;4&#8228;8 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Use FoBo.ToolKit.Init=FoBo.ToolKit.AngularJS148i18n</p></dd><dt>Version</dt><dd><p>1.4.8</p><p> <b>Example:</b></p><pre>FoBo.InitParam.Toolkit=FoBo.AngularJS148i18n</pre></dd><dt>Since</dt><dd><p>v1.5
+</p></dd></dl></div>
+    </li><li name="net.liftmodules.FoBo.Bootstrap232" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Bootstrap232"></a>
+      <a id="Bootstrap232:Bootstrap232"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$Bootstrap232$.html"><span class="name deprecated" title="Deprecated: (Since version 1.6.0) Use FoBo.ToolKit.Init=FoBo.ToolKit.Bootstrap232">Bootstrap232</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBo.FoBoToolkit">FoBoToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.liftmodules.FoBo.package@Bootstrap232" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Enable usage of Twitter Bootstrap version 2&#8228;3&#8228;2 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of Twitter Bootstrap version 2&#8228;3&#8228;2 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Use FoBo.ToolKit.Init=FoBo.ToolKit.Bootstrap232</p></dd><dt>Version</dt><dd><p>2.3.2</p><p><b>Example</b></p><pre>FoBo.InitParam.Toolkit=FoBo.Bootstrap232</pre></dd><dt>Since</dt><dd><p>v1.1
 </p></dd></dl></div>
     </li><li name="net.liftmodules.FoBo.Bootstrap301" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="Bootstrap301"></a>
@@ -962,6 +703,48 @@ FoBo.init()</pre></dd><dt>Since</dt><dd><p>v1.2
               
         </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.5.0)</i> Use Bootstrap311 or later</p></dd><dt>Version</dt><dd><p>3.0.1</p><p><b>Example</b></p><pre>FoBo.InitParam.Toolkit=FoBo.Bootstrap301</pre></dd><dt>Since</dt><dd><p>v1.1
 </p></dd></dl></div>
+    </li><li name="net.liftmodules.FoBo.Bootstrap311" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Bootstrap311"></a>
+      <a id="Bootstrap311:Bootstrap311"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$Bootstrap311$.html"><span class="name deprecated" title="Deprecated: (Since version 1.6.0) Use FoBo.ToolKit.Init=FoBo.ToolKit.Bootstrap311">Bootstrap311</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBo.FoBoToolkit">FoBoToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.liftmodules.FoBo.package@Bootstrap311" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Enable usage of Twitter Bootstrap version 3&#8228;1&#8228;1 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of Twitter Bootstrap version 3&#8228;1&#8228;1 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Use FoBo.ToolKit.Init=FoBo.ToolKit.Bootstrap311</p></dd><dt>Version</dt><dd><p>3.1.1</p><p><b>Example</b></p><pre>FoBo.InitParam.Toolkit=FoBo.Bootstrap311</pre></dd><dt>Since</dt><dd><p>v1.2
+</p></dd></dl></div>
+    </li><li name="net.liftmodules.FoBo.Bootstrap320" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Bootstrap320"></a>
+      <a id="Bootstrap320:Bootstrap320"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$Bootstrap320$.html"><span class="name deprecated" title="Deprecated: (Since version 1.6.0) Use FoBo.ToolKit.Init=FoBo.ToolKit.Bootstrap320">Bootstrap320</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBo.FoBoToolkit">FoBoToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.liftmodules.FoBo.package@Bootstrap320" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Enable usage of Twitter Bootstrap version 3&#8228;2&#8228;0 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of Twitter Bootstrap version 3&#8228;2&#8228;0 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Use FoBo.ToolKit.Init=FoBo.ToolKit.Bootstrap320</p></dd><dt>Version</dt><dd><p>3.2.0</p><p><b>Example</b></p><pre>FoBo.InitParam.Toolkit=FoBo.Bootstrap320</pre></dd><dt>Since</dt><dd><p>v1.3
+</p></dd></dl></div>
     </li><li name="net.liftmodules.FoBo.Bootstrap335" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="Bootstrap335"></a>
       <a id="Bootstrap335:Bootstrap335"></a>
@@ -983,48 +766,433 @@ FoBo.init()</pre></dd><dt>Since</dt><dd><p>v1.2
               
         </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.5.0)</i> Use Bootstrap336 or later</p></dd><dt>Version</dt><dd><p>3.3.5</p><p><b>Example</b></p><pre>FoBo.InitParam.Toolkit=FoBo.Bootstrap335</pre></dd><dt>Since</dt><dd><p>v1.4
 </p></dd></dl></div>
-    </li><li name="net.liftmodules.FoBo.JQuery1110" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="JQuery1110"></a>
-      <a id="JQuery1110:JQuery1110"></a>
+    </li><li name="net.liftmodules.FoBo.Bootstrap336" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Bootstrap336"></a>
+      <a id="Bootstrap336:Bootstrap336"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="package$$JQuery1110$.html"><span class="name deprecated" title="Deprecated: (Since version 1.3) Use v1.11.1 or later">JQuery1110</span></a><span class="result"> extends <a href="package$$FoBoJQuery.html" class="extype" name="net.liftmodules.FoBo.FoBoJQuery">FoBoJQuery</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="package$$Bootstrap336$.html"><span class="name deprecated" title="Deprecated: (Since version 1.6.0) Use FoBo.ToolKit.Init=FoBo.ToolKit.Bootstrap336">Bootstrap336</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBo.FoBoToolkit">FoBoToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#net.liftmodules.FoBo.package@JQuery1110" title="Permalink" target="_top">
+      <a href="../../../index.html#net.liftmodules.FoBo.package@Bootstrap336" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" />
       </a>
     </span>
-      <p class="shortcomment cmt">Enable usage of JQuery version 1&#8228;11&#8228;0 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of JQuery version 1&#8228;11&#8228;0 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+      <p class="shortcomment cmt">Enable usage of Twitter Bootstrap version 3&#8228;3&#8228;6 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of Twitter Bootstrap version 3&#8228;3&#8228;6 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
                 <span class="name">@deprecated</span>
               
-        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.3)</i> Use v1.11.1 or later</p></dd><dt>Version</dt><dd><p>1.11.0</p><p><b>Example:</b></p><pre>FoBo.InitParam.JQuery=FoBo.JQuery1110</pre></dd><dt>Since</dt><dd><p>v1.2
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Use FoBo.ToolKit.Init=FoBo.ToolKit.Bootstrap336</p></dd><dt>Version</dt><dd><p>3.3.6</p><p><b>Example</b></p><pre>FoBo.InitParam.Toolkit=FoBo.Bootstrap335</pre></dd><dt>Since</dt><dd><p>v1.5
 </p></dd></dl></div>
-    </li><li name="net.liftmodules.FoBo.JQuery1111" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="JQuery1111"></a>
-      <a id="JQuery1111:JQuery1111"></a>
+    </li><li name="net.liftmodules.FoBo.FontAwesome321" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="FontAwesome321"></a>
+      <a id="FontAwesome321:FontAwesome321"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="package$$JQuery1111$.html"><span class="name deprecated" title="Deprecated: (Since version 1.4) Use v1.11.3 or later">JQuery1111</span></a><span class="result"> extends <a href="package$$FoBoJQuery.html" class="extype" name="net.liftmodules.FoBo.FoBoJQuery">FoBoJQuery</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="package$$FontAwesome321$.html"><span class="name deprecated" title="Deprecated: (Since version 1.6.0) Use FoBo.ToolKit.Init=FoBo.ToolKit.FontAwesome321">FontAwesome321</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBo.FoBoToolkit">FoBoToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#net.liftmodules.FoBo.package@JQuery1111" title="Permalink" target="_top">
+      <a href="../../../index.html#net.liftmodules.FoBo.package@FontAwesome321" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" />
       </a>
     </span>
-      <p class="shortcomment cmt">Enable usage of JQuery version 1&#8228;11&#8228;1 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of JQuery version 1&#8228;11&#8228;1 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+      <p class="shortcomment cmt">Enable usage of Font-Awesome version 3&#8228;2&#8228;1 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of Font-Awesome version 3&#8228;2&#8228;1 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
                 <span class="name">@deprecated</span>
               
-        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.4)</i> Use v1.11.3 or later</p></dd><dt>Version</dt><dd><p>1.11.1</p><p><b>Example:</b></p><pre>FoBo.InitParam.JQuery=FoBo.JQuery1111</pre></dd><dt>Since</dt><dd><p>v1.3
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Use FoBo.ToolKit.Init=FoBo.ToolKit.FontAwesome321</p></dd><dt>Version</dt><dd><p>3.2.1</p><p> <b>Example:</b></p><pre>FoBo.InitParam.Toolkit=FoBo.FontAwesome321</pre></dd><dt>Since</dt><dd><p>v1.0
 </p></dd></dl></div>
+    </li><li name="net.liftmodules.FoBo.FontAwesome403" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="FontAwesome403"></a>
+      <a id="FontAwesome403:FontAwesome403"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$FontAwesome403$.html"><span class="name deprecated" title="Deprecated: (Since version 1.6.0) Use FoBo.ToolKit.Init=FoBo.ToolKit.FontAwesome403">FontAwesome403</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBo.FoBoToolkit">FoBoToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.liftmodules.FoBo.package@FontAwesome403" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Enable usage of Font-Awesome version 4&#8228;0&#8228;3 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of Font-Awesome version 4&#8228;0&#8228;3 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Use FoBo.ToolKit.Init=FoBo.ToolKit.FontAwesome403</p></dd><dt>Version</dt><dd><p>4.0.3</p><p> <b>Example:</b></p><pre>FoBo.InitParam.Toolkit=FoBo.FontAwesome403</pre></dd><dt>Since</dt><dd><p>v1.2
+</p></dd></dl></div>
+    </li><li name="net.liftmodules.FoBo.FontAwesome410" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="FontAwesome410"></a>
+      <a id="FontAwesome410:FontAwesome410"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$FontAwesome410$.html"><span class="name deprecated" title="Deprecated: (Since version 1.6.0) Use FoBo.ToolKit.Init=FoBo.ToolKit.FontAwesome410">FontAwesome410</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBo.FoBoToolkit">FoBoToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.liftmodules.FoBo.package@FontAwesome410" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Enable usage of Font-Awesome version 4&#8228;1&#8228;0 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of Font-Awesome version 4&#8228;1&#8228;0 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Use FoBo.ToolKit.Init=FoBo.ToolKit.FontAwesome410</p></dd><dt>Version</dt><dd><p>4.1.0</p><p> <b>Example:</b></p><pre>FoBo.InitParam.Toolkit=FoBo.FontAwesome410</pre></dd><dt>Since</dt><dd><p>v1.3
+</p></dd></dl></div>
+    </li><li name="net.liftmodules.FoBo.FontAwesome430" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="FontAwesome430"></a>
+      <a id="FontAwesome430:FontAwesome430"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$FontAwesome430$.html"><span class="name deprecated" title="Deprecated: (Since version 1.6.0) Use FoBo.ToolKit.Init=FoBo.ToolKit.FontAwesome430">FontAwesome430</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBo.FoBoToolkit">FoBoToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.liftmodules.FoBo.package@FontAwesome430" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Enable usage of Font-Awesome version 4&#8228;3&#8228;0 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of Font-Awesome version 4&#8228;3&#8228;0 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Use FoBo.ToolKit.Init=FoBo.ToolKit.FontAwesome430</p></dd><dt>Version</dt><dd><p>4.3.0</p><p> <b>Example:</b></p><pre>FoBo.InitParam.Toolkit=FoBo.FontAwesome430</pre></dd><dt>Since</dt><dd><p>v1.4
+</p></dd></dl></div>
+    </li><li name="net.liftmodules.FoBo.InitParam" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="InitParam"></a>
+      <a id="InitParam:InitParam"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$InitParam$.html"><span class="name deprecated" title="Deprecated: (Since version 1.6.0) Use FoBo.ToolKit.Init=FoBo.ToolKit.[Toolkit case object name]">InitParam</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBo.FoBoToolkit">FoBoToolkit</a> with <a href="package$$FoBoJQuery.html" class="extype" name="net.liftmodules.FoBo.FoBoJQuery">FoBoJQuery</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.liftmodules.FoBo.package@InitParam" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Enable Toolkit(s)/JQuery options for the FoBo module in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable Toolkit(s)/JQuery options for the FoBo module in your bootstrap liftweb Boot.</p><p><b>Example:</b></p><pre>FoBo.InitParam.JQuery=FoBo.JQuery182
+FoBo.InitParam.Toolkit=FoBo.Bootstrap336
+FoBo.InitParam.Toolkit=FoBo.PrettifyJun2011</pre><p>This example uses the Bootstrap v3.3.6 option and adds the Google code Prettify vJun2011
+to the enabled toolkits.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Use FoBo.ToolKit.Init=FoBo.ToolKit.[Toolkit case object name]</p></dd></dl></div>
+    </li><li name="net.liftmodules.FoBo.JQuery1102" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="JQuery1102"></a>
+      <a id="JQuery1102:JQuery1102"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$JQuery1102$.html"><span class="name deprecated" title="Deprecated: (Since version 1.6.0) Use FoBo.ToolKit.Init=FoBo.ToolKit.JQuery1102">JQuery1102</span></a><span class="result"> extends <a href="package$$FoBoJQuery.html" class="extype" name="net.liftmodules.FoBo.FoBoJQuery">FoBoJQuery</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.liftmodules.FoBo.package@JQuery1102" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Enable usage of JQuery version 1&#8228;10&#8228;2 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of JQuery version 1&#8228;10&#8228;2 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Use FoBo.ToolKit.Init=FoBo.ToolKit.JQuery1102</p></dd><dt>Version</dt><dd><p>1.10.2</p><p><b>Example:</b></p><pre>FoBo.InitParam.JQuery=FoBo.JQuery1102</pre></dd><dt>Since</dt><dd><p>v1.1
+</p></dd></dl></div>
+    </li><li name="net.liftmodules.FoBo.JQuery1113" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="JQuery1113"></a>
+      <a id="JQuery1113:JQuery1113"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$JQuery1113$.html"><span class="name deprecated" title="Deprecated: (Since version 1.6.0) Use FoBo.ToolKit.Init=FoBo.ToolKit.JQuery1113">JQuery1113</span></a><span class="result"> extends <a href="package$$FoBoJQuery.html" class="extype" name="net.liftmodules.FoBo.FoBoJQuery">FoBoJQuery</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.liftmodules.FoBo.package@JQuery1113" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Enable usage of JQuery version 1&#8228;11&#8228;3 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of JQuery version 1&#8228;11&#8228;3 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Use FoBo.ToolKit.Init=FoBo.ToolKit.JQuery1113</p></dd><dt>Version</dt><dd><p>1.11.3</p><p><b>Example:</b></p><pre>FoBo.InitParam.JQuery=FoBo.JQuery1113</pre></dd><dt>Since</dt><dd><p>v1.4
+</p></dd></dl></div>
+    </li><li name="net.liftmodules.FoBo.JQuery172" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="JQuery172"></a>
+      <a id="JQuery172:JQuery172"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$JQuery172$.html"><span class="name deprecated" title="Deprecated: (Since version 1.6.0) Use FoBo.ToolKit.Init=FoBo.ToolKit.JQuery172">JQuery172</span></a><span class="result"> extends <a href="package$$FoBoJQuery.html" class="extype" name="net.liftmodules.FoBo.FoBoJQuery">FoBoJQuery</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.liftmodules.FoBo.package@JQuery172" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Enable usage of JQuery version 1&#8228;7&#8228;2 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of JQuery version 1&#8228;7&#8228;2 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Use FoBo.ToolKit.Init=FoBo.ToolKit.JQuery172</p></dd><dt>Version</dt><dd><p>1.7.2</p><p><b>Example:</b></p><pre>FoBo.InitParam.JQuery=FoBo.JQuery172</pre></dd><dt>Since</dt><dd><p>v0.7
+</p></dd></dl></div>
+    </li><li name="net.liftmodules.FoBo.JQuery182" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="JQuery182"></a>
+      <a id="JQuery182:JQuery182"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$JQuery182$.html"><span class="name deprecated" title="Deprecated: (Since version 1.6.0) Use FoBo.ToolKit.Init=FoBo.ToolKit.JQuery182">JQuery182</span></a><span class="result"> extends <a href="package$$FoBoJQuery.html" class="extype" name="net.liftmodules.FoBo.FoBoJQuery">FoBoJQuery</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.liftmodules.FoBo.package@JQuery182" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Enable usage of JQuery version 1&#8228;8&#8228;2 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of JQuery version 1&#8228;8&#8228;2 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Use FoBo.ToolKit.Init=FoBo.ToolKit.JQuery182</p></dd><dt>Version</dt><dd><p>1.8.2</p><p><b>Example:</b></p><pre>FoBo.InitParam.JQuery=FoBo.JQuery182</pre></dd><dt>Since</dt><dd><p>v0.7
+</p></dd></dl></div>
+    </li><li name="net.liftmodules.FoBo.JQuery191" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="JQuery191"></a>
+      <a id="JQuery191:JQuery191"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$JQuery191$.html"><span class="name deprecated" title="Deprecated: (Since version 1.6.0) Use FoBo.ToolKit.Init=FoBo.ToolKit.JQuery191">JQuery191</span></a><span class="result"> extends <a href="package$$FoBoJQuery.html" class="extype" name="net.liftmodules.FoBo.FoBoJQuery">FoBoJQuery</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.liftmodules.FoBo.package@JQuery191" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Enable usage of JQuery version 1&#8228;9&#8228;1 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of JQuery version 1&#8228;9&#8228;1 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Use FoBo.ToolKit.Init=FoBo.ToolKit.JQuery191</p></dd><dt>Version</dt><dd><p>1.9.1</p><p><b>Example:</b></p><pre>FoBo.InitParam.JQuery=FoBo.JQuery191</pre></dd><dt>Since</dt><dd><p>v1.0
+</p></dd></dl></div>
+    </li><li name="net.liftmodules.FoBo.JQuery211" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="JQuery211"></a>
+      <a id="JQuery211:JQuery211"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$JQuery211$.html"><span class="name deprecated" title="Deprecated: (Since version 1.6.0) Use FoBo.ToolKit.Init=FoBo.ToolKit.JQuery211">JQuery211</span></a><span class="result"> extends <a href="package$$FoBoJQuery.html" class="extype" name="net.liftmodules.FoBo.FoBoJQuery">FoBoJQuery</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.liftmodules.FoBo.package@JQuery211" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Enable usage of JQuery version 2&#8228;1&#8228;1 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of JQuery version 2&#8228;1&#8228;1 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Use FoBo.ToolKit.Init=FoBo.ToolKit.JQuery211</p></dd><dt>Version</dt><dd><p>2.1.1
+OBS! JQuery 2.x dose not support Internet Explorer 6, 7, or 8.</p><p><b>Example:</b></p><pre>JQueryModule.InitParam.JQuery=JQueryModule.JQuery211</pre></dd><dt>Since</dt><dd><p>v1.3
+</p></dd></dl></div>
+    </li><li name="net.liftmodules.FoBo.JQuery214" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="JQuery214"></a>
+      <a id="JQuery214:JQuery214"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$JQuery214$.html"><span class="name deprecated" title="Deprecated: (Since version 1.6.0) Use FoBo.ToolKit.Init=FoBo.ToolKit.JQuery214">JQuery214</span></a><span class="result"> extends <a href="package$$FoBoJQuery.html" class="extype" name="net.liftmodules.FoBo.FoBoJQuery">FoBoJQuery</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.liftmodules.FoBo.package@JQuery214" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Enable usage of JQuery version 2&#8228;1&#8228;4 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of JQuery version 2&#8228;1&#8228;4 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Use FoBo.ToolKit.Init=FoBo.ToolKit.JQuery214</p></dd><dt>Version</dt><dd><p>2.1.4
+OBS! JQuery 2.x dose not support Internet Explorer 6, 7, or 8.</p><p><b>Example:</b></p><pre>JQueryModule.InitParam.JQuery=JQueryModule.JQuery214</pre></dd><dt>Since</dt><dd><p>v1.4
+</p></dd></dl></div>
+    </li><li name="net.liftmodules.FoBo.JQueryMigrate121" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="JQueryMigrate121"></a>
+      <a id="JQueryMigrate121:JQueryMigrate121"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$JQueryMigrate121$.html"><span class="name deprecated" title="Deprecated: (Since version 1.6.0) Use FoBo.ToolKit.Init=FoBo.ToolKit.JQueryMigrate121">JQueryMigrate121</span></a><span class="result"> extends <a href="package$$FoBoJQuery.html" class="extype" name="net.liftmodules.FoBo.FoBoJQuery">FoBoJQuery</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.liftmodules.FoBo.package@JQueryMigrate121" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Enable usage of JQuery-migrate version 1&#8228;2&#8228;1 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of JQuery-migrate version 1&#8228;2&#8228;1 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Use FoBo.ToolKit.Init=FoBo.ToolKit.JQueryMigrate121</p></dd><dt>Version</dt><dd><p>1.2.1</p><p><b>Example:</b></p><pre>JQueryModule.InitParam.JQuery=JQueryModule.JQueryMigrate121</pre></dd><dt>Since</dt><dd><p>v2.7
+</p></dd></dl></div>
+    </li><li name="net.liftmodules.FoBo.KineticJS510" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="KineticJS510"></a>
+      <a id="KineticJS510:KineticJS510"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$KineticJS510$.html"><span class="name deprecated" title="Deprecated: (Since version 1.6.0) Use FoBo.ToolKit.Init=FoBo.ToolKit.KineticJS510">KineticJS510</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBo.FoBoToolkit">FoBoToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.liftmodules.FoBo.package@KineticJS510" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Enable usage of KineticJS version 5&#8228;1&#8228;0 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of KineticJS version 5&#8228;1&#8228;0 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Use FoBo.ToolKit.Init=FoBo.ToolKit.KineticJS510</p></dd><dt>Version</dt><dd><p>5.1.0</p><p> <b>Lift Boot:</b></p><pre>FoBo.InitParam.Toolkit=FoBo.KineticJS510
+FoBo.init()</pre></dd><dt>Since</dt><dd><p>v1.3
+</p></dd></dl></div>
+    </li><li name="net.liftmodules.FoBo.Pace0415" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Pace0415"></a>
+      <a id="Pace0415:Pace0415"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$Pace0415$.html"><span class="name deprecated" title="Deprecated: (Since version 1.6.0) Use FoBo.ToolKit.Init=FoBo.ToolKit.Pace0415">Pace0415</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBo.FoBoToolkit">FoBoToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.liftmodules.FoBo.package@Pace0415" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Enable usage of Pace version 0&#8228;4&#8228;15 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of Pace version 0&#8228;4&#8228;15 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Use FoBo.ToolKit.Init=FoBo.ToolKit.Pace0415</p></dd><dt>Version</dt><dd><p>0.4.15</p><p> <b>Lift Boot:</b></p><pre>FoBo.InitParam.Toolkit=FoBo.Pace0415
+FoBo.init()</pre></dd><dt>Since</dt><dd><p>v1.2
+</p></dd></dl></div>
+    </li><li name="net.liftmodules.FoBo.PrettifyJun2011" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="PrettifyJun2011"></a>
+      <a id="PrettifyJun2011:PrettifyJun2011"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$PrettifyJun2011$.html"><span class="name deprecated" title="Deprecated: (Since version 1.6.0) Use FoBo.ToolKit.Init=FoBo.ToolKit.PrettifyJun2011">PrettifyJun2011</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBo.FoBoToolkit">FoBoToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.liftmodules.FoBo.package@PrettifyJun2011" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Enable usage of Prettify version Jun2011 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of Prettify version Jun2011 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Use FoBo.ToolKit.Init=FoBo.ToolKit.PrettifyJun2011</p></dd><dt>Version</dt><dd><p>Jun2011</p><p><b>Example:</b></p><pre>FoBo.InitParam.Toolkit=FoBo.PrettifyJun2011</pre></dd><dt>Since</dt><dd><p>v0.7
+</p></dd></dl></div>
+    </li><li name="net.liftmodules.FoBo.TBLocInfo" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="TBLocInfo"></a>
+      <a id="TBLocInfo:TBLocInfo"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$TBLocInfo$.html"><span class="name deprecated" title="Deprecated: (Since version 1.6.0) Use BSLocInfo or TBLocInfo provided by FoBoBs or FoBoTB ">TBLocInfo</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.liftmodules.FoBo.package@TBLocInfo" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Extends your Lift SiteMap with various common bootstrap menu manipulations such
+as horizontal and vertical menu dividers and menu labels (labels coming soon).</p><div class="fullcomment"><div class="comment cmt"><p>Extends your Lift SiteMap with various common bootstrap menu manipulations such
+as horizontal and vertical menu dividers and menu labels (labels coming soon).</p><p>This object should be used in conjunction with the TB* or BS3* menu builder objects in
+<a href="../FoBoTB/snippet/FoBo/package.html" class="extype" name="net.liftmodules.FoBoTB.snippet.FoBo">net.liftmodules.FoBoTB.snippet.FoBo</a> or <a href="../FoBoBs/snippet/FoBo/package.html" class="extype" name="net.liftmodules.FoBoBs.snippet.FoBo">net.liftmodules.FoBoBs.snippet.FoBo</a> snippet's.</p><p><b>Example:</b></p><pre> :
+<span class="cmt">//add a horizontal menu divider</span>
+divider1 &gt;&gt; LocGroup(...) &gt;&gt; FoBo.TBLocInfo.Divider,
+ :
+<span class="cmt">//add a vertical menu divider</span>
+divider2 &gt;&gt; LocGroup(...) &gt;&gt; FoBo.TBLocInfo.DividerVertical,
+ :
+<span class="cmt">//open link in new tab</span>
+... FoBo.TBLocInfo.LinkTargetBlank
+ :</pre></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Use BSLocInfo or TBLocInfo provided by FoBoBs or FoBoTB </p></dd><dt>Since</dt><dd><p>v1.0
+</p></dd></dl></div>
+    </li><li name="net.liftmodules.FoBo#init" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="init():Unit"></a>
+      <a id="init():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version 1.6.0) Init no longer nessesary as it is now automaticaly done for respective FoBo.InitParam">init</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.liftmodules.FoBo.package@init():Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">When your Lift application first starts up, it executes the code in Boot.scala
+By calling FoBo.init() in Boot.scala the FoBo API packages and toolkit resources
+will be available in your Lift application.</p><div class="fullcomment"><div class="comment cmt"><p>When your Lift application first starts up, it executes the code in Boot.scala
+By calling FoBo.init() in Boot.scala the FoBo API packages and toolkit resources
+will be available in your Lift application.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Init no longer nessesary as it is now automaticaly done for respective FoBo.InitParam</p></dd><div class="block">Example:
+               <ol><li class="cmt"><p>In method boot in the Boot class of package bootstrap.liftweb set</p><pre>FoBo.InitParam.JQuery=FoBo.JQueryXYZ  <span class="cmt">//one jquery version</span>
+FoBo.InitParam.ToolKit=FoBo.FoBoToolkitNameXYZ <span class="cmt">//one or more toolkits</span>
+FoBo.InitParam.ToolKit=FoBo.FoBoToolkitNameXYZ
+ :
+FoBo.init()</pre></li></ol>
+            </div></dl></div>
     </li></ol>
             </div>
         </div>

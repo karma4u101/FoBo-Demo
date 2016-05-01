@@ -1,6 +1,6 @@
 moduleName := "FoBo-Lift-Template-Demo"
 
-version := "3.2.0-SNAPSHOT" 
+version := "3.3.0-SNAPSHOT" 
 
 organization := "se.media4u101"
 
@@ -33,7 +33,6 @@ libraryDependencies <++= (liftVersion,liftEdition,version) { (v,e,mv) =>
     "net.liftweb"     %% "lift-webkit"            % v    % "compile" ::
     "net.liftweb"     %% "lift-mapper"            % v    % "compile" ::
     "net.liftmodules" %% ("fobo"+"_"+e)           % "1.6-SNAPSHOT" % "compile" ::
-    "net.liftmodules" %% ("fobo-pace-res"+"_"+e)           % "1.6-SNAPSHOT" % "compile" ::
     Nil
 }
 

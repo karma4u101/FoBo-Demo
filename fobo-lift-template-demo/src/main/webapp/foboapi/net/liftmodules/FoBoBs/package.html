@@ -47,12 +47,16 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><h4>FoBo - Sub-module</h4><p>This package object is only of interest to you if you are using this module
-as a stand alone artifact dependency in your project (without FoBo).
-This package object provides information on how to initiate and use this module
-in your project. If you are using this module in FoBo see <a href="../FoBo/package.html" class="extype" name="net.liftmodules.FoBo">net.liftmodules.FoBo</a>
-for usage information.
-</p></div><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><h4>FoBo Bootstrap 3 Toolkit Module</h4><p>This FoBo toolkit module provides Bootstrap v3.x API and Resource components to the
+FoBo / FoBo Module, but can also be used as-is, see below for setup information.</p><p>If you are using this module via the FoBo/FoBo artifact module see also <a href="../FoBo/package.html" class="extype" name="net.liftmodules.FoBo">net.liftmodules.FoBo</a> for setup information.</p></div><dl class="attributes block"> <div class="block">Example:
+               <ol><li class="cmt"><p>To initiate this module for usage in your Lift project set something like the following in
+your projects Lift bootstrap.liftweb.Boot boot method.</p><pre><span class="kw">import</span> net.liftmodules.{FoBoBs <span class="kw">=&gt;</span> FoBo}
+ :
+ :
+FoBo.ToolKit.Init=FoBo.ToolKit.Bootstrap336 <span class="cmt">//or any other companion toolkit object</span></pre><p>You may substitute ToolKit for Resource or API and if you wish also adjust the artifact dependencies
+accordingly to include just the FoBo modules you use.
+</p></li></ol>
+            </div></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
@@ -94,40 +98,89 @@ for usage information.
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="net.liftmodules.FoBoBs.FoBoJQuery" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="FoBoJQueryextendsAnyRef"></a>
-      <a id="FoBoJQuery:FoBoJQuery"></a>
+              <ol><li name="net.liftmodules.FoBoBs.API" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="APIextendsAnyRef"></a>
+      <a id="API:API"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier"></span>
+        <span class="modifier">sealed </span>
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="package$$FoBoJQuery.html"><span class="name">FoBoJQuery</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <a href="package$$API.html"><span class="name">API</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#net.liftmodules.FoBoBs.package@FoBoJQueryextendsAnyRef" title="Permalink" target="_top">
+      <a href="../../../index.html#net.liftmodules.FoBoBs.package@APIextendsAnyRef" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" />
       </a>
     </span>
-      
-    </li><li name="net.liftmodules.FoBoBs.FoBoToolkit" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <p class="shortcomment cmt">Initiate FoBo's Bootstrap 3 API in you bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Initiate FoBo's Bootstrap 3 API in you bootstrap liftweb Boot.</p><p> <b>Example:</b></p><pre><span class="kw">import</span> net.liftmodules.{FoBoBs <span class="kw">=&gt;</span> FoBo}
+ :
+FoBo.API.Init=FoBo.API.[API <span class="std">Object</span>]</pre><p><b>Note:</b> To see available objects click on the round trait icon in the header of this page.
+</p></div></div>
+    </li><li name="net.liftmodules.FoBoBs.Resource" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="ResourceextendsAnyRef"></a>
+      <a id="Resource:Resource"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$Resource.html"><span class="name">Resource</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.liftmodules.FoBoBs.package@ResourceextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Initiate FoBo's Bootstrap 3 Resource(s) in you bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Initiate FoBo's Bootstrap 3 Resource(s) in you bootstrap liftweb Boot.</p><p> <b>Example:</b></p><pre><span class="kw">import</span> net.liftmodules.{FoBoBs <span class="kw">=&gt;</span> FoBo}
+ :
+FoBo.Resource.Init=FoBo.Resource.[Resource <span class="std">Object</span>]</pre><p><b>Note:</b> To see available objects click on the round trait icon in the header of this page.
+</p></div></div>
+    </li><li name="net.liftmodules.FoBoBs.ToolKit" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="ToolKitextendsAnyRef"></a>
+      <a id="ToolKit:ToolKit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$ToolKit.html"><span class="name">ToolKit</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.liftmodules.FoBoBs.package@ToolKitextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Initiate FoBo's Bootstrap 3 ToolKit(s) in you bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Initiate FoBo's Bootstrap 3 ToolKit(s) in you bootstrap liftweb Boot.
+Using the ToolKit initiation you will bring in both the
+toolkit's resources and FoBo/Lift API associated
+with the toolkit.</p><p> <b>Example:</b></p><pre><span class="kw">import</span> net.liftmodules.{FoBoBs <span class="kw">=&gt;</span> FoBo}
+ :
+FoBo.ToolKit.Init=FoBo.ToolKit.[ToolKit <span class="std">Object</span>]</pre><p><b>Note:</b> To see available objects click on the round trait icon in the header of this page.
+</p></div></div>
+    </li><li name="net.liftmodules.FoBoBs.FoBoToolkit" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="FoBoToolkitextendsAnyRef"></a>
       <a id="FoBoToolkit:FoBoToolkit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier"></span>
+        <span class="modifier">sealed </span>
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="package$$FoBoToolkit.html"><span class="name">FoBoToolkit</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <a href="package$$FoBoToolkit.html"><span class="name deprecated" title="Deprecated: (Since version 1.6.0) Use FoBoBs.ToolKit or FoBoBs.Resource and FoBoBs.API">FoBoToolkit</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#net.liftmodules.FoBoBs.package@FoBoToolkitextendsAnyRef" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" />
       </a>
     </span>
-      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Use FoBoBs.ToolKit or FoBoBs.Resource and FoBoBs.API</p></dd></dl></div>
     </li></ol>
             </div>
 
@@ -135,7 +188,24 @@ for usage information.
 
         <div id="values" class="values members">
               <h3>Value Members</h3>
-              <ol><li name="net.liftmodules.FoBoBs.BSLocInfo" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+              <ol><li name="net.liftmodules.FoBoBs.API" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="API"></a>
+      <a id="API:API"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$API$.html"><span class="name">API</span></a><span class="result"> extends <a href="package$$API.html" class="extype" name="net.liftmodules.FoBoBs.API">API</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.liftmodules.FoBoBs.package@API" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="net.liftmodules.FoBoBs.BSLocInfo" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="BSLocInfo"></a>
       <a id="BSLocInfo:BSLocInfo"></a>
       <h4 class="signature">
@@ -160,114 +230,40 @@ divider1 &gt;&gt; LocGroup(...) &gt;&gt; FoBoBs.BsLocInfo.Divider,
 <span class="cmt">//add a vertical menu divider</span>
 divider2 &gt;&gt; LocGroup(...) &gt;&gt; FoBoBs.BsLocInfo.DividerVertical,
  :</pre></div></div>
-    </li><li name="net.liftmodules.FoBoBs.Bootstrap301" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="Bootstrap301"></a>
-      <a id="Bootstrap301:Bootstrap301"></a>
+    </li><li name="net.liftmodules.FoBoBs.Resource" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Resource"></a>
+      <a id="Resource:Resource"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="package$$Bootstrap301$.html"><span class="name">Bootstrap301</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBoBs.FoBoToolkit">FoBoToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="package$$Resource$.html"><span class="name">Resource</span></a><span class="result"> extends <a href="package$$Resource.html" class="extype" name="net.liftmodules.FoBoBs.Resource">Resource</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#net.liftmodules.FoBoBs.package@Bootstrap301" title="Permalink" target="_top">
+      <a href="../../../index.html#net.liftmodules.FoBoBs.package@Resource" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" />
       </a>
     </span>
-      <p class="shortcomment cmt">Enable usage of Bootstrap version 3&#8228;0&#8228;1 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of Bootstrap version 3&#8228;0&#8228;1 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Version</dt><dd><p>3.0.1</p><p><b>Example</b></p><pre>FoBoBs.InitParam.Toolkit=FoBoBs.Bootstrap301</pre></dd></dl></div>
-    </li><li name="net.liftmodules.FoBoBs.Bootstrap311" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="Bootstrap311"></a>
-      <a id="Bootstrap311:Bootstrap311"></a>
+      
+    </li><li name="net.liftmodules.FoBoBs.ToolKit" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ToolKit"></a>
+      <a id="ToolKit:ToolKit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="package$$Bootstrap311$.html"><span class="name">Bootstrap311</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBoBs.FoBoToolkit">FoBoToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="package$$ToolKit$.html"><span class="name">ToolKit</span></a><span class="result"> extends <a href="package$$ToolKit.html" class="extype" name="net.liftmodules.FoBoBs.ToolKit">ToolKit</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#net.liftmodules.FoBoBs.package@Bootstrap311" title="Permalink" target="_top">
+      <a href="../../../index.html#net.liftmodules.FoBoBs.package@ToolKit" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" />
       </a>
     </span>
-      <p class="shortcomment cmt">Enable usage of Bootstrap version 3&#8228;1&#8228;1 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of Bootstrap version 3&#8228;1&#8228;1 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Version</dt><dd><p>3.1.1</p><p><b>Example</b></p><pre>FoBoBs.InitParam.Toolkit=FoBoBs.Bootstrap311</pre></dd></dl></div>
-    </li><li name="net.liftmodules.FoBoBs.Bootstrap320" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="Bootstrap320"></a>
-      <a id="Bootstrap320:Bootstrap320"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$Bootstrap320$.html"><span class="name">Bootstrap320</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBoBs.FoBoToolkit">FoBoToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#net.liftmodules.FoBoBs.package@Bootstrap320" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Enable usage of Bootstrap version 3&#8228;2&#8228;0 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of Bootstrap version 3&#8228;2&#8228;0 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Version</dt><dd><p>3.2.0</p><p><b>Example</b></p><pre>FoBoBs.InitParam.Toolkit=FoBoBs.Bootstrap320</pre></dd></dl></div>
-    </li><li name="net.liftmodules.FoBoBs.Bootstrap336" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="Bootstrap336"></a>
-      <a id="Bootstrap336:Bootstrap336"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$Bootstrap336$.html"><span class="name">Bootstrap336</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBoBs.FoBoToolkit">FoBoToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#net.liftmodules.FoBoBs.package@Bootstrap336" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Enable usage of Bootstrap version 3&#8228;3&#8228;6 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of Bootstrap version 3&#8228;3&#8228;6 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Version</dt><dd><p>3.3.6</p><p><b>Example</b></p><pre>FoBoBs.InitParam.Toolkit=FoBoBs.Bootstrap336</pre></dd><dt>Since</dt><dd><p>v1.5
-</p></dd></dl></div>
-    </li><li name="net.liftmodules.FoBoBs.InitParam" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="InitParam"></a>
-      <a id="InitParam:InitParam"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$InitParam$.html"><span class="name">InitParam</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBoBs.FoBoToolkit">FoBoToolkit</a> with <a href="package$$FoBoJQuery.html" class="extype" name="net.liftmodules.FoBoBs.FoBoJQuery">FoBoJQuery</a></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#net.liftmodules.FoBoBs.package@InitParam" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Enable Toolkit(s)/JQuery options for the FoBo module in your bootstrap liftweb Boot</p><div class="fullcomment"><div class="comment cmt"><p>Enable Toolkit(s)/JQuery options for the FoBo module in your bootstrap liftweb Boot</p><p><b>Example:</b></p><pre>FoBoBs.InitParam.JQuery=FoBoBs.JQuery192
-FoBoBs.InitParam.Toolkit=FoBoBs.Bootstrap301</pre><p>This example uses the Bootstrap v3.0.1 option.</p></div></div>
-    </li><li name="net.liftmodules.FoBoBs#init" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="init():Unit"></a>
-      <a id="init():Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">init</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#net.liftmodules.FoBoBs.package@init():Unit" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <div class="block">Example:
-               <ol><li class="cmt"><p>In bootstrap liftweb Boot set</p><pre>FoBoBs.init()</pre><p>The above example just calls init without specifying fobo init
-params so default Toolkit and JQuery values will be used.
-</p></li></ol>
-            </div></dl></div>
+      
     </li><li name="net.liftmodules.FoBoBs.lib" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="lib"></a>
       <a id="lib:lib"></a>
@@ -319,6 +315,23 @@ params so default Toolkit and JQuery values will be used.
       </a>
     </span>
       
+    </li><li name="net.liftmodules.FoBoBs#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <a id="toString():String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.liftmodules.FoBoBs.package@toString():String" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="net.liftmodules.FoBoBs">FoBoBs</a> → AnyRef → Any</dd></dl></div>
     </li></ol>
             </div>
 
@@ -326,7 +339,67 @@ params so default Toolkit and JQuery values will be used.
 
         <div id="values" class="values members">
               <h3>Deprecated Value Members</h3>
-              <ol><li name="net.liftmodules.FoBoBs.Bootstrap335" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+              <ol><li name="net.liftmodules.FoBoBs.Bootstrap301" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Bootstrap301"></a>
+      <a id="Bootstrap301:Bootstrap301"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$Bootstrap301$.html"><span class="name deprecated" title="Deprecated: (Since version 1.6.0) Use FoBoBs.ToolKit.Init=FoBoBs.ToolKit.Bootstrap301">Bootstrap301</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBoBs.FoBoToolkit">FoBoToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.liftmodules.FoBoBs.package@Bootstrap301" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Enable usage of Bootstrap version 3&#8228;0&#8228;1 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of Bootstrap version 3&#8228;0&#8228;1 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Use FoBoBs.ToolKit.Init=FoBoBs.ToolKit.Bootstrap301</p></dd><dt>Version</dt><dd><p>3.0.1</p><p><b>Example</b></p><pre>FoBoBs.InitParam.Toolkit=FoBoBs.Bootstrap301</pre></dd></dl></div>
+    </li><li name="net.liftmodules.FoBoBs.Bootstrap311" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Bootstrap311"></a>
+      <a id="Bootstrap311:Bootstrap311"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$Bootstrap311$.html"><span class="name deprecated" title="Deprecated: (Since version 1.6.0) Use FoBoBs.ToolKit.Init=FoBoBs.ToolKit.Bootstrap311">Bootstrap311</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBoBs.FoBoToolkit">FoBoToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.liftmodules.FoBoBs.package@Bootstrap311" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Enable usage of Bootstrap version 3&#8228;1&#8228;1 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of Bootstrap version 3&#8228;1&#8228;1 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Use FoBoBs.ToolKit.Init=FoBoBs.ToolKit.Bootstrap311</p></dd><dt>Version</dt><dd><p>3.1.1</p><p><b>Example</b></p><pre>FoBoBs.InitParam.Toolkit=FoBoBs.Bootstrap311</pre></dd></dl></div>
+    </li><li name="net.liftmodules.FoBoBs.Bootstrap320" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Bootstrap320"></a>
+      <a id="Bootstrap320:Bootstrap320"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$Bootstrap320$.html"><span class="name deprecated" title="Deprecated: (Since version 1.6.0) Use FoBoBs.ToolKit.Init=FoBoBs.ToolKit.Bootstrap320">Bootstrap320</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBoBs.FoBoToolkit">FoBoToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.liftmodules.FoBoBs.package@Bootstrap320" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Enable usage of Bootstrap version 3&#8228;2&#8228;0 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of Bootstrap version 3&#8228;2&#8228;0 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Use FoBoBs.ToolKit.Init=FoBoBs.ToolKit.Bootstrap320</p></dd><dt>Version</dt><dd><p>3.2.0</p><p><b>Example</b></p><pre>FoBoBs.InitParam.Toolkit=FoBoBs.Bootstrap320</pre></dd></dl></div>
+    </li><li name="net.liftmodules.FoBoBs.Bootstrap335" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="Bootstrap335"></a>
       <a id="Bootstrap335:Bootstrap335"></a>
       <h4 class="signature">
@@ -347,6 +420,72 @@ params so default Toolkit and JQuery values will be used.
               
         </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.5.0)</i> Use Bootstrap336 or later</p></dd><dt>Version</dt><dd><p>3.3.5</p><p><b>Example</b></p><pre>FoBoBs.InitParam.Toolkit=FoBoBs.Bootstrap335</pre></dd><dt>Since</dt><dd><p>v1.4
 </p></dd></dl></div>
+    </li><li name="net.liftmodules.FoBoBs.Bootstrap336" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Bootstrap336"></a>
+      <a id="Bootstrap336:Bootstrap336"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$Bootstrap336$.html"><span class="name deprecated" title="Deprecated: (Since version 1.6.0) Use FoBoBs.ToolKit.Init=FoBoBs.ToolKit.Bootstrap336">Bootstrap336</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBoBs.FoBoToolkit">FoBoToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.liftmodules.FoBoBs.package@Bootstrap336" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Enable usage of Bootstrap version 3&#8228;3&#8228;6 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of Bootstrap version 3&#8228;3&#8228;6 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Use FoBoBs.ToolKit.Init=FoBoBs.ToolKit.Bootstrap336</p></dd><dt>Version</dt><dd><p>3.3.6</p><p><b>Example</b></p><pre>FoBoBs.InitParam.Toolkit=FoBoBs.Bootstrap336</pre></dd><dt>Since</dt><dd><p>v1.5
+</p></dd></dl></div>
+    </li><li name="net.liftmodules.FoBoBs.InitParam" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="InitParam"></a>
+      <a id="InitParam:InitParam"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$InitParam$.html"><span class="name deprecated" title="Deprecated: (Since version 1.6.0) Use FoBoBs.ToolKit.Init=FoBoBs.ToolKit.[Toolkit Object]">InitParam</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBoBs.FoBoToolkit">FoBoToolkit</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.liftmodules.FoBoBs.package@InitParam" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Enable Toolkit(s)/JQuery options for the FoBo module in your bootstrap liftweb Boot</p><div class="fullcomment"><div class="comment cmt"><p>Enable Toolkit(s)/JQuery options for the FoBo module in your bootstrap liftweb Boot</p><p><b>Example:</b></p><pre>FoBoBs.InitParam.JQuery=FoBoBs.JQuery192
+FoBoBs.InitParam.Toolkit=FoBoBs.Bootstrap301</pre><p>This example uses the Bootstrap v3.0.1 option.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Use FoBoBs.ToolKit.Init=FoBoBs.ToolKit.[Toolkit Object]</p></dd></dl></div>
+    </li><li name="net.liftmodules.FoBoBs#init" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="init():Unit"></a>
+      <a id="init():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version 1.6.0) Init no longer nessesary as it is now automaticaly done for respective FoBoBs.InitParam">init</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.liftmodules.FoBoBs.package@init():Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Init no longer nessesary as it is now automaticaly done for respective FoBoBs.InitParam</p></dd><div class="block">Example:
+               <ol><li class="cmt"><p>In bootstrap liftweb Boot set</p><pre>FoBoBs.init()</pre><p>The above example just calls init without specifying fobo init
+params so default Toolkit and JQuery values will be used.
+</p></li></ol>
+            </div></dl></div>
     </li></ol>
             </div>
         </div>

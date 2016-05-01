@@ -226,6 +226,17 @@ p {
   .main-section h1.capital span { font-size: 70%; text-transform: lowercase; letter-spacing: 1px;}
   .main-section h1.capital span.smal { font-size: 45%; text-transform: lowercase; letter-spacing: 1px;}
 
+
+/* highlight responsive adjustments */
+.hl-resp-tb-wrapper {
+	border:none;
+}
+
+.table > tbody > tr > td.hl-table-adjust {
+	min-width:500px;
+	border-top: none;
+	padding:0;
+}
 /*Sections - footer*/   
 
   .footer {

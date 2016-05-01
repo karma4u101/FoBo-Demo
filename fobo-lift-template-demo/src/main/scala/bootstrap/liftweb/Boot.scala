@@ -14,7 +14,7 @@ import java.sql.DriverManager
 import _root_.net.liftweb.util.{ Props }
 import _root_.net.liftweb.http.provider.HTTPRequest
 import _root_.net.liftweb.http.auth.{ HttpBasicAuthentication, AuthRole, userRoles }
-import net.liftmodules.{FoBo,FoBoBs}
+import net.liftmodules.{FoBo,FoBoBs,FoBoHL}
 
 object localeOverride extends SessionVar[Box[Locale]](Empty)
 
@@ -31,10 +31,11 @@ class Boot extends Loggable {
     FoBo.ToolKit.Init=FoBo.ToolKit.Bootstrap336 
     FoBo.ToolKit.Init=FoBo.ToolKit.FontAwesome430 
     FoBo.ToolKit.Init=FoBo.ToolKit.AngularJS148
-    FoBo.ToolKit.Init=FoBo.ToolKit.AJMaterial101
-    //FoBo.ToolKit.Init=FoBo.ToolKit.Pace0415 
+    FoBo.ToolKit.Init=FoBo.ToolKit.AJMaterial108
     FoBo.ToolKit.Init=FoBo.ToolKit.Pace102
+    FoBo.ToolKit.Init=FoBo.ToolKit.HighlightJS930
     FoBo.API.Init=FoBo.API.FoBo1 //build info 
+    logger.info(FoBo.toString)
     
     // where to search snippet
     LiftRules.addToPackages("code")

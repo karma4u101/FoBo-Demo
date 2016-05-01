@@ -47,12 +47,8 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><h4>FoBo - Sub-module</h4><p>This package object is only of interest to you if you are using this module
-as a stand alone artifact dependency in your project (without FoBo).
-This package object provides information on how to initiate and use this module
-in your project. If you are using this module in FoBo see <a href="../FoBo/package.html" class="extype" name="net.liftmodules.FoBo">net.liftmodules.FoBo</a>
-for usage information.
-</p></div><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><h4>FoBo Font Awesome Toolkit Module</h4><p>This FoBo toolkit module provides Font Awesome API and Resource components to the
+FoBo / FoBo Module, but can also be used as-is, see below for setup information.</p><p>If you are using this module via the FoBo/FoBo artifact module see also <a href="../FoBo/package.html" class="extype" name="net.liftmodules.FoBo">net.liftmodules.FoBo</a> for setup information.</p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
@@ -94,12 +90,32 @@ for usage information.
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="net.liftmodules.FoBoFA.FAToolkit" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+              <ol><li name="net.liftmodules.FoBoFA.API" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="APIextendsAnyRef"></a>
+      <a id="API:API"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$API.html"><span class="name">API</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.liftmodules.FoBoFA.package@APIextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Initiate FoBo's Font Awesome API in you bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Initiate FoBo's Font Awesome API in you bootstrap liftweb Boot.</p><p> <b>Example:</b></p><pre><span class="kw">import</span> net.liftmodules.{FoBoFA <span class="kw">=&gt;</span> FoBo}
+ :
+FoBo.API.Init=FoBo.API.[API <span class="std">Object</span>]</pre><p><b>Note:</b> To see available objects click on the round trait icon in the header of this page.
+</p></div></div>
+    </li><li name="net.liftmodules.FoBoFA.FAToolkit" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="FAToolkitextendsAnyRef"></a>
       <a id="FAToolkit:FAToolkit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier"></span>
+        <span class="modifier">sealed </span>
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
@@ -111,6 +127,49 @@ for usage information.
       </a>
     </span>
       
+    </li><li name="net.liftmodules.FoBoFA.Resource" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="ResourceextendsAnyRef"></a>
+      <a id="Resource:Resource"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$Resource.html"><span class="name">Resource</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.liftmodules.FoBoFA.package@ResourceextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Initiate FoBo's Font Awesome Resource(s) in you bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Initiate FoBo's Font Awesome Resource(s) in you bootstrap liftweb Boot.</p><p> <b>Example:</b></p><pre><span class="kw">import</span> net.liftmodules.{FoBoFA <span class="kw">=&gt;</span> FoBo}
+ :
+FoBo.Resource.Init=FoBo.Resource.[Resource <span class="std">Object</span>]</pre><p><b>Note:</b> To see available objects click on the round trait icon in the header of this page.
+</p></div></div>
+    </li><li name="net.liftmodules.FoBoFA.ToolKit" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="ToolKitextendsAnyRef"></a>
+      <a id="ToolKit:ToolKit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$ToolKit.html"><span class="name">ToolKit</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.liftmodules.FoBoFA.package@ToolKitextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Initiate FoBo's Font Awesome ToolKit(s) in you bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Initiate FoBo's Font Awesome ToolKit(s) in you bootstrap liftweb Boot.
+Using the ToolKit initiation you will bring in both the
+toolkit's resources and FoBo/Lift API associated
+with the toolkit.</p><p> <b>Example:</b></p><pre><span class="kw">import</span> net.liftmodules.{FoBoFA <span class="kw">=&gt;</span> FoBo}
+ :
+FoBo.ToolKit.Init=FoBo.ToolKit.[ToolKit <span class="std">Object</span>]</pre><p><b>Note:</b> To see available objects click on the round trait icon in the header of this page.
+</p></div></div>
     </li></ol>
             </div>
 
@@ -118,6 +177,81 @@ for usage information.
 
         <div id="values" class="values members">
               <h3>Value Members</h3>
+              <ol><li name="net.liftmodules.FoBoFA.API" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="API"></a>
+      <a id="API:API"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$API$.html"><span class="name">API</span></a><span class="result"> extends <a href="package$$API.html" class="extype" name="net.liftmodules.FoBoFA.API">API</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.liftmodules.FoBoFA.package@API" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="net.liftmodules.FoBoFA.Resource" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Resource"></a>
+      <a id="Resource:Resource"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$Resource$.html"><span class="name">Resource</span></a><span class="result"> extends <a href="package$$Resource.html" class="extype" name="net.liftmodules.FoBoFA.Resource">Resource</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.liftmodules.FoBoFA.package@Resource" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="net.liftmodules.FoBoFA.ToolKit" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ToolKit"></a>
+      <a id="ToolKit:ToolKit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$ToolKit$.html"><span class="name">ToolKit</span></a><span class="result"> extends <a href="package$$ToolKit.html" class="extype" name="net.liftmodules.FoBoFA.ToolKit">ToolKit</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.liftmodules.FoBoFA.package@ToolKit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="net.liftmodules.FoBoFA#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <a id="toString():String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.liftmodules.FoBoFA.package@toString():String" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="net.liftmodules.FoBoFA">FoBoFA</a> → AnyRef → Any</dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Deprecated Value Members</h3>
               <ol><li name="net.liftmodules.FoBoFA.FontAwesome321" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="FontAwesome321"></a>
       <a id="FontAwesome321:FontAwesome321"></a>
@@ -127,14 +261,17 @@ for usage information.
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="package$$FontAwesome321$.html"><span class="name">FontAwesome321</span></a><span class="result"> extends <a href="package$$FAToolkit.html" class="extype" name="net.liftmodules.FoBoFA.FAToolkit">FAToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="package$$FontAwesome321$.html"><span class="name deprecated" title="Deprecated: (Since version 1.6.0) Use FoBoFA.ToolKit.Init=FoBoFA.ToolKit.FontAwesome321">FontAwesome321</span></a><span class="result"> extends <a href="package$$FAToolkit.html" class="extype" name="net.liftmodules.FoBoFA.FAToolkit">FAToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#net.liftmodules.FoBoFA.package@FontAwesome321" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" />
       </a>
     </span>
-      <p class="shortcomment cmt">Enable usage of Font-Awesome version 3&#8228;2&#8228;1 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of Font-Awesome version 3&#8228;2&#8228;1 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Version</dt><dd><p>3.2.1</p><p> <b>Example:</b></p><pre>FoBoFA.InitParam.Toolkit=FoBoFA.FontAwesome321</pre></dd></dl></div>
+      <p class="shortcomment cmt">Enable usage of Font-Awesome version 3&#8228;2&#8228;1 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of Font-Awesome version 3&#8228;2&#8228;1 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Use FoBoFA.ToolKit.Init=FoBoFA.ToolKit.FontAwesome321</p></dd><dt>Version</dt><dd><p>3.2.1</p><p> <b>Example:</b></p><pre>FoBoFA.InitParam.Toolkit=FoBoFA.FontAwesome321</pre></dd></dl></div>
     </li><li name="net.liftmodules.FoBoFA.FontAwesome403" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="FontAwesome403"></a>
       <a id="FontAwesome403:FontAwesome403"></a>
@@ -144,14 +281,17 @@ for usage information.
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="package$$FontAwesome403$.html"><span class="name">FontAwesome403</span></a><span class="result"> extends <a href="package$$FAToolkit.html" class="extype" name="net.liftmodules.FoBoFA.FAToolkit">FAToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="package$$FontAwesome403$.html"><span class="name deprecated" title="Deprecated: (Since version 1.6.0) Use FoBoFA.ToolKit.Init=FoBoFA.ToolKit.FontAwesome403">FontAwesome403</span></a><span class="result"> extends <a href="package$$FAToolkit.html" class="extype" name="net.liftmodules.FoBoFA.FAToolkit">FAToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#net.liftmodules.FoBoFA.package@FontAwesome403" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" />
       </a>
     </span>
-      <p class="shortcomment cmt">Enable usage of Font-Awesome version 4&#8228;0&#8228;3 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of Font-Awesome version 4&#8228;0&#8228;3 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Version</dt><dd><p>4.0.3</p><p> <b>Example:</b></p><pre>FoBoFA.InitParam.Toolkit=FoBoFA.FontAwesome403</pre></dd><dt>Since</dt><dd><p>v1.2
+      <p class="shortcomment cmt">Enable usage of Font-Awesome version 4&#8228;0&#8228;3 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of Font-Awesome version 4&#8228;0&#8228;3 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Use FoBoFA.ToolKit.Init=FoBoFA.ToolKit.FontAwesome403</p></dd><dt>Version</dt><dd><p>4.0.3</p><p> <b>Example:</b></p><pre>FoBoFA.InitParam.Toolkit=FoBoFA.FontAwesome403</pre></dd><dt>Since</dt><dd><p>v1.2
 </p></dd></dl></div>
     </li><li name="net.liftmodules.FoBoFA.FontAwesome410" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="FontAwesome410"></a>
@@ -162,14 +302,17 @@ for usage information.
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="package$$FontAwesome410$.html"><span class="name">FontAwesome410</span></a><span class="result"> extends <a href="package$$FAToolkit.html" class="extype" name="net.liftmodules.FoBoFA.FAToolkit">FAToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="package$$FontAwesome410$.html"><span class="name deprecated" title="Deprecated: (Since version 1.6.0) Use FoBoFA.ToolKit.Init=FoBoFA.ToolKit.FontAwesome410">FontAwesome410</span></a><span class="result"> extends <a href="package$$FAToolkit.html" class="extype" name="net.liftmodules.FoBoFA.FAToolkit">FAToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#net.liftmodules.FoBoFA.package@FontAwesome410" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" />
       </a>
     </span>
-      <p class="shortcomment cmt">Enable usage of Font-Awesome version 4&#8228;1&#8228;0 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of Font-Awesome version 4&#8228;1&#8228;0 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Version</dt><dd><p>4.1.0</p><p> <b>Example:</b></p><pre>FoBoFA.InitParam.Toolkit=FoBoFA.FontAwesome410</pre></dd><dt>Since</dt><dd><p>v1.3
+      <p class="shortcomment cmt">Enable usage of Font-Awesome version 4&#8228;1&#8228;0 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of Font-Awesome version 4&#8228;1&#8228;0 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Use FoBoFA.ToolKit.Init=FoBoFA.ToolKit.FontAwesome410</p></dd><dt>Version</dt><dd><p>4.1.0</p><p> <b>Example:</b></p><pre>FoBoFA.InitParam.Toolkit=FoBoFA.FontAwesome410</pre></dd><dt>Since</dt><dd><p>v1.3
 </p></dd></dl></div>
     </li><li name="net.liftmodules.FoBoFA.FontAwesome430" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="FontAwesome430"></a>
@@ -180,16 +323,19 @@ for usage information.
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="package$$FontAwesome430$.html"><span class="name">FontAwesome430</span></a><span class="result"> extends <a href="package$$FAToolkit.html" class="extype" name="net.liftmodules.FoBoFA.FAToolkit">FAToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="package$$FontAwesome430$.html"><span class="name deprecated" title="Deprecated: (Since version 1.6.0) Use FoBoFA.ToolKit.Init=FoBoFA.ToolKit.FontAwesome430">FontAwesome430</span></a><span class="result"> extends <a href="package$$FAToolkit.html" class="extype" name="net.liftmodules.FoBoFA.FAToolkit">FAToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#net.liftmodules.FoBoFA.package@FontAwesome430" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" />
       </a>
     </span>
-      <p class="shortcomment cmt">Enable usage of Font-Awesome version 4&#8228;3&#8228;0 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of Font-Awesome version 4&#8228;3&#8228;0 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Version</dt><dd><p>4.3.0</p><p> <b>Example:</b></p><pre>FoBoFA.InitParam.Toolkit=FoBoFA.FontAwesome430</pre></dd><dt>Since</dt><dd><p>v1.4
+      <p class="shortcomment cmt">Enable usage of Font-Awesome version 4&#8228;3&#8228;0 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of Font-Awesome version 4&#8228;3&#8228;0 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Use FoBoFA.ToolKit.Init=FoBoFA.ToolKit.FontAwesome430</p></dd><dt>Version</dt><dd><p>4.3.0</p><p> <b>Example:</b></p><pre>FoBoFA.InitParam.Toolkit=FoBoFA.FontAwesome430</pre></dd><dt>Since</dt><dd><p>v1.4
 </p></dd></dl></div>
-    </li><li name="net.liftmodules.FoBoFA.InitParam" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="net.liftmodules.FoBoFA.InitParam" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="InitParam"></a>
       <a id="InitParam:InitParam"></a>
       <h4 class="signature">
@@ -198,15 +344,18 @@ for usage information.
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="package$$InitParam$.html"><span class="name">InitParam</span></a><span class="result"> extends <a href="package$$FAToolkit.html" class="extype" name="net.liftmodules.FoBoFA.FAToolkit">FAToolkit</a></span>
+        <a href="package$$InitParam$.html"><span class="name deprecated" title="Deprecated: (Since version 1.6.0) Use FoBoFA.ToolKit.Init=FoBoFA.ToolKit.[Toolkit Object]">InitParam</span></a><span class="result"> extends <a href="package$$FAToolkit.html" class="extype" name="net.liftmodules.FoBoFA.FAToolkit">FAToolkit</a></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#net.liftmodules.FoBoFA.package@InitParam" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" />
       </a>
     </span>
-      <p class="shortcomment cmt"></p>
-    </li><li name="net.liftmodules.FoBoFA#init" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Use FoBoFA.ToolKit.Init=FoBoFA.ToolKit.[Toolkit Object]</p></dd></dl></div>
+    </li><li name="net.liftmodules.FoBoFA#init" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="init():Unit"></a>
       <a id="init():Unit"></a>
       <h4 class="signature">
@@ -215,20 +364,19 @@ for usage information.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">init</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name deprecated" title="Deprecated: (Since version 1.6.0) Init no longer nessesary as it is now automaticaly done for respective FoBoFA.InitParam">init</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#net.liftmodules.FoBoFA.package@init():Unit" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" />
       </a>
     </span>
-      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Init no longer nessesary as it is now automaticaly done for respective FoBoFA.InitParam</p></dd></dl></div>
     </li></ol>
             </div>
-
-        
-
-        
         </div>
 
         <div id="inheritedMembers">
