@@ -296,24 +296,23 @@ used higlight script functions.</p></div><div class="toggleContainer block">
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="net.liftmodules.FoBoHL.lib.HightlightSH#initHighlightingOnLoad" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="initHighlightingOnLoad():net.liftweb.http.js.JsCmd"></a>
-      <a id="initHighlightingOnLoad():JsCmd"></a>
+    </li><li name="net.liftmodules.FoBoHL.lib.HightlightSH#highlightBlocks" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="highlightBlocks():net.liftweb.http.js.JsCmd"></a>
+      <a id="highlightBlocks():JsCmd"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">initHighlightingOnLoad</span><span class="params">()</span><span class="result">: <span class="extype" name="net.liftweb.http.js.JsCmd">JsCmd</span></span>
+        <span class="name">highlightBlocks</span><span class="params">()</span><span class="result">: <span class="extype" name="net.liftweb.http.js.JsCmd">JsCmd</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#net.liftmodules.FoBoHL.lib.HightlightSH@initHighlightingOnLoad():net.liftweb.http.js.JsCmd" title="Permalink" target="_top">
+      <a href="../../../../index.html#net.liftmodules.FoBoHL.lib.HightlightSH@highlightBlocks():net.liftweb.http.js.JsCmd" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" />
       </a>
     </span>
-      <p class="shortcomment cmt">This function returns a script that initate highlight js via jquery.</p><div class="fullcomment"><div class="comment cmt"><p>This function returns a script that initate highlight js via jquery.
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>net.liftweb.http.js.JsCmd</p></dd></dl><dl class="attributes block"> <dt>Since</dt><dd><p>v1.4
+      <p class="shortcomment cmt">This function returns a JsCmd that contains a script to highlight js code blocks via jquery.</p><div class="fullcomment"><div class="comment cmt"><p>This function returns a JsCmd that contains a script to highlight js code blocks via jquery.</p><p><b>Result:</b> This will result in the following being returned in a JsCmd:</p><pre>$('pre code').each(function(i, block) { hljs.highlightBlock(block); });</pre></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>net.liftweb.http.js.JsCmd</p></dd></dl><dl class="attributes block"> <dt>Since</dt><dd><p>v1.6
 </p></dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
