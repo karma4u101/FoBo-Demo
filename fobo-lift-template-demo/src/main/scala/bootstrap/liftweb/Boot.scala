@@ -26,14 +26,14 @@ class Boot extends Loggable {
   def boot {
 
     //FoBo init params 
-    FoBo.ToolKit.Init=FoBo.ToolKit.JQuery1113 
-    FoBo.ToolKit.Init=FoBo.ToolKit.PrettifyJun2011
-    FoBo.ToolKit.Init=FoBo.ToolKit.Bootstrap336 
-    FoBo.ToolKit.Init=FoBo.ToolKit.FontAwesome430 
-    FoBo.ToolKit.Init=FoBo.ToolKit.AngularJS148
-    FoBo.ToolKit.Init=FoBo.ToolKit.AJMaterial108
-    FoBo.ToolKit.Init=FoBo.ToolKit.Pace102
-    FoBo.ToolKit.Init=FoBo.ToolKit.HighlightJS930
+    FoBo.Toolkit.Init=FoBo.Toolkit.JQuery1113 
+    FoBo.Toolkit.Init=FoBo.Toolkit.PrettifyJun2011
+    FoBo.Toolkit.Init=FoBo.Toolkit.Bootstrap336 
+    FoBo.Toolkit.Init=FoBo.Toolkit.FontAwesome463 
+    FoBo.Toolkit.Init=FoBo.Toolkit.AngularJS148
+    FoBo.Toolkit.Init=FoBo.Toolkit.AJMaterial108
+    FoBo.Toolkit.Init=FoBo.Toolkit.Pace102
+    FoBo.Toolkit.Init=FoBo.Toolkit.HighlightJS930
     FoBo.API.Init=FoBo.API.FoBo1 //build info 
     logger.info(FoBo.toString)
     

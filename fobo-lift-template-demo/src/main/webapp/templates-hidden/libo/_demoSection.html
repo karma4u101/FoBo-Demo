@@ -86,7 +86,7 @@ libraryDependencies ++= {
   Seq(
     "net.liftweb"     %% "lift-webkit" % liftVersion % "compile" withSources(),
          ⋮
-    "net.liftmodules" %% "fobo_2.6"    % "1.4"       % "compile"
+    "net.liftmodules" %% "fobo_2.6"    % "1.6"       % "compile"
     )
 }                            
 
@@ -150,10 +150,9 @@ import net.liftmodules.FoBo
   class Boot extends Loggable {
     def boot {
            ⋮
-      FoBo.InitParam.JQuery=FoBo.JQuery1111  
-      FoBo.InitParam.ToolKit=FoBo.Bootstrap335
-      FoBo.InitParam.ToolKit=FoBo.FontAwesome430 
-      FoBo.init()
+      FoBo.Toolkit.Init=FoBo.Toolkit.JQuery1111  
+      FoBo.Toolkit.Init=FoBo.Toolkit.Bootstrap335
+      FoBo.Toolkit.Init=FoBo.Toolkit.FontAwesome430 
            ⋮     
 					</pre>
 					<p>In Lift's html5 template:s add (depending on your setup)
@@ -202,7 +201,7 @@ import net.liftmodules.FoBo
 					In most cases the only things you need to change in your project to upgrade to a newer toolkit version 
 					is the FoBo modules version number in build.sbt    
 				    <code style="font-size:10px;">"net.liftmodules" %% "fobo" % (liftVersion+"-X.Y.Z-SNAPSHOT") withJavadoc() withSources()</code>
-					and the init param line <code>FoBo.InitParam.ToolKit = FoBo.BootstrapXYZ</code> in your projects Boot.scala file. 
+					and the init param line <code>FoBo.InitParam.Toolkit = FoBo.BootstrapXYZ</code> in your projects Boot.scala file. 
 					</p>
 					<p>
 					If there are some breaking changes in the toolkit you may need to downgrade to your previous toolkit version and
@@ -228,7 +227,7 @@ import net.liftmodules.FoBo
 					
 					<p>
 					   You can add to the bootstrap provided icon set with <a href="http://fortawesome.github.com/Font-Awesome/">Font Awesome</a>  
-					   this is done by using the init parram <code>FoBo.InitParam.ToolKit = FoBo.FontAwesomeXYZ</code>.
+					   this is done by using the init parram <code>FoBo.InitParam.Toolkit = FoBo.FontAwesomeXYZ</code>.
 					   The v4.x sereies of the Font Awesome icon set is compatible with the Bootstrap v3.x serie.
 					</p>
 
@@ -237,9 +236,8 @@ import net.liftmodules.FoBo
 					 </div>							
 					<div  class="label label-default">Font Awesome - Boot.scala Setup</div>
 <pre class="prettyprint linenums lang-scala">⋮
-FoBo.InitParam.ToolKit=FoBo.Bootstrap335
-FoBo.InitParam.ToolKit=FoBo.FontAwesome430 
-FoBo.init()
+FoBo.Toolkit.Init=FoBo.Toolkit.Bootstrap335
+FoBo.Toolkit.Init=FoBo.Toolkit.FontAwesome463 
 ⋮</pre>					 						
 					<div  class="label label-default">Font Awesome - Template Setup</div>
 <pre class="prettyprint linenums lang-html">&lt;link rel="stylesheet" type='text/css' href="/classpath/fobo/bootstrap.css"/&gt;
