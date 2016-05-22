@@ -54,7 +54,7 @@ FoBo / FoBo Module, but can also be used as-is, see below for setup information.
 your projects Lift bootstrap.liftweb.Boot boot method.</p><pre><span class="kw">import</span> net.liftmodules.{FoBoTB <span class="kw">=&gt;</span> FoBo}
  :
  :
-FoBo.ToolKit.Init=FoBo.ToolKit.Bootstrap232 <span class="cmt">//or any other toolkit object</span></pre><p>You may substitute ToolKit for Resource or API and if you wish also adjust the artifact dependencies
+FoBo.Toolkit.Init=FoBo.Toolkit.Bootstrap232 <span class="cmt">//or any other toolkit object</span></pre><p>You may substitute Toolkit for Resource or API and if you wish also adjust the artifact dependencies
 accordingly to include just the FoBo modules you use.
 </p></li></ol>
             </div></dl><div class="toggleContainer block">
@@ -139,28 +139,28 @@ FoBo.API.Init=FoBo.API.[API <span class="std">Object</span>]</pre><p><b>Note:</b
  :
 FoBo.Resource.Init=FoBo.Resource.[Resource <span class="std">Object</span>]</pre><p><b>Note:</b> To see available objects click on the round trait icon in the header of this page.
 </p></div></div>
-    </li><li name="net.liftmodules.FoBoTB.ToolKit" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="ToolKitextendsAnyRef"></a>
-      <a id="ToolKit:ToolKit"></a>
+    </li><li name="net.liftmodules.FoBoTB.Toolkit" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="ToolkitextendsAnyRef"></a>
+      <a id="Toolkit:Toolkit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">sealed </span>
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="package$$ToolKit.html"><span class="name">ToolKit</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <a href="package$$Toolkit.html"><span class="name">Toolkit</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#net.liftmodules.FoBoTB.package@ToolKitextendsAnyRef" title="Permalink" target="_top">
+      <a href="../../../index.html#net.liftmodules.FoBoTB.package@ToolkitextendsAnyRef" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" />
       </a>
     </span>
-      <p class="shortcomment cmt">Initiate FoBo's Bootstrap 2 ToolKit in you bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Initiate FoBo's Bootstrap 2 ToolKit in you bootstrap liftweb Boot.
-Using the ToolKit initiation you will bring in both the
+      <p class="shortcomment cmt">Initiate FoBo's Bootstrap 2 Toolkit in you bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Initiate FoBo's Bootstrap 2 Toolkit in you bootstrap liftweb Boot.
+Using the Toolkit initiation you will bring in both the
 toolkit's resources and the FoBo/Lift API associated
 with the toolkit.</p><p> <b>Example:</b></p><pre><span class="kw">import</span> net.liftmodules.{FoBoTB <span class="kw">=&gt;</span> FoBo}
  :
-FoBo.ToolKit.Init=FoBo.ToolKit.[ToolKit <span class="std">Object</span>]</pre><p><b>Note:</b> To see available objects click on the round trait icon in the header of this page.</p></div></div>
+FoBo.Toolkit.Init=FoBo.Toolkit.[Toolkit <span class="std">Object</span>]</pre><p><b>Note:</b> To see available objects click on the round trait icon in the header of this page.</p></div></div>
     </li><li name="net.liftmodules.FoBoTB.FoBoToolkit" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="FoBoToolkitextendsAnyRef"></a>
       <a id="FoBoToolkit:FoBoToolkit"></a>
@@ -170,7 +170,7 @@ FoBo.ToolKit.Init=FoBo.ToolKit.[ToolKit <span class="std">Object</span>]</pre><p
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="package$$FoBoToolkit.html"><span class="name deprecated" title="Deprecated: (Since version 1.6.0) Use FoBoTB.ToolKit or FoBoTB.Resource and FoBoTB.API">FoBoToolkit</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <a href="package$$FoBoToolkit.html"><span class="name deprecated" title="Deprecated: (Since version 1.6.0) Use FoBoTB.Toolkit or FoBoTB.Resource and FoBoTB.API">FoBoToolkit</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#net.liftmodules.FoBoTB.package@FoBoToolkitextendsAnyRef" title="Permalink" target="_top">
@@ -180,7 +180,7 @@ FoBo.ToolKit.Init=FoBo.ToolKit.[ToolKit <span class="std">Object</span>]</pre><p
       <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
                 <span class="name">@deprecated</span>
               
-        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Use FoBoTB.ToolKit or FoBoTB.Resource and FoBoTB.API</p></dd></dl></div>
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Use FoBoTB.Toolkit or FoBoTB.Resource and FoBoTB.API</p></dd></dl></div>
     </li></ol>
             </div>
 
@@ -247,19 +247,19 @@ divider1 &gt;&gt; LocGroup(...) &gt;&gt; FoBoTB.TBLocInfo.Divider,
 <span class="cmt">//add a vertical menu divider</span>
 divider2 &gt;&gt; LocGroup(...) &gt;&gt; FoBoTB.TBLocInfo.DividerVertical,
  :</pre></div></div>
-    </li><li name="net.liftmodules.FoBoTB.ToolKit" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="ToolKit"></a>
-      <a id="ToolKit:ToolKit"></a>
+    </li><li name="net.liftmodules.FoBoTB.Toolkit" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Toolkit"></a>
+      <a id="Toolkit:Toolkit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="package$$ToolKit$.html"><span class="name">ToolKit</span></a><span class="result"> extends <a href="package$$ToolKit.html" class="extype" name="net.liftmodules.FoBoTB.ToolKit">ToolKit</a></span>
+        <a href="package$$Toolkit$.html"><span class="name">Toolkit</span></a><span class="result"> extends <a href="package$$Toolkit.html" class="extype" name="net.liftmodules.FoBoTB.Toolkit">Toolkit</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#net.liftmodules.FoBoTB.package@ToolKit" title="Permalink" target="_top">
+      <a href="../../../index.html#net.liftmodules.FoBoTB.package@Toolkit" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" />
       </a>
     </span>
@@ -331,7 +331,7 @@ divider2 &gt;&gt; LocGroup(...) &gt;&gt; FoBoTB.TBLocInfo.DividerVertical,
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="package$$Bootstrap232$.html"><span class="name deprecated" title="Deprecated: (Since version 1.6.0) Use FoBoTB.ToolKit.Init=FoBoTB.ToolKit.Bootstrap232">Bootstrap232</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBoTB.FoBoToolkit">FoBoToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="package$$Bootstrap232$.html"><span class="name deprecated" title="Deprecated: (Since version 1.6.0) Use FoBoTB.Toolkit.Init=FoBoTB.Toolkit.Bootstrap232">Bootstrap232</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBoTB.FoBoToolkit">FoBoToolkit</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#net.liftmodules.FoBoTB.package@Bootstrap232" title="Permalink" target="_top">
@@ -341,7 +341,7 @@ divider2 &gt;&gt; LocGroup(...) &gt;&gt; FoBoTB.TBLocInfo.DividerVertical,
       <p class="shortcomment cmt">Enable usage of Twitter Bootstrap version 2&#8228;3&#8228;2 in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable usage of Twitter Bootstrap version 2&#8228;3&#8228;2 in your bootstrap liftweb Boot.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
                 <span class="name">@deprecated</span>
               
-        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Use FoBoTB.ToolKit.Init=FoBoTB.ToolKit.Bootstrap232</p></dd><dt>Version</dt><dd><p>2.3.2</p><p><b>Example</b></p><pre>FoBoTB.InitParam.Toolkit=FoBoTB.Bootstrap232</pre></dd></dl></div>
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Use FoBoTB.Toolkit.Init=FoBoTB.Toolkit.Bootstrap232</p></dd><dt>Version</dt><dd><p>2.3.2</p><p><b>Example</b></p><pre>FoBoTB.InitParam.ToolKit=FoBoTB.Bootstrap232</pre></dd></dl></div>
     </li><li name="net.liftmodules.FoBoTB.InitParam" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="InitParam"></a>
       <a id="InitParam:InitParam"></a>
@@ -351,7 +351,7 @@ divider2 &gt;&gt; LocGroup(...) &gt;&gt; FoBoTB.TBLocInfo.DividerVertical,
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="package$$InitParam$.html"><span class="name deprecated" title="Deprecated: (Since version 1.6.0) Use FoBoTB.ToolKit.Init=FoBoTB.ToolKit.[Toolkit Object]">InitParam</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBoTB.FoBoToolkit">FoBoToolkit</a></span>
+        <a href="package$$InitParam$.html"><span class="name deprecated" title="Deprecated: (Since version 1.6.0) Use FoBoTB.Toolkit.Init=FoBoTB.Toolkit.[Toolkit Object]">InitParam</span></a><span class="result"> extends <a href="package$$FoBoToolkit.html" class="extype" name="net.liftmodules.FoBoTB.FoBoToolkit">FoBoToolkit</a></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#net.liftmodules.FoBoTB.package@InitParam" title="Permalink" target="_top">
@@ -359,10 +359,10 @@ divider2 &gt;&gt; LocGroup(...) &gt;&gt; FoBoTB.TBLocInfo.DividerVertical,
       </a>
     </span>
       <p class="shortcomment cmt">Enable Toolkit(s)/JQuery options for the FoBo module in your bootstrap liftweb Boot.</p><div class="fullcomment"><div class="comment cmt"><p>Enable Toolkit(s)/JQuery options for the FoBo module in your bootstrap liftweb Boot.</p><p><b>Example:</b></p><pre>FoBoTB.InitParam.JQuery=FoBoTB.JQuery172
-FoBoTB.InitParam.Toolkit=FoBoTB.Bootstrap232</pre><p>This example uses the Bootstrap v2.3.2 option.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+FoBoTB.InitParam.ToolKit=FoBoTB.Bootstrap232</pre><p>This example uses the Bootstrap v2.3.2 option.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
                 <span class="name">@deprecated</span>
               
-        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Use FoBoTB.ToolKit.Init=FoBoTB.ToolKit.[Toolkit Object]</p></dd></dl></div>
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.6.0)</i> Use FoBoTB.Toolkit.Init=FoBoTB.Toolkit.[Toolkit Object]</p></dd></dl></div>
     </li><li name="net.liftmodules.FoBoTB#init" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="init():Unit"></a>
       <a id="init():Unit"></a>

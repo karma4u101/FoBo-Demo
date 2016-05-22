@@ -1,6 +1,6 @@
 moduleName := "FoBo-Lift-Template-Demo"
 
-version := "3.5.1-SNAPSHOT" 
+version := "3.5.2-SNAPSHOT" 
 
 organization := "se.media4u101"
 
