@@ -2,9 +2,9 @@ name := "Pimping-Lift-Advanced-MD"
 
 organization := "net.liftweb"
 
-version := "1.6.2-SNAPSHOT"
+version := "1.6.3-SNAPSHOT"
 
-liftVersion := "3.0-RC2" //"2.6.2" // 
+liftVersion := "3.0-RC3" //"2.6.2" // 
 
 liftEdition <<= liftVersion apply { _.substring(0,3) }
 
@@ -26,7 +26,7 @@ scalacOptions ++= Seq("-deprecation", "-unchecked")
 libraryDependencies <++= (liftVersion,liftEdition,version) { (v,e,mv) =>
     "net.liftweb"     %% "lift-webkit"            % v    % "compile" ::
     "net.liftweb"     %% "lift-mapper"            % v    % "compile" ::
-    "net.liftmodules" %% ("fobo"+"_"+e)          % "1.6-SNAPSHOT" % "compile" ::
+    "net.liftmodules" %% ("fobo"+"_"+e)          % "1.6" % "compile" ::
     Nil
 }
 

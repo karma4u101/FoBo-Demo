@@ -8,7 +8,7 @@
         <moduleId>
             <groupId>se.media4u101</groupId>
             <artifactId>lift-advanced-md</artifactId>
-            <version>1.6.2</version>
+            <version>1.6.3</version>
         </moduleId>
         <dependencies>
         
