@@ -50,7 +50,7 @@ class Boot {
     //Init the FoBo - Front-End Toolkit module, 
     //see http://liftweb.net/lift_modules for more info
     FoBo.Resource.Init=FoBo.Resource.JQuery1113  
-    FoBo.Resource.Init=FoBo.Resource.FontAwesome450 
+    FoBo.Resource.Init=FoBo.Resource.FontAwesome463
     FoBo.Resource.Init=FoBo.Resource.AngularJS148
     FoBo.Resource.Init=FoBo.Resource.AJMaterial108
     FoBo.API.Init=FoBo.API.Angular1
