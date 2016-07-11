@@ -1,5 +1,6 @@
-FoBo-Demo
-=========
+# FoBo-Demo
+
+[![Stories in Ready](https://badge.waffle.io/karma4u101/FoBo-Demo.svg?label=ready&title=Ready)](http://waffle.io/karma4u101/FoBo-Demo) 
 
 Sandbox projects for [FoBo](https://github.com/karma4u101/FoBo) demos/articles/tutorials.
 
