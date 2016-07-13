@@ -172,7 +172,7 @@ object Paths {
   val libospyfooter    = Menu(Loc("LiboSpyFooter", Link(List("libospyfooter"), true, "#spyfooter"), S.loc("LiboSpyRef"  , Text("Referenser")), LocGroup("liboSpyTop")))
     
   val bootstrap3xxDoc  = Menu(Loc("Bootstrap-3.x.x", ExtLink("http://getbootstrap.com/") , S.loc("Bootstrap-3.x.x", Text("Bootstrap-3.x.x")), LocGroup("nldemo1"),FoBoBs.BSLocInfo.LinkTargetBlank))
-  val foboApiDoc       = Menu(Loc("FoBoAPI"        , Link(List("foboapi")        , true, "/foboapi/index.html#net.liftmodules.FoBo.package"), S.loc("FoBoAPI"  , Text("FoBo API")), LocGroup("liboTop2","mdemo2","nldemo1"),FoBoBs.BSLocInfo.LinkTargetBlank ))
+  val foboApiDoc       = Menu(Loc("FoBoAPI"        , Link(List("foboapi")        , true, "/foboapi/current/index.html#net.liftmodules.FoBo.package"), S.loc("FoBoAPI"  , Text("FoBo API")), LocGroup("liboTop2","mdemo2","nldemo1"),FoBoBs.BSLocInfo.LinkTargetBlank ))
 //  val foboApiDoc       = Menu(Loc("FoBoAPI"        , ExtLink("http://www.media4u101.se/fobo-lift-template-demo/foboapi/index.html#net.liftmodules.FoBo.package") , S.loc("FoBoAPI"  , Text("FoBo API")), LocGroup("liboTop2","mdemo2","nldemo1"),FoBo.TBLocInfo.LinkTargetBlank ))
 
   val nlHelp           = Menu.i("NLHelp") / "helpindex"
