@@ -18,40 +18,40 @@
       <md-button data-lift='test_cond.loggedin' aria-label="Open user menu" class="md-fab md-mini md-button" ng-click="$mdOpenMenu($event)" >
 	    <span data-lift="helloWorld.usergrav" id="gravatar"></span>
       </md-button>      
-      	      
+      
       <md-menu-content width="4">
         <md-menu-item data-lift='test_cond.loggedout'>
-          <md-button ng-href="user_mgt/login">
+          <md-button data-lift="FoBo.MDButton.ngHref?name=Login" ng-href="#"><!-- user_mgt/login -->
             <span data-lift="Loc.i">fobo.menu.loc.login</span>
           </md-button>
         </md-menu-item>
         <md-menu-item data-lift='test_cond.loggedout'>
-          <md-button ng-href="user_mgt/sign_up">
+          <md-button data-lift="FoBo.MDButton.ngHref?name=CreateUser" ng-href="#"><!-- user_mgt/sign_up -->
             <span data-lift="Loc.i">fobo.menu.loc.sign.up</span>
           </md-button>
         </md-menu-item>
         <md-menu-divider></md-menu-divider>
         <md-menu-item data-lift='test_cond.loggedout'>
-          <md-button ng-href="user_mgt/lost_password">
+          <md-button data-lift="FoBo.MDButton.ngHref?name=LostPassword" ng-href="#"><!--user_mgt/lost_password-->
             <span data-lift="Loc.i">fobo.menu.loc.lost.password</span>
           </md-button>
         </md-menu-item>
         
         
         <md-menu-item data-lift='test_cond.loggedin'>
-          <md-button ng-href="user_mgt/edit">
+          <md-button data-lift="FoBo.MDButton.ngHref?name=EditUser" ng-href="#"><!-- user_mgt/edit -->
             <span data-lift="Loc.i">fobo.menu.loc.edit.user</span>
           </md-button>
         </md-menu-item> 
         
         <md-menu-item data-lift='test_cond.loggedin'>
-          <md-button ng-href="user_mgt/change_password">
+          <md-button data-lift="FoBo.MDButton.ngHref?name=ChangePassword" ng-href="#"> <!-- user_mgt/change_password -->
             <span data-lift="Loc.i">fobo.menu.loc.change.password</span>
           </md-button>
         </md-menu-item>                 
 
         <md-menu-item data-lift='test_cond.loggedin'>
-          <md-button ng-href="user_mgt/logout">
+          <md-button data-lift="FoBo.MDButton.ngHref?name=Logout" ng-href="#"> <!-- user_mgt/logout -->
             <span data-lift="Loc.i">fobo.menu.loc.logout</span>
           </md-button>
         </md-menu-item>
