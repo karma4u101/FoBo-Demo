@@ -3,17 +3,16 @@ package bootstrap.liftweb
 import net.liftweb._
 import util._
 import Helpers._
-
 import common._
 import http._
 import js.jquery.JQueryArtifacts
 import sitemap._
 import Loc._
 import mapper.{DB,StandardDBVendor,Schemifier}
-
 import code.model._
-import net.liftmodules.{FoBo}
+import net.liftmodules.{FoBo,FoBoJQRes}
 import scravatar.{Gravatar,DefaultImage}
+//import net.liftmodules.FoBoJQ.`package`.FoBoJQ
 
 
 /**
@@ -49,11 +48,17 @@ class Boot {
 
     //Init the FoBo - Front-End Toolkit module, 
     //see http://liftweb.net/lift_modules for more info
-    FoBo.Resource.Init=FoBo.Resource.JQuery1113  
+    // Demonstrating the use of Resource and API initiation instead of using Toolkit (that includes both resource and api).
+    FoBo.Resource.Init=FoBo.Resource.JQuery224  
+    FoBo.Resource.Init=FoBo.Resource.JQueryMigrate141 //trying out the migrate resource 
+    //FoBoJQRes.Resource.Init=FoBoJQRes.Resource.JQueryMigrate141 //the same as above but directly from jq's resource module.
     FoBo.Resource.Init=FoBo.Resource.FontAwesome463
-    FoBo.Resource.Init=FoBo.Resource.AngularJS148
     FoBo.Resource.Init=FoBo.Resource.AJMaterial108
-    FoBo.API.Init=FoBo.API.Angular1
+    //FoBo.Toolkit.Init=FoBo.Toolkit.AngularJS148 // same as using resource and api below
+    FoBo.Resource.Init=FoBo.Resource.AngularJS148 //rem if using AngularJS148 toolkit above 
+    FoBo.API.Init=FoBo.API.Angular1 //rem if using AngularJS148 toolkit above
+    
+    
     
     //Show the spinny image when an Ajax call starts
     LiftRules.ajaxStart =
