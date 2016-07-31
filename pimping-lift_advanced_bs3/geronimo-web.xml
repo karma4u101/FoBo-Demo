@@ -8,7 +8,7 @@
         <moduleId>
             <groupId>se.media4u101</groupId>
             <artifactId>lift-advanced-bs3</artifactId>
-            <version>0.8.0</version>
+            <version>0.9.0</version>
         </moduleId>
         <dependencies>
         

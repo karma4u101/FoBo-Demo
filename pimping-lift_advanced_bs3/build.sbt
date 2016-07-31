@@ -2,7 +2,7 @@ name := "Pimping-Lift-Advanced-Bs3"
 
 organization := "net.liftweb"
 
-version := "0.8.0-SNAPSHOT"
+version := "0.9.0-SNAPSHOT"
 
 liftVersion := "3.0-RC3" //"2.6.2" 
 
@@ -26,7 +26,7 @@ scalacOptions ++= Seq("-deprecation", "-unchecked")
 libraryDependencies <++= (liftVersion,liftEdition,version) { (v,e,mv) =>
     "net.liftweb"     %% "lift-webkit"            % v    % "compile" ::
     "net.liftweb"     %% "lift-mapper"            % v    % "compile" ::
-    "net.liftmodules" %% ("fobo"+"_"+e)          % "1.6" % "compile" ::
+    "net.liftmodules" %% ("fobo"+"_"+e)          % "1.7-SNAPSHOT" % "compile" ::
     Nil
 }
 
