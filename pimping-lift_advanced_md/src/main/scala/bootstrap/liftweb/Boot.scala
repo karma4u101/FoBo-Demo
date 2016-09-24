@@ -5,7 +5,7 @@ import util._
 import Helpers._
 import common._
 import http._
-import js.jquery.JQueryArtifacts
+//import js.jquery.JQueryArtifacts
 import sitemap._
 import Loc._
 import mapper.{DB,StandardDBVendor,Schemifier}
@@ -23,7 +23,7 @@ class Boot {
   def boot {
     if (!DB.jndiJdbcConnAvailable_?) {
       val vendor = 
-	new StandardDBVendor(Props.get("db.driver") openOr "org.h2.Driver",
+	      new StandardDBVendor(Props.get("db.driver") openOr "org.h2.Driver",
 			     Props.get("db.url") openOr 
 			     "jdbc:h2:lift_proto.db;AUTO_SERVER=TRUE",
 			     Props.get("db.user"), Props.get("db.password"))
@@ -50,12 +50,12 @@ class Boot {
     //see http://liftweb.net/lift_modules for more info
     // Demonstrating the use of Resource and API initiation instead of using Toolkit (that includes both resource and api).
     FoBo.Resource.Init=FoBo.Resource.JQuery224  
-    FoBo.Resource.Init=FoBo.Resource.JQueryMigrate141 //trying out the migrate resource 
+    //FoBo.Resource.Init=FoBo.Resource.JQueryMigrate141 //trying out the migrate resource 
     //FoBoJQRes.Resource.Init=FoBoJQRes.Resource.JQueryMigrate141 //the same as above but directly from jq's resource module.
     FoBo.Resource.Init=FoBo.Resource.FontAwesome463
-    FoBo.Resource.Init=FoBo.Resource.AJMaterial108
+    FoBo.Resource.Init=FoBo.Resource.AJMaterial111
     //FoBo.Toolkit.Init=FoBo.Toolkit.AngularJS148 // same as using resource and api below
-    FoBo.Resource.Init=FoBo.Resource.AngularJS148 //rem if using AngularJS148 toolkit above 
+    FoBo.Resource.Init=FoBo.Resource.AngularJS153 //AngularJS148 //rem if using AngularJS148 toolkit above 
     FoBo.API.Init=FoBo.API.Angular1 //rem if using AngularJS148 toolkit above
     
     
