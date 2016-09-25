@@ -1,0 +1,173 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>lib - net.liftmodules.FoBoBs.lib</title>
+          <meta name="description" content="lib - net.liftmodules.FoBoBs.lib" />
+          <meta name="keywords" content="lib net.liftmodules.FoBoBs.lib" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../../index.html';
+            var hash = 'net.liftmodules.FoBoBs.lib.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img src="../../../../lib/package_big.png" />
+        <p id="owner"><a href="../../../package.html" class="extype" name="net">net</a>.<a href="../../package.html" class="extype" name="net.liftmodules">liftmodules</a>.<a href="../package.html" class="extype" name="net.liftmodules.FoBoBs">FoBoBs</a></p>
+        <h1>lib</h1> <span class="permalink">
+      <a href="../../../../index.html#net.liftmodules.FoBoBs.lib.package" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">lib</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        
+        
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="net.liftmodules.FoBoBs.lib.BootstrapSH" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="BootstrapSHextendsScriptHelper"></a>
+      <a id="BootstrapSH:BootstrapSH"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="BootstrapSH.html"><span class="name">BootstrapSH</span></a><span class="result"> extends <a href="ScriptHelper.html" class="extype" name="net.liftmodules.FoBoBs.lib.ScriptHelper">ScriptHelper</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.liftmodules.FoBoBs.lib.package@BootstrapSHextendsScriptHelper" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Bootstrap script helper is a helper class that implements some commonly
+used bootstrap component init/usage script functions.</p><div class="fullcomment"><div class="comment cmt"><h4>Bootstrap Script Helper Bootstrap v3.x</h4><p>Bootstrap script helper is a helper class that implements some commonly
+used bootstrap component init/usage script functions.
+This convenience script functions is used in the <a href="../snippet/FoBo/Bs3Comp.html" class="extype" name="net.liftmodules.FoBoBs.snippet.FoBo.Bs3Comp">net.liftmodules.FoBoBs.snippet.FoBo.Bs3Comp</a>
+snippet but can also be used as a convenience helper in your own customized snippets.
+</p></div><dl class="attributes block"> <div class="block">Example:
+               <ol><li class="cmt"><p>If you find that the <a href="../snippet/FoBo/Bs3Comp.html" class="extype" name="net.liftmodules.FoBoBs.snippet.FoBo.Bs3Comp">net.liftmodules.FoBoBs.snippet.FoBo.Bs3Comp</a> snippet dose not fit you exact needs
+your can still use the BootstrapSH class to customize your own project snippets.</p><pre><span class="kw">import</span> net.liftmodules.FoBoBs.lib.{BootstrapSH<span class="kw">=&gt;</span>sch}
+ :
+<span class="kw">class</span> MySnippet {
+
+  <span class="kw">lazy</span> <span class="kw">val</span> sch = <span class="kw">new</span> sch()
+
+  <span class="kw">def</span> someFunc = {
+    :
+    sch.fobohelper(...)
+    :
+  }
+  :
+}</pre></li></ol>
+            </div></dl></div>
+    </li><li name="net.liftmodules.FoBoBs.lib.ScriptHelper" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ScriptHelperextendsAnyRef"></a>
+      <a id="ScriptHelper:ScriptHelper"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ScriptHelper.html"><span class="name">ScriptHelper</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.liftmodules.FoBoBs.lib.package@ScriptHelperextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">This script helper is a helper class that implements some commonly used script functions.</p><div class="fullcomment"><div class="comment cmt"><h4>Script Helper Boostrap v3.x</h4><p>This script helper is a helper class that implements some commonly used script functions.
+This convenience script functions is used in the FoBo.ScriptHelper snippet but
+can also be used as a convenience helper in your own customized snippets.
+</p></div><dl class="attributes block"> <div class="block">Example:
+               <ol><li class="cmt"><p>If you find that the net.liftmodules.FoBo.snippet.FoBo.ScriptHelper snippet dose not fit you exact needs
+your can still use the ScriptHelper class to customize your own project snippets.</p><pre><span class="kw">import</span> net.liftmodules.FoBoBs.lib.{ScriptHelper<span class="kw">=&gt;</span>sch}
+ :
+<span class="kw">class</span> MySnippet {
+
+  <span class="kw">lazy</span> <span class="kw">val</span> sch = <span class="kw">new</span> sch()
+
+  <span class="kw">def</span> someFunc = {
+    :
+    sch.fobohelper(...)
+    :
+  }
+  :
+}</pre></li></ol>
+            </div></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+
+
+    </body>
+      </html>

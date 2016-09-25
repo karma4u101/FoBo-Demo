@@ -113,14 +113,35 @@
 							</ul></li>
 					</ul>
 
-					<ul class="nav navbar-nav pull-right">
+					<!--<ul class="nav navbar-nav pull-right">
 						<li><span data-lift="Menu.item?name=FoBoAPI;"> <i
 								class="fa fa-book"></i> <span
 								data-lift="Loc?locid=api.link.text">FoBo API</span>
 						</span></li>
-					</ul>
+					</ul>-->
+                      <ul class="nav navbar-nav pull-right">
+                      
+						<li class="dropdown">
+						  <a id="content-dropdown"
+							data-toggle="dropdown" class="dropdown-toggle" href="#"> <span
+								data-lift="Loc?locid=FoBoAPIDD">FoBo API</span> <b
+								class="caret"></b>
+						  </a>
+
+						  <ul class="dropdown-menu">					
+                    
+						    <li><span data-lift="Menu.item?name=FoBoAPI;"> <i
+								class="fa fa-book"></i> <span
+								data-lift="Loc?locid=menu.FoBoAPI">FoBo API</span>
+						    </span></li>
+						    <li><span data-lift="Menu.item?name=FoBoAPIv16;"> <i
+								class="fa fa-book"></i> <span
+								data-lift="Loc?locid=FoBoAPIv16">FoBo API v1.6</span>
+						    </span></li>						    
+					      </ul></li>
+					</ul>					
 				</div>
-<!-- 			</div> -->
+
 		</div>
 	</header>
 	

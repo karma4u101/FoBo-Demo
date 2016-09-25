@@ -154,6 +154,7 @@ object Paths {
   val content1DD       = Menu.i("Content1DD") / "ddlabel1"
   val content11DD      = Menu.i("Content11DD") / "ddlabel11"  
   val content2DD       = Menu.i("Content2DD") / "ddlabel2"
+  val content3DD       = Menu.i("Content3DD") / "ddlabel3"
   
   val index            = Menu.i("Home") / "index"
   val liboIndex        = Menu.i("LiBo") / "libo"
@@ -172,8 +173,13 @@ object Paths {
   val libospyfooter    = Menu(Loc("LiboSpyFooter", Link(List("libospyfooter"), true, "#spyfooter"), S.loc("LiboSpyRef"  , Text("Referenser")), LocGroup("liboSpyTop")))
     
   val bootstrap3xxDoc  = Menu(Loc("Bootstrap-3.x.x", ExtLink("http://getbootstrap.com/") , S.loc("Bootstrap-3.x.x", Text("Bootstrap-3.x.x")), LocGroup("nldemo1"),FoBoBs.BSLocInfo.LinkTargetBlank))
+
   val foboApiDoc       = Menu(Loc("FoBoAPI"        , Link(List("foboapi")        , true, "/foboapi/current/index.html#net.liftmodules.FoBo.package"), S.loc("FoBoAPI"  , Text("FoBo API")), LocGroup("liboTop2","mdemo2","nldemo1"),FoBoBs.BSLocInfo.LinkTargetBlank ))
-//  val foboApiDoc       = Menu(Loc("FoBoAPI"        , ExtLink("http://www.media4u101.se/fobo-lift-template-demo/foboapi/index.html#net.liftmodules.FoBo.package") , S.loc("FoBoAPI"  , Text("FoBo API")), LocGroup("liboTop2","mdemo2","nldemo1"),FoBo.TBLocInfo.LinkTargetBlank ))
+  val foboApiDoc2      = Menu(Loc("FoBoAPI2"        , Link(List("foboapi2")        , true, "/foboapi/current/index.html#net.liftmodules.FoBo.package"), S.loc("FoBoAPI"  , Text("FoBo API")), LocGroup(""),FoBoBs.BSLocInfo.LinkTargetBlank ))
+
+  val foboApiv16Doc    = Menu(Loc("FoBoAPIv16"        , Link(List("foboapiv16")        , true, "/foboapi/older/v1.6/index.html#net.liftmodules.FoBo.package"), S.loc("FoBoAPIv16"  , Text("FoBo API v1.6")), LocGroup("liboTop2","mdemo2","nldemo1"),FoBoBs.BSLocInfo.LinkTargetBlank ))
+
+  //  val foboApiDoc       = Menu(Loc("FoBoAPI"        , ExtLink("http://www.media4u101.se/fobo-lift-template-demo/foboapi/index.html#net.liftmodules.FoBo.package") , S.loc("FoBoAPI"  , Text("FoBo API")), LocGroup("liboTop2","mdemo2","nldemo1"),FoBo.TBLocInfo.LinkTargetBlank ))
 
   val nlHelp           = Menu.i("NLHelp") / "helpindex"
     
@@ -205,6 +211,10 @@ object Paths {
               mdStarterTemplateDemo,
               roundTripDemo
       ), 
+      content3DD >> LocGroup("liboDD3") >> PlaceHolder submenus (
+          foboApiDoc2,
+          foboApiv16Doc
+      ),
       nlHelp >> LocGroup("nldemo1"),
       libogstarted ,
       libostarterproj,
