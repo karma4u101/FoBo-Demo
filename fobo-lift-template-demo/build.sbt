@@ -1,10 +1,10 @@
 moduleName := "FoBo-Lift-Template-Demo"
 
-version := "1.7.0-SNAPSHOT" 
+version := "1.7.1-SNAPSHOT" 
 
 organization := "se.media4u101"
 
-liftVersion := "3.0-RC3" 
+liftVersion := "3.0-RC4" 
 
 liftEdition <<= liftVersion apply { _.substring(0,3) }
 
@@ -32,7 +32,7 @@ transitiveClassifiers := Seq("sources")
 libraryDependencies <++= (liftVersion,liftEdition,version) { (v,e,mv) =>
     "net.liftweb"     %% "lift-webkit"            % v    % "compile" ::
     "net.liftweb"     %% "lift-mapper"            % v    % "compile" ::
-    "net.liftmodules" %% ("fobo"+"_"+e)           % "1.7-SNAPSHOT" % "compile" ::
+    "net.liftmodules" %% ("fobo"+"_"+e)           % "1.7" % "compile" ::
     Nil
 }
 
