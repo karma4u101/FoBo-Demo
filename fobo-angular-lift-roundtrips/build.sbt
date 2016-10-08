@@ -1,10 +1,10 @@
 moduleName := "FoBo-Angular-Lift-RoundTrips"
 
-version := "0.11.0-SNAPSHOT"
+version := "1.7.0"
 
 organization := "net.liftweb"
 
-liftVersion := "3.0-RC3" 
+liftVersion := "3.0-RC4" 
 
 liftEdition <<= liftVersion apply { _.substring(0,3) }
 
@@ -28,7 +28,7 @@ scalacOptions ++= Seq("-deprecation", "-unchecked")
 libraryDependencies <++= (liftVersion,liftEdition,version) { (v,e,mv) =>
     "net.liftweb"     %% "lift-webkit"            % v    % "compile" ::
     "net.liftweb"     %% "lift-mapper"            % v    % "compile" ::
-    "net.liftmodules" %% ("fobo"+"_"+e)          % "1.6" % "compile" ::
+    "net.liftmodules" %% ("fobo"+"_"+e)          % "1.7" % "compile" ::
     Nil
 }
 
