@@ -36,7 +36,7 @@ There is also a sbt.bat for windows users so if you are on a windows machine jus
 4) Update & Start Jetty 
 The following commands will update and fetch the projects dependencies then start the jetty server and load the lift application. 
 
-	> update ~jetty:start
+	> ~jetty:start
 
 5) Launch Your Browser
 Launch your favorite browser and type in the following address to bring up the application.
