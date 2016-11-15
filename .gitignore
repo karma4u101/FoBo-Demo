@@ -21,3 +21,8 @@ project/plugins/project/
 /lift_proto.db.h2.db
 /lift_proto.db.lock.db
 /README.md~
+/.idea/
+/FoBo-Demo.iml
+/.history
+/lift_proto.db.trace.db
+/test.sc

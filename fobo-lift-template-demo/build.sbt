@@ -1,22 +1,24 @@
 moduleName := "FoBo-Lift-Template-Demo"
 
-version := "1.7.1-SNAPSHOT" 
+version := "1.7.2-SNAPSHOT"
 
 organization := "se.media4u101"
 
-liftVersion := "3.0-RC4" 
+liftVersion := "3.0"
 
 liftEdition <<= liftVersion apply { _.substring(0,3) }
 
 scalaVersion := "2.11.7"
 
-crossScalaVersions := Seq("2.11.6", "2.10.4", "2.9.2", "2.9.1-1", "2.9.1")
+crossScalaVersions := Seq("2.11.7", "2.10.4", "2.9.2", "2.9.1-1", "2.9.1")
 
-seq(webSettings :_*)
+//seq(webSettings :_*)
+
+enablePlugins(JettyPlugin)
 
 scalacOptions ++= Seq("-deprecation", "-unchecked")
 
-scanDirectories in Compile := Nil
+//scanDirectories in Compile := Nil
 
 logLevel := Level.Info
 

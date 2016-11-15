@@ -34,9 +34,9 @@ There is also a sbt.bat for windows users so if you are on a windows machine jus
         > project [sub project name as shown in list from the 'projects' command]
 
 4) Update & Start Jetty 
-The following commands will update and fetch the projects dependancys then start the jetty server and load the lift application. 
+The following commands will update and fetch the projects dependencies then start the jetty server and load the lift application. 
 
-	> update ~container:start
+	> update ~jetty:start
 
 5) Launch Your Browser
 Launch your favorite browser and type in the following address to bring up the application.
@@ -46,7 +46,7 @@ Launch your favorite browser and type in the following address to bring up the a
 6) Stop Jetty 
 When you are done or wish to switch to another sub project (3 above) you can stop Jetty with
 
-	> container:stop
+	> jetty:stop
 
 
 Scala IDE Support 

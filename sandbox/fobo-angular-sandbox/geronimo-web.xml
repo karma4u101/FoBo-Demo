@@ -8,7 +8,7 @@
         <moduleId>
             <groupId>se.media4u101</groupId>
             <artifactId>fobo-angular-sandbox</artifactId>
-            <version>0.5.7</version>
+            <version>0.5.8</version>
         </moduleId>
         <dependencies>
         

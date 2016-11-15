@@ -2,22 +2,24 @@ name := "Pimping-Lift-Advanced-Bs3"
 
 organization := "net.liftweb"
 
-version := "1.7.0-SNAPSHOT"
+version := "1.7.1-SNAPSHOT"
 
-liftVersion := "3.0-RC4" //"2.6.2" 
+liftVersion := "3.0" //"2.6.2"
 
 liftEdition <<= liftVersion apply { _.substring(0,3) }
 
 scalaVersion := "2.11.7"
 
-crossScalaVersions := Seq("2.11.2") 
+crossScalaVersions := Seq("2.11.7")
 
 resolvers ++= Seq("snapshots"     at "https://oss.sonatype.org/content/repositories/snapshots",
                   "staging"       at "https://oss.sonatype.org/content/repositories/staging",
                   "releases"      at "https://oss.sonatype.org/content/repositories/releases"
                  )
 
-seq(webSettings :_*)
+//seq(webSettings :_*)
+
+enablePlugins(JettyPlugin)
 
 unmanagedResourceDirectories in Test <+= (baseDirectory) { _ / "src/main/webapp" }
 

@@ -1,10 +1,10 @@
 name := "FoBo-Bootstrap3-Sandbox"
 
-version := "0.0.3-SNAPSHOT"
+version := "0.1-SNAPSHOT"
 
 organization := "net.liftweb"
 
-liftVersion := "3.0-RC1" 
+liftVersion := "3.0"
 
 liftEdition <<= liftVersion apply { _.substring(0,3) }
 
@@ -17,7 +17,9 @@ resolvers ++= Seq("snapshots"     at "https://oss.sonatype.org/content/repositor
                   "releases"      at "https://oss.sonatype.org/content/repositories/releases"
                  )
 
-seq(webSettings :_*)
+//seq(webSettings :_*)
+
+enablePlugins(JettyPlugin)
 
 unmanagedResourceDirectories in Test <+= (baseDirectory) { _ / "src/main/webapp" }
 
