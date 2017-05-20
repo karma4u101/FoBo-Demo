@@ -2,7 +2,7 @@ moduleName := "FoBo-Demo"
 
 organization := "net.liftweb"
 
-version in ThisBuild := "0.9-SNAPSHOT"
+version in ThisBuild := "1.0-SNAPSHOT"
 
 //makes it possible to provide the lift version from sbt script / parameter
 liftVersion in ThisBuild := { liftVersion ?? "3.1.0" }.value //"3.0.1" "2.6.2"
