@@ -28,9 +28,10 @@ unmanagedResourceDirectories in Test <+= (baseDirectory) {
 
 scalacOptions ++= Seq("-deprecation", "-unchecked")
 
-libraryDependencies in ThisBuild ++= {
-  "net.liftweb"       %% "lift-webkit"                      % liftVersion.value % "provided" ::
-    "net.liftweb"     %% "lift-testkit"                     % liftVersion.value % "provided" ::
+libraryDependencies ++= {
+  "net.liftweb"       %% "lift-webkit"                      % liftVersion.value % "compile" ::
+    "net.liftweb"     %% "lift-testkit"                     % liftVersion.value % "compile" ::
+    "net.liftweb"     %% "lift-mapper"                      % liftVersion.value % "compile" ::
     "net.liftmodules" %% ("fobo" + "_" + liftEdition.value) % "2.0-SNAPSHOT"    % "compile" ::
     Nil
 }
@@ -52,7 +53,7 @@ libraryDependencies ++= Seq(
   "com.andersen-gott" %% "scravatar"      % "1.0.3"
 )
 
-libraryDependencies in ThisBuild ++= {
+libraryDependencies ++= {
   ((scalaVersion.value, liftVersion.value) match {
     case ("2.10.4", _) | ("2.9.2", _) | ("2.9.1", _) | ("2.9.1-1", _) =>
       "org.specs2" %% "specs2" % "1.12.3" % "test"
