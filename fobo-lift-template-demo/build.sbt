@@ -8,9 +8,10 @@ liftVersion := "3.1.0"
 
 liftEdition <<= liftVersion apply { _.substring(0, 3) }
 
-scalaVersion := "2.12.2"
+scalaVersion := "2.11.11"
 
 crossScalaVersions := Seq("2.12.2",
+                          "2.11.11",
                           "2.11.7",
                           "2.10.4",
                           "2.9.2",

@@ -8,9 +8,9 @@ liftVersion := "3.1.0" //"2.6.2" //
 
 liftEdition <<= liftVersion apply { _.substring(0, 3) }
 
-scalaVersion := "2.12.2"
+scalaVersion := "2.11.11"
 
-crossScalaVersions := Seq("2.12.2")
+crossScalaVersions := Seq("2.11.11")
 
 resolvers ++= Seq(
   "snapshots" at "https://oss.sonatype.org/content/repositories/snapshots",

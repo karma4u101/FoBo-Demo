@@ -17,6 +17,7 @@ liftLatestEdition in ThisBuild <<= liftLatestVersion apply {
 //name <<= (name, liftEdition) { (n, e) =>  n + "_" + e }
 
 crossScalaVersions := Seq("2.12.2",
+                          "2.11.11",
                           "2.11.7",
                           "2.10.4",
                           "2.9.3",
@@ -24,7 +25,7 @@ crossScalaVersions := Seq("2.12.2",
                           "2.9.1-1",
                           "2.9.1")
 
-scalaVersion in ThisBuild := "2.12.2"
+scalaVersion in ThisBuild := "2.11.11"
 
 EclipseKeys.withSource := true
 

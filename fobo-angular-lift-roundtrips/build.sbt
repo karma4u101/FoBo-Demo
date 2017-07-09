@@ -8,9 +8,9 @@ liftVersion := "3.1.0"
 
 liftEdition <<= liftVersion apply { _.substring(0, 3) }
 
-scalaVersion := "2.12.2"
+scalaVersion := "2.11.11"
 
-crossScalaVersions := Seq("2.12.2")
+crossScalaVersions := Seq("2.11.11")
 
 //javaOptions in run += "-Drun.mode=production"
 
@@ -68,7 +68,7 @@ libraryDependencies in ThisBuild ++= {
     ((scalaVersion.value, liftVersion.value) match {
     case ("2.10.4", _) | ("2.9.2", _) | ("2.9.1", _) | ("2.9.1-1", _) =>
       "org.specs2" %% "specs2" % "1.12.3" % "test"
-    case ("2.11.7", "2.6.2") | ("2.11.7", "2.6.3") =>
+    case ("2.11.11", "2.6.2") | ("2.11.11", "2.6.3") =>
       "org.specs2" %% "specs2" % "2.3.11" % "test"
     case (_, "3.0.0") =>
       "org.specs2" %% "specs2" % "3.7" % "test" //no mather extras for 3.7
