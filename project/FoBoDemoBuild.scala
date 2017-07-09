@@ -19,7 +19,7 @@ object FoBoDemoBuild extends Build {
     "liftLatestEdition",
     "Latest Lift Edition (short version number to append to artifact name)")
 
-  lazy val root = Project(id = "FoBo-Demo", base = file(".")) aggregate (FoBoLiftTemplateDemo, Bs3StarterTemplates, MDStarterTemplates, FoBoLiftRoundTrips, FoBoAngularSandbox)
+  lazy val root = Project(id = "FoBo-Demo", base = file(".")) aggregate (FoBoLiftTemplateDemo, Bs3StarterTemplates, MDStarterTemplates, FoBoLiftRoundTrips)
 
   lazy val FoBoLiftTemplateDemo = Project(id = "FoBo-Lift-Template-Demo",
                                           base =
