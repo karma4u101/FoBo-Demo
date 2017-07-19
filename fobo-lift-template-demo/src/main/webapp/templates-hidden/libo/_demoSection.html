@@ -27,18 +27,8 @@
 					</h2>
 					<p>
 						The following section will show you how to set up and use FoBo in
-						your Lift project. The main documentation for general Bootstrap
-						usage included in this demo is currently the 
-						  <span
-							data-lift="Menu.item?name=Bootstrap-3.0.1;lift:Loc.i;"><span
-							data-lift="Loc.i">Bootstrap-3.0.1</span></span>
-							and the  
-							<span
-							data-lift="Menu.item?name=Bootstrap-2.2.2;lift:Loc.i;"><span
-							data-lift="Loc.i">Bootstrap-2.2.2</span></span> documentation.
+						your Lift project.
 					</p>
-				
-					
 				</section>
 
                 <hr/>
@@ -52,7 +42,7 @@
 						<span class="label label-success">Kick start!</span> If you are
 						about to start a new Lift project that includes FoBo with
 						Bootstrap v3.x you can get a kick start by forking the 
-						<a href="http://www.media4u101.se/lift-advanced-bs3/">Lift v2.6 Template Applications - Bootstrap v3.x</a> 
+						<a href="http://www.media4u101.se/lift-advanced-bs3/">Lift v3.0 Template Applications - Bootstrap v3.x</a>
 						project it uses the FoBo module pre-set-up for use with a v3.y.z release of Bootstrap. 
 					</p>
 					<p>	
@@ -80,21 +70,26 @@
 					<span class="label label-default">SBT setup for FoBo usage </span>
 					<pre class="prettyprint linenums lang-scala">
  ⋮
-// Lift  
+// Lift
+liftVersion := "3.1.0"
+
+liftEdition := { liftVersion apply { _.substring(0, 3) } }.value
+
 libraryDependencies ++= {
-  val liftVersion = "3.0" // Put the current/latest lift version here
-  Seq(
-    "net.liftweb"     %% "lift-webkit" % liftVersion % "compile" withSources(),
-         ⋮
-    "net.liftmodules" %% "fobo_3.0"    % "1.7"       % "compile"
-    )
-}                            
+  "net.liftweb" %% "lift-webkit" % liftVersion.value % "compile" ::
+    "net.liftmodules" %% ("fobo" + "_" + liftEdition.value) % "2.0" % "compile" ::
+    Nil
+}
 
 // Customize any further dependencies as desired
-libraryDependencies ++= Seq(
-  "org.eclipse.jetty"       % "jetty-webapp"            % "8.1.7.v20120910"     % "container,test",
-     ⋮
-   )
+libraryDependencies ++= {
+  "ch.qos.logback" % "logback-classic" % "1.0.6" ::
+    "org.eclipse.jetty" % "jetty-webapp" % "8.0.3.v20111011" % "container" ::
+    "org.eclipse.jetty" % "jetty-plus" % "8.0.3.v20111011" % "container" ::
+						:
+						:
+    Nil
+}
 						</pre>
 
 					<div class="alert alert-info">
@@ -112,7 +107,7 @@ libraryDependencies ++= Seq(
 						<dt>The library dependency section:</dt>
 						<dd>
 							Declare the FoBo lift module line
-							<code style="font-size:10px;">"net.liftmodules" %% "fobo_[minor.major Lift version]" %
+							<code style="font-size:10px;">"net.liftmodules" %% "fobo_[major.minor Lift version]" %
 								[FoBo module version]" % "compile"</code>
 							with the version string starting with the lift version number
 							used for your project and appending the module version on the
@@ -122,8 +117,8 @@ libraryDependencies ++= Seq(
 
 						<dt>Examples on github:</dt>
 						<dd>
-						    Here is the complete <a href="https://github.com/lift/lift_26_sbt/blob/master/scala_210/lift_advanced_bs3/build.sbt">build.sbt file</a>
-						    used in <a href="https://github.com/lift/lift_26_sbt/blob/master/scala_211/lift_advanced_bs3/">Lift v2.6 Template Applications - Bootstrap v3.x</a>
+						    Here is the complete <a href="https://github.com/lift/lift_30_sbt/blob/master/lift_advanced_bs3/build.sbt">build.sbt file</a>
+						    used in <a href="https://github.com/lift/lift_30_sbt/tree/master/lift_advanced_bs3">Lift v3.0 Template Applications - Bootstrap v3.x</a>
 						    
 						</dd>
 					</dl>
@@ -141,7 +136,7 @@ libraryDependencies ++= Seq(
 					<span class="label label-default">FoBo Bootstrap setup in Lift Boot</span>
 					<pre class="prettyprint linenums lang-scala">
    ⋮
-import net.liftmodules.FoBo
+import net.liftmodules.fobo
 
 /**
  * A class that's instantiated early and run.  It allows the application
@@ -150,9 +145,9 @@ import net.liftmodules.FoBo
   class Boot extends Loggable {
     def boot {
            ⋮
-      FoBo.Toolkit.Init=FoBo.Toolkit.JQuery1111  
-      FoBo.Toolkit.Init=FoBo.Toolkit.Bootstrap335
-      FoBo.Toolkit.Init=FoBo.Toolkit.FontAwesome430 
+      fobo.Toolkit.init=fobo.Toolkit.JQuery1111
+      fobo.Toolkit.init=fobo.Toolkit.Bootstrap335
+      fobo.Toolkit.init=fobo.Toolkit.FontAwesome430
            ⋮     
 					</pre>
 					<p>In Lift's html5 template:s add (depending on your setup)
@@ -199,14 +194,14 @@ import net.liftmodules.FoBo
 					</h2>
 					<p>
 					In most cases the only things you need to change in your project to upgrade to a newer toolkit version 
-					is the FoBo modules version number in build.sbt    
-				    <code style="font-size:10px;">"net.liftmodules" %% "fobo" % (liftVersion+"-X.Y.Z-SNAPSHOT") withJavadoc() withSources()</code>
-					and the init param line <code>FoBo.InitParam.Toolkit = FoBo.BootstrapXYZ</code> in your projects Boot.scala file. 
+					is the FoBo modules version number in build.sbt
+				    <code style="font-size:10px;">"net.liftmodules" %% ("fobo" + "_" + liftEdition.value) % "foboVersion.value" % "compile"</code>
+					and the init param line <code>fobo.Toolkit.init = fobo.Toolkit.BootstrapXYZ</code> in your projects Boot.scala file.
 					</p>
 					<p>
 					If there are some breaking changes in the toolkit you may need to downgrade to your previous toolkit version and
 					take messure to fix the problem, for that you just have to change back the init param line in Boot.scala. 
-					FoBo will always have a resonable number of toolkit versions avwailable in it's module bundle. 
+					FoBo will always have a reasonable number of toolkit versions avwailable in it's module bundle.
 					 
 					</p>
 					<div class="alert alert-info">
@@ -227,7 +222,7 @@ import net.liftmodules.FoBo
 					
 					<p>
 					   You can add to the bootstrap provided icon set with <a href="http://fortawesome.github.com/Font-Awesome/">Font Awesome</a>  
-					   this is done by using the init parram <code>FoBo.InitParam.Toolkit = FoBo.FontAwesomeXYZ</code>.
+					   this is done by using the init parram <code>fobo.Toolkit.init = fobo.Toolkit.FontAwesomeXYZ</code>.
 					   The v4.x sereies of the Font Awesome icon set is compatible with the Bootstrap v3.x serie.
 					</p>
 
@@ -236,8 +231,8 @@ import net.liftmodules.FoBo
 					 </div>							
 					<div  class="label label-default">Font Awesome - Boot.scala Setup</div>
 <pre class="prettyprint linenums lang-scala">⋮
-FoBo.Toolkit.Init=FoBo.Toolkit.Bootstrap335
-FoBo.Toolkit.Init=FoBo.Toolkit.FontAwesome463 
+fobo.Toolkit.init=fobo.Toolkit.Bootstrap335
+fobo.Toolkit.init=fobo.Toolkit.FontAwesome463
 ⋮</pre>					 						
 					<div  class="label label-default">Font Awesome - Template Setup</div>
 <pre class="prettyprint linenums lang-html">&lt;link rel="stylesheet" type='text/css' href="/classpath/fobo/bootstrap.css"/&gt;
@@ -304,7 +299,7 @@ FoBo.Toolkit.Init=FoBo.Toolkit.FontAwesome463
                 <h2 class="capital">F<span>o</span>B<span>o's</span> B<span>ootstrap</span> M<span>eta</span> M<span>ega</span> P<span>roto</span> U<span>ser</span> <small>(since v1.1)</small></h2>
                 <p>FoBo comes with a MetaMegaProtoUser trait <strong>BootstrapMegaMetaProtoUser</strong> that you can extend your mapper User object 
                 with to get Bootstrap v3.x ProtoUser form views. For a example see the code.module.User object in the lift_advanced_bs project at 
-                <a href="https://github.com/lift/lift_26_sbt/">Lift v2.6 Template Applications - On Github</a> and the 
+                <a href="https://github.com/lift/lift_30_sbt/">Lift v3.0 Template Applications - On Github</a> and the
                 <a href="http://www.media4u101.se/lift-advanced-bs3/">live Demo</a> for viewing the result.</p>
                                                
                 </section>   
@@ -318,7 +313,7 @@ FoBo.Toolkit.Init=FoBo.Toolkit.FontAwesome463
 					</h2>
 
 					<p>
-						The FoBo module comes with some convinience functions (snippets, optional to use) 
+						The FoBo module comes with some convenience functions (snippets, optional to use)
 						that will, among other things, help you, build menues, create popups and tooltips and more. 
 						For more information see the <span data-lift="Menu.item?name=FoBoAPI;lift:Loc.i;"><span data-lift="Loc.i">FoBoAPI</span></span>							. 
 					</p>
@@ -458,7 +453,7 @@ FoBo.Toolkit.Init=FoBo.Toolkit.FontAwesome463
   ) 
 						</pre>
 						<p>
-						If you wish to take a closer look, <a href="https://github.com/karma4u101/FoBo-Lift-Template/blob/master/src/main/scala/bootstrap/liftweb/Boot.scala">here</a> is the Boot.scala file on Github.	
+						If you wish to take a closer look, <a href="https://github.com/karma4u101/FoBo-Demo/blob/master/fobo-lift-template-demo/src/main/scala/bootstrap/liftweb/Boot.scala">here</a> is the Boot.scala file on Github.
 						</p>												    
 					</section>		
 					

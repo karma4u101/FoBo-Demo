@@ -2,31 +2,30 @@ package bootstrap.liftweb
 
 import net.liftweb._
 import util._
-import Helpers._
 import common._
 import http._
-//import js.jquery.JQueryArtifacts
 import sitemap._
 import Loc._
-import mapper.{DB,StandardDBVendor,Schemifier}
+import mapper.{DB, StandardDBVendor, Schemifier}
 import code.model._
-import net.liftmodules.{FoBo,FoBoJQRes}
-import scravatar.{Gravatar,DefaultImage}
-//import net.liftmodules.FoBoJQ.`package`.FoBoJQ
-
+import net.liftmodules.{fobo, fobojqres}
+import scravatar.{Gravatar, DefaultImage}
 
 /**
- * A class that's instantiated early and run.  It allows the application
- * to modify lift's environment
- */
+  * A class that's instantiated early and run.  It allows the application
+  * to modify lift's environment
+  */
 class Boot {
   def boot {
     if (!DB.jndiJdbcConnAvailable_?) {
-      val vendor = 
-	      new StandardDBVendor(Props.get("db.driver") openOr "org.h2.Driver",
-			     Props.get("db.url") openOr 
-			     "jdbc:h2:lift_proto.db;AUTO_SERVER=TRUE",
-			     Props.get("db.user"), Props.get("db.password"))
+      val vendor =
+        new StandardDBVendor(
+          Props.get("db.driver") openOr "org.h2.Driver",
+          Props.get("db.url") openOr
+            "jdbc:h2:lift_proto.db;AUTO_SERVER=TRUE",
+          Props.get("db.user"),
+          Props.get("db.password")
+        )
 
       LiftRules.unloadHooks.append(vendor.closeAllConnections_! _)
 
@@ -41,32 +40,29 @@ class Boot {
     // where to search snippet
     LiftRules.addToPackages("code")
 
-
     def sitemapMutators = User.sitemapMutator
-    //The SiteMap is built in the Site object bellow 
+    //The SiteMap is built in the Site object bellow
     LiftRules.setSiteMapFunc(() => sitemapMutators(Site.sitemap))
 
-    //Init the FoBo - Front-End Toolkit module, 
+    //Init the FoBo - Front-End Toolkit module,
     //see http://liftweb.net/lift_modules for more info
     // Demonstrating the use of Resource and API initiation instead of using Toolkit (that includes both resource and api).
-    FoBo.Resource.Init=FoBo.Resource.JQuery224  
-    //FoBo.Resource.Init=FoBo.Resource.JQueryMigrate141 //trying out the migrate resource 
-    //FoBoJQRes.Resource.Init=FoBoJQRes.Resource.JQueryMigrate141 //the same as above but directly from jq's resource module.
-    FoBo.Resource.Init=FoBo.Resource.FontAwesome463
-    FoBo.Resource.Init=FoBo.Resource.AJMaterial111
-    //FoBo.Toolkit.Init=FoBo.Toolkit.AngularJS153 // same as using resource and api below
-    FoBo.Resource.Init=FoBo.Resource.AngularJS153 //rem if using AngularJS toolkit above 
-    FoBo.API.Init=FoBo.API.Angular1 //rem if using AngularJS toolkit above
-    
-    
-    
+    fobo.Resource.init = fobo.Resource.JQuery224
+    //fobo.Resource.init=fobo.Resource.JQueryMigrate141 //trying out the migrate resource
+    //fobojqres.Resource.init=fobojqres.Resource.JQueryMigrate141 //the same as above but directly from jq's resource module.
+    fobo.Resource.init = fobo.Resource.FontAwesome463
+    fobo.Resource.init = fobo.Resource.AJMaterial111
+    //fobo.Toolkit.init=fobo.Toolkit.AngularJS153 // same as using resource and api below
+    fobo.Resource.init = fobo.Resource.AngularJS153 //rem if using AngularJS toolkit above
+    fobo.API.init = fobo.API.Angular1 //rem if using AngularJS toolkit above
+
     //Show the spinny image when an Ajax call starts
-    LiftRules.ajaxStart =
-      Full(() => LiftRules.jsArtifacts.show("ajax-loader").cmd)
-    
+    LiftRules.ajaxStart = Full(
+      () => LiftRules.jsArtifacts.show("ajax-loader").cmd)
+
     // Make the spinny image go away when it ends
-    LiftRules.ajaxEnd =
-      Full(() => LiftRules.jsArtifacts.hide("ajax-loader").cmd)
+    LiftRules.ajaxEnd = Full(
+      () => LiftRules.jsArtifacts.hide("ajax-loader").cmd)
 
     // Force the request to be UTF-8
     LiftRules.early.append(_.setCharacterEncoding("UTF-8"))
@@ -76,76 +72,87 @@ class Boot {
 
     // Use HTML5 for rendering
     LiftRules.htmlProperties.default.set((r: Req) =>
-      new Html5Properties(r.userAgent))    
-      
-    
+      new Html5Properties(r.userAgent))
+
     LiftRules.securityRules = () => {
-      SecurityRules(content = Some(ContentSecurityPolicy(
-        scriptSources = List(
-            ContentSourceRestriction.UnsafeEval,
-            ContentSourceRestriction.UnsafeInline,
-            ContentSourceRestriction.Self),
-        styleSources = List(
-            ContentSourceRestriction.UnsafeInline,
-            ContentSourceRestriction.Self),
-        imageSources = List(            
-            ContentSourceRestriction.All)
-            
-            )))
-    } 
-    
+      SecurityRules(
+        content = Some(
+          ContentSecurityPolicy(
+            scriptSources = List(ContentSourceRestriction.UnsafeEval,
+                                 ContentSourceRestriction.UnsafeInline,
+                                 ContentSourceRestriction.Self),
+            styleSources = List(ContentSourceRestriction.UnsafeInline,
+                                ContentSourceRestriction.Self),
+            imageSources = List(ContentSourceRestriction.All)
+          )))
+    }
+
     // Make a transaction span the whole HTTP request
     S.addAround(DB.buildLoanWrapper)
   }
-  
+
   object Site {
     import scala.xml._
     //if user is logged in replace menu label "User" with users gravatar image and full name.
-    def userDDLabel:NodeSeq = { 
-      def gravatar:NodeSeq = {
-        val gurl = Gravatar(User.currentUser.map(u => u.email.get).openOrThrowException("Something wicked happened #1")).size(36).avatarUrl
-        <img class="gravatar" src={gurl}/> 
-      }      
-      lazy val username = User.currentUser.map(u => u.firstName + " "+ u.lastName)
+    def userDDLabel: NodeSeq = {
+      def gravatar: NodeSeq = {
+        val gurl = Gravatar(
+          User.currentUser
+            .map(u => u.email.get)
+            .openOrThrowException("Something wicked happened #1"))
+          .size(36)
+          .avatarUrl
+        <img class="gravatar" src={gurl}/>
+      }
+      lazy val username =
+        User.currentUser.map(u => u.firstName + " " + u.lastName)
       User.loggedIn_? match {
-        case true =>  <xml:group>{gravatar}  {username.openOrThrowException("Something wicked happened")}</xml:group> 
-        case _ => <xml:group>{S ? "UserDDLabel"}</xml:group>   
+        case true =>
+          <xml:group>{gravatar}  {username.openOrThrowException("Something wicked happened")}</xml:group>
+        case _ => <xml:group>{S ? "UserDDLabel"}</xml:group>
       }
     }
 
     //val ddLabel1   = Menu(userDDLabel) / "ddlabel1"
-    val divider1   = Menu("divider1") / "divider1"
-    val home       = Menu.i("Home") / "index" 
-    
-    val userMenu   = User.AddUserMenusHere
-    
-    val static     = Menu(Loc("Static", 
-        Link(List("static"), true, "/static/index"), 
-        S.loc("StaticContent" , scala.xml.Text("Static Content")),
-        LocGroup("lg2","topRight") ))
-        
-    val AMDesign       = Menu(Loc("AMDesign", 
-        ExtLink("https://material.angularjs.org/"), 
-        S.loc("AMDesign" , scala.xml.Text("Angular Material")),
-        LocGroup("lg2")/*,
-        FoBo.TBLocInfo.LinkTargetBlank */ ))   
-     
-    val FLTDemo       = Menu(Loc("FLTDemo", 
-        ExtLink("http://www.media4u101.se/fobo-lift-template-demo/"), 
-        S.loc("FLTDemo" , scala.xml.Text("FoBo Lift Template Demo")),
-        LocGroup("lg2")/*,
-        FoBo.TBLocInfo.LinkTargetBlank */ ))               
-        
+    val divider1 = Menu("divider1") / "divider1"
+    val home = Menu.i("Home") / "index"
+
+    val userMenu = User.AddUserMenusHere
+
+    val static = Menu(
+      Loc("Static",
+          Link(List("static"), true, "/static/index"),
+          S.loc("StaticContent", scala.xml.Text("Static Content")),
+          LocGroup("lg2", "topRight")))
+
+    val AMDesign = Menu(
+      Loc(
+        "AMDesign",
+        ExtLink("https://material.angularjs.org/"),
+        S.loc("AMDesign", scala.xml.Text("Angular Material")),
+        LocGroup("lg2") /*,
+        fobo.TBLocInfo.LinkTargetBlank */
+      ))
+
+    val FLTDemo = Menu(
+      Loc(
+        "FLTDemo",
+        ExtLink("http://www.media4u101.se/fobo-lift-template-demo/"),
+        S.loc("FLTDemo", scala.xml.Text("FoBo Lift Template Demo")),
+        LocGroup("lg2") /*,
+        fobo.TBLocInfo.LinkTargetBlank */
+      ))
+
     def sitemap = SiteMap(
-        home          >> LocGroup("lg1"),
-        static,
-        AMDesign,
-        FLTDemo
+      home >> LocGroup("lg1"),
+      static,
+      AMDesign,
+      FLTDemo
 //        ddLabel1
 //        ddLabel1      >> LocGroup("topRight") >> PlaceHolder submenus (
-//            divider1  /*>> FoBo.TBLocInfo.Divider*/ >> userMenu
+//            divider1  /*>> fobo.TBLocInfo.Divider*/ >> userMenu
 //            )
-         )
+    )
   }
-  
+
 }

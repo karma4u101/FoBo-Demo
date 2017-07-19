@@ -6,13 +6,12 @@ import Helpers._
 
 import common._
 import http._
-import js.jquery.JQueryArtifacts
 import sitemap._
 import Loc._
 import mapper.{DB, StandardDBVendor, Schemifier}
 
 import code.model._
-import net.liftmodules.{FoBo, FoBoBs}
+import net.liftmodules.{fobo, fobobs}
 
 /**
   * A class that's instantiated early and run.  It allows the application
@@ -53,14 +52,14 @@ class Boot {
 
     //Init the FoBo - Front-End Toolkit module,
     //see http://liftweb.net/lift_modules for more info
-    FoBo.Toolkit.Init = FoBo.Toolkit.JQuery224 //JQuery1113
-    FoBo.Toolkit.Init = FoBo.Toolkit.Bootstrap337
-    FoBo.Toolkit.Init = FoBo.Toolkit.FontAwesome463
-    FoBo.Toolkit.Init = FoBo.Toolkit.AngularJS148
-    FoBo.Toolkit.Init = FoBo.Toolkit.AJSUIGrid307
-    FoBo.Toolkit.Init = FoBo.Toolkit.AJSUIBootstrap0100
-    FoBo.Toolkit.Init = FoBo.Toolkit.PrettifyJun2011
-    FoBo.API.Init = FoBo.API.FoBo1
+    fobo.Toolkit.init = fobo.Toolkit.JQuery224 //JQuery1113
+    fobo.Toolkit.init = fobo.Toolkit.Bootstrap337
+    fobo.Toolkit.init = fobo.Toolkit.FontAwesome463
+    fobo.Toolkit.init = fobo.Toolkit.AngularJS148
+    fobo.Toolkit.init = fobo.Toolkit.AJSUIGrid307
+    fobo.Toolkit.init = fobo.Toolkit.AJSUIBootstrap0100
+    fobo.Toolkit.init = fobo.Toolkit.PrettifyJun2011
+    fobo.API.init = fobo.API.FoBo1
 
     //Show the spinny image when an Ajax call starts
     LiftRules.ajaxStart = Full(
@@ -118,36 +117,35 @@ class Boot {
           ExtLink("http://angularjs.org/"),
           S.loc("AngularJS", scala.xml.Text("AngularJS")),
           LocGroup("lg2"),
-          FoBoBs.BSLocInfo.LinkTargetBlank))
+          fobobs.BSLocInfo.LinkTargetBlank))
 
     val Bootstrap = Menu(
       Loc("Bootstrap",
           ExtLink("http://getbootstrap.com/"),
           S.loc("Bootstrap", scala.xml.Text("Bootstrap")),
           LocGroup("lg2"),
-          FoBoBs.BSLocInfo.LinkTargetBlank))
+          fobobs.BSLocInfo.LinkTargetBlank))
 
     val Slick = Menu(
       Loc("Slick",
           ExtLink("http://slick.typesafe.com/"),
           S.loc("Slick", scala.xml.Text("Slcik")),
           LocGroup("lg2"),
-          FoBoBs.BSLocInfo.LinkTargetBlank))
+          fobobs.BSLocInfo.LinkTargetBlank))
 
     val FontAwesome = Menu(
       Loc("FontAwesome",
           ExtLink("http://fontawesome.io/"),
           S.loc("FontAwesome", scala.xml.Text("Font Awesome")),
           LocGroup("lg2"),
-          FoBoBs.BSLocInfo.LinkTargetBlank))
+          fobobs.BSLocInfo.LinkTargetBlank))
 
     val FLTDemo = Menu(
       Loc(
         "FLTDemo",
         ExtLink("http://www.media4u101.se/fobo-lift-template-demo/"),
         S.loc("FLTDemo", scala.xml.Text("FoBo Lift Template Demo")),
-        LocGroup("lg2") /*,
-        FoBo.TBLocInfo.LinkTargetBlank */
+        LocGroup("lg2")
       ))
 
     //index affix sidbar links
@@ -232,7 +230,7 @@ class Boot {
       g2ex6
       /*,
         ddLabel1      >> LocGroup("topRight") >> PlaceHolder submenus (
-            divider1  >> FoBo.TBLocInfo.Divider >> userMenu
+            divider1  >> fobo.TBLocInfo.Divider >> userMenu
             ) */
     )
   }
