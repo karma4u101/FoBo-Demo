@@ -35,17 +35,17 @@ EclipseKeys.withSource := true
 transitiveClassifiers := Seq("sources")
 
 libraryDependencies ++= {
-  "net.liftweb"       %% "lift-webkit"                      % liftVersion.value % "compile" ::
-    "net.liftmodules" %% ("fobo" + "_" + liftEdition.value) % "2.0-SNAPSHOT"    % "compile" ::
-    "net.liftweb"     %% "lift-testkit"                     % liftVersion.value % "test" ::
+  "net.liftweb" %% "lift-webkit" % liftVersion.value % "compile" ::
+    "net.liftmodules" %% ("fobo" + "_" + liftEdition.value) % "2.0-SNAPSHOT" % "compile" ::
+    "net.liftweb" %% "lift-testkit" % liftVersion.value % "test" ::
     Nil
 }
 
 // Customize any further dependencies as desired
 libraryDependencies ++= {
-  "ch.qos.logback"      % "logback-classic" % "1.0.6" ::
-    "org.eclipse.jetty" % "jetty-webapp"    % "8.0.3.v20111011" % "container" ::
-    "org.eclipse.jetty" % "jetty-plus"      % "8.0.3.v20111011" % "container" ::
+  "ch.qos.logback" % "logback-classic" % "1.0.6" ::
+    "org.eclipse.jetty" % "jetty-webapp" % "8.0.3.v20111011" % "container" ::
+    "org.eclipse.jetty" % "jetty-plus" % "8.0.3.v20111011" % "container" ::
     Nil
 }
 
@@ -55,7 +55,7 @@ libraryDependencies ++= {
       "org.specs2" %% "specs2" % "1.12.3" % "test"
     case ("2.11.7", "2.6.2") | ("2.11.7", "2.6.3") =>
       "org.specs2" %% "specs2" % "2.3.11" % "test"
-    case (_, "3.0.0") => "org.specs2" %% "specs2"      % "3.7"   % "test"
+    case (_, "3.0.0") => "org.specs2" %% "specs2" % "3.7" % "test"
     case (_, "3.0.1") => "org.specs2" %% "specs2-core" % "3.8.6" % "test"
     case (_, _) =>
       "org.specs2" %% "specs2-core" % "3.8.6" % "test" //lift 3.1.x

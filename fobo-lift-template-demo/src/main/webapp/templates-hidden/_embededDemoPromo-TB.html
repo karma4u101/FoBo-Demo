@@ -48,7 +48,7 @@
                                  <td class="hl-table-adjust">                                       
 						           <pre><code class="scala">
   :
-import net.liftmodules.FoBo
+import net.liftmodules.fobo
 
 /**
 * A class that's instantiated early and run.  
@@ -57,12 +57,12 @@ import net.liftmodules.FoBo
 class Boot extends Loggable {
   def boot {
       :
-    FoBo.Toolkit.Init=FoBo.Toolkit.JQuery1113                           
-    FoBo.Toolkit.Init=FoBo.Toolkit.PrettifyJun2011
-    FoBo.Toolkit.Init=FoBo.Toolkit.HighlightJS930
-    FoBo.Toolkit.Init=FoBo.Toolkit.Bootstrap337
-    FoBo.Toolkit.Init=FoBo.Toolkit.FontAwesome430      
-    FoBo.Toolkit.Init=FoBo.Toolkit.Pace102  
+    fobo.Toolkit.init=fobo.Toolkit.JQuery1113
+    fobo.Toolkit.init=fobo.Toolkit.PrettifyJun2011
+    fobo.Toolkit.init=fobo.Toolkit.HighlightJS930
+    fobo.Toolkit.init=fobo.Toolkit.Bootstrap337
+    fobo.Toolkit.init=fobo.Toolkit.FontAwesome430
+    fobo.Toolkit.init=fobo.Toolkit.Pace102
       :       						 
 						           </code></pre>
                                  </td>
@@ -189,9 +189,8 @@ class Boot extends Loggable {
 					</div>
 				</div>
 
-	    </div>
-	  </div>
-	  <div class="row">
+
+		<div class="row">
 	    <div class="col-sm-12">
 	      <section id="poweredby">
 	      <hr/>
@@ -206,7 +205,7 @@ class Boot extends Loggable {
 	       </section>	
 	    </div>
 	  </div>
-	</div>	
+	</div>
 	</section>
 
 </body>
