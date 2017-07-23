@@ -51,7 +51,7 @@ class Boot {
     //fobo.Resource.init=fobo.Resource.JQueryMigrate141 //trying out the migrate resource
     //fobojqres.Resource.init=fobojqres.Resource.JQueryMigrate141 //the same as above but directly from jq's resource module.
     fobo.Resource.init = fobo.Resource.FontAwesome463
-    fobo.Resource.init = fobo.Resource.AJMaterial111
+    fobo.Resource.init = fobo.Resource.AJMaterial114
     //fobo.Toolkit.init=fobo.Toolkit.AngularJS153 // same as using resource and api below
     fobo.Resource.init = fobo.Resource.AngularJS153 //rem if using AngularJS toolkit above
     fobo.API.init = fobo.API.Angular1 //rem if using AngularJS toolkit above
