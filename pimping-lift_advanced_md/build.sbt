@@ -2,9 +2,9 @@ name := "Pimping-Lift-Advanced-MD"
 
 organization := "net.liftweb"
 
-version := "1.8.0-SNAPSHOT"
+version := "2.0.0-SNAPSHOT"
 
-liftVersion := "3.1.0" //"2.6.2" //
+liftVersion := "3.1.1" //"2.6.2" //
 
 liftEdition := { liftVersion apply { _.substring(0, 3) } }.value
 
@@ -60,7 +60,7 @@ libraryDependencies ++= {
     case ("2.11.7", "2.6.2") | ("2.11.7", "2.6.3") =>
       "org.specs2" %% "specs2" % "2.3.11" % "test"
     case (_, "3.0.0") => "org.specs2" %% "specs2" % "3.7" % "test"
-    case (_, "3.0.1") => "org.specs2" %% "specs2-core" % "3.8.6" % "test"
+    case (_, "3.0.1") | (_, "3.0.2") => "org.specs2" %% "specs2-core" % "3.8.6" % "test"
     case (_, _) =>
       "org.specs2" %% "specs2-core" % "3.8.6" % "test" //lift 3.1.x
   }) ::
@@ -71,7 +71,7 @@ libraryDependencies ++= {
       "org.specs2" %% "specs2" % "2.3.11" % "test"
     case (_, "3.0.0") =>
       "org.specs2" %% "specs2" % "3.7" % "test" //no mather extras for 3.7
-    case (_, "3.0.1") =>
+    case (_, "3.0.1") | (_, "3.0.2") =>
       "org.specs2" %% "specs2-matcher-extra" % "3.8.6" % "test"
     case (_, _) =>
       "org.specs2" %% "specs2-matcher-extra" % "3.8.6" % "test" //lift 3.1.x
@@ -81,7 +81,7 @@ libraryDependencies ++= {
       "org.scalacheck" %% "scalacheck" % "1.10.1" % "test"
     case (_, "3.0.0") =>
       "org.specs2" %% "specs2-scalacheck" % "3.7" % "test"
-    case (_, "3.0.1") =>
+    case (_, "3.0.1") | (_, "3.0.2") =>
       "org.specs2" %% "specs2-scalacheck" % "3.8.6" % "test"
     case (_, _) =>
       "org.specs2" %% "specs2-scalacheck" % "3.8.6" % "test" //lift 3.1.x
