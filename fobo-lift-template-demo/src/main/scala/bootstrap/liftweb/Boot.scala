@@ -229,7 +229,7 @@ object Paths {
   val bootstrap4xxDoc = Menu(
     Loc(
       "Bootstrap-4.x.x",
-      ExtLink("http://getbootstrap.com/"),
+      ExtLink("http://getbootstrap.com/docs/4.0/"),
       S.loc("Bootstrap-4.x.x", Text("Bootstrap-4.x.x")),
       LocGroup("nldemo1"),
       fobobs.BSLocInfo.LinkTargetBlank
@@ -284,6 +284,17 @@ object Paths {
            true,
            "/foboapi/older/v1.6/index.html#net.liftmodules.FoBo.package"),
       S.loc("FoBoAPIv16", Text("FoBo API v1.6")),
+      LocGroup("liboTop2", "mdemo2", "nldemo1"),
+      fobobs.BSLocInfo.LinkTargetBlank
+    ))
+
+  val foboApiv17Doc = Menu(
+    Loc(
+      "FoBoAPIv17",
+      Link(List("foboapiv17"),
+        true,
+        "/foboapi/older/v1.7/index.html#net.liftmodules.FoBo.package"),
+      S.loc("FoBoAPIv16", Text("FoBo API v1.7")),
       LocGroup("liboTop2", "mdemo2", "nldemo1"),
       fobobs.BSLocInfo.LinkTargetBlank
     ))
@@ -371,6 +382,7 @@ object Paths {
     content3DD >> LocGroup("liboDD3") >> PlaceHolder submenus (
       foboApiDocSnap2,
       foboApiDoc2,
+      foboApiv17Doc,
       foboApiv16Doc
     ),
     nlHelp >> LocGroup("nldemo1"),
