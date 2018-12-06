@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+    <title>Home</title>
+  </head>
+  <body data-lift-content-id="main">
+    <div id="main" data-lift="surround?with=default;at=content">
+
+      <h2>Welcome to your project!</h2>
+      <p>
+	  <span data-lift="helloWorld.howdy">
+	   Welcome to your Lift app at <span id="time">Time goes here</span>
+	  </span>
+      </p>
+    
+    <div class="bs-callout bs-callout-info">
+          <h4><i class="fa fa-exclamation-triangle"></i> Lift Template Application </h4>
+          <p>This Lift template application <a href="https://github.com/lift/lift_30_sbt">lift_advanced_bs4</a>
+          complements the <a href="https://github.com/lift/lift_30_sbt">lift_advanced_bs3</a> template application with usage of the <a href="http://getbootstrap.com/">Bootstrap v4.x</a>
+              HTML, CSS, and JS framework via the
+          <a href="http://www.media4u101.se/fobo-lift-template-demo/">FoBo</a> <a href="http://liftweb.net/">Lift</a> 
+          <a href="http://liftweb.net/lift_modules">Module</a>.</p>
+          
+          <p>Shown here is a slightly demo pimped <a href="https://github.com/lift/lift_30_sbt/tree/master/lift_advanced_bs4">lift_advanced_bs4</a>
+          Lift template application. The things added to this demo is this notice and the demo content below
+          plus the FoBo link in the side menu. This additional content is added for demo purpose. </p>
+          
+    </div> 
+    
+    <div class="jumbotron" id="lift-pop1" title="Lift Template Applications" data-content="A convenient starting point for Lift application projects.">
+      <h2 >Lift v3.x Template Applications</h2>
+      <p>
+      <i class="fa fa-quote-left fa-2x pull-left fa-border"></i> 
+      This is a demo of one of the <a id="lift-tt1" title="The most powerful, most secure web framework available today. It simply rocks!" href="http://liftweb.net/">Lift</a> 
+      Template Applications provided on Github for you convenience. 
+      Several flavors of Lift Template Applications is available and can be used as a starting point 
+      for a new Lift application project making it super easy to get started with Lift. 
+      Just clone the code on Github, read a few steps of instructions and you will have a Lift Application 
+      up and running within a few minutes.    
+      </p>
+      
+      <a class="btn btn-default btn-lg" role="button" href="https://github.com/lift/lift_30_sbt/"><i class="fa fa-github-square fa-2x"></i> <b>Github Home</b></a>
+    </div>
+    <script data-lift="FoBo.Bs4Comp.tooltipAppendJs?id=#lift-tt1"></script>
+    <script data-lift="FoBo.Bs4Comp.popoverAppendJs?id=#lift-pop1&options=placement:'top',trigger:'hover'"></script>
+
+    </div>
+  </body>
+</html>
+

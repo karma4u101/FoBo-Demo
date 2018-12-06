@@ -220,8 +220,17 @@ object Paths {
   val bootstrap3xxDoc = Menu(
     Loc(
       "Bootstrap-3.x.x",
-      ExtLink("http://getbootstrap.com/"),
+      ExtLink("http://getbootstrap.com/docs/3.3/"),
       S.loc("Bootstrap-3.x.x", Text("Bootstrap-3.x.x")),
+      LocGroup("nldemo1"),
+      fobobs.BSLocInfo.LinkTargetBlank
+    ))
+
+  val bootstrap4xxDoc = Menu(
+    Loc(
+      "Bootstrap-4.x.x",
+      ExtLink("http://getbootstrap.com/docs/4.0/"),
+      S.loc("Bootstrap-4.x.x", Text("Bootstrap-4.x.x")),
       LocGroup("nldemo1"),
       fobobs.BSLocInfo.LinkTargetBlank
     ))
@@ -247,6 +256,27 @@ object Paths {
       fobobs.BSLocInfo.LinkTargetBlank
     ))
 
+  val foboApiDocSnap = Menu(
+    Loc(
+      "FoBoAPISNAP",
+      Link(List("foboapisnap"),
+        true,
+        "/foboapi/snapshot/net/liftmodules/fobo/index.html"),
+      S.loc("FoBoAPISNAP", Text("FoBo API")),
+      LocGroup(""),
+      fobobs.BSLocInfo.LinkTargetBlank
+    ))
+  val foboApiDocSnap2 = Menu(
+    Loc(
+      "FoBoAPISNAP2",
+      Link(List("foboapisnap2"),
+        true,
+        "/foboapi/snapshot/net/liftmodules/fobo/index.html"),
+      S.loc("FoBoAPISNAP", Text("FoBo API")),
+      LocGroup(""),
+      fobobs.BSLocInfo.LinkTargetBlank
+    ))
+
   val foboApiv16Doc = Menu(
     Loc(
       "FoBoAPIv16",
@@ -254,6 +284,17 @@ object Paths {
            true,
            "/foboapi/older/v1.6/index.html#net.liftmodules.FoBo.package"),
       S.loc("FoBoAPIv16", Text("FoBo API v1.6")),
+      LocGroup("liboTop2", "mdemo2", "nldemo1"),
+      fobobs.BSLocInfo.LinkTargetBlank
+    ))
+
+  val foboApiv17Doc = Menu(
+    Loc(
+      "FoBoAPIv17",
+      Link(List("foboapiv17"),
+        true,
+        "/foboapi/older/v1.7/index.html#net.liftmodules.FoBo.package"),
+      S.loc("FoBoAPIv16", Text("FoBo API v1.7")),
       LocGroup("liboTop2", "mdemo2", "nldemo1"),
       fobobs.BSLocInfo.LinkTargetBlank
     ))
@@ -267,6 +308,21 @@ object Paths {
       "fobo-angular-lift-roundtrips",
       ExtLink("http://www.media4u101.se/fobo-angular-lift-roundtrips/"),
       S.loc("fobo-angular-lift-roundtrips", Text("Lift round trip tutorial")),
+      fobobs.BSLocInfo.LinkTargetBlank
+    ))
+
+  val bs4StarterTemplateDemo = Menu(
+    Loc(
+      "lift_advanced_bs4",
+      ExtLink("http://www.media4u101.se/lift-advanced-bs4/"),
+      S.loc("lift_advanced_bs4", Text("Lift TB4 templates")),
+      fobobs.BSLocInfo.LinkTargetBlank
+    ))
+  val bs4StarterTemplateGitHub = Menu(
+    Loc(
+      "lift_advanced_bs4",
+      ExtLink("http://www.media4u101.se/lift-advanced-bs4/"),
+      S.loc("lift_advanced_bs4", Text("Lift TB4 templates")),
       fobobs.BSLocInfo.LinkTargetBlank
     ))
 
@@ -311,17 +367,22 @@ object Paths {
     libospysetup,
     libospyfooter,
     content1DD >> LocGroup("liboDD1", "mdemo1") >> PlaceHolder submenus (
+      bootstrap4xxDoc,
       bootstrap3xxDoc,
       divider1 >> fobobs.BSLocInfo.Divider,
+      foboApiDocSnap,
       foboApiDoc
     ),
     content2DD >> LocGroup("liboDD2") >> PlaceHolder submenus (
+      bs4StarterTemplateDemo,
       bsStarterTemplateDemo,
       mdStarterTemplateDemo,
       roundTripDemo
     ),
     content3DD >> LocGroup("liboDD3") >> PlaceHolder submenus (
+      foboApiDocSnap2,
       foboApiDoc2,
+      foboApiv17Doc,
       foboApiv16Doc
     ),
     nlHelp >> LocGroup("nldemo1"),
