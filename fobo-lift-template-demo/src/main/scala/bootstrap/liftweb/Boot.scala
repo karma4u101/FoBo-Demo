@@ -294,7 +294,18 @@ object Paths {
       Link(List("foboapiv17"),
         true,
         "/foboapi/older/v1.7/index.html#net.liftmodules.FoBo.package"),
-      S.loc("FoBoAPIv16", Text("FoBo API v1.7")),
+      S.loc("FoBoAPIv17", Text("FoBo API v1.7")),
+      LocGroup("liboTop2", "mdemo2", "nldemo1"),
+      fobobs.BSLocInfo.LinkTargetBlank
+    ))
+
+  val foboApiv20Doc = Menu(
+    Loc(
+      "FoBoAPIv20",
+      Link(List("foboapiv20"),
+        true,
+        "/foboapi/older/v2.0/index.html#net.liftmodules.FoBo.package"),
+      S.loc("FoBoAPIv20", Text("FoBo API v2.0")),
       LocGroup("liboTop2", "mdemo2", "nldemo1"),
       fobobs.BSLocInfo.LinkTargetBlank
     ))
@@ -380,8 +391,9 @@ object Paths {
       roundTripDemo
     ),
     content3DD >> LocGroup("liboDD3") >> PlaceHolder submenus (
-      foboApiDocSnap2,
+//      foboApiDocSnap2,
       foboApiDoc2,
+      foboApiv20Doc,
       foboApiv17Doc,
       foboApiv16Doc
     ),
