@@ -9,7 +9,7 @@ The corresponding FoBo module is available [here](https://github.com/karma4u101/
 
 **Note:** This was initially intended to be a basic/starter lift template with the FoBo module initiated 
 but it has turned out to be more of a comprehensive demo. There are lots of basic lift starter templats out there 
-and for a FoBo incdued one see below, so just fork the demo, run it and look at the code and its examples. 
+and for a FoBo included one see below, so just fork the demo, run it and look at the code and its examples. 
 
 It's really simple to integrate the FoBo module in any lift project but here is a basic lift starter template 
 that includes the FoBo module, it is set up for twitter bootstrap usage 
