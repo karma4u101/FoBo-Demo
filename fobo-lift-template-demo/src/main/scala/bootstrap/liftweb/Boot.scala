@@ -4,11 +4,12 @@ import _root_.net.liftweb._
 import util._
 import Helpers._
 import common._
-import http._
+import http.{ContentSourceRestriction, _}
 import sitemap._
 import Loc._
 import java.util.Locale
-import _root_.net.liftweb.util.{Props}
+
+import _root_.net.liftweb.util.Props
 import net.liftmodules.{fobo, fobobs}
 
 object localeOverride extends SessionVar[Box[Locale]](Empty)
@@ -95,12 +96,9 @@ class Boot extends Loggable {
         content = Some(
           ContentSecurityPolicy(
             scriptSources = List(
-              /*ContentSourceRestriction.UnsafeInline,*/
               ContentSourceRestriction.Self,
-              /*Api doc generates inline scripts hens the need of UnsafeInline*/
-              /*ContentSourceRestriction.UnsafeInline,*/
-              /*ContentSourceRestriction.UnsafeInline,*/
-              //ContentSourceRestriction.Host("sha256-N3B-5wjqxdgS8Ku1ncUZGgkBp0XyKvXbEdWcE-pB-2g="),
+              /*Api doc has inline scripts hens the need of UnsafeInline*/
+              ContentSourceRestriction.UnsafeInline,
               ContentSourceRestriction.Host("http://platform.twitter.com"),
               ContentSourceRestriction.Host("https://platform.twitter.com"),
               ContentSourceRestriction.Host("https://syndication.twitter.com"),
@@ -108,7 +106,8 @@ class Boot extends Loggable {
                 "http://www.google-analytics.com/ga.js"),
               ContentSourceRestriction.Host(
                 "https://cdn.syndication.twimg.com"),
-              ContentSourceRestriction.Host("https://apis.google.com")
+              ContentSourceRestriction.Host("https://apis.google.com"),
+              ContentSourceRestriction.Host("https://ton.twimg.com")
             ),
             frameSources = List(
               ContentSourceRestriction.Self,
@@ -124,6 +123,7 @@ class Boot extends Loggable {
             styleSources = List(
               ContentSourceRestriction.Host("http://fonts.googleapis.com"),
               ContentSourceRestriction.Host("http://platform.twitter.com"),
+              ContentSourceRestriction.Host("https://ton.twimg.com"),
               ContentSourceRestriction.UnsafeInline,
               ContentSourceRestriction.Self
             ),
@@ -131,6 +131,15 @@ class Boot extends Loggable {
               ContentSourceRestriction.Self,
               ContentSourceRestriction.Host("http://fonts.googleapis.com"),
               ContentSourceRestriction.Host("http://fonts.gstatic.com")
+            ),
+            imageSources = List(
+              ContentSourceRestriction.Self,
+              ContentSourceRestriction.Host("https://syndication.twitter.com"),
+              ContentSourceRestriction.Host("https://platform.twitter.com"),
+              ContentSourceRestriction.Host("https://pbs.twimg.com"),
+              ContentSourceRestriction.Host("https://abs.twimg.com"),
+              ContentSourceRestriction.Host("https://ton.twimg.com"),
+              ContentSourceRestriction.Scheme("data")
             )
           )))
     }
@@ -240,7 +249,7 @@ object Paths {
       "FoBoAPI",
       Link(List("foboapi"),
            true,
-           "/foboapi/current/index.html#net.liftmodules.FoBo.package"),
+           "/foboapi/current/net/liftmodules/fobo/index.html"),
       S.loc("FoBoAPI", Text("FoBo API")),
       LocGroup("liboTop2", "mdemo2", "nldemo1"),
       fobobs.BSLocInfo.LinkTargetBlank
@@ -250,9 +259,9 @@ object Paths {
       "FoBoAPI2",
       Link(List("foboapi2"),
            true,
-           "/foboapi/current/index.html#net.liftmodules.FoBo.package"),
+           "/foboapi/current/net/liftmodules/fobo/index.html"),
       S.loc("FoBoAPI", Text("FoBo API")),
-      LocGroup(""),
+      LocGroup("liboTop2", "mdemo2", "nldemo1"),
       fobobs.BSLocInfo.LinkTargetBlank
     ))
 
@@ -381,7 +390,7 @@ object Paths {
       bootstrap4xxDoc,
       bootstrap3xxDoc,
       divider1 >> fobobs.BSLocInfo.Divider,
-      foboApiDocSnap,
+      // foboApiDocSnap,
       foboApiDoc
     ),
     content2DD >> LocGroup("liboDD2") >> PlaceHolder submenus (
