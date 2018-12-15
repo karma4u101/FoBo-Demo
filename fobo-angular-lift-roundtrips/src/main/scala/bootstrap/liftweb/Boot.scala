@@ -97,7 +97,7 @@ class Boot {
             frameSources = List(
               ContentSourceRestriction.Host("https://www.youtube.com/embed/"),
               ContentSourceRestriction.Host(
-                "http://ghbtns.com/github-btn.html")),
+                "https://ghbtns.com/github-btn.html")),
             styleSources = List(ContentSourceRestriction.UnsafeInline,
                                 ContentSourceRestriction.Self)
           )))

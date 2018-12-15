@@ -4,6 +4,8 @@ moduleName := "fobo-lift-template-demo"
 
 moduleName := { name.value + "_" + liftEdition.value }
 
+version := "2.1.1-SNAPSHOT"
+
 enablePlugins(JettyPlugin)
 
 libraryDependencies ++= {
