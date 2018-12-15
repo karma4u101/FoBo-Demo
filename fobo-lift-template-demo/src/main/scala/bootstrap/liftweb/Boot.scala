@@ -99,11 +99,11 @@ class Boot extends Loggable {
               ContentSourceRestriction.Self,
               /*Api doc has inline scripts hens the need of UnsafeInline*/
               ContentSourceRestriction.UnsafeInline,
-              ContentSourceRestriction.Host("http://platform.twitter.com"),
+              ContentSourceRestriction.Host("https://ssl.google-analytics.com"),
               ContentSourceRestriction.Host("https://platform.twitter.com"),
               ContentSourceRestriction.Host("https://syndication.twitter.com"),
               ContentSourceRestriction.Host(
-                "http://www.google-analytics.com/ga.js"),
+                "https://www.google-analytics.com/ga.js"),
               ContentSourceRestriction.Host(
                 "https://cdn.syndication.twimg.com"),
               ContentSourceRestriction.Host("https://apis.google.com"),
@@ -112,24 +112,24 @@ class Boot extends Loggable {
             frameSources = List(
               ContentSourceRestriction.Self,
               ContentSourceRestriction.Host("https://player.vimeo.com"),
-              ContentSourceRestriction.Host("http://player.vimeo.com"),
+              // ContentSourceRestriction.Host("http://player.vimeo.com"),
               ContentSourceRestriction.Host("https://platform.twitter.com"),
-              ContentSourceRestriction.Host("http://platform.twitter.com"),
+              // ContentSourceRestriction.Host("http://platform.twitter.com"),
               ContentSourceRestriction.Host("https://syndication.twitter.com"),
               ContentSourceRestriction.Host("https://accounts.google.com"),
               ContentSourceRestriction.Host("https://apis.google.com"),
-              ContentSourceRestriction.Host("http://ghbtns.com/github-btn.html")
+              ContentSourceRestriction.Host("https://ghbtns.com/github-btn.html")
             ),
             styleSources = List(
-              ContentSourceRestriction.Host("http://fonts.googleapis.com"),
-              ContentSourceRestriction.Host("http://platform.twitter.com"),
+              ContentSourceRestriction.Host("https://fonts.googleapis.com"),
+              ContentSourceRestriction.Host("https://platform.twitter.com"),
               ContentSourceRestriction.Host("https://ton.twimg.com"),
               ContentSourceRestriction.UnsafeInline,
               ContentSourceRestriction.Self
             ),
             fontSources = List(
               ContentSourceRestriction.Self,
-              ContentSourceRestriction.Host("http://fonts.googleapis.com"),
+              ContentSourceRestriction.Host("https://fonts.googleapis.com"),
               ContentSourceRestriction.Host("http://fonts.gstatic.com")
             ),
             imageSources = List(
