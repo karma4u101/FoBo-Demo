@@ -92,7 +92,7 @@ enablePlugins(JettyPlugin)
 libraryDependencies in ThisBuild ++= {
   "net.liftweb"       %% "lift-webkit"                      % liftVersion.value % "compile" ::
     "net.liftweb"     %% "lift-mapper"                      % liftVersion.value % "compile" ::
-    "net.liftmodules" %% ("fobo" + "_" + liftEdition.value) % "2.0"    % "compile" ::
+    "net.liftmodules" %% ("fobo" + "_" + liftEdition.value) % "2.1.0"    % "compile" ::
     "net.liftweb"     %% "lift-testkit"                     % liftVersion.value % "test" ::
     Nil
 }
