@@ -48,9 +48,7 @@ class Boot {
     //Init the FoBo - Front-End Toolkit module,
     //see http://liftweb.net/lift_modules for more info
     fobo.Toolkit.init = fobo.Toolkit.JQuery310
-    fobo.Toolkit.init = fobo.Toolkit.Bootstrap400
-    //fobobs4.Toolkit.init = fobobs4.Toolkit.Bootstrap400
-    //fobo.Toolkit.init = fobo.Toolkit.Tether140
+    fobo.Toolkit.init = fobo.Toolkit.Bootstrap413
     fobo.Toolkit.init = fobo.Toolkit.Popper1129
     fobo.Toolkit.init = fobo.Toolkit.FontAwesome463
     fobo.API.init = fobo.API.FoBo1 // here used for resource injection
