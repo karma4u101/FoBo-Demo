@@ -4,7 +4,7 @@ moduleName := "pimping-lift-advanced-md"
 
 moduleName := { name.value + "_" + liftEdition.value }
 
-enablePlugins(JettyPlugin)
+version := "2.1.0-SNAPSHOT"
 
 libraryDependencies ++= {
   "ch.qos.logback" % "logback-classic" % "1.0.6" % "compile" ::

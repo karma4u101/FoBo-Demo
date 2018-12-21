@@ -9,13 +9,13 @@
 <title class="lift:Menu.title">App:</title>
 
 	<!-- instead of manually adding the fobo resources we can inject them -->
-	<link data-lift="FoBo.Resources.injectCSS?resources=bootstrap,font-awesome" />
-<!--<link href="/classpath/fobo/bootstrap.css" rel="stylesheet" type="text/css" />
-	<link href="/classpath/fobo/font-awesome.css" rel="stylesheet" type="text/css" />-->
-<link href="/assets/css/app-bs-theme.css" rel="stylesheet" type="text/css" />
+	<!--<link data-lift="FoBo.Resources.injectCSS?resources=bootstrap,font-awesome" />-->
+<link data-lift="CacheBust.usingBuildTime" rel="stylesheet" type="text/css" href="/classpath/fobo/bootstrap.css"/>
+<link data-lift="CacheBust.usingBuildTime" rel="stylesheet" type="text/css" href="/classpath/fobo/font-awesome.css"/>
+<link data-lift="CacheBust.usingBuildTime" rel="stylesheet" type="text/css" href="/assets/css/app-bs-theme.css"/>
 
-<script id="jquery" src="/classpath/fobo/jquery.js" type="text/javascript"></script>
-<script id="json" src="/classpath/json.js" type="text/javascript"></script>
+<script data-lift="CacheBust.usingBuildTime" type="text/javascript" id="jquery" src="/classpath/fobo/jquery.js"></script>
+<script data-lift="CacheBust.usingBuildTime" type="text/javascript" id="json" src="/classpath/json.js"></script>
 
 </head>
 <body>
@@ -65,11 +65,9 @@
 		</div>
 
 		<!-- instead of manually adding the fobo resources we can inject them -->
-		<script data-lift="FoBo.Resources.injectJS?resources=popper,bootstrap"></script>
-		<!--
-		<script src="/classpath/fobo/popper.js" type="text/javascript"></script>
-		<script src="/classpath/fobo/bootstrap.js" type="text/javascript"></script>
-		-->
+		<!--<script data-lift="FoBo.Resources.injectJS?resources=popper,bootstrap"></script>-->
+		<script data-lift="CacheBust.usingBuildTime" type="text/javascript" src="/classpath/fobo/popper.js"></script>
+		<script data-lift="CacheBust.usingBuildTime" type="text/javascript" src="/classpath/fobo/bootstrap.js"></script>
 	</div>
 </body>
 </html>

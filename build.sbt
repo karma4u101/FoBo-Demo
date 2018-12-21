@@ -1,4 +1,4 @@
-import LiftModuleKeys.{liftVersion, liftEdition}
+import LiftModuleKeys.{liftEdition, liftVersion}
 
 //##################################################################
 //##
@@ -11,6 +11,16 @@ lazy val commonSettings = Seq(
   version := "2.1.0-SNAPSHOT",
   scalacOptions ++= Seq("-unchecked", "-deprecation"),
   autoAPIMappings := true
+)
+
+lazy val buildInfo = Seq(
+  buildInfoKeys := Seq[BuildInfoKey](name, version, scalaVersion, sbtVersion),
+  buildInfoKeys ++= Seq[BuildInfoKey](
+    BuildInfoKey.action("buildTime") {
+      System.currentTimeMillis
+    } // re-computed each time at compile
+  ),
+  buildInfoPackage := "code.lib"
 )
 
 lazy val fobometa = (project in file("."))
@@ -32,23 +42,38 @@ lazy val fobometa = (project in file("."))
   )
 
 lazy val foboLiftTemplateDemo = (project in file("fobo-lift-template-demo"))
+  .enablePlugins(JettyPlugin)
+  .enablePlugins(BuildInfoPlugin)
   .settings(commonSettings: _*)
+  .settings(buildInfo: _*)
   .settings(name := "fobo-lift-template-demo")
 
 lazy val foboLiftRoundTrips = (project in file("fobo-angular-lift-roundtrips"))
+  .enablePlugins(JettyPlugin)
+  .enablePlugins(BuildInfoPlugin)
   .settings(commonSettings: _*)
+  .settings(buildInfo: _*)
   .settings(name := "fobo-angular-lift-roundtrips")
 
 lazy val bs3StarterTemplates = (project in file("pimping-lift-advanced-bs3"))
+  .enablePlugins(JettyPlugin)
+  .enablePlugins(BuildInfoPlugin)
   .settings(commonSettings: _*)
+  .settings(buildInfo: _*)
   .settings(name := "pimping-lift-advanced-bs3")
 
 lazy val bs4StarterTemplates = (project in file("pimping-lift-advanced-bs4"))
+  .enablePlugins(JettyPlugin)
+  .enablePlugins(BuildInfoPlugin)
   .settings(commonSettings: _*)
+  .settings(buildInfo: _*)
   .settings(name := "pimping-lift-advanced-bs4")
 
 lazy val mdStarterTemplates = (project in file("pimping-lift-advanced-md"))
+  .enablePlugins(JettyPlugin)
+  .enablePlugins(BuildInfoPlugin)
   .settings(commonSettings: _*)
+  .settings(buildInfo: _*)
   .settings(name := "pimping-lift-advanced-md")
 
 //##
@@ -76,7 +101,7 @@ resolvers in ThisBuild ++= Seq(
 //##
 //##############
 
-enablePlugins(JettyPlugin)
+// enablePlugins(JettyPlugin)
 
 //##
 //##
