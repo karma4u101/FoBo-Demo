@@ -8,7 +8,7 @@ import LiftModuleKeys.{liftEdition, liftVersion}
 
 lazy val commonSettings = Seq(
   organization := "net.liftweb",
-  version := "2.1.0-SNAPSHOT",
+  version := "2.1.1-SNAPSHOT",
   scalacOptions ++= Seq("-unchecked", "-deprecation"),
   autoAPIMappings := true
 )
@@ -117,7 +117,7 @@ resolvers in ThisBuild ++= Seq(
 libraryDependencies in ThisBuild ++= {
   "net.liftweb"       %% "lift-webkit"                      % liftVersion.value % "compile" ::
     "net.liftweb"     %% "lift-mapper"                      % liftVersion.value % "compile" ::
-    "net.liftmodules" %% ("fobo" + "_" + liftEdition.value) % "2.1.0"    % "compile" ::
+    "net.liftmodules" %% ("fobo" + "_" + liftEdition.value) % "2.1.1-SNAPSHOT"    % "compile" ::
     "net.liftweb"     %% "lift-testkit"                     % liftVersion.value % "test" ::
     Nil
 }
