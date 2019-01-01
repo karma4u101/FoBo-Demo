@@ -4,7 +4,7 @@ moduleName := "pimping-lift-advanced-bs4"
 
 moduleName := { name.value + "_" + liftEdition.value }
 
-version := "2.1.0-SNAPSHOT"
+version := "2.1.1-SNAPSHOT"
 
 libraryDependencies ++= {
   "ch.qos.logback" % "logback-classic" % "1.0.6" % "compile" ::

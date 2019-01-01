@@ -93,6 +93,7 @@ class Boot {
 
   object Site {
     import scala.xml._
+    import net.liftmodules.fobobs4.lib.BSLocInfo
     //if user is logged in replace menu label "User" with users gravatar image and full name.
     def userDDLabel: NodeSeq = {
       def gravatar: NodeSeq = {
@@ -117,6 +118,13 @@ class Boot {
 
     val userMenu = User.AddUserMenusHere
 
+    //Test
+    val ddlabel2 = Menu.i("fakeContentDDLabel") / "ddlabel2"
+    val fake1 = Menu("fake1") / "fake1"
+    val fake2 = Menu("fake2") / "fake2"
+    val divider2 = Menu("divider2") / "divider2"
+    val fake3 = Menu("fake3") / "fake3"
+
     val static = Menu(
       Loc("Static",
           Link(List("static"), true, "/static/index"),
@@ -135,17 +143,23 @@ class Boot {
         "FLTDemo",
         ExtLink("http://www.media4u101.se/fobo-lift-template-demo/"),
         S.loc("FLTDemo", scala.xml.Text("FoBo Lift Template Demo")),
-        LocGroup("lg2") /*,
-        FoBoBs.BsLocInfo.LinkTargetBlank */
+        LocGroup("lg2"),
+        BSLocInfo.LinkTargetBlank
       ))
 
     def sitemap = SiteMap(
       home >> LocGroup("lg1"),
+      ddlabel2 >> LocGroup("lg1") >> PlaceHolder submenus (
+        fake1,
+        divider2 >> BSLocInfo.Divider,
+        fake2 >> BSLocInfo.LinkTargetBlank,
+        fake3
+      ),
       static,
       //twbs,
       FLTDemo,
       ddLabel1 >> LocGroup("topRight") >> PlaceHolder submenus (
-        divider1 /*>> fobobs.BsLocInfo.Divider*/ >> userMenu
+        divider1 /*>> BSLocInfo.Divider*/ >> userMenu
       )
     )
   }
