@@ -9,7 +9,7 @@ import sitemap._
 import Loc._
 import mapper.{DB, Schemifier, StandardDBVendor}
 import code.model._
-import net.liftmodules.fobo //{fobo, fobobs4}
+import net.liftmodules.{fobobs4 => fobo}
 import scravatar.{DefaultImage, Gravatar}
 
 /**
@@ -47,11 +47,7 @@ class Boot {
 
     //Init the FoBo - Front-End Toolkit module,
     //see http://liftweb.net/lift_modules for more info
-    fobo.Toolkit.init = fobo.Toolkit.JQuery310
-    fobo.Toolkit.init = fobo.Toolkit.Bootstrap413
-    fobo.Toolkit.init = fobo.Toolkit.Popper1129
-    fobo.Toolkit.init = fobo.Toolkit.FontAwesome463
-    fobo.API.init = fobo.API.FoBo1 // here used for resource injection
+    fobo.API.init = fobo.API.Bootstrap4
 
     //Show the spinny image when an Ajax call starts
 //    LiftRules.ajaxStart = Full(

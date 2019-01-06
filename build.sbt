@@ -117,7 +117,7 @@ resolvers in ThisBuild ++= Seq(
 libraryDependencies in ThisBuild ++= {
   "net.liftweb"       %% "lift-webkit"                      % liftVersion.value % "compile" ::
     "net.liftweb"     %% "lift-mapper"                      % liftVersion.value % "compile" ::
-    "net.liftmodules" %% ("fobo" + "_" + liftEdition.value) % "2.1.1-SNAPSHOT"    % "compile" ::
+    "net.liftmodules" %% ("fobo" + "_" + liftEdition.value) % "2.1.1"    % "compile" ::
     "net.liftweb"     %% "lift-testkit"                     % liftVersion.value % "test" ::
     Nil
 }
